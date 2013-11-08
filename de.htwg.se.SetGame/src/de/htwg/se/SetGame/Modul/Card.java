@@ -18,6 +18,10 @@ public class Card {
 		String fomr;
 		String panelFilling;
 		int anz;
+		private static String[] colorr = {"red", "green", "purple"};
+		String[] form = {"balk","ovally","wave"};
+		String[] pannelFilling = {"halffill","fill","empty"};
+		private static int[] anzahl = {1,2,3};
 
 		public Cards(String color, String form, String panelFilling, int anzahl) {
 
@@ -47,7 +51,13 @@ public class Card {
 		Cards list[] = new Cards[81];
 		/* Reds */
 		/* 1 */
-
+		Cards [] cards = new Cards[81];
+		for(int i = 0 ; i < 81; i++){
+			/*create all reds*/
+			
+			
+		}
+		
 		Cards card1 = new Cards("red", "balk", "halffill", 1);
 		Cards card2 = new Cards("red", "ovally", "halffill", 1);
 		Cards card3 = new Cards("red", "wave", "halffill", 1);
@@ -285,6 +295,19 @@ public class Card {
 		return this.numberOfCard;
 
 	}
+	public Cards[] creatRed(){
+			Cards[] c = new Cards[27];
+			for(int i = 0 ; i < 27; i++){
+				if(i < 3){
+					c[i] = new Cards(collor[0],"" , "",anzahl[0] );
+				}
+					
+				
+			}
+			return c;
+		
+	}
+	
 
 
 
