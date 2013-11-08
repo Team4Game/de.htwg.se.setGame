@@ -32,12 +32,11 @@ public class Field {
 	public int[] rand(){
 		int[] array = new int[81];
 		boolean b =  true;
-		for(int i = 0 ; i < 80; i++){
-			int j = (int) (Math.random()*80+0);
+		for(int i = 0 ; i < 81; i++){
+			int j = (int) (Math.random()*81+1);
 			for(int t = 0; t < 81; t++){
 				if(j == array[t] && i > 0){
-					
-					j = (int) (Math.random()*80+0);
+					j = (int) (Math.random()*81+1);
 				}
 					
 			}

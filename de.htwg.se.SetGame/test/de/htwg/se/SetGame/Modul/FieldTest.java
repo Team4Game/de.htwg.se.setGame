@@ -22,10 +22,10 @@ public class FieldTest {
 	}
 	@Test
 	public void testFieldradom(){
-		int array[] =f.rand();
+		int array[] = f.rand();
 		int numberofArray = 0;
 		for(int i = 0; i < array.length;i++){
-			for(int t = 1; t < array.length+1;t++){
+			for(int t = 0 ; t < array.length;t++){
 				if(t == array[i]){
 					System.out.println(i+"  number: "+t + " in index: "+i);
 					numberofArray++;
@@ -38,7 +38,7 @@ public class FieldTest {
 		if(numberofArray == array.length){
 			System.out.println("true");
 		}else{
-			System.out.println("false numberofarray = "+numberofArray );
+			System.out.println("false!! \n numberofarray = "+numberofArray+"\narray length:  "+ array.length );
 		}
 			
 		
