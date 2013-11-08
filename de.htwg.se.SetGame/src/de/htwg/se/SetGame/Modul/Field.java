@@ -31,15 +31,18 @@ public class Field {
 	
 	public int[] rand(){
 		int[] array = new int[81];
-		boolean b =  true;
+		boolean b;
 		for(int i = 0 ; i < 81; i++){
+			b = true;
 			int j = (int) (Math.random()*81+1);
 			for(int t = 0; t < 81; t++){
 				if(j == array[t] && i > 0){
-					j = (int) (Math.random()*81+1);
+					i = i - 1;
+					b = false;
 				}
 					
 			}
+			if(b == true)
 				array[i] = j;
 
 
