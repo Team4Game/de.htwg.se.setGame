@@ -163,18 +163,18 @@ public class GameField extends JPanel implements ActionListener {
 
 		cardkey = ZERO;
 
-		resource1 = ImageIcon.class.getResource(urlListe.get(number1));
-		resource2 = ImageIcon.class.getResource(urlListe.get(number2));
-		resource3 = ImageIcon.class.getResource(urlListe.get(number3));
-		resource4 = ImageIcon.class.getResource(urlListe.get(number4));
-		resource5 = ImageIcon.class.getResource(urlListe.get(number5));
-		resource6 = ImageIcon.class.getResource(urlListe.get(number6));
-		resource7 = ImageIcon.class.getResource(urlListe.get(number7));
-		resource8 = ImageIcon.class.getResource(urlListe.get(number8));
-		resource9 = ImageIcon.class.getResource(urlListe.get(number9));
-		resource10 = ImageIcon.class.getResource(urlListe.get(number10));
-		resource11 = ImageIcon.class.getResource(urlListe.get(number11));
-		resource12 = ImageIcon.class.getResource(urlListe.get(number12));
+		resource1 = getClass().getResource(urlListe.get(number1));
+		resource2 = getClass().getResource(urlListe.get(number2));
+		resource3 = getClass().getResource(urlListe.get(number3));
+		resource4 = getClass().getResource(urlListe.get(number4));
+		resource5 = getClass().getResource(urlListe.get(number5));
+		resource6 = getClass().getResource(urlListe.get(number6));
+		resource7 = getClass().getResource(urlListe.get(number7));
+		resource8 = getClass().getResource(urlListe.get(number8));
+		resource9 = getClass().getResource(urlListe.get(number9));
+		resource10 = getClass().getResource(urlListe.get(number10));
+		resource11 = getClass().getResource(urlListe.get(number11));
+		resource12 = getClass().getResource(urlListe.get(number12));
 
 		icon1 = new ImageIcon(resource1);
 		icon2 = new ImageIcon(resource2);
