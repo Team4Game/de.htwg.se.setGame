@@ -15,7 +15,9 @@ import de.htwg.se.setgame.util.observer.IObserver;
  */
 public class TextUI implements IObserver {
 
-	private IController controller;
+    public static final String MESSAGE_WELCOME = "Welcome to SetGame!!!! %nWell ist not that hard to play ;)%nIf you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)%nif you need a tipp plese write h%nif you want to know the solution please write s%nIf you want to know the game point please write GetPoints%nif you want to solve the set with out knowing just write solve%nSet size of the field 3-80 size number%nFor a newGame please write nw%nHave fun!!! if you want to finish the game please write exit";
+
+    private IController controller;
 	private static final int ZERO = 0;
 	private static final int ONE = 1;
 	private static final int TWO = 1;
@@ -172,24 +174,7 @@ public class TextUI implements IObserver {
 	 * 
 	 */
 	public void printTUI() {
-		logger.info("Welcome to SetGame!!!! "
-				+ this.newLine
-				+ "Well ist not that hard to play ;)"
-				+ this.newLine
-				+ "If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)"
-				+ this.newLine
-				+ "if you need a tipp plese write h"
-				+ this.newLine
-				+ "if you want to know the solution please write s"
-				+ this.newLine
-				+ "If you want to know the game point please write GetPoints"
-				+ this.newLine
-				+ "if you want to solve the set with out knowing just write solve"
-				+ this.newLine + "Set size of the fiel 3-80 size number"
-				+ this.newLine + "For a newGame plase write nw" + this.newLine
-				+ "Have fun!!!"
-				+ "if you want to finisch the game please write exit"
-				+ this.controller.getField().toString());
+		logger.info(MESSAGE_WELCOME + this.controller.getField().toString());
 	}
 
 	/**
