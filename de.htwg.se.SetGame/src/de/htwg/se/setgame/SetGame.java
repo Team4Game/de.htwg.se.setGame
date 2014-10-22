@@ -1,4 +1,6 @@
 package de.htwg.se.setgame;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.Scanner;
 
 import org.apache.log4j.PropertyConfigurator;
@@ -22,16 +24,32 @@ public final class SetGame {
 		}
 		return instance;
 	}
-	private SetGame(){
-		//set logging throgh log4j
-		PropertyConfigurator.configure("log4j.properties");
-		Injector injector = Guice.createInjector(new SetGameModule());
-		controller = injector.getInstance(IController.class);
-		@SuppressWarnings("unused")
-		GUI gui = new GUI(controller);
-		tui = new TextUI(controller);
-		tui.printTUI();
-	}
+    private SetGame(){
+        initLogger();
+        initDependencyInjector();
+        initUserInterface();
+    }
+
+    private void initLogger() {
+        try {
+            Properties props = new Properties();
+            props.load(getClass().getResourceAsStream("/log4j.properties"));
+            PropertyConfigurator.configure(props);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void initDependencyInjector() {
+        Injector injector = Guice.createInjector(new SetGameModule());
+        controller = injector.getInstance(IController.class);
+    }
+
+    private void initUserInterface() {
+        new GUI(controller);
+        tui = new TextUI(controller);
+        tui.printTUI();
+    }
 	public IController getIController(){
 		return this.controller;
 	}
