@@ -174,7 +174,7 @@ public class TextUI implements IObserver {
 	 * 
 	 */
 	public void printTUI() {
-		logger.info(MESSAGE_WELCOME + this.controller.getField().toString());
+		logger.info(String.format(MESSAGE_WELCOME) + this.controller.getField().toString());
 	}
 
 	/**
