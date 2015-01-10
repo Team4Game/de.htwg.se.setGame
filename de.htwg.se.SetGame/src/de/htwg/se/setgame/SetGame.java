@@ -17,17 +17,19 @@ public final class SetGame {
 	private static TextUI tui;
 	private IController controller;
 	private static SetGame instance = null;
-	
+
 	public static SetGame getInstance(){
-		if(instance == null){
-			instance = new SetGame();
-		}
-		return instance;
+		return getInstance(true);
 	}
-    private SetGame(){
+
+	public static SetGame getInstance(boolean activateGui){
+		return (instance == null) ? instance = new SetGame(activateGui): instance;
+	}
+
+    private SetGame(boolean activateGui){
         initLogger();
         initDependencyInjector();
-        initUserInterface();
+        initUserInterface(activateGui);
     }
 
     private void initLogger() {
@@ -45,17 +47,20 @@ public final class SetGame {
         controller = injector.getInstance(IController.class);
     }
 
-    private void initUserInterface() {
-        new GUI(controller);
+    private void initUserInterface(boolean activateGui) {
+        if (activateGui) {
+			new GUI(controller);
+		}
+
         tui = new TextUI(controller);
         tui.printTUI();
     }
 	public IController getIController(){
-		return this.controller;
+		return controller;
 	}
 
 	public TextUI getTextUI(){
-		return this.tui;
+		return tui;
 	}
 
 	public static void main(String[] args) {
