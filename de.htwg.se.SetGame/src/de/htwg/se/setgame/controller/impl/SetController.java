@@ -10,7 +10,9 @@ import com.google.inject.Inject;
 import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.modell.ICard;
 import de.htwg.se.setgame.modell.IField;
+import de.htwg.se.setgame.modell.IPack;
 import de.htwg.se.setgame.modell.impl.Field;
+import de.htwg.se.setgame.modell.impl.Pack;
 import de.htwg.se.setgame.util.observer.Observable;
 
 
@@ -20,14 +22,22 @@ import de.htwg.se.setgame.util.observer.Observable;
  *
  */
 public class SetController extends Observable implements IController {
+
 	/**
 	 *  field
 	 */
 	private IField field;
+
 	/**
 	 * counter
 	 */
 	private int counter;
+
+	/**
+	 * IPack
+	 */
+	private IPack pack;
+
 	/**
 	 * number for set
 	 */
@@ -70,7 +80,7 @@ public class SetController extends Observable implements IController {
 		this.playerOneCounter = 0;
 		this.playerTwoCounter = 0;
 		checkIfIsASeTInGame();
-
+		pack = new Pack();
 	}
 	@Override
 	public void newGame(){
@@ -429,4 +439,8 @@ public class SetController extends Observable implements IController {
 		return this.field.getCardInFieldGame();
 	}
 
+	@Override
+	public IPack getPack() {
+		return pack;
+	}
 }
