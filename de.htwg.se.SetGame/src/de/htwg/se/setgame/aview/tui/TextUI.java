@@ -83,13 +83,13 @@ public class TextUI implements IObserver {
 		logger.info("Hey dude! there is no longger stes in game for you here is the Points ;) "
 				+ this.newLine
 				+ "Player 1 = "
-				+ controller.geTplayerOnePoints()
+				+ controller.getPlayerOnePoints()
 				+ this.newLine
-				+ "Player Two " + controller.geTplayerTwoPoints());
-		if (controller.geTplayerTwoPoints() < controller.geTplayerOnePoints()) {
+				+ "Player Two " + controller.getPlayerTwoPoints());
+		if (controller.getPlayerTwoPoints() < controller.getPlayerOnePoints()) {
 			logger.info("Gongratilations player one Dude you are amazing!!");
-		} else if (controller.geTplayerTwoPoints() > controller
-				.geTplayerOnePoints()) {
+		} else if (controller.getPlayerTwoPoints() > controller
+				.getPlayerOnePoints()) {
 			logger.info("Congratilations player Two Dude you are amazing!!");
 		} else {
 			logger.info("nobody wins nobody pays the dinne xD");
@@ -147,7 +147,7 @@ public class TextUI implements IObserver {
 			player = this.controller.getPlayerTwo();
 		}
 		if (player != -1) {
-			this.controller.isAsetForController(
+			this.controller.isASetForController(
 					this.controller.getField().getCardInFieldGame()
 							.get(arrayForSerNumber[ZERO]),
 					this.controller.getField().getCardInFieldGame()
@@ -185,8 +185,8 @@ public class TextUI implements IObserver {
 			logger.info("solved" + this.controller.getSetInField().toString()
 					+ newLine
 					+ controller.getField().getAllCardsInGame().size());
-			this.controller.isAsetForController(this.controller.getSetInField()
-					.get(ZERO), this.controller.getSetInField().get(ONE),
+			this.controller.isASetForController(this.controller.getSetInField()
+							.get(ZERO), this.controller.getSetInField().get(ONE),
 					this.controller.getSetInField().get(TWO), THREE);
 			printTUI();
 		} else {
@@ -202,7 +202,7 @@ public class TextUI implements IObserver {
 	 */
 	private void help() {
 		logger.info("A tipp your set begiss with  " + this.newLine
-				+ controller.getAsetInGame().get(ZERO));
+				+ controller.getASetInGame().get(ZERO));
 
 	}
 
@@ -236,8 +236,8 @@ public class TextUI implements IObserver {
 	 */
 	private void getPoints() {
 		logger.info(this.newLine + "Player one = "
-				+ controller.geTplayerOnePoints() + this.newLine
-				+ "Player Two = " + controller.geTplayerTwoPoints()
+				+ controller.getPlayerOnePoints() + this.newLine
+				+ "Player Two = " + controller.getPlayerTwoPoints()
 				+ this.newLine);
 
 	}

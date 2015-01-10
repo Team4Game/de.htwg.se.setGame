@@ -153,7 +153,7 @@ public class SetController extends Observable implements IController {
 		} else {
 			if (proveIfIsASet(cardOne, cardTwo, cardThree)) {
 				field.foundSet(cardOne, cardTwo, cardThree);
-				if(getAsetInGame().size() >= THREE){
+				if(getASetInGame().size() >= THREE){
 					return true;
 				} else if (alltheSetsInField(this.field.getAllCardsInGame())) {
 					changeCardsinGame();
@@ -359,11 +359,11 @@ public class SetController extends Observable implements IController {
 	}
 
 	/* (non-Javadoc)
-	 * @see setgame.controller.impl.ISuperController#isAsetForController(setgame.modell.impl.Card, setgame.modell.impl.Card, setgame.modell.impl.Card, int)
+	 * @see setgame.controller.impl.ISuperController#isASetForController(setgame.modell.impl.Card, setgame.modell.impl.Card, setgame.modell.impl.Card, int)
 	 */
 	@Override
-	public void isAsetForController(ICard cardOne, ICard cardTwo,
-			ICard cardThree, int player) {
+	public void isASetForController(ICard cardOne, ICard cardTwo,
+									ICard cardThree, int player) {
 		if (isAset(cardOne, cardTwo, cardThree)) {
 			if (this.playerOne == player) {
 				this.playerOneCounter = this.playerOneCounter + 1;
@@ -377,10 +377,10 @@ public class SetController extends Observable implements IController {
 		}
 	}
 	/* (non-Javadoc)
-	 * @see setgame.controller.impl.ISuperController#getAsetInGame()
+	 * @see setgame.controller.impl.ISuperController#getASetInGame()
 	 */
 	@Override
-	public List<ICard> getAsetInGame(){
+	public List<ICard> getASetInGame(){
 		return getSet(this.field.getCardsInField());
 	}
 	/* (non-Javadoc)
@@ -404,17 +404,17 @@ public class SetController extends Observable implements IController {
 		
 	}
 	/* (non-Javadoc)
-	 * @see setgame.controller.impl.ISuperController#geTplayerOnePoints()
+	 * @see setgame.controller.impl.ISuperController#getPlayerOnePoints()
 	 */
 	@Override
-	public int geTplayerOnePoints(){
+	public int getPlayerOnePoints(){
 		return this.playerOneCounter;
 	}
 	/* (non-Javadoc)
-	 * @see setgame.controller.impl.ISuperController#geTplayerTwoPoints()
+	 * @see setgame.controller.impl.ISuperController#getPlayerTwoPoints()
 	 */
 	@Override
-	public int geTplayerTwoPoints(){
+	public int getPlayerTwoPoints(){
 		return this.playerTwoCounter;
 	}
 	/* (non-Javadoc)

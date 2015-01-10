@@ -22,12 +22,12 @@ public class SetControllerTest {
 
 	@Test
 	public void testSetController() {
-		System.out.println(this.setcontroll.geTplayerOnePoints());
+		System.out.println(this.setcontroll.getPlayerOnePoints());
 	}
 
 	@Test
 	public void testIsAsetForController() {
-		setcontroll.isAsetForController(aSetListe.get(0), aSetListe.get(1), aSetListe.get(2), setcontroll.getPlayerOne());
+		setcontroll.isASetForController(aSetListe.get(0), aSetListe.get(1), aSetListe.get(2), setcontroll.getPlayerOne());
 		
 	}
 

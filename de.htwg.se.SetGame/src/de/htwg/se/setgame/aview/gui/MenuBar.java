@@ -62,9 +62,9 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	}
 	
 	public void exit() {
-		if(GUI.getController().geTplayerOnePoints() > GUI.getController().geTplayerTwoPoints()) {
+		if(GUI.getController().getPlayerOnePoints() > GUI.getController().getPlayerTwoPoints()) {
     		playerOneWin();
-    	} else if (GUI.getController().geTplayerOnePoints() < GUI.getController().geTplayerTwoPoints()) {
+    	} else if (GUI.getController().getPlayerOnePoints() < GUI.getController().getPlayerTwoPoints()) {
     		playerTwoWin();
     	} else {
     		noOneWin();
@@ -79,9 +79,9 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	}
 	
 	public void newGame() {
-		if(GUI.getController().geTplayerOnePoints() > GUI.getController().geTplayerTwoPoints()) {
+		if(GUI.getController().getPlayerOnePoints() > GUI.getController().getPlayerTwoPoints()) {
     		playerOneWin();
-    	} else if (GUI.getController().geTplayerOnePoints() < GUI.getController().geTplayerTwoPoints()) {
+    	} else if (GUI.getController().getPlayerOnePoints() < GUI.getController().getPlayerTwoPoints()) {
     		playerTwoWin();
     	} else {
     		noOneWin();

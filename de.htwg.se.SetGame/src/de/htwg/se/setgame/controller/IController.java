@@ -17,20 +17,13 @@ import de.htwg.se.setgame.util.observer.IObservable;
  */
 public interface IController extends IObservable {
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see setgame.controller.IController#isAset(setgame.modell.impl.Card,
-	 * setgame.modell.impl.Card, setgame.modell.impl.Card, int)
-	 */
 	/**
 	 * @param cardOne card for set
 	 * @param cardTwo card for set
 	 * @param cardThree card for set
-	 * @param player wich player is
+	 * @param player which player is
 	 */
-	void isAsetForController(ICard cardOne, ICard cardTwo, ICard cardThree,
-			int player);
+	void isASetForController(ICard cardOne, ICard cardTwo, ICard cardThree, int player);
 
 	/**
 	 * @return card in game
@@ -50,10 +43,10 @@ public interface IController extends IObservable {
 	/**
 	 * @return return a set
 	 */
-	List<ICard> getAsetInGame();
+	List<ICard> getASetInGame();
 
 	/**
-	 * @return look trougth the pack and see if still a set
+	 * @return look trough the pack and see if still a set
 	 */
 	boolean stillSetInGAme();
 
@@ -65,12 +58,12 @@ public interface IController extends IObservable {
 	/**
 	 * @return points player one
 	 */
-	int geTplayerOnePoints();
+	int getPlayerOnePoints();
 
 	/**
 	 * @return points player two
 	 */
-	int geTplayerTwoPoints();
+	int getPlayerTwoPoints();
 
 	/**
 	 * @return player one

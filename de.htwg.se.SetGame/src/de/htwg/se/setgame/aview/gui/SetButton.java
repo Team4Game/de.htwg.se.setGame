@@ -88,10 +88,10 @@ public class SetButton extends JPanel implements ActionListener {
 	        			"Which Player?", "Choice",JOptionPane.DEFAULT_OPTION, 
 	        			JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
 	        	if(selected == ZERO) {
-	                GUI.getController().isAsetForController(GameField.getCardforSetOne(), GameField.getCardforSetTwo(), GameField.getCardforSetThree(), ONE);
+	                GUI.getController().isASetForController(GameField.getCardforSetOne(), GameField.getCardforSetTwo(), GameField.getCardforSetThree(), ONE);
 	                
 	        	} else if (selected == ONE) {
-	            	GUI.getController().isAsetForController(GameField.getCardforSetOne(), GameField.getCardforSetTwo(), GameField.getCardforSetThree(), TWO);
+	            	GUI.getController().isASetForController(GameField.getCardforSetOne(), GameField.getCardforSetTwo(), GameField.getCardforSetThree(), TWO);
 	        	}	
 
 	}
@@ -100,9 +100,9 @@ public class SetButton extends JPanel implements ActionListener {
 	 * 
 	 */
 	public static void updateSB() {
-		Integer play1 = Integer.valueOf(GUI.getController().geTplayerOnePoints());
+		Integer play1 = Integer.valueOf(GUI.getController().getPlayerOnePoints());
 		player1.setText(play1.toString());
-		Integer play2 = Integer.valueOf(GUI.getController().geTplayerTwoPoints());
+		Integer play2 = Integer.valueOf(GUI.getController().getPlayerTwoPoints());
 		player2.setText(play2.toString());
 	}
 	
