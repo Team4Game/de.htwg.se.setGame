@@ -95,4 +95,7 @@ public interface IController extends IObservable {
 	 */
 	Map<Integer, ICard> getCardsAndTheIndexOfCardInField();
 
+
+
+
 }

@@ -1,4 +1,4 @@
-package setgame.modell;
+package setgame.modell.impl;
 
 import static org.junit.Assert.*;
 
@@ -32,7 +32,7 @@ public class FieldTest {
 	@Test
 	public void testField() {
 		if((this.field instanceof Field) == false){
-			fail("field ist keine object der grösse field");
+			fail("field ist keine object der grï¿½sse field");
 		}
 	}
 
@@ -107,7 +107,7 @@ public class FieldTest {
 	@Test
 	public void testGetPackForControler() {
 		if(field.getAllCardsInGame().size() != 81){
-			fail("feld größe stimmt nicht");
+			fail("feld grï¿½ï¿½e stimmt nicht");
 		}
 	}
 

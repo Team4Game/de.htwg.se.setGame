@@ -17,6 +17,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import de.htwg.se.setgame.modell.ICard;
+import de.htwg.se.setgame.modell.IPack;
 import de.htwg.se.setgame.modell.impl.Pack;
 
 /**
@@ -135,7 +136,7 @@ public class GameField extends JPanel implements ActionListener {
 	private static JPanel panel1 = new JPanel();
 
 	private static ICard[] card = new ICard[FIVE];
-	private static Pack pack;
+	private static IPack IPack;
 	private static Map<Integer, String> cardToPicture;
 	private static List<ICard> saveList;
 	private static List<String> urlListe;
@@ -150,12 +151,12 @@ public class GameField extends JPanel implements ActionListener {
 		urlListe = new LinkedList<String>();
 		test = new LinkedList<String>();
 
-		pack = new Pack();
+		IPack = new Pack();
 
-		for (int i = 0; i < pack.getPack().size(); i++) {
+		for (int i = 0; i < IPack.getPack().size(); i++) {
 			test.add("/pack/" + i + ".gif");
 		}
-		for (int index1 = 0; index1 < pack.getPack().size(); index1++) {
+		for (int index1 = 0; index1 < IPack.getPack().size(); index1++) {
 			cardToPicture.put(index1, test.get(index1));
 		}
 
@@ -503,7 +504,7 @@ public class GameField extends JPanel implements ActionListener {
 	}
 	
 	public static int numberGiven() {
-		return pack.getPack().size();
+		return IPack.getPack().size();
 	}
 	
 	public static void saveUrl() {
@@ -514,7 +515,7 @@ public class GameField extends JPanel implements ActionListener {
 	}
 	
 	public static void string(int index1) {
-		String s = pack.getPack().get(index1).toString();
+		String s = IPack.getPack().get(index1).toString();
 		saveUrlFor(s);
 	}
 	 

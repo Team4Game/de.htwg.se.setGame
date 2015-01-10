@@ -9,6 +9,7 @@ import java.util.TreeSet;
 
 import de.htwg.se.setgame.modell.AField;
 import de.htwg.se.setgame.modell.ICard;
+import de.htwg.se.setgame.modell.IPack;
 
 /**
  * Class Field.
@@ -51,9 +52,9 @@ public class Field extends AField {
 	public void startUp() {
 		Map<Integer, ICard> packForThegame = new TreeMap<Integer, ICard>();
 		rand();
-		Pack pack = new Pack();
+		IPack IPack = new Pack();
 		int i = 0;
-		for (ICard card : pack.getPack()) {
+		for (ICard card : IPack.getPack()) {
 			packForThegame.put(this.getRamdomListe().get(i), card);
 			i++;
 		}

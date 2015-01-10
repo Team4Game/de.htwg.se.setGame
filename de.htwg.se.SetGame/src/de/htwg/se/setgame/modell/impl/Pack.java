@@ -9,16 +9,16 @@ import de.htwg.se.setgame.modell.ICard;
  * @author David Simon & Raina Bertolini class use to create all the
  *         combinations of the pack
  */
-public class Pack{
+public class Pack implements de.htwg.se.setgame.modell.IPack {
 
 	/**
 	 * Instance variable
 	 */
 	private ICard pack[] = creatCards();
-	protected static final String[] FORME = { "ovally", "wave", "balk" };
-	protected static final String[] COLORS = { "red", "green", "purple" };
-	protected static final String[] FILL = { "halffill", "fill", "empty" };
-	protected static final int[] NUMBEROFCOMPONET = { 1, 2, 3 };
+	public static final String[] FORME = { "ovally", "wave", "balk" };
+	public static final String[] COLORS = { "red", "green", "purple" };
+	public static final String[] FILL = { "halffill", "fill", "empty" };
+	public static final int[] NUMBEROFCOMPONET = { 1, 2, 3 };
 	private static final int SIZEOFARRAY = 81;
 	private static final int NUMBEROFEACHCARD = 3;
 	private int colorIndex = 0;
@@ -107,6 +107,7 @@ public class Pack{
 	/**
 	 * @return pack of cards
 	 */
+	@Override
 	public List<ICard> getPack() {
 		List<ICard> liste = new LinkedList<ICard>();
 		for (ICard card : this.pack) {
@@ -114,18 +115,4 @@ public class Pack{
 		}
 		return liste;
 	}
-
-	public String[] getcolors() {
-		return Pack.COLORS;
-
-	}
-
-	public String[] getFormes() {
-		return Pack.FORME;
-	}
-
-	public String[] getFill() {
-		return Pack.FILL;
-	}
-
 }
