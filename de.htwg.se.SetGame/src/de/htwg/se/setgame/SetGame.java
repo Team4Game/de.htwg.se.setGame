@@ -53,10 +53,11 @@ public final class SetGame {
 	public IController getIController(){
 		return this.controller;
 	}
-	@SuppressWarnings("static-access")
+
 	public TextUI getTextUI(){
 		return this.tui;
 	}
+
 	public static void main(String[] args) {
 		SetGame.getInstance();
 		boolean cont = true;

@@ -48,7 +48,7 @@ public interface IController extends IObservable {
 	/**
 	 * @return look trough the pack and see if still a set
 	 */
-	boolean stillSetInGAme();
+	boolean stillSetInGame();
 
 	/**
 	 * @return return the set in field
