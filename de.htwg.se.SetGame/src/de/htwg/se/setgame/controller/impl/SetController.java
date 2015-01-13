@@ -185,7 +185,7 @@ public class SetController extends Observable implements IController {
 	 */
 	private boolean changeCardsInGame() {
 		List<ICard> allCards = new LinkedList<ICard>();
-		allCards.addAll(field.getAllCardsInGame());
+		allCards.addAll(field.getUnusedCards());
 		if (!allCards.isEmpty() && !getSet(allCards).isEmpty()) {
 			field.changeCards(getSet(allCards));
 			return true;

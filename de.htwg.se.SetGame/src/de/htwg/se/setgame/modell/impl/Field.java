@@ -176,31 +176,12 @@ public class Field extends AField {
 	 */
 	@Override
 	public void setSizeOfField(int size) {
-		if (size < sizeOfField) {
-			int diference = sizeOfField - size;
-			LinkedList<Integer> keys = new LinkedList<Integer>();
-			for (int i = 0; i < diference; i++) {
-				keys.add(i);
-			}
 
-			for (Integer key : keys) {
-				this.getCardInFieldGame().remove(key);
-			}
-			sizeOfField = size;
-		} else if (size > sizeOfField) {
-			LinkedList<ICard> list = new LinkedList<ICard>();
-			list.addAll(getUnusedCards());
-
-			for (int key = 0; key < size; key++) {
-				if (!list.isEmpty()
-						&& !getCardInFieldGame().keySet().contains(key)) {
-					this.getCardInFieldGame().put(key, list.getFirst());
-					list.removeFirst();
-
-				}
-			}
-			sizeOfField = size;
-		}
+        if(size != sizeOfField && size >= 3 && size <= getUnusedCards().size()){
+            this.cardInFieldGame.clear();
+            this.sizeOfField = size;
+            fillField();
+        }
 	}
 
 	/*
@@ -210,32 +191,10 @@ public class Field extends AField {
 	 */
 	@Override
 	public void changeCards(List<ICard> liste) {
-		LinkedList<ICard> tmpList = new LinkedList<ICard>();
-		tmpList.addAll(liste);
-		if (this.getCardInFieldGame().size() < tmpList.size()) {
-			sizeOfField = tmpList.size();
-		}
-		LinkedList<Integer> keysforbeuse = new LinkedList<Integer>();
 
-		for (Integer key : this.getCardInFieldGame().keySet()) {
-			if (tmpList.contains(this.getCardInFieldGame().get(key))) {
-				tmpList.remove(this.getCardInFieldGame().get(key));
-
-			} else {
-				keysforbeuse.add(key);
-			}
-
-		}
-		for (Integer key : keysforbeuse) {
-			if (!tmpList.isEmpty()) {
-				this.getCardInFieldGame().put(key, tmpList.getFirst());
-				tmpList.removeFirst();
-			} else if (tmpList.isEmpty()) {
-				break;
-
-			}
-
-		}
+		   for(int i = 0; i < liste.size(); i++){
+              this.cardInFieldGame.put(i,liste.get(i));
+           }
 
 	}
 
