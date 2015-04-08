@@ -1,4 +1,4 @@
-package setgame.controller;
+package de.htwg.se.setgame.controller;
 
 
 import java.util.LinkedList;
@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import de.htwg.se.setgame.controller.impl.SetController;
-import de.htwg.se.setgame.modell.ICard;
+import de.htwg.se.setgame.model.ICard;
 
 public class SetControllerTest {
 	SetController setcontroll;

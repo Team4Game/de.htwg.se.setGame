@@ -1,7 +1,7 @@
-package de.htwg.se.setgame.modell.impl;
+package de.htwg.se.setgame.model.impl;
 
-import de.htwg.se.setgame.modell.ACard;
-import de.htwg.se.setgame.modell.ICard;
+import de.htwg.se.setgame.model.ACard;
+import de.htwg.se.setgame.model.ICard;
 
 /**
  * @author David Simon & Raina Bertolini
@@ -33,7 +33,7 @@ public class Card extends ACard {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.impl.ICard#getColor()
+	 * @see de.htwg.se.setgame.modell.impl.ICard#getColor()
 	 */
 	@Override
 	public String getColor() {
@@ -57,7 +57,7 @@ public class Card extends ACard {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.impl.ICard#getFomr()
+	 * @see de.htwg.se.setgame.modell.impl.ICard#getFomr()
 	 */
 	@Override
 	public String getForm() {
@@ -82,7 +82,7 @@ public class Card extends ACard {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.impl.ICard#getPanelFilling()
+	 * @see de.htwg.se.setgame.modell.impl.ICard#getPanelFilling()
 	 */
 	@Override
 	public String getPanelFilling() {
@@ -109,7 +109,7 @@ public class Card extends ACard {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.impl.ICard#getNumberOfComponents()
+	 * @see de.htwg.se.setgame.modell.impl.ICard#getNumberOfComponents()
 	 */
 	public int getNumberOfComponents() {
 		return anz;
@@ -135,7 +135,7 @@ public class Card extends ACard {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.impl.ICard#toString()
+	 * @see de.htwg.se.setgame.modell.impl.ICard#toString()
 	 */
 	@Override
 	public String toString() {
@@ -148,7 +148,7 @@ public class Card extends ACard {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.impl.ICard#comparTo(setgame.modell.impl.Card)
+	 * @see de.htwg.se.setgame.modell.impl.ICard#comparTo(de.htwg.se.setgame.modell.impl.Card)
 	 */
 	public boolean comparTo(Card card) {
 		if (this.color.equals(card.color) && this.anz == card.anz

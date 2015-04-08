@@ -1,4 +1,4 @@
-package setgame.modell.impl;
+package de.htwg.se.setgame.model.impl;
 
 import static org.junit.Assert.*;
 
@@ -9,8 +9,8 @@ import java.util.TreeSet;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.htwg.se.setgame.modell.ICard;
-import de.htwg.se.setgame.modell.impl.Field;
+import de.htwg.se.setgame.model.ICard;
+import de.htwg.se.setgame.model.impl.Field;
 
 public class FieldTest {
 	Field field;

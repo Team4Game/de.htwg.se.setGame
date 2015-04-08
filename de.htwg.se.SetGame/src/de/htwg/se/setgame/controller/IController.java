@@ -3,9 +3,9 @@ package de.htwg.se.setgame.controller;
 import java.util.List;
 import java.util.Map;
 
-import de.htwg.se.setgame.modell.ICard;
-import de.htwg.se.setgame.modell.IPack;
-import de.htwg.se.setgame.modell.impl.Field;
+import de.htwg.se.setgame.model.ICard;
+import de.htwg.se.setgame.model.IPack;
+import de.htwg.se.setgame.model.impl.Field;
 import de.htwg.se.setgame.util.observer.IObservable;
 
 /**
@@ -36,10 +36,7 @@ public interface IController extends IObservable {
 	 */
 	Field getField();
 
-	/**
-	 * @return true is is a set
-	 */
-	boolean areSetInField();
+
 
 	/**
 	 * @return return a set

@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import com.google.inject.Inject;
 
 import de.htwg.se.setgame.controller.IController;
-import de.htwg.se.setgame.modell.ICard;
+import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.util.observer.Event;
 import de.htwg.se.setgame.util.observer.IObserver;
 
@@ -25,7 +25,7 @@ public class TextUI implements IObserver {
 	private static final int FOUR = 1;
 	private String newLine = System.getProperty("line.separator");
 
-	private Logger logger = Logger.getLogger("de.htwg.se.setgame.aview.tui");
+	private Logger logger = Logger.getLogger("de.htwg.se.de.htwg.se.setgame.aview.tui");
 
 	/**
 	 * @param controller
@@ -38,7 +38,7 @@ public class TextUI implements IObserver {
 	}
 
 	/* (non-Javadoc)
-	 * @see de.htwg.se.setgame.util.observer.IObserver#update(de.htwg.se.setgame.util.observer.Event)
+	 * @see de.htwg.se.de.htwg.se.setgame.util.observer.IObserver#update(de.htwg.se.de.htwg.se.setgame.util.observer.Event)
 	 */
 	@Override
 	public void update(Event e) {

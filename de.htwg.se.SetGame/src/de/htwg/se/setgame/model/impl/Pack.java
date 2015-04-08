@@ -1,15 +1,15 @@
-package de.htwg.se.setgame.modell.impl;
+package de.htwg.se.setgame.model.impl;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import de.htwg.se.setgame.modell.ICard;
+import de.htwg.se.setgame.model.ICard;
 
 /**
  * @author David Simon & Raina Bertolini class use to create all the
  *         combinations of the pack
  */
-public class Pack implements de.htwg.se.setgame.modell.IPack {
+public class Pack implements de.htwg.se.setgame.model.IPack {
 
 	/**
 	 * Instance variable

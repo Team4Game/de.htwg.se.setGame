@@ -1,4 +1,4 @@
-package de.htwg.se.setgame.modell.impl;
+package de.htwg.se.setgame.model.impl;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -7,9 +7,9 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-import de.htwg.se.setgame.modell.AField;
-import de.htwg.se.setgame.modell.ICard;
-import de.htwg.se.setgame.modell.IPack;
+import de.htwg.se.setgame.model.AField;
+import de.htwg.se.setgame.model.ICard;
+import de.htwg.se.setgame.model.IPack;
 
 /**
  * Class Field.
@@ -46,7 +46,7 @@ public class Field extends AField {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.IField#startUp()
+	 * @see de.htwg.se.setgame.modell.IField#startUp()
 	 */
 	@Override
 	public void startUp() {
@@ -108,8 +108,8 @@ public class Field extends AField {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.IField#foundSet(setgame.modell.Card,
-	 * setgame.modell.Card, setgame.modell.Card)
+	 * @see de.htwg.se.setgame.modell.IField#foundSet(de.htwg.se.setgame.modell.Card,
+	 * de.htwg.se.setgame.modell.Card, de.htwg.se.setgame.modell.Card)
 	 */
 	@Override
 	public void foundSet(ICard cardOne, ICard cardTwo, ICard cardThree) {
@@ -159,7 +159,7 @@ public class Field extends AField {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.IField#getCardsInField()
+	 * @see de.htwg.se.setgame.modell.IField#getCardsInField()
 	 */
 	@Override
 	public List<ICard> getCardsInField() {
@@ -172,7 +172,7 @@ public class Field extends AField {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.IField#setSizeOfField(int, java.util.List)
+	 * @see de.htwg.se.setgame.modell.IField#setSizeOfField(int, java.util.List)
 	 */
 	@Override
 	public void setSizeOfField(int size) {
@@ -187,7 +187,7 @@ public class Field extends AField {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.IField#changeCards(java.util.List)
+	 * @see de.htwg.se.setgame.modell.IField#changeCards(java.util.List)
 	 */
 	@Override
 	public void changeCards(List<ICard> liste) {
@@ -201,7 +201,7 @@ public class Field extends AField {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.IField#getUnusedCards()
+	 * @see de.htwg.se.setgame.modell.IField#getUnusedCards()
 	 */
 	@Override
 	public List<ICard> getUnusedCards() {
@@ -214,7 +214,7 @@ public class Field extends AField {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.IField#getSizeofField()
+	 * @see de.htwg.se.setgame.modell.IField#getSizeofField()
 	 */
 	@Override
 	public int getSizeofField() {
@@ -224,7 +224,7 @@ public class Field extends AField {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.IField#getAllCardsInGame()
+	 * @see de.htwg.se.setgame.modell.IField#getAllCardsInGame()
 	 */
 	@Override
 	public List<ICard> getAllCardsInGame() {
@@ -241,7 +241,7 @@ public class Field extends AField {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see setgame.modell.IField#getCardInFieldGame()
+	 * @see de.htwg.se.setgame.modell.IField#getCardInFieldGame()
 	 */
 	@Override
 	public Map<Integer, ICard> getCardInFieldGame() {

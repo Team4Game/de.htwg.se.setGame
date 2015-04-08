@@ -1,4 +1,4 @@
-package de.htwg.se.setgame.modell;
+package de.htwg.se.setgame.model;
 
 public interface ICard {
 
