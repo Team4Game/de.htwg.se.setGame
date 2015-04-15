@@ -20,7 +20,7 @@ import de.htwg.se.setgame.model.IPack;
  */
 public class Field extends AField {
 	private int sizeOfField;
-	private static final int INITIALVALUEOFFIELD = 12;
+	protected static final int INITIALVALUEOFFIELD = 12;
 	private static final int MAX = 81;
 	private static final int ONE = 1;
 	private static final int NUMBERFORONELINE = 3;
@@ -50,15 +50,16 @@ public class Field extends AField {
 	 */
 	@Override
 	public void startUp() {
-		Map<Integer, ICard> packForThegame = new TreeMap<Integer, ICard>();
+		Map<Integer, ICard> packForGame = new TreeMap<Integer, ICard>();
 		rand();
+        // TODO injection
 		IPack IPack = new Pack();
 		int i = 0;
 		for (ICard card : IPack.getPack()) {
-			packForThegame.put(this.getRamdomListe().get(i), card);
+			packForGame.put(this.getRamdomListe().get(i), card);
 			i++;
 		}
-		packForGame.addAll(packForThegame.values());
+		this.packForGame.addAll(packForGame.values());
 
 		startUpOfField();
 	}
@@ -114,42 +115,39 @@ public class Field extends AField {
 	@Override
 	public void foundSet(ICard cardOne, ICard cardTwo, ICard cardThree) {
 
-		TreeSet<Integer> keyOfcardInField = new TreeSet<Integer>();
+		TreeSet<Integer> keyCardInField = new TreeSet<Integer>();
 		for (Integer key : this.getCardInFieldGame().keySet()) {
 			if (this.getCardInFieldGame().get(key).comparTo(cardOne)
 					|| this.getCardInFieldGame().get(key).comparTo(cardTwo)
 					|| this.getCardInFieldGame().get(key).comparTo(cardThree)) {
-				keyOfcardInField.add(key);
+				keyCardInField.add(key);
 				this.packForGame.remove(this.getCardInFieldGame().get(key));
 			}
 		}
-		for (Integer key : keyOfcardInField) {
+		for (Integer key : keyCardInField) {
 			this.getCardInFieldGame().remove(key);
 
 		}
 		fillField();
 
 	}
-
+    /*
+    *
+    * cardOnStack are card that are not in game
+    */
 	private void fillField() {
-		LinkedList<ICard> listCardarenoteinfieldCards = new LinkedList<ICard>();
-		listCardarenoteinfieldCards.addAll(getUnusedCards());
+		LinkedList<ICard> cardsOnStack = new LinkedList<ICard>();
+		cardsOnStack.addAll(getUnusedCards());
 
 		for (int index = 0; index < sizeOfField; index++) {
 			if (this.getCardInFieldGame().get(index) == null
-					&& !(listCardarenoteinfieldCards.isEmpty())) {
+					&& !(cardsOnStack.isEmpty())) {
 				this.getCardInFieldGame().put(index,
-						listCardarenoteinfieldCards.getFirst());
-				listCardarenoteinfieldCards.removeFirst();
+						cardsOnStack.getFirst());
+				cardsOnStack.removeFirst();
 			} else if (this.getCardInFieldGame().get(index) == null
-					&& listCardarenoteinfieldCards.isEmpty()) {
+					&& cardsOnStack.isEmpty()) {
 				this.getCardInFieldGame().remove(index);
-
-			} else if (!(this.getCardInFieldGame().containsKey(index))
-					&& !(listCardarenoteinfieldCards.isEmpty())) {
-				this.getCardInFieldGame().put(index,
-						listCardarenoteinfieldCards.getFirst());
-				listCardarenoteinfieldCards.removeFirst();
 
 			}
 		}
@@ -163,6 +161,7 @@ public class Field extends AField {
 	 */
 	@Override
 	public List<ICard> getCardsInField() {
+
 		List<ICard> liste = new LinkedList<ICard>();
 		liste.addAll(this.getCardInFieldGame().values());
 		return liste;
@@ -191,11 +190,10 @@ public class Field extends AField {
 	 */
 	@Override
 	public void changeCards(List<ICard> liste) {
-
 		   for(int i = 0; i < liste.size(); i++){
-              this.cardInFieldGame.put(i,liste.get(i));
+              if(!this.cardInFieldGame.containsValue(liste.get(i)))
+                this.cardInFieldGame.put(i,liste.get(i));
            }
-
 	}
 
 	/*
