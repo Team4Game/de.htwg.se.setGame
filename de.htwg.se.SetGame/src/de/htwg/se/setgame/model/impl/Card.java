@@ -20,13 +20,13 @@ public class Card extends ACard {
 	 * @param color
 	 * @param form
 	 * @param panelFilling
-	 * @param anzahl
+	 * @param amount
 	 */
-	public Card(String color, String form, String panelFilling, int anzahl) {
+	public Card(String color, String form, String panelFilling, int amount) {
 		this.setColor(color);
 		this.setFomr(form);
 		this.setPanelFilling(panelFilling);
-		this.setNumberOfComponents(anzahl);
+		this.setNumberOfComponents(amount);
 
 	}
 

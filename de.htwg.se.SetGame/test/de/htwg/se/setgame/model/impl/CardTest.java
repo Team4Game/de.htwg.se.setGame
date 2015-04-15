@@ -1,4 +1,5 @@
 package de.htwg.se.setgame.model.impl;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,13 +19,19 @@ public class CardTest {
 		assert(card != null);
 		
 	}
+    @Test
+    public void createCartTest_Fail(){
+        Card c = new Card("bla","bla","bla", -100 );
+        Assert.assertTrue(c.getColor() == null && c.getForm() == null && c.getPanelFilling() == null && c.getNumberOfComponents() == -1);
+
+    }
 
 	@Test
 	public void testGetColor() {
 		assert(card.getColor() != null);
 	}
 	@Test
-	public void testGetFomr() {
+	public void testGetForm() {
 		assert(card.getForm() != null);
 	}
 
