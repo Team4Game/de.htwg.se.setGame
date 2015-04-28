@@ -94,7 +94,7 @@ public class SetController extends Observable implements IController {
 	/**
 	 * 
 	 */
-	private void checkIfIsASeTInGame() {
+	protected void checkIfIsASeTInGame() {
 		List<ICard> liste = new LinkedList<ICard>();
 		liste.addAll(getSet(this.field.getAllCardsInGame()));
 		if(liste.size() < NUMBEROFSETCARDS){
@@ -115,7 +115,7 @@ public class SetController extends Observable implements IController {
 	 * @param cardThree
 	 * @return true if all the cards are in the field is only a safety Method
 	 */
-	private boolean isInField(ICard cardOne, ICard cardTwo, ICard cardThree) {
+	protected boolean isInField(ICard cardOne, ICard cardTwo, ICard cardThree) {
 		this.counter = 0;
 		for (ICard card : field.getCardsInField()) {
 			if (card.comparTo(cardOne) || card.comparTo(cardTwo)
@@ -136,7 +136,7 @@ public class SetController extends Observable implements IController {
 	 * @param cardThree
 	 * @return return true if is a set.
 	 */
-	private boolean isASet(ICard cardOne, ICard cardTwo, ICard cardThree) {
+	protected boolean isASet(ICard cardOne, ICard cardTwo, ICard cardThree) {
 
 		if (!isInField(cardOne, cardTwo, cardThree)) {
 			return false;
@@ -158,7 +158,7 @@ public class SetController extends Observable implements IController {
 	 * @param list is the Cards in field the new ones if there is no set anymore.
 	 * @return true if still set in fields
 	 */
-	private boolean allTheSetsInField(List<ICard> list) {
+	protected boolean allTheSetsInField(List<ICard> list) {
 		if (!getSet(list).isEmpty()) {
 			return true;
 		}
@@ -401,7 +401,7 @@ public class SetController extends Observable implements IController {
 	 */
 	@Override
 	public int getPlayerOnePoints(){
-		return this.playerOneCounter;
+        return this.playerOneCounter;
 	}
 
 	/* (non-Javadoc)
