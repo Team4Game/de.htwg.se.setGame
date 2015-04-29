@@ -19,7 +19,7 @@ public class FieldTest {
 
 	@Before
 	public void setUp() {
-		this.field = new Field();
+		this.field = new Field(new ModelFactory().createPack(), 12);
 	}
 
 
