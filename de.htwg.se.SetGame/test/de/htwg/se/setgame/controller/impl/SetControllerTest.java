@@ -91,6 +91,10 @@ public class SetControllerTest {
         Assert.assertTrue(target.allTheSetsInField(new LinkedList<ICard>()) == true) ;
     }
     @Test
+    public void allTheSetsInField_ok(){
+        Assert.assertTrue(target.allTheSetsInField(target.getCardInFieldGame()) == true) ;
+    }
+    @Test
     public void setFieldSize_ok(){
         target.setFieldSize(20);
         Assert.assertEquals(target.getCardInFieldGame().size(), 20);
