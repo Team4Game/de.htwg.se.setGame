@@ -136,7 +136,7 @@ public class GameField extends JPanel implements ActionListener {
 	private static JPanel panel1 = new JPanel();
 
 	private static ICard[] card = new ICard[FIVE];
-	private static IPack IPack;
+	private static IPack iPack;
 	private static Map<Integer, String> cardToPicture;
 	private static List<ICard> saveList;
 	private static List<String> urlListe;
@@ -151,12 +151,12 @@ public class GameField extends JPanel implements ActionListener {
 		urlListe = new LinkedList<String>();
 		test = new LinkedList<String>();
 
-		IPack = new Pack();
+		iPack = new Pack();
 
-		for (int i = 0; i < IPack.getPack().size(); i++) {
+		for (int i = 0; i < iPack.getPack().size(); i++) {
 			test.add("/pack/" + i + ".gif");
 		}
-		for (int index1 = 0; index1 < IPack.getPack().size(); index1++) {
+		for (int index1 = 0; index1 < iPack.getPack().size(); index1++) {
 			cardToPicture.put(index1, test.get(index1));
 		}
 
@@ -504,7 +504,7 @@ public class GameField extends JPanel implements ActionListener {
 	}
 	
 	public static int numberGiven() {
-		return IPack.getPack().size();
+		return iPack.getPack().size();
 	}
 	
 	public static void saveUrl() {
@@ -515,7 +515,7 @@ public class GameField extends JPanel implements ActionListener {
 	}
 	
 	public static void string(int index1) {
-		String s = IPack.getPack().get(index1).toString();
+		String s = iPack.getPack().get(index1).toString();
 		saveUrlFor(s);
 	}
 	 

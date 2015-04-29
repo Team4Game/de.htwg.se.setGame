@@ -28,6 +28,7 @@ public class Field extends AField {
 	private Map<Integer, Integer> ramdomListe;
 	private static final int LEGHTFORSTRING = Pack.FILL[0].length();
 	private Map<Integer, ICard> cardInFieldGame;
+    private IPack iPack;
 	/** 
 	 * pack for the game are the cards and the random positions
 	 */
@@ -41,6 +42,7 @@ public class Field extends AField {
 		this.ramdomListe = new TreeMap<Integer, Integer>();
 		this.packForGame = new LinkedList<ICard>();
 		this.listeofcontains = new TreeSet<Integer>();
+        this.iPack = pack;
 	}
 
 	/*
@@ -52,10 +54,8 @@ public class Field extends AField {
 	public void startUp() {
 		Map<Integer, ICard> packForGame = new TreeMap<Integer, ICard>();
 		rand();
-        // TODO injection
-		IPack IPack = new Pack();
 		int i = 0;
-		for (ICard card : IPack.getPack()) {
+		for (ICard card : iPack.getPack()) {
 			packForGame.put(this.getRamdomListe().get(i), card);
 			i++;
 		}
@@ -176,7 +176,7 @@ public class Field extends AField {
 	@Override
 	public void setSizeOfField(int size) {
 
-        if(size != sizeOfField && size >= 3 && size <= getUnusedCards().size()){
+        if(size != sizeOfField && size >= NUMBERFORONELINE && size <= getUnusedCards().size()){
             this.cardInFieldGame.clear();
             this.sizeOfField = size;
             fillField();
@@ -191,8 +191,9 @@ public class Field extends AField {
 	@Override
 	public void changeCards(List<ICard> liste) {
 		   for(int i = 0; i < liste.size(); i++){
-              if(!this.cardInFieldGame.containsValue(liste.get(i)))
-                this.cardInFieldGame.put(i,liste.get(i));
+              if(!this.cardInFieldGame.containsValue(liste.get(i))) {
+                  this.cardInFieldGame.put(i, liste.get(i));
+              }
            }
 	}
 

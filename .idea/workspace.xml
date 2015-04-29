@@ -6,9 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6818033a-37b4-43b4-9f57-9dfde351fbb4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sudoku.log" afterPath="$PROJECT_DIR$/sudoku.log" />
+    <list default="true" id="6818033a-37b4-43b4-9f57-9dfde351fbb4" name="Default" comment="test field constructor">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGame.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="de.htwg.se.setGame.iws" />
@@ -70,12 +74,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FieldTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java">
+      <file leaf-file-name="TextUI.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36298934" vertical-offset="85" max-vertical-offset="1632">
-              <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="4250">
+              <caret line="135" column="58" selection-start-line="135" selection-start-column="58" selection-end-line="135" selection-end-column="58" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Field.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.796875" vertical-offset="2958" max-vertical-offset="7208">
+              <caret line="195" column="15" selection-start-line="195" selection-start-column="15" selection-end-line="195" selection-end-column="15" />
+              <folding>
+                <element signature="e#3432#3439#0" expanded="true" />
+                <element signature="e#4066#4073#0" expanded="true" />
+                <element signature="e#5323#5324#0" expanded="true" />
+                <element signature="e#5364#5365#0" expanded="true" />
+                <element signature="e#5512#5513#0" expanded="true" />
+                <element signature="e#5542#5543#0" expanded="true" />
+                <element signature="e#5630#5631#0" expanded="true" />
+                <element signature="e#5655#5656#0" expanded="true" />
+                <element signature="e#5813#5814#0" expanded="true" />
+                <element signature="e#5842#5843#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,21 +122,22 @@
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/setgame/controller/SetControllerTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/modell/IField.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/modell/impl/Field.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGame.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/IController.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/sonar-project.properties" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Card.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/util/observer/ObservableTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/CardTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/PackTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/SetControllerTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/de.htwg.se.SetGame.iml" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGame.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java" />
       </list>
     </option>
   </component>
@@ -240,6 +266,150 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.setGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.SetGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.setGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.SetGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.setGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.SetGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.setGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.SetGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.setGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.SetGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.setGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.SetGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aview" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -753,7 +923,7 @@
       <workItem from="1429518817893" duration="92000" />
       <workItem from="1429518935417" duration="48000" />
       <workItem from="1429519083178" duration="334000" />
-      <workItem from="1430248550861" duration="14253000" />
+      <workItem from="1430248550861" duration="16813000" />
     </task>
     <task id="LOCAL-00001" summary="#WEB TECH size of field.">
       <created>1421180325921</created>
@@ -787,11 +957,15 @@
       <created>1430317798601</created>
       <updated>1430317798601</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="test field constructor">
+      <created>1430318352502</created>
+      <updated>1430318352502</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59065000" />
+    <option name="totallyTimeSpent" value="61625000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -895,7 +1069,8 @@
     <MESSAGE value="#test start test covergage so that we can work with project&#10;" />
     <MESSAGE value="#test start test covergage so that we can work with project&#10;Controller" />
     <MESSAGE value="TUI was wrong now is working with gui and model factory is finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="TUI was wrong now is working with gui and model factory is finish" />
+    <MESSAGE value="test field constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="test field constructor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -930,13 +1105,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="4437">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/observer/Event.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="187">
@@ -1203,37 +1371,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1354" max-vertical-offset="7055">
-          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
-          <folding>
-            <element signature="e#3434#3441#0" expanded="true" />
-            <element signature="e#4068#4075#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="8738">
-          <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/ModelFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
           <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1270,22 +1411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4738806" vertical-offset="944" max-vertical-offset="4250">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1105">
-          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/de.htwg.se.SetGame/lib/guice-3.0.jar!/com/google/inject/Injector.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.92" vertical-offset="387" max-vertical-offset="799">
@@ -1294,21 +1419,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java">
+    <entry file="jar://$PROJECT_DIR$/de.htwg.se.SetGame/lib/log4j-1.2.17.jar!/org/apache/log4j/PropertyConfigurator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.7910447" vertical-offset="0" max-vertical-offset="7123">
-          <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
-          <folding>
-            <element signature="e#6322#6329#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-0.909465" vertical-offset="306" max-vertical-offset="1241">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36298934" vertical-offset="85" max-vertical-offset="1632">
-          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1632">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53125" vertical-offset="3230" max-vertical-offset="8738">
+          <caret line="216" column="31" selection-start-line="216" selection-start-column="31" selection-end-line="216" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39145908" vertical-offset="213" max-vertical-offset="1258">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23880596" vertical-offset="1296" max-vertical-offset="7684">
+          <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2011#2018#0" expanded="true" />
+            <element signature="e#4399#4406#0" expanded="true" />
+            <element signature="e#7643#7650#0" expanded="true" />
+            <element signature="e#8636#8637#0" expanded="true" />
+            <element signature="e#8689#8690#0" expanded="true" />
+            <element signature="e#8838#8839#0" expanded="true" />
+            <element signature="e#8879#8880#0" expanded="true" />
+            <element signature="e#10232#10233#0" expanded="true" />
+            <element signature="e#10291#10292#0" expanded="true" />
+            <element signature="e#10504#10511#0" expanded="true" />
+            <element signature="e#11061#11062#0" expanded="true" />
+            <element signature="e#11105#11106#0" expanded="true" />
+            <element signature="e#11272#11273#0" expanded="true" />
+            <element signature="e#11316#11317#0" expanded="true" />
+            <element signature="e#11471#11472#0" expanded="true" />
+            <element signature="e#11508#11509#0" expanded="true" />
+            <element signature="e#11663#11664#0" expanded="true" />
+            <element signature="e#11700#11701#0" expanded="true" />
+            <element signature="e#11761#11762#0" expanded="true" />
+            <element signature="e#11812#11813#0" expanded="true" />
+            <element signature="e#11895#11896#0" expanded="true" />
+            <element signature="e#11949#11950#0" expanded="true" />
+            <element signature="e#11993#11994#0" expanded="true" />
+            <element signature="e#12020#12021#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="4250">
+          <caret line="135" column="58" selection-start-line="135" selection-start-column="58" selection-end-line="135" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.796875" vertical-offset="2958" max-vertical-offset="7208">
+          <caret line="195" column="15" selection-start-line="195" selection-start-column="15" selection-end-line="195" selection-end-column="15" />
+          <folding>
+            <element signature="e#3432#3439#0" expanded="true" />
+            <element signature="e#4066#4073#0" expanded="true" />
+            <element signature="e#5323#5324#0" expanded="true" />
+            <element signature="e#5364#5365#0" expanded="true" />
+            <element signature="e#5512#5513#0" expanded="true" />
+            <element signature="e#5542#5543#0" expanded="true" />
+            <element signature="e#5630#5631#0" expanded="true" />
+            <element signature="e#5655#5656#0" expanded="true" />
+            <element signature="e#5813#5814#0" expanded="true" />
+            <element signature="e#5842#5843#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

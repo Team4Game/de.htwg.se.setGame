@@ -133,7 +133,7 @@ public class TextUI implements IObserver {
 	 * @param string
 	 */
 	private void printASet(Integer[] arrayForSerNumber, String string) {
-		int player = string.toLowerCase().equals("PlayerOne".toLowerCase()) ? controller.getPlayerOne(): controller.getPlayerTwo();
+		int player = string.equalsIgnoreCase("PlayerOne") ? controller.getPlayerOne(): controller.getPlayerTwo();
 
 		ICard cardOne = getCard(arrayForSerNumber, ZERO);
 		ICard cardTwo = getCard(arrayForSerNumber, ONE);
