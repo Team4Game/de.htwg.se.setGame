@@ -35,8 +35,8 @@ public class Field extends AField {
 	/**
 	 * startup of the objects
 	 */
-	public Field() {
-		this.sizeOfField = INITIALVALUEOFFIELD;
+	public Field(IPack pack, int fieldsize) {
+		this.sizeOfField = fieldsize;
 		this.cardInFieldGame = new TreeMap<Integer, ICard>();
 		this.ramdomListe = new TreeMap<Integer, Integer>();
 		this.packForGame = new LinkedList<ICard>();
