@@ -10,6 +10,7 @@ import com.google.inject.Inject;
 import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
+import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPack;
 import de.htwg.se.setgame.model.impl.Field;
 import de.htwg.se.setgame.model.impl.Pack;
@@ -71,8 +72,8 @@ public class SetController extends Observable implements IController {
 	 * Logic Construct make for the game a new field with a new pack!!!
 	 */
 	@Inject
-	public SetController() {
-		this.field = new de.htwg.se.setgame.model.impl.Field();
+	public SetController(IModelFactory modelFactory) {
+		this.field = modelFactory.createField();
 		this.counter = 0;
 		this.field.startUp();
 		this.playerOne = 1;

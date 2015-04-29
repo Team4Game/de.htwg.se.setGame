@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import de.htwg.se.setgame.model.impl.Field;
+import de.htwg.se.setgame.model.impl.ModelFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +19,7 @@ public class SetControllerTest {
 
     @Before
     public void setUp() {
-        this.target = new SetController();
+        this.target = new SetController(new ModelFactory());
         this.aSetListe = new LinkedList<ICard>();
         aSetListe.addAll(this.target.getSetInField());
     }

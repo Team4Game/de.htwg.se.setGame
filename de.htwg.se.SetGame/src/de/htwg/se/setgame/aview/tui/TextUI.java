@@ -20,9 +20,9 @@ public class TextUI implements IObserver {
     private IController controller;
 	private static final int ZERO = 0;
 	private static final int ONE = 1;
-	private static final int TWO = 1;
-	private static final int THREE = 1;
-	private static final int FOUR = 1;
+	private static final int TWO = 2;
+	private static final int THREE = 3;
+	private static final int FOUR = 4;
 	private String newLine = System.getProperty("line.separator");
 
 	private Logger logger = Logger.getLogger("de.htwg.se.de.htwg.se.setgame.aview.tui");
@@ -133,11 +133,11 @@ public class TextUI implements IObserver {
 	 * @param string
 	 */
 	private void printASet(Integer[] arrayForSerNumber, String string) {
-		int player = string.equals("PlayerOne") ? controller.getPlayerOne(): controller.getPlayerTwo();
+		int player = string.toLowerCase().equals("PlayerOne".toLowerCase()) ? controller.getPlayerOne(): controller.getPlayerTwo();
 
 		ICard cardOne = getCard(arrayForSerNumber, ZERO);
 		ICard cardTwo = getCard(arrayForSerNumber, ONE);
-		ICard cardThree = getCard(arrayForSerNumber, THREE);
+		ICard cardThree = getCard(arrayForSerNumber, TWO);
 
 		controller.isASetForController(cardOne, cardTwo, cardThree, player);
 		logger.info(newLine + "Congratilations it is a SET!! ! size == "
@@ -154,7 +154,7 @@ public class TextUI implements IObserver {
 	 * @return
 	 */
 	private boolean compareIfPlayerIsRight(String string) {
-		return string.equals("PlayerOne") || string.equals("PlayerTwo");
+		return string.toLowerCase().equals("PlayerOne".toLowerCase()) || string.toLowerCase().equals("PlayerTwo".toLowerCase());
 	}
 
 	/**
