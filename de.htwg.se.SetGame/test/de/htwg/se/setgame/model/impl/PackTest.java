@@ -6,27 +6,26 @@ import org.junit.Before;
 import org.junit.Test;
 
 import de.htwg.se.setgame.model.ICard;
-import de.htwg.se.setgame.model.impl.Pack;
 
 public class PackTest {
-	IPack IPack;
+	IPack target;
 
 	@Before
 	public void setUp() {
-		this.IPack = new Pack();
+		this.target = new Pack();
 	}
 
 	@Test
 	public void testCard() {
-		assert (this.IPack != null);
+		Assert.assertTrue(this.target != null);
 	}
 
 	@Test
 	public void testGetCards() {
-		this.IPack = new Pack();
+		this.target = new Pack();
 		boolean b = false;
 
-		for (ICard cards : IPack.getPack()) {
+		for (ICard cards : target.getPack()) {
 			if (cards.getColor().equals(Pack.COLORS[0])
 					|| cards.getColor().equals(Pack.COLORS[1])
 					|| cards.getColor().equals(Pack.COLORS[2])

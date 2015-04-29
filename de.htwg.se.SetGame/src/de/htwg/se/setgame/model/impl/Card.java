@@ -145,20 +145,7 @@ public class Card extends ACard {
 		return sb.toString();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see de.htwg.se.setgame.modell.impl.ICard#comparTo(de.htwg.se.setgame.modell.impl.Card)
-	 */
-	public boolean comparTo(Card card) {
-		if (this.color.equals(card.color) && this.anz == card.anz
-				&& this.form.equals(card.form)
-				&& this.panelFilling.equals(card.panelFilling)) {
-			return true;
-		}
-		return false;
 
-	}
 
 	@Override
 	public boolean comparTo(ICard card) {
