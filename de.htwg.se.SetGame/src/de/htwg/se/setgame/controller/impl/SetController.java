@@ -180,9 +180,7 @@ public class SetController extends Observable implements IController {
 
     /**
      * changed the Cards in the field if necessary. to
-     */
-    /**
-     * @return
+     * @return true if cards change
      */
     private boolean changeCardsInGame() {
         List<ICard> allCards = new LinkedList<ICard>();
@@ -335,18 +333,6 @@ public class SetController extends Observable implements IController {
         return (Field) this.field;
     }
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#areSetInField()
-
-    private boolean areSetInField() {
-        LinkedList<ICard> liste = new LinkedList<ICard>();
-        liste.addAll(getSet(this.field.getCardsInField()));
-        if (liste.isEmpty()) {
-            return changeCardsInGame();
-
-        }
-        return true;
-    }
 
     /* (non-Javadoc)
      * @see de.htwg.se.setgame.controller.impl.ISuperController#isASetForController(de.htwg.se.setgame.modell.impl.Card, de.htwg.se.setgame.modell.impl.Card, de.htwg.se.setgame.modell.impl.Card, int)
