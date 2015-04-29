@@ -154,7 +154,7 @@ public class TextUI implements IObserver {
 	 * @return
 	 */
 	private boolean compareIfPlayerIsRight(String string) {
-		return string.equalsIgnoreCase("PlayerOne") || string.toLowerCase().equals("PlayerTwo".toLowerCase());
+		return string.equalsIgnoreCase("PlayerOne") || string.equalsIgnoreCase("PlayerTwo");
 	}
 
 	/**

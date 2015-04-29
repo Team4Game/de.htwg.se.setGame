@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6818033a-37b4-43b4-9f57-9dfde351fbb4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -74,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.3326613" vertical-offset="2334" max-vertical-offset="4250">
-              <caret line="156" column="50" selection-start-line="156" selection-start-column="50" selection-end-line="156" selection-end-column="50" />
+              <caret line="156" column="90" selection-start-line="156" selection-start-column="90" selection-end-line="156" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -935,7 +934,7 @@
       <workItem from="1429518817893" duration="92000" />
       <workItem from="1429518935417" duration="48000" />
       <workItem from="1429519083178" duration="334000" />
-      <workItem from="1430248550861" duration="17380000" />
+      <workItem from="1430248550861" duration="17598000" />
     </task>
     <task id="LOCAL-00001" summary="#WEB TECH size of field.">
       <created>1421180325921</created>
@@ -977,11 +976,15 @@
       <created>1430321071686</created>
       <updated>1430321071686</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="correct some violations">
+      <created>1430321630656</created>
+      <updated>1430321630656</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62192000" />
+    <option name="totallyTimeSpent" value="62410000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1516,7 +1519,7 @@
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3326613" vertical-offset="2334" max-vertical-offset="4250">
-          <caret line="156" column="50" selection-start-line="156" selection-start-column="50" selection-end-line="156" selection-end-column="50" />
+          <caret line="156" column="90" selection-start-line="156" selection-start-column="90" selection-end-line="156" selection-end-column="90" />
           <folding />
         </state>
       </provider>
