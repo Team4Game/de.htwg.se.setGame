@@ -52,14 +52,14 @@ public class Field extends AField {
 	 */
 	@Override
 	public void startUp() {
-		Map<Integer, ICard> packForGame = new TreeMap<Integer, ICard>();
+		Map<Integer, ICard> mapForGame = new TreeMap<Integer, ICard>();
 		rand();
 		int i = 0;
 		for (ICard card : iPack.getPack()) {
-			packForGame.put(this.getRamdomListe().get(i), card);
+			mapForGame.put(this.getRamdomListe().get(i), card);
 			i++;
 		}
-		this.packForGame.addAll(packForGame.values());
+		this.packForGame.addAll(mapForGame.values());
 
 		startUpOfField();
 	}
