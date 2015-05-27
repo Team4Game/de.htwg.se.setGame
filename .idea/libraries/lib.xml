@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/de.htwg.se.SetGame/lib/aopalliance.jar!/" />
       <root url="jar://$PROJECT_DIR$/de.htwg.se.SetGame/lib/log4j-1.2.17.jar!/" />
       <root url="jar://$PROJECT_DIR$/de.htwg.se.SetGame/lib/guice-3.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/de.htwg.se.SetGame/lib/guice-assistedinject-3.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/de.htwg.se.SetGame/lib/javax.inject.jar!/" />
+      <root url="jar://$PROJECT_DIR$/de.htwg.se.SetGame/lib/aopalliance.jar!/" />
+      <root url="jar://$PROJECT_DIR$/de.htwg.se.SetGame/lib/db4o-7.4.88.12908-java5.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
