@@ -1642,3 +1642,76 @@ Have fun!!! if you want to finish the game please write exit
 
 INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
 Congratilations it is a SET!! ! size == 72
+INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
+Well ist not that hard to play ;)
+If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
+if you need a tipp plese write h
+if you want to know the solution please write s
+If you want to know the game point please write GetPoints
+if you want to solve the set with out knowing just write solve
+Set size of the field 3-80 size number
+For a newGame please write nw
+Have fun!!! if you want to finish the game please write exit
+    [0]        [1]        [2]    
+| green  |  | purple |  |  red   |  
+|  wave  |  | ovally |  |  balk  |  
+|   1    |  |   2    |  |   3    |  
+|halffill|  |  fill  |  | empty  |  
+    [3]        [4]        [5]    
+|  red   |  |  red   |  | purple |  
+| ovally |  | ovally |  |  balk  |  
+|   1    |  |   2    |  |   3    |  
+|halffill|  |  fill  |  |halffill|  
+    [6]        [7]        [8]    
+| green  |  | purple |  | purple |  
+|  balk  |  |  balk  |  |  balk  |  
+|   1    |  |   1    |  |   3    |  
+|  fill  |  |halffill|  | empty  |  
+    [9]        [10]        [11]    
+| green  |  | green  |  | purple |  
+|  balk  |  |  wave  |  | ovally |  
+|   1    |  |   2    |  |   3    |  
+|halffill|  |  fill  |  |  fill  |  
+
+INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
+81
+INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Index  == 0
+INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
+
+INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Index  == 1
+INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
+
+INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Index  == 2
+INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
+
+INFO AWT-EventQueue-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
+Well ist not that hard to play ;)
+If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
+if you need a tipp plese write h
+if you want to know the solution please write s
+If you want to know the game point please write GetPoints
+if you want to solve the set with out knowing just write solve
+Set size of the field 3-80 size number
+For a newGame please write nw
+Have fun!!! if you want to finish the game please write exit
+    [0]        [1]        [2]    
+|  red   |  | green  |  |  red   |  
+|  wave  |  |  wave  |  |  wave  |  
+|   2    |  |   3    |  |   2    |  
+|  fill  |  | empty  |  | empty  |  
+    [3]        [4]        [5]    
+|  red   |  |  red   |  | purple |  
+| ovally |  | ovally |  |  balk  |  
+|   1    |  |   2    |  |   3    |  
+|halffill|  |  fill  |  |halffill|  
+    [6]        [7]        [8]    
+| green  |  | purple |  | purple |  
+|  balk  |  |  balk  |  |  balk  |  
+|   1    |  |   1    |  |   3    |  
+|  fill  |  |halffill|  | empty  |  
+    [9]        [10]        [11]    
+| green  |  | green  |  | purple |  
+|  balk  |  |  wave  |  | ovally |  
+|   1    |  |   2    |  |   3    |  
+|halffill|  |  fill  |  |  fill  |  
+
