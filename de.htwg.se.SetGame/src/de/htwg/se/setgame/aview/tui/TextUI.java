@@ -200,7 +200,7 @@ public class TextUI implements IObserver {
 		for (ICard card : controller.getSetInField()) {
 			for (Integer key : controller.getCardsAndTheIndexOfCardInField().keySet()) {
 				if (controller.getCardsAndTheIndexOfCardInField().get(key)
-						.comparTo(card)) {
+						.compareTo(card)) {
 					logger.info("Index  == " + key);
 				}
 

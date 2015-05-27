@@ -90,6 +90,7 @@ public class SetController extends Observable implements IController {
         this.playerTwoCounter = 0;
         notifyObservers();
     }
+    
 
     /**
      *
@@ -118,8 +119,8 @@ public class SetController extends Observable implements IController {
     protected boolean isInField(ICard cardOne, ICard cardTwo, ICard cardThree) {
         this.counter = 0;
         for (ICard card : field.getCardsInField()) {
-            if (card.comparTo(cardOne) || card.comparTo(cardTwo)
-                    || card.comparTo(cardThree)) {
+            if (card.compareTo(cardOne) || card.compareTo(cardTwo)
+                    || card.compareTo(cardThree)) {
                 counter++;
             }
         }

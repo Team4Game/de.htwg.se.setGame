@@ -34,6 +34,6 @@ public interface ICard {
 	 * @param card 
 	 * @return true if card is the same
 	 */
-	boolean comparTo(ICard card);
+	boolean compareTo(ICard card);
 
 }

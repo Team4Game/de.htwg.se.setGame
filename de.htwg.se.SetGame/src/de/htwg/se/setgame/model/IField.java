@@ -63,5 +63,6 @@ public interface IField {
 	 * @param size set size of field
 	 */
 	void setSizeOfField(int size);
-
+    boolean remove(ICard card);
+    boolean add(ICard card);
 }

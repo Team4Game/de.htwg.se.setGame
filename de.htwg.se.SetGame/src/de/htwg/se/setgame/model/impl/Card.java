@@ -148,7 +148,7 @@ public class Card extends ACard {
 
 
 	@Override
-	public boolean comparTo(ICard card) {
+	public boolean compareTo(ICard card) {
 
 		if (this.color.equals(card.getColor()) && this.anz == card.getNumberOfComponents()
 				&& this.form.equals(card.getForm())

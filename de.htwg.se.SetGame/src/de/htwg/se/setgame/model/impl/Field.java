@@ -117,9 +117,9 @@ public class Field extends AField {
 
 		TreeSet<Integer> keyCardInField = new TreeSet<Integer>();
 		for (Integer key : this.getCardInFieldGame().keySet()) {
-			if (this.getCardInFieldGame().get(key).comparTo(cardOne)
-					|| this.getCardInFieldGame().get(key).comparTo(cardTwo)
-					|| this.getCardInFieldGame().get(key).comparTo(cardThree)) {
+			if (this.getCardInFieldGame().get(key).compareTo(cardOne)
+					|| this.getCardInFieldGame().get(key).compareTo(cardTwo)
+					|| this.getCardInFieldGame().get(key).compareTo(cardThree)) {
 				keyCardInField.add(key);
 				this.packForGame.remove(this.getCardInFieldGame().get(key));
 			}
@@ -183,11 +183,21 @@ public class Field extends AField {
         }
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see de.htwg.se.setgame.modell.IField#changeCards(java.util.List)
-	 */
+    @Override
+    public boolean remove(ICard card) {
+        return false;
+    }
+
+    @Override
+    public boolean add(ICard card) {
+        return false;
+    }
+
+    /*
+     * (non-Javadoc)
+     *
+     * @see de.htwg.se.setgame.modell.IField#changeCards(java.util.List)
+     */
 	@Override
 	public void changeCards(List<ICard> liste) {
 		   for(int i = 0; i < liste.size(); i++){

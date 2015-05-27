@@ -27,7 +27,7 @@ public class CardTest {
     @Test
     public void createCart_ok(){
         Card card1 = new Card(Pack.COLORS[0], Pack.FORME[1], Pack.FILL[1], Pack.NUMBEROFCOMPONET[0]);
-        Assert.assertTrue(card1.comparTo(target));
+        Assert.assertTrue(card1.compareTo(target));
     }
     @Test
     public void test_ToString(){
