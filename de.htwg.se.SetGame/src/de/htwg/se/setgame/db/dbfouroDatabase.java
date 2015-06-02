@@ -1,6 +1,7 @@
 package de.htwg.se.setgame.db;
 
 
+import com.db4o.Db4oEmbedded;
 import com.sun.org.apache.xml.internal.security.signature.ObjectContainer;
 
 /**
@@ -8,6 +9,8 @@ import com.sun.org.apache.xml.internal.security.signature.ObjectContainer;
  */
 public class dbfouroDatabase {
 
+	/*
+	
     // accessDb4o
     ////
 
@@ -18,5 +21,7 @@ public class dbfouroDatabase {
     } finally {
         db.close();
     }
+    
+    */
 
 }
