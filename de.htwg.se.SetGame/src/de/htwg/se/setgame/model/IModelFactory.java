@@ -16,5 +16,6 @@ public interface IModelFactory {
      * @return new IField
      */
     IPack createPack();
+    IGame createGame();
 
 }
