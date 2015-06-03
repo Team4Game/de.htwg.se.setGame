@@ -2,9 +2,10 @@ package de.htwg.se.setgame.model;
 
 
 import java.util.List;
+import java.util.Map;
 
 public interface IField {
-    void setCardInField(List<ICard> cardsInField);
-    List<ICard> getCardsInField();
+    void setCardInField(Map<Integer,ICard> cardsInField);
+    Map<Integer,ICard>  getCardsInField();
 
 }

@@ -1,11 +1,6 @@
 package de.htwg.se.setgame.model.impl;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 
 import de.htwg.se.setgame.model.AField;
 import de.htwg.se.setgame.model.ICard;
@@ -19,18 +14,19 @@ import de.htwg.se.setgame.model.IPack;
  * @category Modell
  */
 public class Field extends AField {
-    private List<ICard> cardsInField;
+    private Map<Integer, ICard>  cardsInField;
     public Field(){
-        this.cardsInField = new LinkedList<ICard>();
+        this.cardsInField = new HashMap<Integer, ICard>();
+    }
+
+
+    @Override
+    public void setCardInField(Map<Integer, ICard> cardsInField) {
+
     }
 
     @Override
-    public void setCardInField(List<ICard> cardsInField) {
-
-    }
-
-    @Override
-    public List<ICard> getCardsInField() {
+    public Map<Integer, ICard> getCardsInField() {
         return null;
     }
 }
