@@ -7,4 +7,5 @@ import java.util.List;
  */
 public interface IPack {
     List<ICard> getPack();
+    void setPack(List<ICard> pack);
 }

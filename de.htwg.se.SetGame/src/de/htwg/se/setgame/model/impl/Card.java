@@ -2,6 +2,7 @@ package de.htwg.se.setgame.model.impl;
 
 import de.htwg.se.setgame.model.ACard;
 import de.htwg.se.setgame.model.ICard;
+import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
 
 /**
  * @author David Simon & Raina Bertolini
@@ -24,11 +25,14 @@ public class Card extends ACard {
 	 */
 	public Card(String color, String form, String panelFilling, int amount) {
 		this.setColor(color);
-		this.setFomr(form);
+		this.setForm(form);
 		this.setPanelFilling(panelFilling);
 		this.setNumberOfComponents(amount);
 
 	}
+    public Card(){
+
+    }
 
 	/*
 	 * (non-Javadoc)
@@ -44,9 +48,10 @@ public class Card extends ACard {
 	 * @param color
 	 *            set the color of a card
 	 */
-	private void setColor(String color) {
-		if (color.equals(Pack.COLORS[0]) || color.equals(Pack.COLORS[1])
-				|| color.equals(Pack.COLORS[2])) {
+    @Override
+	public void setColor(String color) {
+		if (color.equals(CardAtributen.COLORS[0]) || color.equals(CardAtributen.COLORS[1])
+				|| color.equals(CardAtributen.COLORS[2])) {
 			this.color = color;
 		} else {
 			this.color = null;
@@ -65,15 +70,16 @@ public class Card extends ACard {
 	}
 
 	/**
-	 * @param fomr
+	 * @param form
 	 *            set the form of the Card
 	 * @throws IllegalArgumentException
 	 *             if the form is not allowed
 	 */
-	private void setFomr(String fomr) {
-		if (fomr.equals(Pack.FORME[2]) || fomr.equals(Pack.FORME[0])
-				|| fomr.equals(Pack.FORME[1])) {
-			this.form = fomr;
+    @Override
+	public void setForm(String form) {
+		if (form.equals(CardAtributen.FORME[2]) || form.equals(CardAtributen.FORME[0])
+				|| form.equals(CardAtributen.FORME[1])) {
+			this.form = form;
 		} else {
 			this.form = null;
 		}
@@ -95,10 +101,11 @@ public class Card extends ACard {
 	 * @throws IllegalArgumentException
 	 *             if filling is not allowed
 	 */
-	private void setPanelFilling(String panelFilling) {
-		if (panelFilling.equals(Pack.FILL[0])
-				|| panelFilling.equals(Pack.FILL[1])
-				|| panelFilling.equals(Pack.FILL[2])) {
+    @Override
+	public void setPanelFilling(String panelFilling) {
+		if (panelFilling.equals(CardAtributen.FILL[0])
+				|| panelFilling.equals(CardAtributen.FILL[1])
+				|| panelFilling.equals(CardAtributen.FILL[2])) {
 			this.panelFilling = panelFilling;
 		} else {
 			this.panelFilling = null;
@@ -120,11 +127,11 @@ public class Card extends ACard {
 	 * @throws IllegalArgumentException
 	 *             if numberOfComponents is not allowed
 	 */
-
-	private void setNumberOfComponents(int numberOfComponents) {
-		if (numberOfComponents == Pack.NUMBEROFCOMPONET[0]
-				|| numberOfComponents == Pack.NUMBEROFCOMPONET[1]
-				|| numberOfComponents == Pack.NUMBEROFCOMPONET[2]) {
+    @Override
+	public void setNumberOfComponents(int numberOfComponents) {
+		if (numberOfComponents == CardAtributen.NUMBEROFCOMPONET[0]
+				|| numberOfComponents == CardAtributen.NUMBEROFCOMPONET[1]
+				|| numberOfComponents == CardAtributen.NUMBEROFCOMPONET[2]) {
 			this.anz = numberOfComponents;
 
 		} else {

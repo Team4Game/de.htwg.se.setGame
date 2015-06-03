@@ -1,70 +1,75 @@
-/*
 package de.htwg.se.setgame.controller.impl.logic.impl;
 
-import de.htwg.se.setgame.model.AField;
 import de.htwg.se.setgame.model.ICard;
+import de.htwg.se.setgame.model.IField;
+import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPack;
-import de.htwg.se.setgame.model.impl.Pack;
+import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
 
 import java.util.*;
 
-*/
 /**
  * Created by raina on 03.06.2015.
- *//*
+ */
+public class GameProvider {
 
-public class PackProviderImpl {
 
-
-    */
-/**
+    protected static final int INITIALVALUEOFFIELD = 12;
+    private static final int MAX = 81;
+    private static final int ONE = 1;
+    private static final int NUMBERFORONELINE = 3;
+    private static final int LEGHTFORSTRING = CardAtributen.FILL[0].length();
+    /**
      * Class Field.
      *
      * @author David Simon & Raina Bertolini
      * @date 7.12.201NUMBERFORONELINE
      * @category Modell
-     *//*
+     */
+
+    private int sizeOfField;
+    private Set<Integer> listeofcontains;
+    private Map<Integer, Integer> ramdomListe;
+    private Map<Integer, ICard> cardInFieldGame;
+    private IPack iPack;
+
+    public IField getField() {
+        return field;
+    }
+
+    public void setField(IField field) {
+        this.field = field;
+    }
+
+    private IField field;
 
 
-        private int sizeOfField;
-        protected static final int INITIALVALUEOFFIELD = 12;
-        private static final int MAX = 81;
-        private static final int ONE = 1;
-        private static final int NUMBERFORONELINE = 3;
-        private Set<Integer> listeofcontains;
-        private Map<Integer, Integer> ramdomListe;
-        private static final int LEGHTFORSTRING = Pack.FILL[0].length();
-        private Map<Integer, ICard> cardInFieldGame;
-        private IPack iPack;
-        */
-/**
-         * pack for the game are the cards and the random positions
-         *//*
+    /**
+     * pack for the game are the cards and the random positions
+     */
+    private List<ICard> packForGame;
 
-        private List<ICard> packForGame;
-        */
-/**
-         * startup of the objects
-         *//*
-
-        public Field(IPack pack, int fieldsize) {
-            this.sizeOfField = fieldsize;
+    /**
+     * startup of the objects
+     */
+    public GameProvider(IModelFactory modelFactory, int fieldsize) {
+        PackProvider packProvider = new PackProvider(modelFactory);
+        this.sizeOfField = fieldsize;
             this.cardInFieldGame = new TreeMap<Integer, ICard>();
             this.ramdomListe = new TreeMap<Integer, Integer>();
             this.packForGame = new LinkedList<ICard>();
             this.listeofcontains = new TreeSet<Integer>();
-            this.iPack = pack;
-        }
+        this.iPack = packProvider.getPack();
+        this.field = modelFactory.createField();
+    }
 
-        */
-/*
+        /*
          * (non-Javadoc)
          *
          * @see de.htwg.se.setgame.modell.IField#startUp()
-         *//*
+         */
 
-        @Override
-        public void startUp() {
+    public void startUp() {
             Map<Integer, ICard> mapForGame = new TreeMap<Integer, ICard>();
             rand();
             int i = 0;
@@ -77,14 +82,12 @@ public class PackProviderImpl {
             startUpOfField();
         }
 
-        */
-/**
-         * Filled array with integer number.
+    /**
+     * Filled array with integer number.
          *
          * @return filled array
-         *//*
-
-        public Map<Integer, Integer> rand() {
+     */
+    public Map<Integer, Integer> rand() {
             int[] tem = new int[MAX];
             boolean b;
             for (int key = 0; key < MAX; key++) {
@@ -108,14 +111,12 @@ public class PackProviderImpl {
 
         }
 
-        */
-/**
-         * Filled field with cards from the class Card
+    /**
+     * Filled field with cards from the class Card
          *
          * @return filled Field with Cards
-         *//*
-
-        private void startUpOfField() {
+     */
+    private void startUpOfField() {
 
             for (int index = 0; index < sizeOfField; index++) {
                 this.getCardInFieldGame().put(index, this.packForGame.get(index));
@@ -123,16 +124,14 @@ public class PackProviderImpl {
             }
         }
 
-        */
-/*
+        /*
          * (non-Javadoc)
          *
          * @see de.htwg.se.setgame.modell.IField#foundSet(de.htwg.se.setgame.modell.Card,
          * de.htwg.se.setgame.modell.Card, de.htwg.se.setgame.modell.Card)
-         *//*
+         */
 
-        @Override
-        public void foundSet(ICard cardOne, ICard cardTwo, ICard cardThree) {
+    public void foundSet(ICard cardOne, ICard cardTwo, ICard cardThree) {
 
             TreeSet<Integer> keyCardInField = new TreeSet<Integer>();
             for (Integer key : this.getCardInFieldGame().keySet()) {
@@ -150,13 +149,12 @@ public class PackProviderImpl {
             fillField();
 
         }
-        */
-/*
-        *
-        * cardOnStack are card that are not in game
-        *//*
 
-        private void fillField() {
+    /*
+    *
+    * cardOnStack are card that are not in game
+    */
+    private void fillField() {
             LinkedList<ICard> cardsOnStack = new LinkedList<ICard>();
             cardsOnStack.addAll(getUnusedCards());
 
@@ -175,15 +173,13 @@ public class PackProviderImpl {
 
         }
 
-        */
-/*
+        /*
          * (non-Javadoc)
          *
          * @see de.htwg.se.setgame.modell.IField#getCardsInField()
-         *//*
+         */
 
-        @Override
-        public List<ICard> getCardsInField() {
+    public List<ICard> getCardsInField() {
 
             List<ICard> liste = new LinkedList<ICard>();
             liste.addAll(this.getCardInFieldGame().values());
@@ -191,15 +187,13 @@ public class PackProviderImpl {
 
         }
 
-        */
-/*
+        /*
          * (non-Javadoc)
          *
          * @see de.htwg.se.setgame.modell.IField#setSizeOfField(int, java.util.List)
-         *//*
+         */
 
-        @Override
-        public void setSizeOfField(int size) {
+    public void setSizeOfField(int size) {
 
             if(size != sizeOfField && size >= NUMBERFORONELINE && size <= getUnusedCards().size()){
                 this.cardInFieldGame.clear();
@@ -208,25 +202,23 @@ public class PackProviderImpl {
             }
         }
 
-        @Override
-        public boolean remove(ICard card) {
+
+    public boolean remove(ICard card) {
             return false;
         }
 
-        @Override
-        public boolean add(ICard card) {
+
+    public boolean add(ICard card) {
             return false;
         }
 
-        */
-/*
+        /*
          * (non-Javadoc)
          *
          * @see de.htwg.se.setgame.modell.IField#changeCards(java.util.List)
-         *//*
+         */
 
-        @Override
-        public void changeCards(List<ICard> liste) {
+    public void changeCards(List<ICard> liste) {
             for(int i = 0; i < liste.size(); i++){
                 if(!this.cardInFieldGame.containsValue(liste.get(i))) {
                     this.cardInFieldGame.put(i, liste.get(i));
@@ -234,68 +226,58 @@ public class PackProviderImpl {
             }
         }
 
-        */
-/*
+        /*
          * (non-Javadoc)
          *
          * @see de.htwg.se.setgame.modell.IField#getUnusedCards()
-         *//*
+         */
 
-        @Override
-        public List<ICard> getUnusedCards() {
+    public List<ICard> getUnusedCards() {
             LinkedList<ICard> list = new LinkedList<ICard>();
             list.addAll(this.packForGame);
             list.removeAll(this.getCardInFieldGame().values());
             return list;
         }
 
-        */
-/*
+        /*
          * (non-Javadoc)
          *
          * @see de.htwg.se.setgame.modell.IField#getSizeofField()
-         *//*
+         */
 
-        @Override
-        public int getSizeofField() {
+    public int getSizeofField() {
             return getCardInFieldGame().size();
         }
 
-        */
-/*
+        /*
          * (non-Javadoc)
          *
          * @see de.htwg.se.setgame.modell.IField#getAllCardsInGame()
-         *//*
+         */
 
-        @Override
-        public List<ICard> getAllCardsInGame() {
+    public List<ICard> getAllCardsInGame() {
             return this.packForGame;
         }
 
-        */
-/**
-         * @return the ramdomListe
-         *//*
-
-        public Map<Integer, Integer> getRamdomListe() {
+    /**
+     * @return the ramdomListe
+     */
+    public Map<Integer, Integer> getRamdomListe() {
             return ramdomListe;
         }
 
-        */
-/*
+        /*
          * (non-Javadoc)
          *
          * @see de.htwg.se.setgame.modell.IField#getCardInFieldGame()
-         *//*
+         */
 
-        @Override
-        public Map<Integer, ICard> getCardInFieldGame() {
+    public Map<Integer, ICard> getCardInFieldGame() {
             return cardInFieldGame;
         }
 
-        @Override
-        public void clear() {
+
+    public void clear() {
             packForGame.clear();
             this.cardInFieldGame.clear();
             this.packForGame.clear();
@@ -473,7 +455,6 @@ public class PackProviderImpl {
         }
 
 
-
-
 }
-*/
+
+

@@ -8,6 +8,8 @@ import java.util.Map;
 import com.google.inject.Inject;
 
 import de.htwg.se.setgame.controller.IController;
+import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
+import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
 import de.htwg.se.setgame.model.IModelFactory;
@@ -25,7 +27,7 @@ public class SetController extends Observable implements IController {
     /**
      * field
      */
-    private IField field;
+    private GameProvider field;
 
     /**
      * counter
@@ -71,7 +73,9 @@ public class SetController extends Observable implements IController {
      */
     @Inject
     public SetController(IModelFactory modelFactory) {
-        this.field = modelFactory.createField();
+        PackProvider packProvider = new PackProvider(modelFactory);
+        //TODO
+        this.field = new GameProvider(modelFactory, 12);
         this.counter = 0;
         this.field.startUp();
         this.playerOne = 1;
@@ -330,8 +334,8 @@ public class SetController extends Observable implements IController {
      * @see de.htwg.se.setgame.controller.impl.ISuperController#getField()
      */
     @Override
-    public Field getField() {
-        return (Field) this.field;
+    public IField getField() {
+        return  this.field.getField();
     }
 
 

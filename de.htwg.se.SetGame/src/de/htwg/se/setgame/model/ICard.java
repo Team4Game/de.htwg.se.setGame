@@ -1,7 +1,6 @@
 package de.htwg.se.setgame.model;
 
 public interface ICard {
-
 	 /**
 	 * @return colors
 	 */
@@ -29,8 +28,11 @@ public interface ICard {
 	 */
 	String toString();
 
-
-	/**
+    void setForm(String form);
+    void setPanelFilling(String panelFilling);
+    void setNumberOfComponents(int numberOfComponents);
+    void setColor(String color);
+    /**
 	 * @param card 
 	 * @return true if card is the same
 	 */

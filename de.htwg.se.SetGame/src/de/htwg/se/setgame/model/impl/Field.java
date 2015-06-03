@@ -15,27 +15,22 @@ import de.htwg.se.setgame.model.IPack;
  * Class Field.
  * 
  * @author David Simon & Raina Bertolini
- * @date 7.12.201
+ * @date 7.12.201NUMBERFORONELINE
  * @category Modell
  */
 public class Field extends AField {
-
-    List<ICard> cardsInField;
-    /**
-     * startup of the objects
-     */
-    public Field(List<ICard> cardsInField) {
-    this.cardsInField = cardsInField;
-
+    private List<ICard> cardsInField;
+    public Field(){
+        this.cardsInField = new LinkedList<ICard>();
     }
 
     @Override
     public void setCardInField(List<ICard> cardsInField) {
-        this.cardsInField = cardsInField;
+
     }
 
     @Override
     public List<ICard> getCardsInField() {
-        return cardsInField;
+        return null;
     }
 }

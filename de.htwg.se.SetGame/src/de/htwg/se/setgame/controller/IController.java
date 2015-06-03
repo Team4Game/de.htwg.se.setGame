@@ -4,8 +4,9 @@ import java.util.List;
 import java.util.Map;
 
 import de.htwg.se.setgame.model.ICard;
+import de.htwg.se.setgame.model.IField;
 import de.htwg.se.setgame.model.IPack;
-import de.htwg.se.setgame.model.impl.Field;
+
 import de.htwg.se.setgame.util.observer.IObservable;
 
 /**
@@ -34,7 +35,7 @@ public interface IController extends IObservable {
 	/**
 	 * @return field
 	 */
-	Field getField();
+	IField getField();
 
 
 
@@ -98,4 +99,5 @@ public interface IController extends IObservable {
 	 * @return IPack
 	 */
 	IPack getPack();
+
 }
