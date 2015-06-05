@@ -8,6 +8,17 @@ import org.hibernate.cfg.*;
 
 public class GameDao implements IGameDao {
 
+	/*
+	 * 
+	 * Hibernate TODO:
+	 * 
+	 * - alle models erstellen mit annotations
+	 * - id autogen bei allen models
+	 * - @OneToOne / @OneToMany etc. bei unbekannten Typen / Listen
+	 * 
+	 */
+	
+	
 	private Session session;
 
 	public GameDao() {
