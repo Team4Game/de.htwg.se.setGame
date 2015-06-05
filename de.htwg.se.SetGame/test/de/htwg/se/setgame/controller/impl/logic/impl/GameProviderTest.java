@@ -44,15 +44,15 @@ public class GameProviderTest {
 
     @Test
     public void testFoundSet() {
-        this.target.startUp();
+        target.startUp();
         LinkedList<ICard> liste = new LinkedList<ICard>();
         liste.addAll(target.getAllCardsInGame());
-        for (int index = 0; index < (liste.size() - 2); index++) {
+        for (int index = 0; index < (liste.size()-2); index++) {
             this.target.foundSet(liste.get(index),
-                    liste.get((index + 1)),
-                    liste.get(index + 2));
+                    liste.get((index+1)),
+                    liste.get(index+2));
         }
-        Assert.assertTrue(this.target.getAllCardsInGame().isEmpty());
+        Assert.assertTrue(target.getAllCardsInGame().isEmpty());
     }
 
     @Test

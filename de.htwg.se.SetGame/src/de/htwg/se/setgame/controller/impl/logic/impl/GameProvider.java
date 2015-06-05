@@ -40,12 +40,13 @@ public class GameProvider {
 
     private IPack iPack;
     private IField field;
-
+    private IModelFactory modelFactory;
     /**
      * startup of the objects
      */
     public GameProvider(IModelFactory modelFactory, int fieldsize) {
         PackProvider packProvider = new PackProvider(modelFactory);
+        this.modelFactory =modelFactory;
         this.sizeOfField = fieldsize;
         this.ramdomListe = new TreeMap<Integer, Integer>();
 
@@ -229,7 +230,11 @@ public class GameProvider {
     public void changeCards(List<ICard> liste) {
             for(int i = 0; i < liste.size(); i++){
                 if(!field.getCardsInField().containsValue(liste.get(i))) {
+                    if(field.getCardsInField().get(i)!= null){
+                        iPack.getPack().add(field.getCardsInField().get(i));
+                    }
                     field.getCardsInField().put(i, liste.get(i));
+                    iPack.getPack().remove(liste.get(i));
                 }
             }
         }
@@ -262,8 +267,9 @@ public class GameProvider {
 
     public List<ICard> getAllCardsInGame() {
         List<ICard> result = new LinkedList<ICard>();
-        result.addAll(iPack.getPack());
         result.addAll(field.getCardsInField().values());
+        result.addAll(iPack.getPack());
+
         return result;
     }
 
@@ -287,6 +293,8 @@ public class GameProvider {
 
     public void clear() {
         iPack.getPack().clear();
+        PackProvider packProvider = new PackProvider(modelFactory);
+        iPack.setPack(packProvider.getPack().getPack());
         this.field.getCardsInField().clear();
             this.sizeOfField = INITIALVALUEOFFIELD;
             startUp();

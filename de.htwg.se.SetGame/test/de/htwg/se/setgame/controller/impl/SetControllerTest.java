@@ -77,7 +77,7 @@ public class SetControllerTest {
         //get Cards are not in game
         List<ICard> cardSet = target.getASetInGame();
         target.isASetForController(cardSet.get(0), cardSet.get(1), cardSet.get(2), 1);
-        Assert.assertEquals(target.getCardinGame().size(), 78);
+        Assert.assertEquals( 78,target.getCardinGame().size());
         Assert.assertTrue(target.isInField(cardSet.get(0), cardSet.get(1), cardSet.get(2)) == false);
     }
     @Test
@@ -141,6 +141,7 @@ public class SetControllerTest {
     }
     @Test
     public void getPack_ok(){
-        Assert.assertEquals(target.getPack().getPack().size(), 81);
+
+        Assert.assertEquals(69, target.getPack().getPack().size());
     }
 }

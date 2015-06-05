@@ -6,119 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6818033a-37b4-43b4-9f57-9dfde351fbb4" name="Default" comment="change pack to resource folder and tostring to field and ogger4j configuration">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/GameProviderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_cache_4_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ektorp_org_ektorp_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/PackProviderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test Results - All_in_de_htwg_se_SetGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/tralala.java" />
-      <change type="DELETED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\log4j.properties" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\0.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/0.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\1.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/1.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\10.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/10.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\11.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/11.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\12.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/12.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\13.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/13.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\14.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/14.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\15.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/15.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\16.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/16.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\17.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/17.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\18.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/18.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\19.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/19.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\2.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/2.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\20.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/20.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\21.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/21.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\22.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/22.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\23.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/23.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\24.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/24.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\25.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/25.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\26.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/26.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\27.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/27.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\28.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/28.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\29.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/29.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\3.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/3.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\30.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/30.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\31.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/31.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\32.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/32.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\33.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/33.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\34.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/34.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\35.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/35.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\36.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/36.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\37.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/37.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\38.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/38.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\39.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/39.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\4.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/4.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\40.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/40.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\41.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/41.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\42.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/42.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\43.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/43.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\44.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/44.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\45.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/45.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\46.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/46.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\47.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/47.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\48.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/48.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\49.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/49.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\5.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/5.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\50.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/50.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\51.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/51.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\52.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/52.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\53.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/53.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\54.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/54.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\55.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/55.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\56.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/56.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\57.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/57.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\58.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/58.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\59.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/59.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\6.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/6.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\60.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/60.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\61.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/61.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\62.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/62.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\63.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/63.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\64.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/64.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\65.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/65.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\66.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/66.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\67.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/67.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\68.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/68.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\69.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/69.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\7.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/7.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\70.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/70.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\71.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/71.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\72.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/72.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\73.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/73.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\74.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/74.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\75.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/75.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\76.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/76.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\77.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/77.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\78.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/78.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\79.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/79.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\8.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/8.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\80.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/80.gif" />
-      <change type="MOVED" beforePath="C:\Users\raina\IdeaProjects\de.htwg.se.setGame\de.htwg.se.SetGame\src\pack\9.gif" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack/9.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/CardTest.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/CardTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java" />
+    <list default="true" id="6818033a-37b4-43b4-9f57-9dfde351fbb4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/GameProvider.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/GameProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IPack.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IPack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Pack.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Pack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/PackTest.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/PackTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/GameProviderTest.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/GameProviderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/de.htwg.se.SetGame.iml" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/de.htwg.se.SetGame.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/de_htwg_se_SetGame_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/de_htwg_se_SetGame_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sudoku.log" afterPath="$PROJECT_DIR$/sudoku.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -137,31 +31,31 @@
     <splitter proportion="0.5" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/de.htwg.se.setGame$SetControllerTest.coverage" NAME="SetControllerTest Coverage Results" MODIFIED="1430252222938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>de.htwg.se.setgame.controller.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/de.htwg.se.setGame$SetControllerTest_testIfIsSetInGame_Fail.coverage" NAME="SetControllerTest.testIfIsSetInGame_Fail Coverage Results" MODIFIED="1430253446804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>de.htwg.se.setgame.controller.impl.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/de.htwg.se.setGame$CardTest.coverage" NAME="CardTest Coverage Results" MODIFIED="1429116809217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>de.htwg.se.setgame.model.impl.*</FILTER>
+    <SUITE FILE_PATH="coverage/de.htwg.se.setGame$SetControllerTest.coverage" NAME="SetControllerTest Coverage Results" MODIFIED="1430252222938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>de.htwg.se.setgame.controller.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/de.htwg.se.setGame$FieldTest.coverage" NAME="FieldTest Coverage Results" MODIFIED="1429108640043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/de.htwg.se.setGame$CardTest.coverage" NAME="CardTest Coverage Results" MODIFIED="1429116809217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>de.htwg.se.setgame.model.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/de.htwg.se.setGame$FieldTest_testTostring.coverage" NAME="FieldTest.testTostring Coverage Results" MODIFIED="1429115932692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>de.htwg.se.setgame.model.impl.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/de.htwg.se.setGame$PackTest.coverage" NAME="PackTest Coverage Results" MODIFIED="1429100730491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/de.htwg.se.setGame$FieldTest.coverage" NAME="FieldTest Coverage Results" MODIFIED="1429108640043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>de.htwg.se.setgame.model.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/de.htwg.se.setGame$FieldTest_testFoundSet.coverage" NAME="FieldTest.testFoundSet Coverage Results" MODIFIED="1429107551276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>de.htwg.se.setgame.model.impl.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/de.htwg.se.setGame$PackTest.coverage" NAME="PackTest Coverage Results" MODIFIED="1429100730491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>de.htwg.se.setgame.model.impl.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/de.htwg.se.setGame$de_htwg_se_setgame_in_de_htwg_se_SetGame.coverage" NAME="de.htwg.se.setgame in de.htwg.se.SetGame Coverage Results" MODIFIED="1430309446709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>de.htwg.se.setgame.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/de.htwg.se.setGame$All_in_de_htwg_se_SetGame.coverage" NAME="All in de.htwg.se.SetGame Coverage Results" MODIFIED="1433511760165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/de.htwg.se.setGame$All_in_de_htwg_se_SetGame.coverage" NAME="All in de.htwg.se.SetGame Coverage Results" MODIFIED="1433520241157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/de.htwg.se.setGame$SetControllerTest_testIfIsSetInGame.coverage" NAME="SetControllerTest.testIfIsSetInGame Coverage Results" MODIFIED="1430252280094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>de.htwg.se.setgame.controller.*</FILTER>
     </SUITE>
@@ -182,76 +76,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SetController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java">
+      <file leaf-file-name="SetGame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5226" max-vertical-offset="7004">
-              <caret line="332" column="39" selection-start-line="332" selection-start-column="39" selection-end-line="332" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1071">
+              <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextUI.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-104.04" vertical-offset="0" max-vertical-offset="4267">
+              <caret line="162" column="49" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="49" />
               <folding>
-                <element signature="e#9033#9034#0" expanded="true" />
-                <element signature="e#9093#9094#0" expanded="true" />
-                <element signature="e#10280#10281#0" expanded="true" />
-                <element signature="e#10346#10347#0" expanded="true" />
+                <element signature="e#5137#5138#0" expanded="true" />
+                <element signature="e#5227#5228#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SetControllerTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java">
+      <file leaf-file-name="FieldTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1061" max-vertical-offset="2329">
-              <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrameworkMethod.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <file leaf-file-name="IField.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="901">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReflectiveCallable.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <file leaf-file-name="Field.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="289">
-              <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="3519">
+              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/GameProvider.java">
+      <file leaf-file-name="GameField.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3981" max-vertical-offset="4777">
-              <caret line="265" column="20" selection-start-line="265" selection-start-column="20" selection-end-line="265" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test Results - All_in_de_htwg_se_SetGame.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test Results - All_in_de_htwg_se_SetGame.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.8976984" vertical-offset="6075" max-vertical-offset="28441">
-              <caret line="470" column="16" selection-start-line="470" selection-start-column="16" selection-end-line="470" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkedList.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/LinkedList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3549" max-vertical-offset="18309">
-              <caret line="232" column="7" selection-start-line="232" selection-start-column="7" selection-end-line="232" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.70689654" vertical-offset="8537" max-vertical-offset="8721">
+              <caret line="533" column="0" selection-start-line="514" selection-start-column="22" selection-end-line="533" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -293,7 +175,6 @@
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/PackProvider.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/IController.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IField.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/tralala.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/impl/PackProvider.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/impl/GameProvider.java" />
@@ -302,16 +183,17 @@
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/PackProviderTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/CardTest.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/GameProviderTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Pack.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IPack.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GUI.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGame.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/GameProviderTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/GameProvider.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java" />
       </list>
     </option>
   </component>
@@ -393,7 +275,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -427,6 +308,106 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.setGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.SetGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.setGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.SetGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.setGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.SetGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.setGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.htwg.se.SetGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="setgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -512,6 +493,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -550,21 +532,21 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="172" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="174" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="201" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="202" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="202" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="204" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="876" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="871" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="194" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="195" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="193" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="194" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="195" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="197" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="869" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="865" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
@@ -590,7 +572,7 @@
       <recent name="de.htwg.se" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in de.htwg.se.SetGame">
+  <component name="RunManager" selected="Application.SetGame">
     <configuration default="false" name="All in de.htwg.se.SetGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="de.htwg.se.SetGame" />
@@ -616,13 +598,19 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="SetControllerTest.testIfIsSetInGame_Fail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="SetControllerTest.testResetGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="de.htwg.se.setgame.controller.impl.*" />
@@ -634,7 +622,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="de.htwg.se.setgame.controller.impl" />
       <option name="MAIN_CLASS_NAME" value="de.htwg.se.setgame.controller.impl.SetControllerTest" />
-      <option name="METHOD_NAME" value="testIfIsSetInGame_Fail" />
+      <option name="METHOD_NAME" value="testResetGame" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -646,14 +634,76 @@
       </option>
       <envs />
       <patterns />
-      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SetControllerTest.getPack_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="de.htwg.se.setgame.controller.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="de.htwg.se.SetGame" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="de.htwg.se.setgame.controller.impl" />
+      <option name="MAIN_CLASS_NAME" value="de.htwg.se.setgame.controller.impl.SetControllerTest" />
+      <option name="METHOD_NAME" value="getPack_ok" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameProviderTest.testFoundSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="de.htwg.se.setgame.controller.impl.logic.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="de.htwg.se.SetGame" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="de.htwg.se.setgame.controller.impl.logic.impl" />
+      <option name="MAIN_CLASS_NAME" value="de.htwg.se.setgame.controller.impl.logic.impl.GameProviderTest" />
+      <option name="METHOD_NAME" value="testFoundSet" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -676,76 +726,8 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="de.htwg.se.SetGame" />
       <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="de.htwg.se.setgame in de.htwg.se.SetGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="de.htwg.se.setgame.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="de.htwg.se.SetGame" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.htwg.se.setgame" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SetControllerTest.stillSetInGame_Fail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="de.htwg.se.setgame.controller.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="de.htwg.se.SetGame" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.htwg.se.setgame.controller.impl" />
-      <option name="MAIN_CLASS_NAME" value="de.htwg.se.setgame.controller.impl.SetControllerTest" />
-      <option name="METHOD_NAME" value="stillSetInGame_Fail" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -971,21 +953,6 @@
       <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -1006,20 +973,35 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in de.htwg.se.SetGame" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SetControllerTest.testIfIsSetInGame_Fail" />
-      <item index="2" class="java.lang.String" itemvalue="Application.SetGame" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.de.htwg.se.setgame in de.htwg.se.SetGame" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SetControllerTest.stillSetInGame_Fail" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SetControllerTest.testResetGame" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SetControllerTest.getPack_ok" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.GameProviderTest.testFoundSet" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SetGame" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in de.htwg.se.SetGame" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SetControllerTest.stillSetInGame_Fail" />
-        <item index="2" class="java.lang.String" itemvalue="Application.SetGame" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.de.htwg.se.setgame in de.htwg.se.SetGame" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SetControllerTest.testIfIsSetInGame_Fail" />
+        <item index="0" class="java.lang.String" itemvalue="Application.SetGame" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in de.htwg.se.SetGame" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.GameProviderTest.testFoundSet" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SetControllerTest.getPack_ok" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SetControllerTest.testResetGame" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1067,7 +1049,8 @@
       <workItem from="1433349547338" duration="661000" />
       <workItem from="1433350222920" duration="1471000" />
       <workItem from="1433508616070" duration="3185000" />
-      <workItem from="1433511842160" duration="953000" />
+      <workItem from="1433511842160" duration="1591000" />
+      <workItem from="1433513448542" duration="7563000" />
     </task>
     <task id="LOCAL-00001" summary="#WEB TECH size of field.">
       <created>1421180325921</created>
@@ -1145,11 +1128,23 @@
       <created>1433340980834</created>
       <updated>1433340980834</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="change pack to resource folder and tostring to field and ogger4j configuration">
+      <created>1433512808502</created>
+      <updated>1433512808502</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Merge branch 'master' of https://github.com/rabertol/de.htwg.se.setGame&#10;&#10;Conflicts:&#10;&#9;de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java&#10;">
+      <created>1433513101084</created>
+      <updated>1433513101084</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Merge branch 'master' of https://github.com/rabertol/de.htwg.se.setGame&#10;&#10;Conflicts:&#10;&#9;de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java&#10;">
+      <created>1433513334279</created>
+      <updated>1433513334279</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93053000" />
+    <option name="totallyTimeSpent" value="101254000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1176,10 +1171,11 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5450704" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28450704" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32676056" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26197183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299866" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41834003" sideWeight="0.49882904" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3971831" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1187,52 +1183,51 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58117324" sideWeight="0.2825521" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5309859" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32816902" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43239436" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.017402945" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24966533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40026775" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.49859154" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4210174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5140845" sideWeight="0.71744794" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32931727" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24497992" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.8" sideWeight="0.71744794" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287858" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26197183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32676056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41834003" sideWeight="0.49882904" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299866" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58117324" sideWeight="0.2825521" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24788733" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32931727" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24497992" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40704226" sideWeight="0.71744794" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287858" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5450704" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299866" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41834003" sideWeight="0.49882904" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58117324" sideWeight="0.2825521" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5295775" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32931727" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4210174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5140845" sideWeight="0.71744794" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287858" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32676056" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32676056" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26197183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3971831" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3971831" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24966533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.49859154" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40026775" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.49859154" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1265,76 +1260,71 @@
     <MESSAGE value="change field" />
     <MESSAGE value="change field to integer with card value" />
     <MESSAGE value="change pack to resource folder and tostring to field and ogger4j configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="change pack to resource folder and tostring to field and ogger4j configuration" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/rabertol/de.htwg.se.setGame&#10;&#10;Conflicts:&#10;&#9;de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/rabertol/de.htwg.se.setGame&#10;&#10;Conflicts:&#10;&#9;de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java</url>
-          <line>164</line>
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java</url>
+          <line>79</line>
           <properties />
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java</url>
-          <line>166</line>
-          <properties />
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java</url>
-          <line>168</line>
-          <properties />
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java</url>
-          <line>181</line>
-          <properties />
-          <option name="timeStamp" value="106" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java</url>
-          <line>528</line>
-          <properties />
-          <option name="timeStamp" value="110" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/GameProvider.java</url>
-          <line>288</line>
-          <properties />
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java</url>
-          <line>80</line>
-          <properties />
-          <option name="timeStamp" value="113" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java</url>
-          <line>147</line>
-          <properties />
-          <option name="timeStamp" value="115" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java</url>
-          <line>53</line>
-          <properties />
-          <option name="timeStamp" value="116" />
+          <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java</url>
-          <line>120</line>
+          <line>143</line>
           <properties />
-          <option name="timeStamp" value="121" />
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java</url>
+          <line>433</line>
+          <properties />
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java</url>
+          <line>101</line>
+          <properties />
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/GameProviderTest.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/GameProvider.java</url>
+          <line>143</line>
+          <properties />
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/GameProvider.java</url>
+          <line>149</line>
+          <properties />
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java</url>
+          <line>524</line>
+          <properties />
+          <option name="timeStamp" value="138" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="122" />
+      <option name="time" value="139" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1412,27 +1402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/miwalz/testing/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="748">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/PackProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="2482">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/PackProviderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IModelFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="493">
@@ -1444,34 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.28" vertical-offset="726" max-vertical-offset="1224">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="527">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/GameProviderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.44" vertical-offset="1572" max-vertical-offset="1887">
-          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1507,7 +1448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="595">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1593,42 +1533,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.76" vertical-offset="2465" max-vertical-offset="4233">
-          <caret line="162" column="73" selection-start-line="162" selection-start-column="73" selection-end-line="162" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/IController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1717">
           <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8343" max-vertical-offset="8738">
-          <caret line="158" column="44" selection-start-line="158" selection-start-column="44" selection-end-line="158" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42836258" vertical-offset="2988" max-vertical-offset="3672">
-          <caret line="193" column="17" selection-start-line="193" selection-start-column="17" selection-end-line="193" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1653,22 +1561,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1226" max-vertical-offset="7191">
           <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test Results - All_in_de_htwg_se_SetGame.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6075" max-vertical-offset="28441">
+          <caret line="470" column="16" selection-start-line="470" selection-start-column="16" selection-end-line="470" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGame.java">
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/miwalz/testing/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1071">
-          <caret line="38" column="59" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3549" max-vertical-offset="18309">
-          <caret line="232" column="7" selection-start-line="232" selection-start-column="7" selection-end-line="232" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.5074627" vertical-offset="0" max-vertical-offset="1615">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1681,47 +1588,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.88" vertical-offset="609" max-vertical-offset="1224">
+          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.88" vertical-offset="14" max-vertical-offset="1615">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="289">
+        <state vertical-scroll-proportion="0.51359516" vertical-offset="0" max-vertical-offset="331">
           <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/PackProviderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1061" max-vertical-offset="2329">
-          <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="935">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5226" max-vertical-offset="7004">
-          <caret line="332" column="39" selection-start-line="332" selection-start-column="39" selection-end-line="332" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.43229166" vertical-offset="6787" max-vertical-offset="7225">
+          <caret line="440" column="12" selection-start-line="440" selection-start-column="12" selection-end-line="440" selection-end-column="12" />
           <folding>
-            <element signature="e#9033#9034#0" expanded="true" />
-            <element signature="e#9093#9094#0" expanded="true" />
-            <element signature="e#10280#10281#0" expanded="true" />
-            <element signature="e#10346#10347#0" expanded="true" />
+            <element signature="e#2225#2232#0" expanded="true" />
+            <element signature="e#8905#8906#0" expanded="true" />
+            <element signature="e#8965#8966#0" expanded="true" />
+            <element signature="e#10152#10153#0" expanded="true" />
+            <element signature="e#10218#10219#0" expanded="true" />
+            <element signature="e#11948#11949#0" expanded="true" />
+            <element signature="e#11994#11995#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62222224" vertical-offset="1975" max-vertical-offset="2380">
+          <caret line="144" column="30" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/logic/impl/GameProviderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41975307" vertical-offset="510" max-vertical-offset="1785">
+          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+          <folding>
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#1317#1324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="13.14354" vertical-offset="1578" max-vertical-offset="18309">
+          <caret line="449" column="45" selection-start-line="449" selection-start-column="45" selection-end-line="449" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/GameProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3981" max-vertical-offset="4777">
-          <caret line="265" column="20" selection-start-line="265" selection-start-column="20" selection-end-line="265" selection-end-column="20" />
+        <state vertical-scroll-proportion="1.0956938" vertical-offset="4149" max-vertical-offset="4913">
+          <caret line="297" column="0" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
+          <folding>
+            <element signature="e#7547#7554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/PackProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77272725" vertical-offset="1581" max-vertical-offset="2346">
+          <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test Results - All_in_de_htwg_se_SetGame.html">
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.8976984" vertical-offset="6075" max-vertical-offset="28441">
-          <caret line="470" column="16" selection-start-line="470" selection-start-column="16" selection-end-line="470" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1071">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/tui/TextUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-104.04" vertical-offset="0" max-vertical-offset="4267">
+          <caret line="162" column="49" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="49" />
+          <folding>
+            <element signature="e#5137#5138#0" expanded="true" />
+            <element signature="e#5227#5228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/FieldTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="3519">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70689654" vertical-offset="8537" max-vertical-offset="8721">
+          <caret line="533" column="0" selection-start-line="514" selection-start-column="22" selection-end-line="533" selection-end-column="0" />
           <folding />
         </state>
       </provider>

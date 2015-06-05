@@ -75,9 +75,6 @@ public class SetController extends Observable implements IController {
      */
     @Inject
     public SetController(IModelFactory modelFactory) {
-        PackProvider packProvider = new PackProvider(modelFactory);
-        //TODO
-
         this.gameProvider = new GameProvider(modelFactory, 12);
         this.counter = 0;
         this.gameProvider.startUp();
@@ -103,7 +100,7 @@ public class SetController extends Observable implements IController {
      */
     protected void checkIfIsASeTInGame() {
         List<ICard> liste = new LinkedList<ICard>();
-        liste.addAll(getSet(this.gameProvider.getAllCardsInGame()));
+        liste.addAll(getSet(this.gameProvider.getCardsInField()));
         if (liste.size() < NUMBEROFSETCARDS) {
             int i = 0;
             while (!changeCardsInGame() && i < THOUSAND) {
