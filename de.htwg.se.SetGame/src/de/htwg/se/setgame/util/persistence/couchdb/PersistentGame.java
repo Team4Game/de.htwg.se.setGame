@@ -1,4 +1,4 @@
-package de.htwg.se.setgame.model.impl;
+package de.htwg.se.setgame.util.persistence.couchdb;
 
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
@@ -6,10 +6,14 @@ import de.htwg.se.setgame.model.IPlayer;
 
 import java.util.List;
 
+import org.ektorp.support.CouchDbDocument;
+
 /**
- * Created by raina on 03.06.2015.
+ * Created by miwalz on 03.06.2015.
  */
-public class Game implements IGame {
+public class PersistentGame extends CouchDbDocument implements IGame {
+
+	private static final long serialVersionUID = 9152157365405198118L;
 
 	private IPlayer player1;
 	private IPlayer player2;
@@ -19,7 +23,7 @@ public class Game implements IGame {
 
 	private String token;
 
-	public Game(IPlayer player1, IPlayer player2, List<ICard> cardsInField,
+	public PersistentGame(IPlayer player1, IPlayer player2, List<ICard> cardsInField,
 			List<ICard> unusedCards, String token) {
 		super();
 		this.player1 = player1;

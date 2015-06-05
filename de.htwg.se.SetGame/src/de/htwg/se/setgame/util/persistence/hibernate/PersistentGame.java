@@ -1,4 +1,4 @@
-package de.htwg.se.setgame.model.impl;
+package de.htwg.se.setgame.util.persistence.hibernate;
 
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
@@ -6,11 +6,21 @@ import de.htwg.se.setgame.model.IPlayer;
 
 import java.util.List;
 
-/**
- * Created by raina on 03.06.2015.
- */
-public class Game implements IGame {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+/**
+ * Created by miwalz on 03.06.2015.
+ */
+
+@Entity
+@Table(name = "setgame")
+public class PersistentGame implements IGame {
+
+	@Id  
+	private int id;
+	
 	private IPlayer player1;
 	private IPlayer player2;
 
@@ -19,7 +29,7 @@ public class Game implements IGame {
 
 	private String token;
 
-	public Game(IPlayer player1, IPlayer player2, List<ICard> cardsInField,
+	public PersistentGame(IPlayer player1, IPlayer player2, List<ICard> cardsInField,
 			List<ICard> unusedCards, String token) {
 		super();
 		this.player1 = player1;
@@ -67,6 +77,14 @@ public class Game implements IGame {
 	@Override
 	public String getToken() {
 		return this.token;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	@Override
