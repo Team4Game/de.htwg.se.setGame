@@ -10,11 +10,10 @@ import com.google.inject.Inject;
 import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
 import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
-import de.htwg.se.setgame.model.ICard;
-import de.htwg.se.setgame.model.IField;
-import de.htwg.se.setgame.model.IModelFactory;
-import de.htwg.se.setgame.model.IPack;
+import de.htwg.se.setgame.model.*;
+import de.htwg.se.setgame.model.impl.Game;
 import de.htwg.se.setgame.model.impl.Pack;
+import de.htwg.se.setgame.model.impl.Player;
 import de.htwg.se.setgame.util.observer.Observable;
 
 
@@ -436,5 +435,19 @@ public class SetController extends Observable implements IController {
     @Override
     public IPack getPack() {
         return gameProvider.getiPack();
+    }
+    @Override
+    public void saveGame() {
+
+        List<ICard> unusedCards = this.getPack().getPack();
+        List<ICard> cardsInField = this.getCardInFieldGame();
+        IPlayer player1 = new Player(this.playerOne, this.playerOneCounter);
+        IPlayer player2 = new Player(this.playerTwo, this.playerTwoCounter);
+        String token = "123test";
+
+        Game game = new Game(player1, player2 , cardsInField , unusedCards , token);
+
+        System.out.println("target point");
+
     }
 }
