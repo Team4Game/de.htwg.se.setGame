@@ -16,9 +16,11 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
+import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IPack;
-import de.htwg.se.setgame.model.impl.Pack;
+import de.htwg.se.setgame.model.impl.ModelFactory;
 
 /**
  * @author raina
@@ -150,8 +152,8 @@ public class GameField extends JPanel implements ActionListener {
 		saveList = new LinkedList<ICard>();
 		urlListe = new LinkedList<String>();
 		test = new LinkedList<String>();
-
-		iPack = new Pack();
+        PackProvider packProvider = new PackProvider(new ModelFactory());
+		iPack = packProvider.getPack();
 
 		for (int i = 0; i < iPack.getPack().size(); i++) {
 			test.add("/pack/" + i + ".gif");
@@ -520,12 +522,12 @@ public class GameField extends JPanel implements ActionListener {
 	}
 	 
 	public static void saveUrlFor(String card) {
-		for (ICard key : GUI.getController().getField().getCardInFieldGame()
-				.values()) {
+		for (ICard key : GUI.getController().getCardInFieldGame()) {
 			if (card.equals(key.toString())) {
 				urlListe.add(cardToPicture.get(cardkey));
 				saveList.add(key);
-			}
+                System.out.println(key);
+            }
 		}
 	}
 

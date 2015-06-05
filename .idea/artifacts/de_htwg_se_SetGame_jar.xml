@@ -8,7 +8,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/de.htwg.se.SetGame/lib/guice-3.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/de.htwg.se.SetGame/lib/guice-assistedinject-3.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/de.htwg.se.SetGame/lib/javax.inject.jar" path-in-jar="/" />
-      <element id="dir-copy" path="$PROJECT_DIR$/de.htwg.se.SetGame/src/pack" />
+      <element id="dir-copy" path="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack" />
       <element id="library" level="project" name="lib" />
       <element id="file-copy" path="$PROJECT_DIR$/de.htwg.se.SetGame/src/log4j.properties" />
     </root>

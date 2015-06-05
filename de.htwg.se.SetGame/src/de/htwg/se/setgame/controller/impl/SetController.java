@@ -14,7 +14,6 @@ import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPack;
-import de.htwg.se.setgame.model.impl.Field;
 import de.htwg.se.setgame.model.impl.Pack;
 import de.htwg.se.setgame.util.observer.Observable;
 
@@ -24,20 +23,24 @@ import de.htwg.se.setgame.util.observer.Observable;
  */
 public class SetController extends Observable implements IController {
 
+    public GameProvider getGameProvider() {
+        return gameProvider;
+    }
+
+    public void setGameProvider(GameProvider gameProvider) {
+        this.gameProvider = gameProvider;
+    }
+
     /**
-     * field
+     * gameProvider
      */
-    private GameProvider field;
+    protected GameProvider gameProvider;
 
     /**
      * counter
      */
     private int counter;
 
-    /**
-     * IPack
-     */
-    private IPack pack;
 
     /**
      * number for set
@@ -75,20 +78,20 @@ public class SetController extends Observable implements IController {
     public SetController(IModelFactory modelFactory) {
         PackProvider packProvider = new PackProvider(modelFactory);
         //TODO
-        this.field = new GameProvider(modelFactory, 12);
+
+        this.gameProvider = new GameProvider(modelFactory, 12);
         this.counter = 0;
-        this.field.startUp();
+        this.gameProvider.startUp();
         this.playerOne = 1;
         this.playerTwo = 2;
         this.playerOneCounter = 0;
         this.playerTwoCounter = 0;
-        pack = new Pack();
         checkIfIsASeTInGame();
     }
 
     @Override
     public void newGame() {
-        this.field.clear();
+        this.gameProvider.clear();
         this.counter = 0;
         this.playerOneCounter = 0;
         this.playerTwoCounter = 0;
@@ -101,7 +104,7 @@ public class SetController extends Observable implements IController {
      */
     protected void checkIfIsASeTInGame() {
         List<ICard> liste = new LinkedList<ICard>();
-        liste.addAll(getSet(this.field.getAllCardsInGame()));
+        liste.addAll(getSet(this.gameProvider.getAllCardsInGame()));
         if (liste.size() < NUMBEROFSETCARDS) {
             int i = 0;
             while (!changeCardsInGame() && i < THOUSAND) {
@@ -122,7 +125,7 @@ public class SetController extends Observable implements IController {
      */
     protected boolean isInField(ICard cardOne, ICard cardTwo, ICard cardThree) {
         this.counter = 0;
-        for (ICard card : field.getCardsInField()) {
+        for (ICard card : gameProvider.getCardsInField()) {
             if (card.compareTo(cardOne) || card.compareTo(cardTwo)
                     || card.compareTo(cardThree)) {
                 counter++;
@@ -147,10 +150,10 @@ public class SetController extends Observable implements IController {
             return false;
         } else {
             if (proveIfIsASet(cardOne, cardTwo, cardThree)) {
-                field.foundSet(cardOne, cardTwo, cardThree);
+                gameProvider.foundSet(cardOne, cardTwo, cardThree);
                 if (getASetInGame().size() >= THREE) {
                     return true;
-                } else if (allTheSetsInField(this.field.getAllCardsInGame())) {
+                } else if (allTheSetsInField(this.gameProvider.getAllCardsInGame())) {
                     changeCardsInGame();
                     return true;
                 }
@@ -178,7 +181,7 @@ public class SetController extends Observable implements IController {
     @Override
     public void setFieldSize(int size) {
         if (size > 0) {
-            this.field.setSizeOfField(size);
+            this.gameProvider.setSizeOfField(size);
         }
         checkIfIsASeTInGame();
     }
@@ -189,9 +192,9 @@ public class SetController extends Observable implements IController {
      */
     private boolean changeCardsInGame() {
         List<ICard> allCards = new LinkedList<ICard>();
-        allCards.addAll(field.getUnusedCards());
+        allCards.addAll(gameProvider.getUnusedCards());
         if (!allCards.isEmpty() && !getSet(allCards).isEmpty()) {
-            field.changeCards(getSet(allCards));
+            gameProvider.changeCards(getSet(allCards));
             return true;
         }
         return false;
@@ -327,7 +330,7 @@ public class SetController extends Observable implements IController {
      */
     @Override
     public List<ICard> getCardinGame() {
-        return this.field.getAllCardsInGame();
+        return this.gameProvider.getAllCardsInGame();
     }
 
     /* (non-Javadoc)
@@ -335,7 +338,7 @@ public class SetController extends Observable implements IController {
      */
     @Override
     public IField getField() {
-        return  this.field.getField();
+        return  this.gameProvider.getField();
     }
 
 
@@ -363,7 +366,7 @@ public class SetController extends Observable implements IController {
      */
     @Override
     public List<ICard> getASetInGame() {
-        return getSet(this.field.getCardsInField());
+        return getSet(this.gameProvider.getCardsInField());
     }
 
     /* (non-Javadoc)
@@ -372,7 +375,7 @@ public class SetController extends Observable implements IController {
     @Override
     public boolean stillSetInGame() {
         LinkedList<ICard> liste = new LinkedList<ICard>();
-        liste.addAll(getSet(this.field.getAllCardsInGame()));
+        liste.addAll(getSet(this.gameProvider.getAllCardsInGame()));
         if (liste.isEmpty()) {
             return false;
         }
@@ -384,7 +387,7 @@ public class SetController extends Observable implements IController {
      */
     @Override
     public List<ICard> getSetInField() {
-        return getSet(this.field.getCardsInField());
+        return getSet(this.gameProvider.getCardsInField());
 
     }
 
@@ -422,16 +425,16 @@ public class SetController extends Observable implements IController {
 
     @Override
     public List<ICard> getCardInFieldGame() {
-        return this.field.getCardsInField();
+        return this.gameProvider.getCardsInField();
     }
 
     @Override
     public Map<Integer, ICard> getCardsAndTheIndexOfCardInField() {
-        return this.field.getCardInFieldGame();
+        return this.gameProvider.getCardInFieldGame();
     }
 
     @Override
     public IPack getPack() {
-        return pack;
+        return gameProvider.getiPack();
     }
 }

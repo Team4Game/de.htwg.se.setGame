@@ -1,13 +1,13 @@
 package de.htwg.se.setgame.aview.tui;
 
-import org.apache.log4j.Logger;
-
 import com.google.inject.Inject;
-
 import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.util.observer.Event;
 import de.htwg.se.setgame.util.observer.IObserver;
+import org.apache.log4j.Logger;
+
+import java.util.List;
 
 /**
  * @author raina
@@ -16,14 +16,13 @@ import de.htwg.se.setgame.util.observer.IObserver;
 public class TextUI implements IObserver {
 
     public static final String MESSAGE_WELCOME = "Welcome to SetGame!!!! %nWell ist not that hard to play ;)%nIf you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)%nif you need a tipp plese write h%nif you want to know the solution please write s%nIf you want to know the game point please write GetPoints%nif you want to solve the set with out knowing just write solve%nSet size of the field 3-80 size number%nFor a newGame please write nw%nHave fun!!! if you want to finish the game please write exit";
-
-    private IController controller;
 	private static final int ZERO = 0;
 	private static final int ONE = 1;
 	private static final int TWO = 2;
 	private static final int THREE = 3;
 	private static final int FOUR = 4;
-	private String newLine = System.getProperty("line.separator");
+    private IController controller;
+    private String newLine = System.getProperty("line.separator");
 
 	private Logger logger = Logger.getLogger("de.htwg.se.de.htwg.se.setgame.aview.tui");
 
@@ -141,13 +140,13 @@ public class TextUI implements IObserver {
 
 		controller.isASetForController(cardOne, cardTwo, cardThree, player);
 		logger.info(newLine + "Congratilations it is a SET!! ! size == "
-				+ controller.getField().getAllCardsInGame().size());
+                + (controller.getField().getCardsInField().size()) + controller.getPack().getPack().size());
 
-	}
+    }
 
-	private ICard getCard(Integer[] arrayForSerNumber, int i) {
-		return controller.getField().getCardInFieldGame().get(arrayForSerNumber[i]);
-	}
+    private ICard getCard(Integer[] arrayForSetNumber, int i) {
+        return ((List<ICard>) controller.getField().getCardsInField().values()).get(arrayForSetNumber[i]);
+    }
 
 	/**
 	 * @param string
@@ -171,15 +170,15 @@ public class TextUI implements IObserver {
 		if (this.controller.getSetInField().size() >= THREE) {
 			logger.info("solved" + this.controller.getSetInField().toString()
 					+ newLine
-					+ controller.getField().getAllCardsInGame().size());
-			this.controller.isASetForController(this.controller.getSetInField()
+                    + (controller.getField().getCardsInField().size()) + controller.getPack().getPack().size());
+            this.controller.isASetForController(this.controller.getSetInField()
 							.get(ZERO), this.controller.getSetInField().get(ONE),
 					this.controller.getSetInField().get(TWO), THREE);
 			printTUI();
 		} else {
 			logger.info("number of cards = "
-					+ controller.getField().getAllCardsInGame().size());
-			printTUI();
+                    + (controller.getField().getCardsInField().size()) + controller.getPack().getPack().size());
+            printTUI();
 
 		}
 	}

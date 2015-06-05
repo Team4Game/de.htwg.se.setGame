@@ -28,19 +28,34 @@ public class GameProvider {
      */
 
     private int sizeOfField;
-    private Set<Integer> listeofcontains;
     private Map<Integer, Integer> ramdomListe;
+
+    public IPack getiPack() {
+        return iPack;
+    }
+
+    public void setiPack(IPack iPack) {
+        this.iPack = iPack;
+    }
 
     private IPack iPack;
     private IField field;
-    /*All Cards, like in field and in pack*/
-    private List<ICard> packForGame;
-    public IField getField() {
-        return field;
+
+    /**
+     * startup of the objects
+     */
+    public GameProvider(IModelFactory modelFactory, int fieldsize) {
+        PackProvider packProvider = new PackProvider(modelFactory);
+        this.sizeOfField = fieldsize;
+        this.ramdomListe = new TreeMap<Integer, Integer>();
+
+
+        this.iPack = packProvider.getPack();
+        this.field = modelFactory.createField();
     }
 
-    public void setField(IField field) {
-        this.field = field;
+    public IField getField() {
+        return field;
     }
 
 
@@ -49,18 +64,8 @@ public class GameProvider {
      * pack for the game are the cards and the random positions
      */
 
-
-    /**
-     * startup of the objects
-     */
-    public GameProvider(IModelFactory modelFactory, int fieldsize) {
-        PackProvider packProvider = new PackProvider(modelFactory);
-        this.sizeOfField = fieldsize;
-            this.ramdomListe = new TreeMap<Integer, Integer>();
-            this.packForGame = new LinkedList<ICard>();
-            this.listeofcontains = new TreeSet<Integer>();
-        this.iPack = packProvider.getPack();
-        this.field = modelFactory.createField();
+    public void setField(IField field) {
+        this.field = field;
     }
 
         /*
@@ -77,9 +82,9 @@ public class GameProvider {
                 mapForGame.put(this.getRamdomListe().get(i), card);
                 i++;
             }
-            this.packForGame.addAll(mapForGame.values());
-            this.iPack.getPack().addAll(mapForGame.values());
-            startUpOfField();
+            this.iPack.getPack().clear();
+        this.iPack.getPack().addAll(mapForGame.values());
+        startUpOfField();
         }
 
     /**
@@ -119,11 +124,12 @@ public class GameProvider {
     private void startUpOfField() {
 
             for (int index = 0; index < sizeOfField; index++) {
-                this.getCardInFieldGame().put(index, this.packForGame.get(index));
+                field.getCardsInField().put(index, ((LinkedList<ICard>)this.iPack.getPack()).get(index));
 
             }
 
-        }
+        this.iPack.getPack().removeAll(field.getCardsInField().values());
+    }
 
         /*
          * (non-Javadoc)
@@ -140,7 +146,7 @@ public class GameProvider {
                         || this.getCardInFieldGame().get(key).compareTo(cardTwo)
                         || this.getCardInFieldGame().get(key).compareTo(cardThree)) {
                     keyCardInField.add(key);
-                    this.packForGame.remove(this.getCardInFieldGame().get(key));
+                    this.iPack.getPack().remove(this.getCardInFieldGame().get(key));
                 }
             }
             for (Integer key : keyCardInField) {
@@ -157,13 +163,14 @@ public class GameProvider {
     */
     private void fillField() {
             LinkedList<ICard> cardsOnStack = new LinkedList<ICard>();
-            cardsOnStack.addAll(getUnusedCards());
+        cardsOnStack.addAll(iPack.getPack());
 
-            for (int index = 0; index < sizeOfField; index++) {
+        for (int index = 0; index < sizeOfField; index++) {
                 if (this.getCardInFieldGame().get(index) == null
                         && !(cardsOnStack.isEmpty())) {
                     this.getCardInFieldGame().put(index,
                             cardsOnStack.getFirst());
+                    iPack.getPack().remove(cardsOnStack.getFirst());
                     cardsOnStack.removeFirst();
                 } else if (this.getCardInFieldGame().get(index) == null
                         && cardsOnStack.isEmpty()) {
@@ -234,11 +241,8 @@ public class GameProvider {
          */
 
     public List<ICard> getUnusedCards() {
-            LinkedList<ICard> list = new LinkedList<ICard>();
-            list.addAll(this.packForGame);
-            list.removeAll(this.getCardInFieldGame().values());
-            return list;
-        }
+        return iPack.getPack();
+    }
 
         /*
          * (non-Javadoc)
@@ -257,8 +261,11 @@ public class GameProvider {
          */
 
     public List<ICard> getAllCardsInGame() {
-            return this.packForGame;
-        }
+        List<ICard> result = new LinkedList<ICard>();
+        result.addAll(iPack.getPack());
+        result.addAll(field.getCardsInField().values());
+        return result;
+    }
 
     /**
      * @return the ramdomListe
@@ -279,181 +286,14 @@ public class GameProvider {
 
 
     public void clear() {
-            packForGame.clear();
-            this.field.getCardsInField().clear();
-            this.packForGame.clear();
+        iPack.getPack().clear();
+        this.field.getCardsInField().clear();
             this.sizeOfField = INITIALVALUEOFFIELD;
             startUp();
 
         }
 
-        @Override
-        public String toString() {
 
-            return returnString();
-        }
-
-        private String returnApeend() {
-            return "|  ";
-        }
-
-        private String returnString() {
-            this.listeofcontains.clear();
-            StringBuilder field = new StringBuilder();
-            field.append("\n");
-            int t = 0;
-            while (t != this.sizeOfField) {
-                field.append(apendKeyInString()).append("\n");
-                field.append(appendColorInString()).append("\n");
-                field.append(appendFormInString()).append("\n");
-                field.append(appendNumberOfComponents()).append("\n");
-                field.append(appendFillingInString()).append("\n");
-                t++;
-                if (sizeOfField == listeofcontains.size()) {
-                    break;
-                }
-            }
-            return field.toString();
-        }
-
-        private String apendKeyInString() {
-            StringBuilder fieldSt = new StringBuilder();
-            int i = 0;
-            for (Integer key : field.getCardsInField().keySet()) {
-                if (!listeofcontains.contains(key)) {
-                    double fehlt = LEGHTFORSTRING - 1;
-                    double me = fehlt / 2;
-                    fehlt = fehlt - me;
-                    for (int loop = 0; loop < me; loop++) {
-                        fieldSt.append(" ");
-                    }
-                    fieldSt.append("[" + key + "]");
-                    for (int loop = 0; loop < fehlt; loop++) {
-                        fieldSt.append(" ");
-                    }
-                    i++;
-                    if (i == NUMBERFORONELINE) {
-                        i = 0;
-                        break;
-                    }
-                }
-            }
-            return fieldSt.toString();
-        }
-
-        private String appendColorInString() {
-            int i = 0;
-            StringBuilder fieldSt = new StringBuilder();
-            for (Integer key : field.getCardsInField().keySet()) {
-                if (!listeofcontains.contains(key)) {
-                    int fehlt = LEGHTFORSTRING
-                            - field.getCardsInField().get(key).getColor().toCharArray().length;
-                    int me = fehlt / 2;
-                    fehlt = fehlt - me;
-                    fieldSt.append("|");
-                    for (int loop = 0; loop < me; loop++) {
-                        fieldSt.append(" ");
-                    }
-                    fieldSt.append(field.getCardsInField().get(key).getColor());
-                    for (int loop = 0; loop < fehlt; loop++) {
-                        fieldSt.append(" ");
-                    }
-                    fieldSt.append(returnApeend());
-                    i++;
-                    if (i == NUMBERFORONELINE) {
-                        i = 0;
-                        break;
-                    }
-                }
-            }
-            return fieldSt.toString();
-        }
-
-        private String appendFormInString() {
-            int i = 0;
-            StringBuilder fieldSt = new StringBuilder();
-            for (Integer key : field.getCardsInField().keySet()) {
-                if (!listeofcontains.contains(key)) {
-                    int fehlt = LEGHTFORSTRING
-                            - field.getCardsInField().get(key).getForm().toCharArray().length;
-                    int me = fehlt / 2;
-                    fehlt = fehlt - me;
-                    fieldSt.append("|");
-                    for (int loop = 0; loop < me; loop++) {
-                        fieldSt.append(" ");
-                    }
-                    fieldSt.append(field.getCardsInField().get(key).getForm());
-                    for (int loop = 0; loop < fehlt; loop++) {
-                        fieldSt.append(" ");
-                    }
-                    fieldSt.append(returnApeend());
-                    i++;
-                    if (i == NUMBERFORONELINE) {
-                        i = 0;
-                        break;
-                    }
-                }
-            }
-            return fieldSt.toString();
-        }
-
-        private String appendNumberOfComponents() {
-            int i = 0;
-            StringBuilder fieldSt = new StringBuilder();
-            for (Integer key : field.getCardsInField().keySet()) {
-                if (!listeofcontains.contains(key)) {
-                    int fehlt = LEGHTFORSTRING - 1;
-                    int me = fehlt / 2;
-                    fehlt = fehlt - me;
-                    fieldSt.append("|");
-                    for (int loop = 0; loop < me; loop++) {
-                        fieldSt.append(" ");
-                    }
-                    fieldSt.append(field.getCardsInField().get(key).getNumberOfComponents());
-                    for (int loop = 0; loop < fehlt; loop++) {
-                        fieldSt.append(" ");
-                    }
-                    fieldSt.append(returnApeend());
-                    i++;
-                    if (i == NUMBERFORONELINE) {
-                        i = 0;
-                        break;
-                    }
-                }
-
-            }
-            return fieldSt.toString();
-        }
-
-        private String appendFillingInString() {
-            int i = 0;
-            StringBuilder fieldST = new StringBuilder();
-            for (Integer key : field.getCardsInField().keySet()) {
-                if (!listeofcontains.contains(key)) {
-                    int fehlt = LEGHTFORSTRING
-                            - field.getCardsInField().get(key).getPanelFilling()
-                            .toCharArray().length;
-                    int me = fehlt / 2;
-                    fehlt = fehlt - me;
-                    fieldST.append("|");
-                    for (int loop = 0; loop < me; loop++) {
-                        fieldST.append(" ");
-                    }
-                    fieldST.append(field.getCardsInField().get(key).getPanelFilling());
-                    for (int loop = 0; loop < fehlt; loop++) {
-                        fieldST.append(" ");
-                    }
-                    fieldST.append(returnApeend());
-                    listeofcontains.add(key);
-                    i++;
-                    if (i == NUMBERFORONELINE) {
-                        i = 0;
-                        break;
-                    }
-                }
-            }
-            return fieldST.toString();
-        }
 
 
 }

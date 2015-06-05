@@ -4,6 +4,7 @@ package de.htwg.se.setgame.controller.impl;
 import java.util.LinkedList;
 import java.util.List;
 
+import de.htwg.se.setgame.model.IField;
 import de.htwg.se.setgame.model.impl.Field;
 import de.htwg.se.setgame.model.impl.ModelFactory;
 import org.junit.Assert;
@@ -131,7 +132,7 @@ public class SetControllerTest {
     }
     @Test
     public void getField_ok(){
-        Field f = target.getField();
+        IField f = target.getField();
         Assert.assertEquals(f.getCardsInField().size(),target.getCardInFieldGame().size());
     }
     @Test

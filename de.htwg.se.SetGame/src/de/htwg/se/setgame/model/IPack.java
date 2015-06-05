@@ -1,5 +1,6 @@
 package de.htwg.se.setgame.model;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -8,4 +9,7 @@ import java.util.List;
 public interface IPack {
     List<ICard> getPack();
     void setPack(List<ICard> pack);
+
+
+
 }
