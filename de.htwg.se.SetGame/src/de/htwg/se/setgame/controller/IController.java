@@ -99,5 +99,10 @@ public interface IController extends IObservable {
 	 * @return IPack
 	 */
 	IPack getPack();
+	
+	/**
+	 * 	save game
+	 */
+	void saveGame();
 
 }
