@@ -17,4 +17,4 @@
 		<mapping class="miwalz.testing.Model" />
 	</session-factory>
 
-</hibernate-configuration>  
+</hibernate-configuration>

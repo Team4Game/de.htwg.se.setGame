@@ -9,6 +9,11 @@ import org.ektorp.impl.StdCouchDbInstance;
 import org.hibernate.*;
 import org.hibernate.cfg.*;
 
+import com.db4o.Db4oEmbedded;
+import com.db4o.ObjectContainer;
+
+import de.htwg.se.setgame.model.impl.Game;
+
 public class Controller {
 
 	public void testCouch() {
@@ -16,10 +21,9 @@ public class Controller {
 		Model model = new Model();
 		model.setFoo("zwei");
 
-		
 		// COUCH DB
-
 		
+		/*
 		HttpClient httpClient = new StdHttpClient.Builder()
 				.host("lenny2.in.htwg-konstanz.de").port(5984).build();
 
@@ -33,15 +37,17 @@ public class Controller {
 		System.out.println(model.getId());
 		System.out.println(model.getRevision());
 		System.out.println("couchdb ok");
+		*/
+
 		
-		
+		/*
 		// HIBERNATE
 
 		Session session = new AnnotationConfiguration().configure()
 				.buildSessionFactory().openSession();
-		
+
 		Transaction transaction = null;
-		
+
 		// save
 		try {
 			transaction = session.beginTransaction();
@@ -56,22 +62,28 @@ public class Controller {
 				transaction.rollback();
 			}
 		}
-		
-		/*
-		// fetch
-		try {
-			transaction = session.beginTransaction();
-			session.get(Model.class, arg1)
-			transaction.commit();
-			System.out.println("hibernate ok");
-		} catch (HibernateException ex) {
-			System.out.println("hibernate error");
-			if (transaction != null) {
-				System.out.println("hibernate rollback");
-				transaction.rollback();
-			}
-		}
 		*/
-	}
+		/*
+		 * // fetch try { transaction = session.beginTransaction();
+		 * session.get(Model.class, arg1) transaction.commit();
+		 * System.out.println("hibernate ok"); } catch (HibernateException ex) {
+		 * System.out.println("hibernate error"); if (transaction != null) {
+		 * System.out.println("hibernate rollback"); transaction.rollback(); } }
+		 */
 
+		// DB4O
+
+		ObjectContainer odb = Db4oEmbedded.openFile(
+				Db4oEmbedded.newConfiguration(), "dboSetgame");
+		try {
+			odb.store(model);
+			
+			//Game gotGame = odb.q
+			
+		} finally {
+			odb.close();
+		}
+		
+		
+	}
 }
