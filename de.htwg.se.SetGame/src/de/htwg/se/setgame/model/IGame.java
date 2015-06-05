@@ -7,7 +7,9 @@ import java.util.List;
  */
 public interface IGame {
 
-	void setPlayer(IPlayer playerOne, IPlayer playerTwo);
+	void setPlayerOne(IPlayer player1);
+	
+	void setPlayerTwo(IPlayer player2);
 
 	void setCardInField(List<ICard> cardsInField);
 

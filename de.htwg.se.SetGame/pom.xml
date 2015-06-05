@@ -73,5 +73,15 @@
 			<artifactId>ejb3-persistence</artifactId>
 			<version>1.0.2.GA</version>
 		</dependency>
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.12.1.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.35</version>
+		</dependency>
 	</dependencies>
 </project>

@@ -34,12 +34,6 @@ public class PersistentGame extends CouchDbDocument implements IGame {
 	}
 
 	@Override
-	public void setPlayer(IPlayer playerOne, IPlayer playerTwo) {
-		this.player1 = playerOne;
-		this.player2 = playerTwo;
-	}
-
-	@Override
 	public void setCardInField(List<ICard> cardsInField) {
 		this.cardsInField = cardsInField;
 	}
@@ -77,5 +71,15 @@ public class PersistentGame extends CouchDbDocument implements IGame {
 	@Override
 	public String getToken() {
 		return this.token;
+	}
+
+	@Override
+	public void setPlayerOne(IPlayer player1) {
+		this.player1 = player1;
+	}
+
+	@Override
+	public void setPlayerTwo(IPlayer player2) {
+		this.player2 = player2;
 	}
 }

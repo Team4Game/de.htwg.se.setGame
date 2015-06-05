@@ -7,6 +7,7 @@ import de.htwg.se.setgame.model.IPlayer;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -17,6 +18,9 @@ import javax.persistence.Table;
 @Table(name = "setgame")
 public class PersistentGame implements IGame {
 
+	@Id  
+	private int id;
+	
 	private IPlayer player1;
 	private IPlayer player2;
 
@@ -33,12 +37,6 @@ public class PersistentGame implements IGame {
 		this.cardsInField = cardsInField;
 		this.unusedCards = unusedCards;
 		this.token = token;
-	}
-
-	@Override
-	public void setPlayer(IPlayer playerOne, IPlayer playerTwo) {
-		this.player1 = playerOne;
-		this.player2 = playerTwo;
 	}
 
 	@Override
@@ -79,5 +77,23 @@ public class PersistentGame implements IGame {
 	@Override
 	public String getToken() {
 		return this.token;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@Override
+	public void setPlayerOne(IPlayer player1) {
+		this.player1 = player1;
+	}
+
+	@Override
+	public void setPlayerTwo(IPlayer player2) {
+		this.player2 = player2;
 	}
 }
