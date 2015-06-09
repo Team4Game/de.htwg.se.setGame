@@ -17,16 +17,13 @@ public class Game implements IGame {
 	private List<ICard> cardsInField; // get via Field.getCardsInField
 	private List<ICard> unusedCards; // get via Pack.getPack
 
-	private String token;
-
 	public Game(IPlayer player1, IPlayer player2, List<ICard> cardsInField,
-			List<ICard> unusedCards, String token) {
+			List<ICard> unusedCards) {
 		super();
 		this.player1 = player1;
 		this.player2 = player2;
 		this.cardsInField = cardsInField;
 		this.unusedCards = unusedCards;
-		this.token = token;
 	}
 
 	@Override
@@ -37,11 +34,6 @@ public class Game implements IGame {
 	@Override
 	public void setUnusedCards(List<ICard> unusedCards) {
 		this.unusedCards = unusedCards;
-	}
-
-	@Override
-	public void setGameToken(String token) {
-		this.token = token;
 	}
 
 	@Override
@@ -65,11 +57,6 @@ public class Game implements IGame {
 	}
 
 	@Override
-	public String getToken() {
-		return this.token;
-	}
-
-	@Override
 	public void setPlayerOne(IPlayer player1) {
 		this.player1 = player1;
 	}
@@ -77,5 +64,17 @@ public class Game implements IGame {
 	@Override
 	public void setPlayerTwo(IPlayer player2) {
 		this.player2 = player2;
+	}
+
+	@Override
+	public void setId(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getId() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

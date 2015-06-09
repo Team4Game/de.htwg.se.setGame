@@ -8,7 +8,6 @@ import org.ektorp.http.StdHttpClient;
 import org.ektorp.impl.StdCouchDbConnector;
 import org.ektorp.impl.StdCouchDbInstance;
 
-import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.util.persistence.IGameDao;
 
 public class GameDao implements IGameDao {
@@ -25,15 +24,14 @@ public class GameDao implements IGameDao {
 	}
 
 	@Override
-	public void createOrUpdateGame(IGame game) {
+	public void createOrUpdateGame(PersistentGame game) {
 		db.create(game);
-		return;
 	}
 
 	@Override
-	public IGame findGame(String id) {
+	public PersistentGame findGame(String id) {
 		try {
-            PersistentGame persistentGame = db.get(PersistentGame.class, id);
+			PersistentGame persistentGame = db.get(PersistentGame.class, id);
             return persistentGame;
         } catch (DocumentNotFoundException e) {
         	// TODO: err handling
@@ -43,9 +41,8 @@ public class GameDao implements IGameDao {
 
 	@Override
 	public void deleteGame(String id) {
-		IGame persistentGame = this.findGame(id);
+		PersistentGame persistentGame = this.findGame(id);
 		db.delete(persistentGame);
-		return;
 	}
 
 }

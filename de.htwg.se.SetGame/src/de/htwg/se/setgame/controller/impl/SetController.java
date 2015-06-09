@@ -1,9 +1,10 @@
 package de.htwg.se.setgame.controller.impl;
 
-
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import com.google.inject.Inject;
 
@@ -16,444 +17,515 @@ import de.htwg.se.setgame.model.impl.Pack;
 import de.htwg.se.setgame.model.impl.Player;
 import de.htwg.se.setgame.util.observer.Observable;
 import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
+import de.htwg.se.setgame.util.persistence.couchdb.PersistentCard;
 import de.htwg.se.setgame.util.persistence.couchdb.PersistentGame;
-
+import de.htwg.se.setgame.util.persistence.couchdb.PersistentPlayer;
 
 /**
  * @author raina
  */
 public class SetController extends Observable implements IController {
 
-    public GameProvider getGameProvider() {
-        return gameProvider;
-    }
+	public GameProvider getGameProvider() {
+		return gameProvider;
+	}
 
-    public void setGameProvider(GameProvider gameProvider) {
-        this.gameProvider = gameProvider;
-    }
+	public void setGameProvider(GameProvider gameProvider) {
+		this.gameProvider = gameProvider;
+	}
 
-    /**
-     * gameProvider
-     */
-    protected GameProvider gameProvider;
+	/**
+	 * gameProvider
+	 */
+	protected GameProvider gameProvider;
 
-    /**
-     * counter
-     */
-    private int counter;
+	/**
+	 * counter
+	 */
+	private int counter;
 
-
-    /**
-     * number for set
-     */
-    private static final int NUMBEROFSETCARDS = 3;
-    /**
-     * numforgotrguth;
-     */
-    private static final int THREE = 3;
-    /**
-     * a number for
-     */
-    private static final int THOUSAND = 1000;
-    /**
+	/**
+	 * number for set
+	 */
+	private static final int NUMBEROFSETCARDS = 3;
+	/**
+	 * numforgotrguth;
+	 */
+	private static final int THREE = 3;
+	/**
+	 * a number for
+	 */
+	private static final int THOUSAND = 1000;
+	/**
      *
      */
-    private final int playerOne;
-    /**
+	private final int playerOne;
+	/**
      *
      */
-    private final int playerTwo;
-    /**
+	private final int playerTwo;
+	/**
      *
      */
-    private int playerOneCounter;
-    /**
+	private int playerOneCounter;
+	/**
      *
      */
-    private int playerTwoCounter;
+	private int playerTwoCounter;
 
-    /**
-     * Logic Construct make for the game a new field with a new pack!!!
+	/**
+     * 
      */
-    @Inject
-    public SetController(IModelFactory modelFactory) {
-        this.gameProvider = new GameProvider(modelFactory, 12);
-        this.counter = 0;
-        this.gameProvider.startUp();
-        this.playerOne = 1;
-        this.playerTwo = 2;
-        this.playerOneCounter = 0;
-        this.playerTwoCounter = 0;
-        checkIfIsASeTInGame();
-    }
+	PersistentGame game = null;
 
-    @Override
-    public void newGame() {
-        this.gameProvider.clear();
-        this.counter = 0;
-        this.playerOneCounter = 0;
-        this.playerTwoCounter = 0;
-        notifyObservers();
-    }
-    
+	/**
+	 * Logic Construct make for the game a new field with a new pack!!!
+	 */
+	@Inject
+	public SetController(IModelFactory modelFactory) {
+		this.gameProvider = new GameProvider(modelFactory, 12);
+		this.counter = 0;
+		this.gameProvider.startUp();
+		this.playerOne = 1;
+		this.playerTwo = 2;
+		this.playerOneCounter = 0;
+		this.playerTwoCounter = 0;
+		checkIfIsASeTInGame();
+	}
 
-    /**
+	@Override
+	public void newGame() {
+		this.gameProvider.clear();
+		this.counter = 0;
+		this.playerOneCounter = 0;
+		this.playerTwoCounter = 0;
+		notifyObservers();
+	}
+
+	/**
      *
      */
-    protected void checkIfIsASeTInGame() {
-        List<ICard> liste = new LinkedList<ICard>();
-        liste.addAll(getSet(this.gameProvider.getCardsInField()));
-        if (liste.size() < NUMBEROFSETCARDS) {
-            int i = 0;
-            while (!changeCardsInGame() && i < THOUSAND) {
-                i++;
-            }
+	protected void checkIfIsASeTInGame() {
+		List<ICard> liste = new LinkedList<ICard>();
+		liste.addAll(getSet(this.gameProvider.getCardsInField()));
+		if (liste.size() < NUMBEROFSETCARDS) {
+			int i = 0;
+			while (!changeCardsInGame() && i < THOUSAND) {
+				i++;
+			}
 
-        }
-        changeCardsInGame();
-        notifyObservers();
-    }
+		}
+		changeCardsInGame();
+		notifyObservers();
+	}
 
+	/**
+	 * @param cardOne
+	 * @param cardTwo
+	 * @param cardThree
+	 * @return true if all the cards are in the field is only a safety Method
+	 */
+	protected boolean isInField(ICard cardOne, ICard cardTwo, ICard cardThree) {
+		this.counter = 0;
+		for (ICard card : gameProvider.getCardsInField()) {
+			if (card.compareTo(cardOne) || card.compareTo(cardTwo)
+					|| card.compareTo(cardThree)) {
+				counter++;
+			}
+		}
+		if (this.counter == NUMBEROFSETCARDS) {
+			return true;
+		}
+		return false;
 
-    /**
-     * @param cardOne
-     * @param cardTwo
-     * @param cardThree
-     * @return true if all the cards are in the field is only a safety Method
-     */
-    protected boolean isInField(ICard cardOne, ICard cardTwo, ICard cardThree) {
-        this.counter = 0;
-        for (ICard card : gameProvider.getCardsInField()) {
-            if (card.compareTo(cardOne) || card.compareTo(cardTwo)
-                    || card.compareTo(cardThree)) {
-                counter++;
-            }
-        }
-        if (this.counter == NUMBEROFSETCARDS) {
-            return true;
-        }
-        return false;
+	}
 
-    }
+	/**
+	 * @param cardOne
+	 * @param cardTwo
+	 * @param cardThree
+	 * @return return true if is a set.
+	 */
+	protected boolean isASet(ICard cardOne, ICard cardTwo, ICard cardThree) {
 
-    /**
-     * @param cardOne
-     * @param cardTwo
-     * @param cardThree
-     * @return return true if is a set.
-     */
-    protected boolean isASet(ICard cardOne, ICard cardTwo, ICard cardThree) {
+		if (!isInField(cardOne, cardTwo, cardThree)) {
+			return false;
+		} else {
+			if (proveIfIsASet(cardOne, cardTwo, cardThree)) {
+				gameProvider.foundSet(cardOne, cardTwo, cardThree);
+				if (getASetInGame().size() >= THREE) {
+					return true;
+				} else if (allTheSetsInField(this.gameProvider
+						.getAllCardsInGame())) {
+					changeCardsInGame();
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 
-        if (!isInField(cardOne, cardTwo, cardThree)) {
-            return false;
-        } else {
-            if (proveIfIsASet(cardOne, cardTwo, cardThree)) {
-                gameProvider.foundSet(cardOne, cardTwo, cardThree);
-                if (getASetInGame().size() >= THREE) {
-                    return true;
-                } else if (allTheSetsInField(this.gameProvider.getAllCardsInGame())) {
-                    changeCardsInGame();
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
+	/**
+	 * @param list
+	 *            is the Cards in field the new ones if there is no set anymore.
+	 * @return true if still set in fields
+	 */
+	protected boolean allTheSetsInField(List<ICard> list) {
+		if (!getSet(list).isEmpty()) {
+			return true;
+		}
+		if (changeCardsInGame()) {
+			return true;
+		}
 
-    /**
-     * @param list is the Cards in field the new ones if there is no set anymore.
-     * @return true if still set in fields
-     */
-    protected boolean allTheSetsInField(List<ICard> list) {
-        if (!getSet(list).isEmpty()) {
-            return true;
-        }
-        if (changeCardsInGame()) {
-            return true;
-        }
+		return false;
 
-        return false;
+	}
 
-    }
+	@Override
+	public void setFieldSize(int size) {
+		if (size > 0) {
+			this.gameProvider.setSizeOfField(size);
+		}
+		checkIfIsASeTInGame();
+	}
 
-    @Override
-    public void setFieldSize(int size) {
-        if (size > 0) {
-            this.gameProvider.setSizeOfField(size);
-        }
-        checkIfIsASeTInGame();
-    }
+	/**
+	 * changed the Cards in the field if necessary. to
+	 * 
+	 * @return true if cards change
+	 */
+	private boolean changeCardsInGame() {
+		List<ICard> allCards = new LinkedList<ICard>();
+		allCards.addAll(gameProvider.getUnusedCards());
+		if (!allCards.isEmpty() && !getSet(allCards).isEmpty()) {
+			gameProvider.changeCards(getSet(allCards));
+			return true;
+		}
+		return false;
 
-    /**
-     * changed the Cards in the field if necessary. to
-     * @return true if cards change
-     */
-    private boolean changeCardsInGame() {
-        List<ICard> allCards = new LinkedList<ICard>();
-        allCards.addAll(gameProvider.getUnusedCards());
-        if (!allCards.isEmpty() && !getSet(allCards).isEmpty()) {
-            gameProvider.changeCards(getSet(allCards));
-            return true;
-        }
-        return false;
+	}
 
-    }
+	/**
+	 * @param cardOne
+	 * @param cardTwo
+	 * @param cardThree
+	 * @return
+	 */
+	private boolean proveColor(ICard cardOne, ICard cardTwo, ICard cardThree) {
+		return proveString(cardOne.getColor(), cardTwo.getColor(),
+				cardThree.getColor());
+	}
 
-    /**
-     * @param cardOne
-     * @param cardTwo
-     * @param cardThree
-     * @return
-     */
-    private boolean proveColor(ICard cardOne, ICard cardTwo, ICard cardThree) {
-        return proveString(cardOne.getColor(), cardTwo.getColor(),
-                cardThree.getColor());
-    }
+	/**
+	 * @param cardOne
+	 * @param cardTwo
+	 * @param cardThree
+	 * @return
+	 */
+	private boolean proveNumberOfComponents(ICard cardOne, ICard cardTwo,
+			ICard cardThree) {
+		if (cardOne.getNumberOfComponents() == cardTwo.getNumberOfComponents()
+				&& cardOne.getNumberOfComponents() == cardThree
+						.getNumberOfComponents()) {
+			return true;
+		} else if (cardOne.getNumberOfComponents() != cardTwo
+				.getNumberOfComponents()
+				&& cardOne.getNumberOfComponents() != cardThree
+						.getNumberOfComponents()
+				&& cardTwo.getNumberOfComponents() != cardThree
+						.getNumberOfComponents()) {
+			return true;
+		}
+		return false;
+	}
 
-    /**
-     * @param cardOne
-     * @param cardTwo
-     * @param cardThree
-     * @return
-     */
-    private boolean proveNumberOfComponents(ICard cardOne, ICard cardTwo,
-                                            ICard cardThree) {
-        if (cardOne.getNumberOfComponents() == cardTwo.getNumberOfComponents()
-                && cardOne.getNumberOfComponents() == cardThree
-                .getNumberOfComponents()) {
-            return true;
-        } else if (cardOne.getNumberOfComponents() != cardTwo
-                .getNumberOfComponents()
-                && cardOne.getNumberOfComponents() != cardThree
-                .getNumberOfComponents()
-                && cardTwo.getNumberOfComponents() != cardThree
-                .getNumberOfComponents()) {
-            return true;
-        }
-        return false;
-    }
+	/**
+	 * @param cardOne
+	 * @param cardTwo
+	 * @param cardThree
+	 * @return
+	 */
+	private boolean proveFilling(ICard cardOne, ICard cardTwo, ICard cardThree) {
+		return proveString(cardOne.getPanelFilling(),
+				cardTwo.getPanelFilling(), cardThree.getPanelFilling());
+	}
 
-    /**
-     * @param cardOne
-     * @param cardTwo
-     * @param cardThree
-     * @return
-     */
-    private boolean proveFilling(ICard cardOne, ICard cardTwo, ICard cardThree) {
-        return proveString(cardOne.getPanelFilling(),
-                cardTwo.getPanelFilling(), cardThree.getPanelFilling());
-    }
+	/**
+	 * @param cardOne
+	 * @param cardTwo
+	 * @param cardThree
+	 * @return
+	 */
+	private boolean proveForm(ICard cardOne, ICard cardTwo, ICard cardThree) {
+		return proveString(cardOne.getForm(), cardTwo.getForm(),
+				cardThree.getForm());
+	}
 
-    /**
-     * @param cardOne
-     * @param cardTwo
-     * @param cardThree
-     * @return
-     */
-    private boolean proveForm(ICard cardOne, ICard cardTwo, ICard cardThree) {
-        return proveString(cardOne.getForm(), cardTwo.getForm(),
-                cardThree.getForm());
-    }
+	/**
+	 * @param stringOne
+	 * @param stringTwo
+	 * @param stringThree
+	 * @return
+	 */
+	private boolean proveString(String stringOne, String stringTwo,
+			String stringThree) {
+		if (stringOne.compareTo(stringTwo) == 0
+				&& stringOne.compareTo(stringThree) == 0
+				&& stringTwo.compareTo(stringThree) == 0) {
+			return true;
+		} else if (stringOne.compareTo(stringTwo) != 0
+				&& stringOne.compareTo(stringThree) != 0
+				&& stringTwo.compareTo(stringThree) != 0) {
+			return true;
+		}
+		return false;
+	}
 
-    /**
-     * @param stringOne
-     * @param stringTwo
-     * @param stringThree
-     * @return
-     */
-    private boolean proveString(String stringOne, String stringTwo,
-                                String stringThree) {
-        if (stringOne.compareTo(stringTwo) == 0
-                && stringOne.compareTo(stringThree) == 0 && stringTwo.compareTo(stringThree) == 0) {
-            return true;
-        } else if (stringOne.compareTo(stringTwo) != 0
-                && stringOne.compareTo(stringThree) != 0
-                && stringTwo.compareTo(stringThree) != 0) {
-            return true;
-        }
-        return false;
-    }
+	/**
+	 * @param cardOne
+	 * @param cardTwo
+	 * @param cardThree
+	 * @return
+	 */
+	private boolean proveIfIsASet(ICard cardOne, ICard cardTwo, ICard cardThree) {
+		if (proveColor(cardOne, cardTwo, cardThree)
+				&& proveFilling(cardOne, cardTwo, cardThree)
+				&& proveNumberOfComponents(cardOne, cardTwo, cardThree)
+				&& proveForm(cardOne, cardTwo, cardThree)) {
+			return true;
+		}
+		return false;
 
-    /**
-     * @param cardOne
-     * @param cardTwo
-     * @param cardThree
-     * @return
-     */
-    private boolean proveIfIsASet(ICard cardOne, ICard cardTwo, ICard cardThree) {
-        if (proveColor(cardOne, cardTwo, cardThree)
-                && proveFilling(cardOne, cardTwo, cardThree)
-                && proveNumberOfComponents(cardOne, cardTwo, cardThree)
-                && proveForm(cardOne, cardTwo, cardThree)) {
-            return true;
-        }
-        return false;
+	}
 
-    }
+	/**
+	 * @param list
+	 * @return
+	 */
+	private List<ICard> getSet(List<ICard> list) {
+		LinkedList<ICard> setList = new LinkedList<ICard>();
+		if (list.size() >= NUMBEROFSETCARDS) {
 
-    /**
-     * @param list
-     * @return
-     */
-    private List<ICard> getSet(List<ICard> list) {
-        LinkedList<ICard> setList = new LinkedList<ICard>();
-        if (list.size() >= NUMBEROFSETCARDS) {
+			for (ICard cardOne : list) {
+				for (ICard cardTwo : list) {
+					if (!cardOne.equals(cardTwo)) {
+						for (ICard cardThree : list) {
 
-            for (ICard cardOne : list) {
-                for (ICard cardTwo : list) {
-                    if (!cardOne.equals(cardTwo)) {
-                        for (ICard cardThree : list) {
+							if (proveIfIsASet(cardOne, cardTwo, cardThree)
+									&& !cardThree.equals(cardOne)
+									&& !(cardTwo.equals(cardThree))) {
 
-                            if (proveIfIsASet(cardOne, cardTwo, cardThree)
-                                    && !cardThree.equals(cardOne)
-                                    && !(cardTwo.equals(cardThree))) {
+								setList.add(cardOne);
+								setList.add(cardTwo);
+								setList.add(cardThree);
+								return setList;
+							}
+						}
+					}
+				}
+			}
 
-                                setList.add(cardOne);
-                                setList.add(cardTwo);
-                                setList.add(cardThree);
-                                return setList;
-                            }
-                        }
-                    }
-                }
-            }
+		}
 
-        }
+		return setList;
+	}
 
-        return setList;
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see de.htwg.se.setgame.controller.impl.ISuperController#getCardinGame()
+	 */
+	@Override
+	public List<ICard> getCardinGame() {
+		return this.gameProvider.getAllCardsInGame();
+	}
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#getCardinGame()
-     */
-    @Override
-    public List<ICard> getCardinGame() {
-        return this.gameProvider.getAllCardsInGame();
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see de.htwg.se.setgame.controller.impl.ISuperController#getField()
+	 */
+	@Override
+	public IField getField() {
+		return this.gameProvider.getField();
+	}
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#getField()
-     */
-    @Override
-    public IField getField() {
-        return  this.gameProvider.getField();
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * de.htwg.se.setgame.controller.impl.ISuperController#isASetForController
+	 * (de.htwg.se.setgame.modell.impl.Card,
+	 * de.htwg.se.setgame.modell.impl.Card, de.htwg.se.setgame.modell.impl.Card,
+	 * int)
+	 */
+	@Override
+	public void isASetForController(ICard cardOne, ICard cardTwo,
+			ICard cardThree, int player) {
+		if (isASet(cardOne, cardTwo, cardThree)) {
+			if (this.playerOne == player) {
+				this.playerOneCounter = this.playerOneCounter + 1;
+			} else if (this.playerTwo == player) {
+				this.playerTwoCounter = this.playerTwoCounter + 1;
 
+			}
+			if (playerOne == player || player == this.playerTwo || player >= 0) {
+				notifyObservers();
+			}
+		}
+	}
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#isASetForController(de.htwg.se.setgame.modell.impl.Card, de.htwg.se.setgame.modell.impl.Card, de.htwg.se.setgame.modell.impl.Card, int)
-     */
-    @Override
-    public void isASetForController(ICard cardOne, ICard cardTwo,
-                                    ICard cardThree, int player) {
-        if (isASet(cardOne, cardTwo, cardThree)) {
-            if (this.playerOne == player) {
-                this.playerOneCounter = this.playerOneCounter + 1;
-            } else if (this.playerTwo == player) {
-                this.playerTwoCounter = this.playerTwoCounter + 1;
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see de.htwg.se.setgame.controller.impl.ISuperController#getASetInGame()
+	 */
+	@Override
+	public List<ICard> getASetInGame() {
+		return getSet(this.gameProvider.getCardsInField());
+	}
 
-            }
-            if (playerOne == player || player == this.playerTwo || player >= 0) {
-                notifyObservers();
-            }
-        }
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see de.htwg.se.setgame.controller.impl.ISuperController#stillSetInGame()
+	 */
+	@Override
+	public boolean stillSetInGame() {
+		LinkedList<ICard> liste = new LinkedList<ICard>();
+		liste.addAll(getSet(this.gameProvider.getAllCardsInGame()));
+		if (liste.isEmpty()) {
+			return false;
+		}
+		return true;
+	}
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#getASetInGame()
-     */
-    @Override
-    public List<ICard> getASetInGame() {
-        return getSet(this.gameProvider.getCardsInField());
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see de.htwg.se.setgame.controller.impl.ISuperController#getSetInField()
+	 */
+	@Override
+	public List<ICard> getSetInField() {
+		return getSet(this.gameProvider.getCardsInField());
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#stillSetInGame()
-     */
-    @Override
-    public boolean stillSetInGame() {
-        LinkedList<ICard> liste = new LinkedList<ICard>();
-        liste.addAll(getSet(this.gameProvider.getAllCardsInGame()));
-        if (liste.isEmpty()) {
-            return false;
-        }
-        return true;
-    }
+	}
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#getSetInField()
-     */
-    @Override
-    public List<ICard> getSetInField() {
-        return getSet(this.gameProvider.getCardsInField());
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * de.htwg.se.setgame.controller.impl.ISuperController#getPlayerOnePoints()
+	 */
+	@Override
+	public int getPlayerOnePoints() {
+		return this.playerOneCounter;
+	}
 
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * de.htwg.se.setgame.controller.impl.ISuperController#getPlayerTwoPoints()
+	 */
+	@Override
+	public int getPlayerTwoPoints() {
+		return this.playerTwoCounter;
+	}
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#getPlayerOnePoints()
-     */
-    @Override
-    public int getPlayerOnePoints() {
-        return this.playerOneCounter;
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see de.htwg.se.setgame.controller.impl.ISuperController#getPlayerOne()
+	 */
+	@Override
+	public int getPlayerOne() {
+		return this.playerOne;
+	}
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#getPlayerTwoPoints()
-     */
-    @Override
-    public int getPlayerTwoPoints() {
-        return this.playerTwoCounter;
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see de.htwg.se.setgame.controller.impl.ISuperController#getPlayerTwo()
+	 */
+	@Override
+	public int getPlayerTwo() {
+		return this.playerTwo;
+	}
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#getPlayerOne()
-     */
-    @Override
-    public int getPlayerOne() {
-        return this.playerOne;
-    }
+	@Override
+	public List<ICard> getCardInFieldGame() {
+		return this.gameProvider.getCardsInField();
+	}
 
-    /* (non-Javadoc)
-     * @see de.htwg.se.setgame.controller.impl.ISuperController#getPlayerTwo()
-     */
-    @Override
-    public int getPlayerTwo() {
-        return this.playerTwo;
-    }
+	@Override
+	public Map<Integer, ICard> getCardsAndTheIndexOfCardInField() {
+		return this.gameProvider.getCardInFieldGame();
+	}
 
-    @Override
-    public List<ICard> getCardInFieldGame() {
-        return this.gameProvider.getCardsInField();
-    }
+	@Override
+	public IPack getPack() {
+		return gameProvider.getiPack();
+	}
 
-    @Override
-    public Map<Integer, ICard> getCardsAndTheIndexOfCardInField() {
-        return this.gameProvider.getCardInFieldGame();
-    }
+	@SuppressWarnings("unchecked")
+	@Override
+	public void saveGame() {
 
-    @Override
-    public IPack getPack() {
-        return gameProvider.getiPack();
-    }
-    @Override
-    public void saveGame() {
+		Collection<? extends PersistentCard> unusedCards = (Collection<? extends PersistentCard>) this
+				.getPack().getPack();
 
-        List<ICard> unusedCards = this.getPack().getPack();
-        List<ICard> cardsInField = this.getCardInFieldGame();
-        IPlayer player1 = new Player(this.playerOne, this.playerOneCounter);
-        IPlayer player2 = new Player(this.playerTwo, this.playerTwoCounter);
-        String token = null;
-        
-        PersistentGame game = new PersistentGame(player1, player2 , cardsInField , unusedCards , token);
+		Collection<? extends PersistentCard> cardsInField = (Collection<? extends PersistentCard>) this
+				.getCardInFieldGame();
+		
+		PersistentPlayer player1 = new PersistentPlayer(this.playerOne,
+				this.playerOneCounter);
+		
+		PersistentPlayer player2 = new PersistentPlayer(this.playerTwo,
+				this.playerTwoCounter);
+		
+		String id = UUID.randomUUID().toString();
+		
+		int counter = this.counter;
 
-        GameDao dao = new GameDao();
-        dao.createOrUpdateGame(game);
-        
-        token = game.getId();
-        
-        IGame fetchedGame = dao.findGame(token);
-        
-        //System.out.println("Fetched game, ID is: " + fetchedGame);
+		game = new PersistentGame(id, player1, player2, cardsInField,
+				unusedCards, counter);
 
-    }
+		GameDao dao = new GameDao();
+		dao.createOrUpdateGame(game);
+
+		System.out.println("Token is: " + game.getId());
+
+		// IGame fetchedGame = dao.findGame(token);
+
+		// System.out.println("Fetched game, ID is: " + fetchedGame);
+
+	}
+
+	@Override
+	public void loadGame() {
+
+		String targetId = "99e0907f-8572-4cff-b2ae-7b0909fb1d17";
+
+		GameDao dao = new GameDao();
+		this.game = dao.findGame(targetId);
+
+		this.gameProvider.clear();
+		this.counter = game.getCounter();
+		this.playerOneCounter = game.getPlayerOne().getCounter();
+		this.playerTwoCounter = game.getPlayerTwo().getCounter();
+		this.getPack().setPack(game.getUnusedCards());
+		
+		// cards in field set??? --> Map<integer, ICard>?
+		
+		//gameProvider.getField().setCardInField(game.getCardInField());
+		
+		notifyObservers();
+
+		// System.out.println(game.getPlayerOne().getCounter());
+		// System.out.println(game.getPlayerTwo().getCounter());
+
+	}
+
 }

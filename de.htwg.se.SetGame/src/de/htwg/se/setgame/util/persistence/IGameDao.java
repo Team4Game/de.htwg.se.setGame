@@ -1,14 +1,14 @@
 package de.htwg.se.setgame.util.persistence;
 
-import de.htwg.se.setgame.model.IGame;
+import de.htwg.se.setgame.util.persistence.couchdb.PersistentGame;
 
 public interface IGameDao {
 
 	// creates or updates game
-	void createOrUpdateGame(IGame game);
+	void createOrUpdateGame(PersistentGame game);
 	
 	// get game
-	IGame findGame(String id);
+	PersistentGame findGame(String id);
 	
 	// delete game
 	void deleteGame(String id);

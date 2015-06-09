@@ -12,7 +12,7 @@ import java.awt.event.*;
 public class MenuBar extends JMenuBar implements ActionListener {
 	
 	private static final long serialVersionUID = 1L;
-	private JMenuItem mHelp, mExit, mNewGame, mSaveGame;
+	private JMenuItem mHelp, mExit, mNewGame, mSaveGame, mLoadGame;
 	
 	public MenuBar() {
 		
@@ -25,8 +25,11 @@ public class MenuBar extends JMenuBar implements ActionListener {
 		mNewGame.addActionListener(this);
 		mSaveGame = new JMenuItem("Save Game");
 		mSaveGame.addActionListener(this);
+		mLoadGame = new JMenuItem("Load Game");
+		mLoadGame.addActionListener(this);
 		menu.add(mNewGame);
 		menu.add(mSaveGame);
+		menu.add(mLoadGame);
 		menu.add(mHelp);
 		menu.add(mExit);
 		this.add(menu);
@@ -57,6 +60,8 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	        	exit();
 	        }else if ( e.getSource() == mSaveGame ){
 	        	saveGame();
+	        }else if ( e.getSource() == mLoadGame ){
+	        	loadGame();
 	        }else{
 	        	if ( JOptionPane.showConfirmDialog(null,
 	        			"Really start a new Game?", "Choice", JOptionPane.YES_NO_OPTION) == 0) {
@@ -68,6 +73,10 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	
 	public void saveGame() {
 		GUI.getController().saveGame();
+	}
+
+	public void loadGame() {
+		GUI.getController().loadGame();
 	}
 	
 	public void exit() {

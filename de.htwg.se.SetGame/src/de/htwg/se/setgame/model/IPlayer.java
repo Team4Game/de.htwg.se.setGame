@@ -5,11 +5,11 @@ package de.htwg.se.setgame.model;
  */
 public interface IPlayer {
 	
-	void setId(int id);
+	void setPid(int pid);
 	
 	void setCounter(int counter);
 	
-	int getId();
+	int getPid();
 	
 	int getCounter();
 	

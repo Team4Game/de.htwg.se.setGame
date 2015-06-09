@@ -14,8 +14,8 @@ public interface IGame {
 	void setCardInField(List<ICard> cardsInField);
 
 	void setUnusedCards(List<ICard> unusedCards);
-
-	void setGameToken(String token);
+	
+	void setId(String id);
 
 	IPlayer getPlayerOne();
 
@@ -25,6 +25,5 @@ public interface IGame {
 
 	List<ICard> getUnusedCards();
 
-	String getToken();
-
+	String getId();
 }

@@ -105,4 +105,9 @@ public interface IController extends IObservable {
 	 */
 	void saveGame();
 
+	/**
+	 * 	load game
+	 */
+	void loadGame();
+
 }

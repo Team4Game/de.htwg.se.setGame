@@ -1,85 +1,89 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
-import de.htwg.se.setgame.model.ICard;
-import de.htwg.se.setgame.model.IGame;
-import de.htwg.se.setgame.model.IPlayer;
-
+import java.util.Collection;
 import java.util.List;
 
 import org.ektorp.support.CouchDbDocument;
 
+import de.htwg.se.setgame.model.ICard;
+
 /**
  * Created by miwalz on 03.06.2015.
  */
-public class PersistentGame extends CouchDbDocument implements IGame {
+public class PersistentGame extends CouchDbDocument {
 
 	private static final long serialVersionUID = 9152157365405198118L;
 	
-	private IPlayer player1;
-	private IPlayer player2;
+	private String id;
+	
+	private PersistentPlayer player1;
+	private PersistentPlayer player2;
+	
+	private int counter;
 
-	private List<ICard> cardsInField; // get via Field.getCardsInField
+	private List<PersistentCard> cardsInField; // get via Field.getCardsInField
 	private List<ICard> unusedCards; // get via Pack.getPack
 
-	private String token;
-
-	public PersistentGame(IPlayer player1, IPlayer player2, List<ICard> cardsInField,
-			List<ICard> unusedCards, String token) {
+	public PersistentGame() {}
+	
+	@SuppressWarnings("unchecked")
+	public PersistentGame(String id, PersistentPlayer player1, PersistentPlayer player2, Collection<? extends PersistentCard> cardsInField2,
+			Collection<? extends PersistentCard> unusedCards2, int counter) {
 		super();
+		this.id = id;
 		this.player1 = player1;
 		this.player2 = player2;
-		this.cardsInField = cardsInField;
-		this.unusedCards = unusedCards;
-		this.token = token;
+		this.cardsInField = (List<PersistentCard>) cardsInField2;
+		this.unusedCards = (List<ICard>) unusedCards2;
+		this.counter = counter;
 	}
 
-	@Override
-	public void setCardInField(List<ICard> cardsInField) {
+	public void setCardInField(List<PersistentCard> cardsInField) {
 		this.cardsInField = cardsInField;
 	}
 
-	@Override
 	public void setUnusedCards(List<ICard> unusedCards) {
 		this.unusedCards = unusedCards;
 	}
-
-	@Override
-	public void setGameToken(String token) {
-		this.token = token;
-	}
-
-	@Override
-	public IPlayer getPlayerOne() {
+	
+	public PersistentPlayer getPlayerOne() {
 		return this.player1;
 	}
 
-	@Override
-	public IPlayer getPlayerTwo() {
+	public PersistentPlayer getPlayerTwo() {
 		return this.player2;
 	}
 
-	@Override
-	public List<ICard> getCardInField() {
+	public List<PersistentCard> getCardInField() {
 		return this.cardsInField;
 	}
 
-	@Override
 	public List<ICard> getUnusedCards() {
 		return this.unusedCards;
 	}
 
-	@Override
-	public String getToken() {
-		return this.token;
+	public String getId() {
+		return id;
 	}
 
-	@Override
-	public void setPlayerOne(IPlayer player1) {
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public void setPlayerOne(PersistentPlayer player1) {
 		this.player1 = player1;
+		
 	}
 
-	@Override
-	public void setPlayerTwo(IPlayer player2) {
+	public void setPlayerTwo(PersistentPlayer player2) {
 		this.player2 = player2;
+	}
+
+	public int getCounter() {
+		return counter;
+	}
+
+	public void setCounter(int counter) {
+		this.counter = counter;
 	}
 }
