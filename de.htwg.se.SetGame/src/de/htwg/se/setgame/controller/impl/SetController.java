@@ -15,6 +15,8 @@ import de.htwg.se.setgame.model.impl.Game;
 import de.htwg.se.setgame.model.impl.Pack;
 import de.htwg.se.setgame.model.impl.Player;
 import de.htwg.se.setgame.util.observer.Observable;
+import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
+import de.htwg.se.setgame.util.persistence.couchdb.PersistentGame;
 
 
 /**
@@ -440,11 +442,18 @@ public class SetController extends Observable implements IController {
         List<ICard> cardsInField = this.getCardInFieldGame();
         IPlayer player1 = new Player(this.playerOne, this.playerOneCounter);
         IPlayer player2 = new Player(this.playerTwo, this.playerTwoCounter);
-        String token = "123test";
+        String token = null;
+        
+        PersistentGame game = new PersistentGame(player1, player2 , cardsInField , unusedCards , token);
 
-        Game game = new Game(player1, player2 , cardsInField , unusedCards , token);
-
-        System.out.println("target point");
+        GameDao dao = new GameDao();
+        dao.createOrUpdateGame(game);
+        
+        token = game.getId();
+        
+        IGame fetchedGame = dao.findGame(token);
+        
+        //System.out.println("Fetched game, ID is: " + fetchedGame);
 
     }
 }

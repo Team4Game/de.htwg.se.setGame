@@ -8,6 +8,8 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -24,7 +26,10 @@ public class PersistentGame implements IGame {
 	private IPlayer player1;
 	private IPlayer player2;
 
+	@OneToMany(mappedBy="persistentGame")
 	private List<ICard> cardsInField; // get via Field.getCardsInField
+	
+	@OneToMany(mappedBy="persistentGame")
 	private List<ICard> unusedCards; // get via Pack.getPack
 
 	private String token;

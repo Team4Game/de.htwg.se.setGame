@@ -14,7 +14,7 @@ import org.ektorp.support.CouchDbDocument;
 public class PersistentGame extends CouchDbDocument implements IGame {
 
 	private static final long serialVersionUID = 9152157365405198118L;
-
+	
 	private IPlayer player1;
 	private IPlayer player2;
 
