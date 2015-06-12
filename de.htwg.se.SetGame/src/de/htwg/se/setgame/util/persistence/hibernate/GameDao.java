@@ -8,17 +8,6 @@ import org.hibernate.cfg.*;
 
 public class GameDao implements IGameDao {
 
-	/*
-	 * 
-	 * Hibernate TODO:
-	 * 
-	 * - alle models erstellen mit annotations
-	 * - id autogen bei allen models
-	 * - @OneToOne / @OneToMany etc. bei unbekannten Typen / Listen
-	 * 
-	 */
-	
-	
 	private Session session;
 
 	public GameDao() {
@@ -28,13 +17,17 @@ public class GameDao implements IGameDao {
 
 	@Override
 	public void createOrUpdateGame(IGame game) {
+		Mapper mapper = new Mapper();
+		PersistentGame persGame = mapper.getPersistentGame(game);
 		Transaction transaction = null;
 		try {
 			transaction = this.session.beginTransaction();
-			this.session.saveOrUpdate(game);
+			this.session.saveOrUpdate(persGame);
 			transaction.commit();
+			System.out.println(persGame.getHibernateId());
 		} catch (HibernateException ex) {
 			if (transaction != null) {
+				System.out.println(ex.toString());
 				transaction.rollback();
 			}
 		}
@@ -42,8 +35,9 @@ public class GameDao implements IGameDao {
 
 	@Override
 	public IGame findGame(String id) {
-		// TODO: todo
-		return null;
+		PersistentGame persGame = (PersistentGame) this.session.get(PersistentGame.class, id);
+		Mapper mapper = new Mapper();
+		return mapper.getGame(persGame);
 	}
 
 	@Override
