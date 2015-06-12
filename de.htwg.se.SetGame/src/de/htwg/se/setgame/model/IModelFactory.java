@@ -1,6 +1,7 @@
 package de.htwg.se.setgame.model;
 
 import de.htwg.se.setgame.util.persistence.IGameDao;
+import de.htwg.se.setgame.util.persistence.hibernate.PersistentCard;
 
 import java.util.List;
 
@@ -24,5 +25,6 @@ public interface IModelFactory {
     IGame createGame();
     ICard createCard();
     IPlayer createPlayer();
+
 
 }

@@ -1,29 +1,31 @@
 package de.htwg.se.setgame.util.persistence.hibernate;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
+import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPlayer;
 import de.htwg.se.setgame.model.impl.Card;
-import de.htwg.se.setgame.model.impl.Game;
-import de.htwg.se.setgame.model.impl.Player;
+import de.htwg.se.setgame.model.impl.ModelFactoryHibernate;
+import de.htwg.se.setgame.util.IMapper;
 
-public class Mapper {
+import java.util.*;
 
-	public PersistentGame getPersistentGame(IGame game) {
-		String id = game.getId();
-		PersistentPlayer playerOne = new PersistentPlayer(game.getPlayerOne().getPid(), game.getPlayerOne().getCounter());
-		PersistentPlayer playerTwo = new PersistentPlayer(game.getPlayerTwo().getPid(), game.getPlayerTwo().getCounter());
-		int counter = game.getCounter();
+public class Mapper implements IMapper {
+    IModelFactory modelFactory;
+
+    public PersistentGame getPersistentGame(IGame game, ModelFactoryHibernate modelFactoryPersistent, IModelFactory modelFactory) {
+        String id = game.getId();
+        PersistentPlayer playerOne = modelFactoryPersistent.getPersistentPlayer();
+        playerOne.setPid(game.getPlayerOne().getPid());
+        playerOne.setCounter(game.getPlayerOne().getCounter());
+        PersistentPlayer playerTwo = modelFactoryPersistent.getPersistentPlayer();
+        playerTwo.setPid(game.getPlayerTwo().getPid());
+        playerTwo.setCounter(game.getPlayerTwo().getCounter());
+        int counter = game.getCounter();
 		Collection<PersistentCard> cardsInField = new ArrayList<PersistentCard>(); // get via Field.getCardsInField
 		Collection<PersistentCard> unusedCards = new ArrayList<PersistentCard>(); // get via Pack.getPack
-		
-		for (Map.Entry<Integer, ICard> entry : game.getCardsInField().entrySet()) {
+        this.modelFactory = modelFactory;
+        for (Map.Entry<Integer, ICard> entry : game.getCardsInField().entrySet()) {
 			ICard card = entry.getValue();
 			cardsInField.add(new PersistentCard(card.getColor(), card.getForm(), card.getPanelFilling(), card.getNumberOfComponents()));
 		}
@@ -38,9 +40,13 @@ public class Mapper {
 
 	public IGame getGame(PersistentGame persistentGame) {
 		String id = persistentGame.getId();
-		IPlayer playerOne = new Player(persistentGame.getPlayerOne().getPid(), persistentGame.getPlayerOne().getCounter());
-		IPlayer playerTwo = new Player(persistentGame.getPlayerTwo().getPid(), persistentGame.getPlayerTwo().getCounter());
-		int counter = persistentGame.getCounter();
+        IPlayer playerOne = modelFactory.createPlayer();
+        playerOne.setPid(persistentGame.getPlayerOne().getPid());
+        playerOne.setCounter(persistentGame.getPlayerOne().getCounter());
+        IPlayer playerTwo = modelFactory.createPlayer();
+        playerTwo.setPid(persistentGame.getPlayerTwo().getPid());
+        playerTwo.setCounter(persistentGame.getPlayerTwo().getCounter());
+        int counter = persistentGame.getCounter();
 		Map<Integer, ICard> cardsInField = new HashMap<Integer, ICard>();
 		List<ICard> unusedCards = new ArrayList<ICard>();
 		
@@ -52,9 +58,16 @@ public class Mapper {
 		for (PersistentCard persCard : persistentGame.getUnusedCards()) {
 			unusedCards.add(new Card(persCard.getColor(), persCard.getForm(), persCard.getPanelFilling(), persCard.getNumberOfComponents()));
 		}
-		
-		IGame game = new Game(id, playerOne, playerTwo, counter, cardsInField, unusedCards);
-		
-		return game;
+
+        IGame game = modelFactory.createGame();
+        game.setId(id);
+        game.setPlayerOne(playerOne);
+        game.setPlayerTwo(playerTwo);
+        game.setCounter(counter);
+        game.setCardsInField(cardsInField);
+        game.setUnusedCards(unusedCards);
+
+
+        return game;
 	}
 }

@@ -4,8 +4,6 @@ import de.htwg.se.setgame.model.*;
 import de.htwg.se.setgame.util.persistence.IGameDao;
 import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
 
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by David on 15.04.15.
@@ -26,7 +24,7 @@ public class ModelFactory implements IModelFactory {
 
     @Override
     public IGameDao createGameDao() {
-        return new GameDao();
+        return new GameDao(getPersistent(), this);
     }
 
     @Override
@@ -45,4 +43,8 @@ public class ModelFactory implements IModelFactory {
     }
 
 
+
+    public IModelFactoryPersistent getPersistent(){
+        return new ModelFactoryCouchDb();
+    }
 }

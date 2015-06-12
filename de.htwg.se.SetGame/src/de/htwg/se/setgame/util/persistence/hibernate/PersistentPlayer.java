@@ -27,10 +27,10 @@ public class PersistentPlayer implements Serializable {
 	
 	public PersistentPlayer() {};
 	
-	public PersistentPlayer(int pid, int counter) {
+/*	public PersistentPlayer(int pid, int counter) {
 		this.pid = pid;
 		this.counter = counter;
-	}
+	}*/
 
 	public void setCounter(int counter) {
 		this.counter = counter;

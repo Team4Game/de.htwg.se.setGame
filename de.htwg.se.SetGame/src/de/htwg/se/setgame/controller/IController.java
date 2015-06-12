@@ -112,4 +112,6 @@ public interface IController extends IObservable {
 	 */
 	int loadGame(String uid);
 
+    void setKIPlayer(String level);
+
 }

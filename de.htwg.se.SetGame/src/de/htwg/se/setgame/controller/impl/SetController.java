@@ -529,4 +529,9 @@ public class SetController extends Observable implements IController {
 
 	}
 
+    @Override
+    public void setKIPlayer(String level) {
+
+    }
+
 }

@@ -1,5 +1,8 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
+import de.htwg.se.setgame.model.IModelFactory;
+import de.htwg.se.setgame.model.IModelFactoryPersistent;
+import de.htwg.se.setgame.model.ModelFactoryCouchDb;
 import org.ektorp.CouchDbConnector;
 import org.ektorp.CouchDbInstance;
 import org.ektorp.DocumentNotFoundException;
@@ -14,20 +17,28 @@ import de.htwg.se.setgame.util.persistence.IGameDao;
 public class GameDao implements IGameDao {
 
 	private CouchDbConnector db;
-	private Mapper mapper = new Mapper();
-	
-	public GameDao() {
-		HttpClient httpClient = new StdHttpClient.Builder()
+	private Mapper mapper;
+    IModelFactoryPersistent modelFactoryPersistent;
+    IModelFactory modelFactory;
+	public GameDao(IModelFactoryPersistent modelFactoryPersistent , IModelFactory modelFactory) {
+		this.modelFactory = modelFactory;
+        this.modelFactoryPersistent = (ModelFactoryCouchDb) modelFactoryPersistent;
+
+        this.mapper = new Mapper();
+        HttpClient httpClient = new StdHttpClient.Builder()
 				.host("lenny2.in.htwg-konstanz.de").port(5984).build();
 
 		CouchDbInstance dbInstance = new StdCouchDbInstance(httpClient);
 		db = new StdCouchDbConnector("setgame", dbInstance);
 		db.createDatabaseIfNotExists();
-	}
+	    this.modelFactory = modelFactory;
+        this.modelFactoryPersistent = modelFactoryPersistent;
+
+    }
 
 	@Override
 	public void createOrUpdateGame(IGame game) {
-		PersistentGame persistentGame = mapper.getPersistentGame(game);
+		PersistentGame persistentGame = mapper.getPersistentGame(game,modelFactoryPersistent,modelFactory);
 		db.create(persistentGame);
 	}
 
