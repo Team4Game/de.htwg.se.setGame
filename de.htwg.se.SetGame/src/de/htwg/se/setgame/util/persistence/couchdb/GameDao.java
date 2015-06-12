@@ -42,4 +42,10 @@ public class GameDao implements IGameDao {
         }
 	}
 
+	@Override
+	public void closeDb() {
+		// nothing to do here
+		return;
+	}
+
 }

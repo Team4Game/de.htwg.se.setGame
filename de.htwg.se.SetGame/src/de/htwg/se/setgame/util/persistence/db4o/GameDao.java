@@ -37,6 +37,7 @@ public class GameDao implements IGameDao {
 		return objectSet.get(0);
 	}
 	
+	@Override
 	public void closeDb() {
 		this.db.close();
 	}

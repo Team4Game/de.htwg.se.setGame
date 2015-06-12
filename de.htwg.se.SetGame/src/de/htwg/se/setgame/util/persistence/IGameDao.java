@@ -7,5 +7,7 @@ public interface IGameDao {
 	void createOrUpdateGame(IGame game);
 	
 	IGame findGame(String id);
+
+	void closeDb();
 	
 }
