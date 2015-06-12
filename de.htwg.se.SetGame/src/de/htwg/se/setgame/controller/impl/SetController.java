@@ -13,7 +13,9 @@ import de.htwg.se.setgame.model.*;
 import de.htwg.se.setgame.model.impl.Game;
 import de.htwg.se.setgame.model.impl.Player;
 import de.htwg.se.setgame.util.observer.Observable;
-import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
+
+//import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
+import de.htwg.se.setgame.util.persistence.db4o.GameDao;
 
 /**
  * @author raina
@@ -479,6 +481,10 @@ public class SetController extends Observable implements IController {
 		GameDao dao = new GameDao();
 		dao.createOrUpdateGame(game);
 		
+		System.out.println(game.getId());
+		
+		dao.closeDb();
+		
 		return game.getId();
 
 	}
@@ -487,7 +493,7 @@ public class SetController extends Observable implements IController {
 	public int loadGame(String uid) {
 		
 		// sample savegame:
-		// e7e720c4-5894-4c00-a697-46931e973af2;
+		// 28395449-a76e-4499-8189-f7061e3994b7;
 
 		GameDao dao = new GameDao();
 		this.game = dao.findGame(uid);
@@ -504,6 +510,8 @@ public class SetController extends Observable implements IController {
 		this.getPack().setPack(game.getUnusedCards());
 
 		notifyObservers();
+		
+		dao.closeDb();
 		
 		return 0;
 
