@@ -9,11 +9,9 @@ public class Player implements IPlayer {
 	
 	private int pid;
 	private int counter;
-	
-	public Player(int pid, int counter) {
-		this.pid = pid;
-		this.counter = counter;
-	}
+	public Player(){
+
+    }
 	
 	@Override
 	public void setCounter(int counter) {

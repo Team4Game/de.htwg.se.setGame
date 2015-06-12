@@ -1,5 +1,7 @@
 package de.htwg.se.setgame.model;
 
+import de.htwg.se.setgame.util.persistence.IGameDao;
+
 import java.util.List;
 
 /**
@@ -18,6 +20,9 @@ public interface IModelFactory {
      * @return new IField
      */
     IPack createPack();
+    IGameDao createGameDao();
     IGame createGame();
     ICard createCard();
+    IPlayer createPlayer();
+
 }

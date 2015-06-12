@@ -19,18 +19,12 @@ public class Game implements IGame {
 	private Map<Integer, ICard> cardsInField; // get via Field.getCardsInField
 	private List<ICard> unusedCards; // get via Pack.getPack
 
-	
-	
-	public Game(String id, IPlayer playerOne, IPlayer playerTwo, int counter, Map<Integer, ICard> cardsInField2,
-			List<ICard> unusedCards) {
-		super();
-		this.id = id;
-		this.playerOne = playerOne;
-		this.playerTwo = playerTwo;
-		this.counter = counter;
-		this.cardsInField = cardsInField2;
-		this.unusedCards = unusedCards;
-	}
+	public Game(){
+
+    }
+
+
+
 
 	
 	

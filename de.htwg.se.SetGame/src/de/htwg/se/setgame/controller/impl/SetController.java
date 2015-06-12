@@ -13,6 +13,7 @@ import de.htwg.se.setgame.model.*;
 import de.htwg.se.setgame.model.impl.Game;
 import de.htwg.se.setgame.model.impl.Player;
 import de.htwg.se.setgame.util.observer.Observable;
+import de.htwg.se.setgame.util.persistence.IGameDao;
 import de.htwg.se.setgame.util.persistence.hibernate.GameDao;
 
 //import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
@@ -73,7 +74,7 @@ public class SetController extends Observable implements IController {
      * 
      */
 	IGame game = null;
-
+    private IModelFactory modelFactory;
 	/**
 	 * Logic Construct make for the game a new field with a new pack!!!
 	 */
@@ -81,6 +82,7 @@ public class SetController extends Observable implements IController {
 	public SetController(IModelFactory modelFactory) {
 		this.gameProvider = new GameProvider(modelFactory, 12);
 		this.counter = 0;
+        this.modelFactory =  modelFactory;
 		this.gameProvider.startUp();
 		this.playerOne = 1;
 		this.playerTwo = 2;
@@ -468,17 +470,27 @@ public class SetController extends Observable implements IController {
 	@Override
 	public String saveGame() {
 
-		IPlayer playerOne = new Player(this.playerOne, this.playerOneCounter);
-		IPlayer playerTwo = new Player(this.playerTwo, this.playerTwoCounter);
+		IPlayer playerOne = modelFactory.createPlayer();
+        playerOne.setCounter(this.playerOneCounter);
+        playerOne.setPid(this.playerOne);
+		IPlayer playerTwo = modelFactory.createPlayer();
+        playerTwo.setCounter(this.playerTwoCounter);
+        playerTwo.setPid(this.playerTwo);
 		int counter = this.counter;
 		Map<Integer, ICard> cardsInField = this.getField().getCardsInField();
 		List<ICard> unusedCards = this.getPack().getPack();
 		
 		// generate unique id
 		String uid = UUID.randomUUID().toString();
-		
-		IGame game = new Game(uid, playerOne, playerTwo, counter, cardsInField, unusedCards);
-		GameDao dao = new GameDao();
+
+        IGame game = modelFactory.createGame();
+        game.setId(uid);
+        game.setPlayerOne(playerOne);
+        game.setPlayerTwo(playerTwo);
+        game.setCounter(counter);
+        game.setCardsInField(cardsInField);
+        game.setUnusedCards(unusedCards);
+		IGameDao dao = modelFactory.createGameDao();
 		dao.createOrUpdateGame(game);
 		
 		System.out.println(game.getId());
@@ -495,7 +507,7 @@ public class SetController extends Observable implements IController {
 		// sample savegame:
 		// 28395449-a76e-4499-8189-f7061e3994b7;
 
-		GameDao dao = new GameDao();
+		IGameDao dao = modelFactory.createGameDao();
 		this.game = dao.findGame(uid);
 		if (game == null) {
 			// game not found

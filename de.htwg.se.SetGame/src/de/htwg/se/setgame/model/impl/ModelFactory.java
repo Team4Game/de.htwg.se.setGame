@@ -1,6 +1,8 @@
 package de.htwg.se.setgame.model.impl;
 
 import de.htwg.se.setgame.model.*;
+import de.htwg.se.setgame.util.persistence.IGameDao;
+import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -23,13 +25,23 @@ public class ModelFactory implements IModelFactory {
     }
 
     @Override
+    public IGameDao createGameDao() {
+        return new GameDao();
+    }
+
+    @Override
     public IGame createGame() {
-        return null;
+        return new Game();
     }
 
     @Override
     public ICard createCard() {
         return new Card();
+    }
+
+    @Override
+    public IPlayer createPlayer() {
+        return new Player();
     }
 
 
