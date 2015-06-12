@@ -1,36 +1,36 @@
-package de.htwg.se.setgame.model.impl;
+package de.htwg.se.setgame.util.persistence.couchdb;
 
-import de.htwg.se.setgame.model.IPlayer;
+import org.ektorp.support.CouchDbDocument;
 
 /**
  * Created by raina on 03.06.2015.
  */
-public class Player implements IPlayer {
+public class PersistentPlayer extends CouchDbDocument {
+	
+	private static final long serialVersionUID = 8022990459802689763L;
 	
 	private int pid;
 	private int counter;
 	
-	public Player(int pid, int counter) {
+	public PersistentPlayer() {};
+	
+	public PersistentPlayer(int pid, int counter) {
 		this.pid = pid;
 		this.counter = counter;
 	}
-	
-	@Override
+
 	public void setCounter(int counter) {
 		this.counter = counter;
 	}
-
-	@Override
+	
 	public int getCounter() {
 		return this.counter;
 	}
 
-	@Override
 	public void setPid(int pid) {
 		this.pid = pid;
 	}
 
-	@Override
 	public int getPid() {
 		return this.pid;
 	}

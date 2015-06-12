@@ -4,7 +4,6 @@ import java.util.*;
 
 import de.htwg.se.setgame.model.AField;
 import de.htwg.se.setgame.model.ICard;
-import de.htwg.se.setgame.model.IPack;
 import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
 
 /**

@@ -14,6 +14,7 @@ import de.htwg.se.setgame.util.persistence.IGameDao;
 public class GameDao implements IGameDao {
 
 	private CouchDbConnector db;
+	private Mapper mapper = new Mapper();
 	
 	public GameDao() {
 		HttpClient httpClient = new StdHttpClient.Builder()
@@ -26,25 +27,24 @@ public class GameDao implements IGameDao {
 
 	@Override
 	public void createOrUpdateGame(IGame game) {
-		db.create(game);
-		return;
+		PersistentGame persistentGame = mapper.getPersistentGame(game);
+		db.create(persistentGame);
 	}
 
 	@Override
 	public IGame findGame(String id) {
 		try {
-            PersistentGame persistentGame = db.get(PersistentGame.class, id);
-            return persistentGame;
+			PersistentGame persistentGame = db.get(PersistentGame.class, id);
+			IGame game = mapper.getGame(persistentGame);
+			return game;
         } catch (DocumentNotFoundException e) {
-        	// TODO: err handling
         	return null;
         }
 	}
 
 	@Override
-	public void deleteGame(String id) {
-		IGame persistentGame = this.findGame(id);
-		db.delete(persistentGame);
+	public void closeDb() {
+		// nothing to do here
 		return;
 	}
 

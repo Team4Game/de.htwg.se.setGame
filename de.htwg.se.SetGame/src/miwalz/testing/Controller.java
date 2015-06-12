@@ -40,7 +40,7 @@ public class Controller {
 		*/
 
 		
-		/*
+		
 		// HIBERNATE
 
 		Session session = new AnnotationConfiguration().configure()
@@ -62,7 +62,7 @@ public class Controller {
 				transaction.rollback();
 			}
 		}
-		*/
+		
 		/*
 		 * // fetch try { transaction = session.beginTransaction();
 		 * session.get(Model.class, arg1) transaction.commit();
@@ -72,7 +72,7 @@ public class Controller {
 		 */
 
 		// DB4O
-
+/*
 		ObjectContainer odb = Db4oEmbedded.openFile(
 				Db4oEmbedded.newConfiguration(), "dboSetgame");
 		try {
@@ -83,7 +83,7 @@ public class Controller {
 		} finally {
 			odb.close();
 		}
-		
+	*/	
 		
 	}
 }

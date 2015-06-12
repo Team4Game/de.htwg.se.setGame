@@ -6,7 +6,6 @@ import java.util.Map;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
 import de.htwg.se.setgame.model.IPack;
-
 import de.htwg.se.setgame.util.observer.IObservable;
 
 /**
@@ -102,7 +101,15 @@ public interface IController extends IObservable {
 	
 	/**
 	 * 	save game
+	 * @return 
 	 */
-	void saveGame();
+	String saveGame();
+
+	/**
+	 * 	load game
+	 * @param uid 
+	 * @return 
+	 */
+	int loadGame(String uid);
 
 }
