@@ -72,11 +72,18 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	}
 	
 	public void saveGame() {
-		GUI.getController().saveGame();
+		String uid = GUI.getController().saveGame();
+        JOptionPane.showMessageDialog(null, "Your game is saved under:\n\n" + uid + "\n\nIf you want to continue your game you will need this key.");
 	}
 
 	public void loadGame() {
-		GUI.getController().loadGame();
+		String uid = (String) JOptionPane.showInputDialog(null, "Game token:");
+		if ((uid != null) && (uid.length() > 0)) {
+		    int result = GUI.getController().loadGame(uid);
+		    if (result < 0) {
+		    	JOptionPane.showMessageDialog(null, "No game found under this token.");
+		    }
+		}
 	}
 	
 	public void exit() {

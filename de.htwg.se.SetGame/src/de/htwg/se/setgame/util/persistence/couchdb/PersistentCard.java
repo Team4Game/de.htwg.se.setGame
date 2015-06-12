@@ -10,7 +10,7 @@ import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
  * 
  */
 
-public class PersistentCard extends CouchDbDocument {
+public class PersistentCard extends CouchDbDocument implements ICard {
 	/**
 	 * 
 	 */

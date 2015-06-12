@@ -8,11 +8,13 @@ import org.ektorp.http.StdHttpClient;
 import org.ektorp.impl.StdCouchDbConnector;
 import org.ektorp.impl.StdCouchDbInstance;
 
+import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.util.persistence.IGameDao;
 
 public class GameDao implements IGameDao {
 
 	private CouchDbConnector db;
+	private Mapper mapper = new Mapper();
 	
 	public GameDao() {
 		HttpClient httpClient = new StdHttpClient.Builder()
@@ -24,25 +26,20 @@ public class GameDao implements IGameDao {
 	}
 
 	@Override
-	public void createOrUpdateGame(PersistentGame game) {
-		db.create(game);
+	public void createOrUpdateGame(IGame game) {
+		PersistentGame persistentGame = mapper.getPersistentGame(game);
+		db.create(persistentGame);
 	}
 
 	@Override
-	public PersistentGame findGame(String id) {
+	public IGame findGame(String id) {
 		try {
 			PersistentGame persistentGame = db.get(PersistentGame.class, id);
-            return persistentGame;
+			IGame game = mapper.getGame(persistentGame);
+			return game;
         } catch (DocumentNotFoundException e) {
-        	// TODO: err handling
         	return null;
         }
-	}
-
-	@Override
-	public void deleteGame(String id) {
-		PersistentGame persistentGame = this.findGame(id);
-		db.delete(persistentGame);
 	}
 
 }

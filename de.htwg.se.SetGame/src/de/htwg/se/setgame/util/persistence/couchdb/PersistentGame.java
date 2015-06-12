@@ -1,11 +1,7 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
 import java.util.Collection;
-import java.util.List;
-
 import org.ektorp.support.CouchDbDocument;
-
-import de.htwg.se.setgame.model.ICard;
 
 /**
  * Created by miwalz on 03.06.2015.
@@ -15,53 +11,29 @@ public class PersistentGame extends CouchDbDocument {
 	private static final long serialVersionUID = 9152157365405198118L;
 	
 	private String id;
-	
-	private PersistentPlayer player1;
-	private PersistentPlayer player2;
-	
+	private PersistentPlayer playerOne;
+	private PersistentPlayer playerTwo;
 	private int counter;
+	private Collection<PersistentCard> cardsInField; // get via Field.getCardsInField
+	private Collection<PersistentCard> unusedCards; // get via Pack.getPack
 
-	private List<PersistentCard> cardsInField; // get via Field.getCardsInField
-	private List<ICard> unusedCards; // get via Pack.getPack
-
+	
+	
 	public PersistentGame() {}
 	
-	@SuppressWarnings("unchecked")
-	public PersistentGame(String id, PersistentPlayer player1, PersistentPlayer player2, Collection<? extends PersistentCard> cardsInField2,
-			Collection<? extends PersistentCard> unusedCards2, int counter) {
+	public PersistentGame(String id, PersistentPlayer playerOne, PersistentPlayer playerTwo, Collection<PersistentCard> cardsInField2,
+			Collection<PersistentCard> unusedCards2, int counter) {
 		super();
 		this.id = id;
-		this.player1 = player1;
-		this.player2 = player2;
-		this.cardsInField = (List<PersistentCard>) cardsInField2;
-		this.unusedCards = (List<ICard>) unusedCards2;
+		this.playerOne = playerOne;
+		this.playerTwo = playerTwo;
+		this.cardsInField = cardsInField2;
+		this.unusedCards = unusedCards2;
 		this.counter = counter;
 	}
 
-	public void setCardInField(List<PersistentCard> cardsInField) {
-		this.cardsInField = cardsInField;
-	}
-
-	public void setUnusedCards(List<ICard> unusedCards) {
-		this.unusedCards = unusedCards;
-	}
 	
-	public PersistentPlayer getPlayerOne() {
-		return this.player1;
-	}
-
-	public PersistentPlayer getPlayerTwo() {
-		return this.player2;
-	}
-
-	public List<PersistentCard> getCardInField() {
-		return this.cardsInField;
-	}
-
-	public List<ICard> getUnusedCards() {
-		return this.unusedCards;
-	}
-
+	
 	public String getId() {
 		return id;
 	}
@@ -70,13 +42,20 @@ public class PersistentGame extends CouchDbDocument {
 		this.id = id;
 	}
 
-	public void setPlayerOne(PersistentPlayer player1) {
-		this.player1 = player1;
-		
+	public PersistentPlayer getPlayerOne() {
+		return playerOne;
 	}
 
-	public void setPlayerTwo(PersistentPlayer player2) {
-		this.player2 = player2;
+	public void setPlayerOne(PersistentPlayer playerOne) {
+		this.playerOne = playerOne;
+	}
+
+	public PersistentPlayer getPlayerTwo() {
+		return playerTwo;
+	}
+
+	public void setPlayerTwo(PersistentPlayer playerTwo) {
+		this.playerTwo = playerTwo;
 	}
 
 	public int getCounter() {
@@ -86,4 +65,21 @@ public class PersistentGame extends CouchDbDocument {
 	public void setCounter(int counter) {
 		this.counter = counter;
 	}
+
+	public Collection<PersistentCard> getCardsInField() {
+		return cardsInField;
+	}
+
+	public void setCardsInField(Collection<PersistentCard> cardsInField) {
+		this.cardsInField = cardsInField;
+	}
+
+	public Collection<PersistentCard> getUnusedCards() {
+		return unusedCards;
+	}
+
+	public void setUnusedCards(Collection<PersistentCard> unusedCards) {
+		this.unusedCards = unusedCards;
+	}
+
 }

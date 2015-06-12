@@ -1,6 +1,5 @@
 package de.htwg.se.setgame.controller.impl;
 
-import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -10,16 +9,11 @@ import com.google.inject.Inject;
 
 import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
-import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
 import de.htwg.se.setgame.model.*;
 import de.htwg.se.setgame.model.impl.Game;
-import de.htwg.se.setgame.model.impl.Pack;
 import de.htwg.se.setgame.model.impl.Player;
 import de.htwg.se.setgame.util.observer.Observable;
 import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
-import de.htwg.se.setgame.util.persistence.couchdb.PersistentCard;
-import de.htwg.se.setgame.util.persistence.couchdb.PersistentGame;
-import de.htwg.se.setgame.util.persistence.couchdb.PersistentPlayer;
 
 /**
  * @author raina
@@ -76,7 +70,7 @@ public class SetController extends Observable implements IController {
 	/**
      * 
      */
-	PersistentGame game = null;
+	IGame game = null;
 
 	/**
 	 * Logic Construct make for the game a new field with a new pack!!!
@@ -469,62 +463,49 @@ public class SetController extends Observable implements IController {
 		return gameProvider.getiPack();
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
-	public void saveGame() {
+	public String saveGame() {
 
-		Collection<? extends PersistentCard> unusedCards = (Collection<? extends PersistentCard>) this
-				.getPack().getPack();
-
-		Collection<? extends PersistentCard> cardsInField = (Collection<? extends PersistentCard>) this
-				.getCardInFieldGame();
-		
-		PersistentPlayer player1 = new PersistentPlayer(this.playerOne,
-				this.playerOneCounter);
-		
-		PersistentPlayer player2 = new PersistentPlayer(this.playerTwo,
-				this.playerTwoCounter);
-		
-		String id = UUID.randomUUID().toString();
-		
+		IPlayer playerOne = new Player(this.playerOne, this.playerOneCounter);
+		IPlayer playerTwo = new Player(this.playerTwo, this.playerTwoCounter);
 		int counter = this.counter;
-
-		game = new PersistentGame(id, player1, player2, cardsInField,
-				unusedCards, counter);
-
+		Map<Integer, ICard> cardsInField = this.getField().getCardsInField();
+		List<ICard> unusedCards = this.getPack().getPack();
+		
+		// generate unique id
+		String uid = UUID.randomUUID().toString();
+		
+		IGame game = new Game(uid, playerOne, playerTwo, counter, cardsInField, unusedCards);
 		GameDao dao = new GameDao();
 		dao.createOrUpdateGame(game);
-
-		System.out.println("Token is: " + game.getId());
-
-		// IGame fetchedGame = dao.findGame(token);
-
-		// System.out.println("Fetched game, ID is: " + fetchedGame);
+		
+		return game.getId();
 
 	}
 
 	@Override
-	public void loadGame() {
-
-		String targetId = "99e0907f-8572-4cff-b2ae-7b0909fb1d17";
+	public int loadGame(String uid) {
+		
+		// sample savegame:
+		// e7e720c4-5894-4c00-a697-46931e973af2;
 
 		GameDao dao = new GameDao();
-		this.game = dao.findGame(targetId);
-
+		this.game = dao.findGame(uid);
+		if (game == null) {
+			// game not found
+			return -1;
+		}
+		
 		this.gameProvider.clear();
 		this.counter = game.getCounter();
 		this.playerOneCounter = game.getPlayerOne().getCounter();
 		this.playerTwoCounter = game.getPlayerTwo().getCounter();
+		this.getField().setCardInField(game.getCardsInField());
 		this.getPack().setPack(game.getUnusedCards());
-		
-		// cards in field set??? --> Map<integer, ICard>?
-		
-		//gameProvider.getField().setCardInField(game.getCardInField());
-		
-		notifyObservers();
 
-		// System.out.println(game.getPlayerOne().getCounter());
-		// System.out.println(game.getPlayerTwo().getCounter());
+		notifyObservers();
+		
+		return 0;
 
 	}
 
