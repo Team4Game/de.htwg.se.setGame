@@ -5,6 +5,7 @@ import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IPlayer;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -45,18 +46,8 @@ public class PersistentGame implements IGame {
 	}
 
 	@Override
-	public void setCardInField(List<ICard> cardsInField) {
-		this.cardsInField = cardsInField;
-	}
-
-	@Override
 	public void setUnusedCards(List<ICard> unusedCards) {
 		this.unusedCards = unusedCards;
-	}
-
-	@Override
-	public void setGameToken(String token) {
-		this.token = token;
 	}
 
 	@Override
@@ -70,22 +61,8 @@ public class PersistentGame implements IGame {
 	}
 
 	@Override
-	public List<ICard> getCardInField() {
-		return this.cardsInField;
-	}
-
-	@Override
 	public List<ICard> getUnusedCards() {
 		return this.unusedCards;
-	}
-
-	@Override
-	public String getToken() {
-		return this.token;
-	}
-	
-	public int getId() {
-		return id;
 	}
 
 	public void setId(int id) {
@@ -100,5 +77,41 @@ public class PersistentGame implements IGame {
 	@Override
 	public void setPlayerTwo(IPlayer player2) {
 		this.player2 = player2;
+	}
+
+	@Override
+	public void setCardsInField(Map<Integer, ICard> cardInField) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setId(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setCounter(int counter) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Map<Integer, ICard> getCardsInField() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getCounter() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

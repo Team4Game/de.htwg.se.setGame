@@ -46,9 +46,4 @@ public class GameDao implements IGameDao {
 		return null;
 	}
 
-	@Override
-	public void deleteGame(String id) {
-		// TODO: todo
-	}
-
 }
