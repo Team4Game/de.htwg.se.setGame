@@ -7,6 +7,7 @@ import java.util.List;
 import de.htwg.se.setgame.model.IField;
 import de.htwg.se.setgame.model.impl.Field;
 import de.htwg.se.setgame.model.impl.ModelFactory;
+import de.htwg.se.setgame.util.persistence.hibernate.GameDao;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,7 +21,7 @@ public class SetControllerTest {
 
     @Before
     public void setUp() {
-        this.target = new SetController(new ModelFactory());
+        this.target = new SetController(new ModelFactory(), new GameDao());
         this.aSetListe = new LinkedList<ICard>();
         aSetListe.addAll(this.target.getSetInField());
     }

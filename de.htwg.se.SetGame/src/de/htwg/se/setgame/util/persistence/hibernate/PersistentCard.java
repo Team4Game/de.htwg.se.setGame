@@ -2,12 +2,9 @@ package de.htwg.se.setgame.util.persistence.hibernate;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+import com.sun.istack.internal.NotNull;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
 
@@ -17,37 +14,34 @@ import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
  */
 
 @Entity
-@Table(name = "card")
-public class PersistentCard implements ICard, Serializable {
+@Table(name = "setgame_card")
+public class PersistentCard implements Serializable, ICard {
 
 	private static final long serialVersionUID = 4706387443241003922L;
 
-	@Id
+    @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	
-	private String color;
-	private String form;
-	private String panelFilling;
-	private int anz;
+	private Long cardID;
+
+    public Long getCardID() {
+        return cardID;
+    }
+
+    public void setCardID(Long cardID) {
+        this.cardID = cardID;
+    }
+
+    @NotNull
+    private String color;
+    @NotNull
+    private String form;
+    @NotNull
+    private String panelFilling;
+    @NotNull
+    private int anz;
 
 	public PersistentCard() {};
-	
-	/**
-	 * This method create a new card object
-	 * 
-	 * @param color
-	 * @param form
-	 * @param panelFilling
-	 * @param amount
-	 */
-	public PersistentCard(String color, String form, String panelFilling, int amount) {
-		this.setColor(color);
-		this.setForm(form);
-		this.setPanelFilling(panelFilling);
-		this.setNumberOfComponents(amount);
 
-	}
 
 	/*
 	 * (non-Javadoc)
@@ -171,4 +165,6 @@ public class PersistentCard implements ICard, Serializable {
 		return false;
 
 	}
+
+
 }

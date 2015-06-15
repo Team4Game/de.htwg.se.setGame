@@ -2,7 +2,7 @@ package de.htwg.se.setgame.model.impl;
 
 import de.htwg.se.setgame.model.*;
 import de.htwg.se.setgame.util.persistence.IGameDao;
-import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
+import de.htwg.se.setgame.util.persistence.hibernate.GameDao;
 
 
 /**
@@ -22,10 +22,7 @@ public class ModelFactory implements IModelFactory {
         return new Pack();
     }
 
-    @Override
-    public IGameDao createGameDao() {
-        return new GameDao(getPersistent(), this);
-    }
+
 
     @Override
     public IGame createGame() {
@@ -44,7 +41,5 @@ public class ModelFactory implements IModelFactory {
 
 
 
-    public IModelFactoryPersistent getPersistent(){
-        return new ModelFactoryCouchDb();
-    }
+
 }

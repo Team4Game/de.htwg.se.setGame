@@ -21,7 +21,6 @@ public interface IModelFactory {
      * @return new IField
      */
     IPack createPack();
-    IGameDao createGameDao();
     IGame createGame();
     ICard createCard();
     IPlayer createPlayer();

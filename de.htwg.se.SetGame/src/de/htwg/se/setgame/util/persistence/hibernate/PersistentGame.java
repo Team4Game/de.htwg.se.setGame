@@ -1,69 +1,58 @@
 package de.htwg.se.setgame.util.persistence.hibernate;
 
+import com.sun.istack.internal.NotNull;
+import org.hibernate.annotations.IndexColumn;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import java.util.TreeSet;
 
 @Entity
-@Table(name = "persistentGame")
+@Table(name = "setgame_game")
 public class PersistentGame implements Serializable {
 
 	private static final long serialVersionUID = -2065551404391826048L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int hibernateId;
-	
-	private String id;
-	
-	private PersistentPlayer playerOne;
-	
-	private PersistentPlayer playerTwo;
-	
-	private int counter;
-	
-	//@OneToMany(mappedBy="persistentGame")
-	//@Column(name="card")
-	
-	
-	@OneToMany
-	private Collection<PersistentCard> cardsInField; // get via Field.getCardsInField
-	
-	@OneToMany
-	private Collection<PersistentCard> unusedCards; // get via Pack.getPack
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	
-	
-	public PersistentGame() {}
-	
-	public PersistentGame(String id, PersistentPlayer playerOne, PersistentPlayer playerTwo, Collection<PersistentCard> cardsInField,
-			Collection<PersistentCard> unusedCards, int counter) {
-		super();
-		this.id = id;
-		this.playerOne = playerOne;
-		this.playerTwo = playerTwo;
-		this.cardsInField = cardsInField;
-		this.unusedCards = unusedCards;
-		this.counter = counter;
-	}
+    private String gameID;
 
-	
-	
-	public String getId() {
-		return id;
-	}
+    @OneToOne
+    private PersistentPlayer playerOne;
+    @OneToOne
+    private PersistentPlayer playerTwo;
+    @NotNull
+    private int counter;
 
-	public void setId(String id) {
-		this.id = id;
-	}
 
-	public PersistentPlayer getPlayerOne() {
+    @OneToMany(cascade=CascadeType.ALL)
+    @JoinTable(name="SETGAME_UNUSED_CARDS", joinColumns={@JoinColumn(name="GAME_ID", referencedColumnName="id")}
+            , inverseJoinColumns={@JoinColumn(name="UNUSEDCARD_ID", referencedColumnName="cardID",nullable=true)})
+    private Collection<PersistentCard> unusedCards = new TreeSet<PersistentCard>(); // get via Pack.getPack
+
+    @OneToMany(cascade=CascadeType.ALL)
+    @JoinTable(name="SETGAME_CARDS_IN_FIELD", joinColumns={@JoinColumn(name="GAME_ID", referencedColumnName="id")}
+            , inverseJoinColumns={@JoinColumn(name="CARD_IN_FIELD_ID", referencedColumnName="cardID",nullable=true)})
+    private Collection<PersistentCard> cardsInField = new TreeSet<PersistentCard>();
+    // get via Field.getCardsInField
+
+
+    public PersistentGame() {
+    }
+
+
+    public String getGameID() {
+        return gameID;
+    }
+
+    public void setGameID(String id) {
+        this.gameID = id;
+    }
+
+    public PersistentPlayer getPlayerOne() {
 		return playerOne;
 	}
 
@@ -87,29 +76,25 @@ public class PersistentGame implements Serializable {
 		this.counter = counter;
 	}
 
-	public Collection<PersistentCard> getCardsInField() {
-		return cardsInField;
-	}
+    public Collection<PersistentCard> getCardsInField() {
+        return cardsInField;
+    }
 
-	public void setCardsInField(Collection<PersistentCard> cardsInField) {
-		this.cardsInField = cardsInField;
-	}
-
-	public Collection<PersistentCard> getUnusedCards() {
-		return unusedCards;
+    public void setCardsInField(Collection<PersistentCard> cardsInField) {
+        this.cardsInField = cardsInField;
+    }
+    public Collection<PersistentCard> getUnusedCards() {
+        return unusedCards;
 	}
 
 	public void setUnusedCards(Collection<PersistentCard> unusedCards) {
 		this.unusedCards = unusedCards;
 	}
 
-	public int getHibernateId() {
-		return hibernateId;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setHibernateId(int hibernateId) {
-		this.hibernateId = hibernateId;
-	}
 
 }
 

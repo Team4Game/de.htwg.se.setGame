@@ -1,5 +1,6 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
+import com.google.inject.Inject;
 import de.htwg.se.setgame.model.*;
 import de.htwg.se.setgame.model.impl.Card;
 import de.htwg.se.setgame.model.impl.Game;
@@ -9,12 +10,19 @@ import java.util.*;
 
 public class Mapper {
 
-    @SuppressWarnings("unchecked")
-    ModelFactoryCouchDb modelFactoryCouchDb;
+
+    public IModelFactory getModelFactory() {
+        return modelFactory;
+    }
+
+    @Inject
+    public void setModelFactory(IModelFactory modelFactory) {
+        this.modelFactory = modelFactory;
+    }
+
     IModelFactory modelFactory;
 
-    public PersistentGame getPersistentGame(IGame game, IModelFactoryPersistent modelFactoryCouchDb, IModelFactory modelFactory) {
-        this.modelFactoryCouchDb =(ModelFactoryCouchDb) modelFactoryCouchDb;
+    public PersistentGame getPersistentGame(IGame game) {
         this.modelFactory = modelFactory;
         String id = game.getId();
 		PersistentPlayer playerOne = new PersistentPlayer(game.getPlayerOne().getPid(), game.getPlayerOne().getCounter());
@@ -25,7 +33,7 @@ public class Mapper {
 		
 		for (Map.Entry<Integer, ICard> entry : game.getCardsInField().entrySet()) {
 			ICard card = entry.getValue();
-            PersistentCard persistentCard = ((ModelFactoryCouchDb) modelFactoryCouchDb).getPersistentCard();
+            PersistentCard persistentCard =new PersistentCard();
             persistentCard.setColor(card.getColor());
             persistentCard.setForm(card.getForm());
             persistentCard.setPanelFilling(card.getPanelFilling());
@@ -33,7 +41,7 @@ public class Mapper {
 			cardsInField.add(persistentCard);
 		}
 		for (ICard card : game.getUnusedCards()) {
-            PersistentCard persistentCard = ((ModelFactoryCouchDb) modelFactoryCouchDb).getPersistentCard();
+            PersistentCard persistentCard = new PersistentCard();
             persistentCard.setColor(card.getColor());
             persistentCard.setForm(card.getForm());
             persistentCard.setPanelFilling(card.getPanelFilling());
@@ -42,7 +50,7 @@ public class Mapper {
             unusedCards.add(persistentCard);
 		}
 		
-		PersistentGame persGame = ((ModelFactoryCouchDb) modelFactoryCouchDb).getPersistentGame();
+		PersistentGame persGame = new PersistentGame();
         persGame.setId(id);
         persGame.setPlayerOne(playerOne);
         persGame.setPlayerTwo(playerTwo);

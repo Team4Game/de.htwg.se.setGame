@@ -1,51 +1,50 @@
 package de.htwg.se.setgame.util.persistence.hibernate;
 
-import java.io.Serializable;
+import com.sun.istack.internal.NotNull;
+import de.htwg.se.setgame.model.IPlayer;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by raina on 03.06.2015.
  */
 
 @Entity
-@Table(name = "player")
-public class PersistentPlayer implements Serializable {
+@Table(name = "setgame_player")
+public class PersistentPlayer implements Serializable, IPlayer {
 	
 	private static final long serialVersionUID = 4826196614879025625L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	
-	private int pid;
-	private int counter;
-	
-	public PersistentPlayer() {};
+	private Long playerID;
+    @NotNull
+    private int pid;
+    @NotNull
+    private int counter;
+
+    public PersistentPlayer() {};
 	
 /*	public PersistentPlayer(int pid, int counter) {
 		this.pid = pid;
 		this.counter = counter;
 	}*/
 
-	public void setCounter(int counter) {
-		this.counter = counter;
-	}
-	
-	public int getCounter() {
-		return this.counter;
-	}
+    public int getCounter() {
+        return this.counter;
+    }
 
-	public void setPid(int pid) {
-		this.pid = pid;
-	}
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
 
-	public int getPid() {
-		return this.pid;
-	}
+    public int getPid() {
+        return this.pid;
+    }
+
+    public void setPid(int pid) {
+        this.pid = pid;
+    }
 
 }

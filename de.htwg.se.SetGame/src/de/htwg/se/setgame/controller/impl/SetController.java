@@ -78,10 +78,12 @@ public class SetController extends Observable implements IController {
 	/**
 	 * Logic Construct make for the game a new field with a new pack!!!
 	 */
+    private IGameDao gameDao;
 	@Inject
-	public SetController(IModelFactory modelFactory) {
+	public SetController(IModelFactory modelFactory, IGameDao gameDao) {
 		this.gameProvider = new GameProvider(modelFactory, 12);
 		this.counter = 0;
+        this.gameDao = gameDao;
         this.modelFactory =  modelFactory;
 		this.gameProvider.startUp();
 		this.playerOne = 1;
@@ -490,7 +492,7 @@ public class SetController extends Observable implements IController {
         game.setCounter(counter);
         game.setCardsInField(cardsInField);
         game.setUnusedCards(unusedCards);
-		IGameDao dao = modelFactory.createGameDao();
+		IGameDao dao = this.gameDao;
 		dao.createOrUpdateGame(game);
 		
 		System.out.println(game.getId());
@@ -507,7 +509,7 @@ public class SetController extends Observable implements IController {
 		// sample savegame:
 		// 28395449-a76e-4499-8189-f7061e3994b7;
 
-		IGameDao dao = modelFactory.createGameDao();
+		IGameDao dao = this.gameDao;
 		this.game = dao.findGame(uid);
 		if (game == null) {
 			// game not found

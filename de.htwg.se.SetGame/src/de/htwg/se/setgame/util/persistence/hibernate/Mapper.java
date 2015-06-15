@@ -1,45 +1,73 @@
 package de.htwg.se.setgame.util.persistence.hibernate;
 
+import com.google.inject.Inject;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPlayer;
 import de.htwg.se.setgame.model.impl.Card;
-import de.htwg.se.setgame.model.impl.ModelFactoryHibernate;
-import de.htwg.se.setgame.util.IMapper;
 
 import java.util.*;
 
-public class Mapper implements IMapper {
+public class Mapper {
     IModelFactory modelFactory;
+    @Inject
+    public Mapper(IModelFactory modelFactory){
+        this.modelFactory = modelFactory;
+    }
+    public IModelFactory getModelFactory() {
+        return modelFactory;
+    }
 
-    public PersistentGame getPersistentGame(IGame game, ModelFactoryHibernate modelFactoryPersistent, IModelFactory modelFactory) {
+    @Inject
+    public void setModelFactory(IModelFactory modelFactory) {
+        this.modelFactory = modelFactory;
+    }
+
+    public PersistentGame getPersistentGame(IGame game) {
         String id = game.getId();
-        PersistentPlayer playerOne = modelFactoryPersistent.getPersistentPlayer();
+        PersistentPlayer playerOne = new PersistentPlayer();
         playerOne.setPid(game.getPlayerOne().getPid());
         playerOne.setCounter(game.getPlayerOne().getCounter());
-        PersistentPlayer playerTwo = modelFactoryPersistent.getPersistentPlayer();
+        PersistentPlayer playerTwo = new PersistentPlayer();
         playerTwo.setPid(game.getPlayerTwo().getPid());
         playerTwo.setCounter(game.getPlayerTwo().getCounter());
         int counter = game.getCounter();
 		Collection<PersistentCard> cardsInField = new ArrayList<PersistentCard>(); // get via Field.getCardsInField
 		Collection<PersistentCard> unusedCards = new ArrayList<PersistentCard>(); // get via Pack.getPack
-        this.modelFactory = modelFactory;
+
         for (Map.Entry<Integer, ICard> entry : game.getCardsInField().entrySet()) {
 			ICard card = entry.getValue();
-			cardsInField.add(new PersistentCard(card.getColor(), card.getForm(), card.getPanelFilling(), card.getNumberOfComponents()));
-		}
+            PersistentCard persistentCard = new PersistentCard();
+            persistentCard.setColor(card.getColor());
+            persistentCard.setForm(card.getForm());
+            persistentCard.setPanelFilling(card.getPanelFilling());
+            persistentCard.setNumberOfComponents(card.getNumberOfComponents());
+            cardsInField.add(persistentCard);
+        }
 		for (ICard card : game.getUnusedCards()) {
-			unusedCards.add(new PersistentCard(card.getColor(), card.getForm(), card.getPanelFilling(), card.getNumberOfComponents()));
-		}
-		
-		PersistentGame persGame = new PersistentGame(id, playerOne, playerTwo, cardsInField, unusedCards, counter);
-		
-		return persGame;
-	}
+            PersistentCard persistentCard = new PersistentCard();
+            persistentCard.setColor(card.getColor());
+            persistentCard.setForm(card.getForm());
+            persistentCard.setPanelFilling(card.getPanelFilling());
+            persistentCard.setNumberOfComponents(card.getNumberOfComponents());
+
+            unusedCards.add(persistentCard);
+        }
+
+        PersistentGame persGame = new PersistentGame();
+        persGame.setGameID(id);
+        persGame.setPlayerOne(playerOne);
+        persGame.setPlayerTwo(playerTwo);
+        persGame.setCardsInField(cardsInField);
+        persGame.setUnusedCards(unusedCards);
+        persGame.setCounter(counter);
+
+        return persGame;
+    }
 
 	public IGame getGame(PersistentGame persistentGame) {
-		String id = persistentGame.getId();
+        String id = persistentGame.getGameID();
         IPlayer playerOne = modelFactory.createPlayer();
         playerOne.setPid(persistentGame.getPlayerOne().getPid());
         playerOne.setCounter(persistentGame.getPlayerOne().getCounter());
