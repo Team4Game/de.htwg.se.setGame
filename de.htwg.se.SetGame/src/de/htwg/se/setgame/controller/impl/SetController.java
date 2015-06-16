@@ -36,7 +36,7 @@ public class SetController extends Observable implements IController {
 	 * counter
 	 */
 	private int counter;
-
+    String uidForGame;
 	/**
 	 * number for set
 	 */
@@ -477,10 +477,13 @@ public class SetController extends Observable implements IController {
 		int counter = this.counter;
 		Map<Integer, ICard> cardsInField = this.getField().getCardsInField();
 		List<ICard> unusedCards = this.getPack().getPack();
-		
-		// generate unique id
-		String uid = UUID.randomUUID().toString();
-
+        String uid;
+		if(this.uidForGame == null) {
+            // generate unique id
+         uid   =UUID.randomUUID().toString();
+        }else{
+            uid = uidForGame;
+        }
         IGame game = modelFactory.createGame();
         game.setId(uid);
         game.setPlayerOne(playerOne);
@@ -494,7 +497,7 @@ public class SetController extends Observable implements IController {
 		System.out.println(game.getId());
 		
 		dao.closeDb();
-		
+		this.uidForGame = game.getId();
 		return game.getId();
 
 	}
@@ -512,7 +515,9 @@ public class SetController extends Observable implements IController {
 			return -1;
 		}
 		
-		this.gameProvider.clear();
+		this.gameProvider.getCardInFieldGame().clear();
+        this.gameProvider.getUnusedCards().clear();
+        this.gameProvider.getAllCardsInGame().clear();
 		this.counter = game.getCounter();
 		this.playerOneCounter = game.getPlayerOne().getCounter();
 		this.playerTwoCounter = game.getPlayerTwo().getCounter();
@@ -522,7 +527,7 @@ public class SetController extends Observable implements IController {
 		notifyObservers();
 		
 		dao.closeDb();
-		
+		this.uidForGame = this.game.getId();
 		return 0;
 
 	}

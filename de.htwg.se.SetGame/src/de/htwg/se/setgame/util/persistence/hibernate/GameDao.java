@@ -1,10 +1,7 @@
 package de.htwg.se.setgame.util.persistence.hibernate;
 
 
-import com.google.inject.Guice;
 import com.google.inject.Inject;
-import com.google.inject.Injector;
-import de.htwg.se.setgame.SetGameModule;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.util.persistence.IGameDao;
@@ -28,36 +25,40 @@ public class GameDao implements IGameDao {
     @Override
     public void createOrUpdateGame(IGame game) {
 
-        if (findGame(game.getId()) == null) {
-
-            PersistentGame persistenceGame = mapper.getPersistentGame(game);
-            PersistentPlayer persistentPlayerOne = createUser(persistenceGame.getPlayerOne());
-            game.setPlayerOne(persistentPlayerOne);
-            PersistentPlayer persistentPlayerTwo = createUser(persistenceGame.getPlayerTwo());
-            persistenceGame.setPlayerTwo(persistentPlayerTwo);
-            List<PersistentCard> unusedCards = createCardsForGame((List<PersistentCard>) persistenceGame.getUnusedCards());
-            persistenceGame.setUnusedCards(unusedCards);
-            List<PersistentCard> cardsInField = createCardsForGame((List<PersistentCard>) persistenceGame.getCardsInField());
-            persistenceGame.setCardsInField(cardsInField);
-            PersistentGame pGame = saveGame(persistenceGame);
-        } else {
-            updateGame(game);
+        if (findGame(game.getId()) != null) {
+            deleteGame(game);
         }
+        PersistentGame persistenceGame = mapper.getPersistentGame(game);
+        PersistentPlayer persistentPlayerOne = createUser(persistenceGame.getPlayerOne());
+        game.setPlayerOne(persistentPlayerOne);
+        PersistentPlayer persistentPlayerTwo = createUser(persistenceGame.getPlayerTwo());
+        persistenceGame.setPlayerTwo(persistentPlayerTwo);
+        List<PersistentCard> unusedCards = createCardsForGame((List<PersistentCard>) persistenceGame.getUnusedCards());
+        persistenceGame.setUnusedCards(unusedCards);
+        List<PersistentCard> cardsInField = createCardsForGame((List<PersistentCard>) persistenceGame.getCardsInField());
+        persistenceGame.setCardsInField(cardsInField);
+        PersistentGame pGame = saveGame(persistenceGame);
+
     }
 
-    private void updateGame(IGame game) {
+    protected void deleteGame(IGame game) {
         PersistentGame persistentGame = mapper.getPersistentGame(game);
         Session session = SessionServiceHibernate.getSession();
         PersistentGame result = (PersistentGame) session.createCriteria(PersistentGame.class).add(Restrictions.eq("gameID", game.getId())).uniqueResult();
-        result.getPlayerOne().setCounter(persistentGame.getPlayerOne().getCounter());
-        result.getPlayerTwo().setCounter(persistentGame.getPlayerTwo().getCounter());
-        result.getCardsInField().clear();
-        result.setCardsInField(createCardsForGame((List<PersistentCard>) persistentGame.getCardsInField()));
-        result.getUnusedCards().clear();
-        result.setUnusedCards(persistentGame.getUnusedCards());
-        session.flush();
         session.close();
-        saveGame(result);
+        Session sessionDelete = SessionServiceHibernate.getSession();
+        Transaction transaction = null;
+        try {
+            transaction = sessionDelete.beginTransaction();
+            sessionDelete.delete(result);
+        } catch (HibernateException ex) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+        }
+        sessionDelete.flush();
+        transaction.commit();
+        sessionDelete.close();
     }
 
 

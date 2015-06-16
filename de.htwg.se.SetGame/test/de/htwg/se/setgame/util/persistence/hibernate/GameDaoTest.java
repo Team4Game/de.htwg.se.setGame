@@ -7,6 +7,7 @@ import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPlayer;
+import de.htwg.se.setgame.model.impl.Game;
 import de.htwg.se.setgame.util.persistence.IGameDao;
 import org.hibernate.HibernateException;
 import org.junit.Assert;
@@ -186,5 +187,6 @@ public class GameDaoTest {
 
 
     }
+
 
 }
