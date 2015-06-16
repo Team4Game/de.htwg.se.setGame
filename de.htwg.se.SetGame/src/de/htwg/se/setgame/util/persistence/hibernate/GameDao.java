@@ -42,23 +42,20 @@ public class GameDao implements IGameDao {
     }
 
     protected void deleteGame(IGame game) {
-        PersistentGame persistentGame = mapper.getPersistentGame(game);
         Session session = SessionServiceHibernate.getSession();
         PersistentGame result = (PersistentGame) session.createCriteria(PersistentGame.class).add(Restrictions.eq("gameID", game.getId())).uniqueResult();
         session.close();
-        Session sessionDelete = SessionServiceHibernate.getSession();
-        Transaction transaction = null;
-        try {
+        if (result != null) {
+            Session sessionDelete = SessionServiceHibernate.getSession();
+            Transaction transaction = null;
+
             transaction = sessionDelete.beginTransaction();
             sessionDelete.delete(result);
-        } catch (HibernateException ex) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
+
+            sessionDelete.flush();
+            transaction.commit();
+            sessionDelete.close();
         }
-        sessionDelete.flush();
-        transaction.commit();
-        sessionDelete.close();
     }
 
 

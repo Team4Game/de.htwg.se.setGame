@@ -187,6 +187,18 @@ public class GameDaoTest {
 
 
     }
+    @Test
+    public void deleteGame_fail(){
+        IGame persistentGame = new Game();
+        persistentGame.setId("tralala");
+        PersistentPlayer persistentPlayer = new PersistentPlayer();
+        persistentPlayer.setCounter(5);
+        persistentPlayer.setPid(1);
+        persistentGame.setPlayerOne(persistentPlayer);
+        target.deleteGame(persistentGame);
+
+
+    }
 
 
 }
