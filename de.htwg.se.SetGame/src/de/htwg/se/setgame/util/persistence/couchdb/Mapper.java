@@ -1,12 +1,13 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
-import com.google.inject.Inject;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
-import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPlayer;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class Mapper {
 

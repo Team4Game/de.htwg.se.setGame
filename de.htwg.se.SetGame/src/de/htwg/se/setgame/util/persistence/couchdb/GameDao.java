@@ -1,8 +1,6 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
-import com.google.inject.Inject;
 import de.htwg.se.setgame.model.IGame;
-import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.util.persistence.IGameDao;
 import org.ektorp.ViewQuery;
 

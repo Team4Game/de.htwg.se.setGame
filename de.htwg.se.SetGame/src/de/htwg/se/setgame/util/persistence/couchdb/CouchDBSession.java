@@ -12,7 +12,7 @@ import org.ektorp.impl.StdCouchDbInstance;
  */
 public final class CouchDBSession {
     private static CouchDbConnector couchDbConnector;
-    private static final int port = 5984;
+    private static final int PORT = 5984;
     private CouchDBSession(){
 
     }
@@ -20,7 +20,7 @@ public final class CouchDBSession {
     public static CouchDbConnector getCouchDbConnector(){
         if(couchDbConnector == null){
             HttpClient httpClient = new StdHttpClient.Builder()
-                    .host("lenny2.in.htwg-konstanz.de").port(port).build();
+                    .host("lenny2.in.htwg-konstanz.de").port(PORT).build();
 
             CouchDbInstance dbInstance = new StdCouchDbInstance(httpClient);
             couchDbConnector = new StdCouchDbConnector("a_setgame", dbInstance);

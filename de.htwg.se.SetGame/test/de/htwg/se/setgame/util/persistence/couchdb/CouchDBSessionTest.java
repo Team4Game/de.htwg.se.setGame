@@ -1,9 +1,7 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
-import de.htwg.se.setgame.util.persistence.hibernate.SessionServiceHibernate;
 import javassist.Modifier;
 import org.ektorp.CouchDbConnector;
-import org.hibernate.Session;
 import org.junit.Assert;
 import org.junit.Test;
 
