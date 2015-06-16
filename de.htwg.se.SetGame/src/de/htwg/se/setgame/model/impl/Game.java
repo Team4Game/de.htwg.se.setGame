@@ -3,6 +3,7 @@ package de.htwg.se.setgame.model.impl;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IPlayer;
+import de.htwg.se.setgame.util.persistence.couchdb.PersistentCard;
 
 import java.util.List;
 import java.util.Map;
@@ -12,7 +13,7 @@ import java.util.Map;
  */
 public class Game implements IGame {
 
-	private String id;
+	private String gameID;
 	private IPlayer playerOne;
 	private IPlayer playerTwo;
 	private int counter;
@@ -23,19 +24,16 @@ public class Game implements IGame {
 
     }
 
-
-
-
 	
 	
 	@Override
 	public String getId() {
-		return id;
+		return gameID;
 	}
 
 	@Override
 	public void setId(String id) {
-		this.id = id;
+		this.gameID = id;
 	}
 
 	@Override

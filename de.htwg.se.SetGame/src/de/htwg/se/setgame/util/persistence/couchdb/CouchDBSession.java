@@ -12,6 +12,7 @@ import org.ektorp.impl.StdCouchDbInstance;
  */
 public class CouchDBSession {
     private static CouchDbConnector couchDbConnector;
+    private static CouchDbConnector couchDbConnectorView;
 
     private CouchDBSession(){
 
@@ -23,9 +24,10 @@ public class CouchDBSession {
                     .host("lenny2.in.htwg-konstanz.de").port(5984).build();
 
             CouchDbInstance dbInstance = new StdCouchDbInstance(httpClient);
-            couchDbConnector = new StdCouchDbConnector("setgame", dbInstance);
+            couchDbConnector = new StdCouchDbConnector("a_setgame", dbInstance);
             couchDbConnector.createDatabaseIfNotExists();
         }
         return couchDbConnector;
     }
+
 }

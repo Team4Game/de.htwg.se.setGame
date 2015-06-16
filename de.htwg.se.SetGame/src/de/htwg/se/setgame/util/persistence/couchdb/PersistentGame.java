@@ -1,86 +1,42 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
-import org.ektorp.support.CouchDbDocument;
+import de.htwg.se.setgame.model.ICard;
+import de.htwg.se.setgame.model.IPlayer;
+import de.htwg.se.setgame.model.impl.Game;
+import org.codehaus.jackson.annotate.JsonProperty;
 
-import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by miwalz on 03.06.2015.
  */
-public class PersistentGame extends CouchDbDocument {
+public class PersistentGame extends Game {
 
-	private static final long serialVersionUID = 9152157365405198118L;
-	
-	private String id;
-	private PersistentPlayer playerOne;
-	private PersistentPlayer playerTwo;
-	private int counter;
-	private Collection<PersistentCard> cardsInField; // get via Field.getCardsInField
-	private Collection<PersistentCard> unusedCards; // get via Pack.getPack
+    private String dbId;
+    private String dbRev;
 
-	
-	
-	public PersistentGame() {}
-	
-	public PersistentGame(String id, PersistentPlayer playerOne, PersistentPlayer playerTwo, Collection<PersistentCard> cardsInField2,
-			Collection<PersistentCard> unusedCards2, int counter) {
-		super();
-		this.id = id;
-		this.playerOne = playerOne;
-		this.playerTwo = playerTwo;
-		this.cardsInField = cardsInField2;
-		this.unusedCards = unusedCards2;
-		this.counter = counter;
-	}
 
-	
-	
-	public String getId() {
-		return id;
-	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
 
-	public PersistentPlayer getPlayerOne() {
-		return playerOne;
-	}
+    @JsonProperty("_id")
+    public String getDbId() {
+        return dbId;
+    }
 
-	public void setPlayerOne(PersistentPlayer playerOne) {
-		this.playerOne = playerOne;
-	}
+    @JsonProperty("_id")
+    public void setDbId(String dbId) {
+        this.dbId = dbId;
+    }
 
-	public PersistentPlayer getPlayerTwo() {
-		return playerTwo;
-	}
+    @JsonProperty("_rev")
+    public String getDbRev() {
+        return dbRev;
+    }
 
-	public void setPlayerTwo(PersistentPlayer playerTwo) {
-		this.playerTwo = playerTwo;
-	}
-
-	public int getCounter() {
-		return counter;
-	}
-
-	public void setCounter(int counter) {
-		this.counter = counter;
-	}
-
-	public Collection<PersistentCard> getCardsInField() {
-		return cardsInField;
-	}
-
-	public void setCardsInField(Collection<PersistentCard> cardsInField) {
-		this.cardsInField = cardsInField;
-	}
-
-	public Collection<PersistentCard> getUnusedCards() {
-		return unusedCards;
-	}
-
-	public void setUnusedCards(Collection<PersistentCard> unusedCards) {
-		this.unusedCards = unusedCards;
-	}
+    @JsonProperty("_rev")
+    public void setDbRev(String dbRev) {
+        this.dbRev = dbRev;
+    }
 
 }

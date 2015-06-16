@@ -1,5 +1,9 @@
 package de.htwg.se.setgame.model;
 
+import de.htwg.se.setgame.util.persistence.couchdb.PersistentCard;
+import org.codehaus.jackson.map.annotate.JsonDeserialize;
+
+@JsonDeserialize(as= PersistentCard.class)
 public interface ICard {
 	 /**
 	 * @return colors
