@@ -28,13 +28,13 @@ public class PersistenceGameTest {
     public void getPersistentGame(){
         String uid = "b3192b4a-55ba-4adc-9047-764778fd89c9";
         PersistentGame game =(PersistentGame) gameDao.findGame(uid);
-        Assert.assertTrue(null != game.getDbId());
-        Assert.assertTrue(null != game.getDbRev());
-        game.setDbId("ulala");
-        game.setDbRev("tralala");
+        Assert.assertTrue(null != game.getDbIdGame());
+        Assert.assertTrue(null != game.getDbRevGame());
+        game.setDbIdGame("ulala");
+        game.setDbRevGame("tralala");
 
-        Assert.assertTrue(game.getDbId().equals("ulala"));
-        Assert.assertTrue(game.getDbRev().equals("tralala"));
+        Assert.assertTrue(game.getDbIdGame().equals("ulala"));
+        Assert.assertTrue(game.getDbRevGame().equals("tralala"));
     }
 
 

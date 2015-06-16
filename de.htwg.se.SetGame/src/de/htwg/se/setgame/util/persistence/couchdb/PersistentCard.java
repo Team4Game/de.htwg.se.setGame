@@ -9,25 +9,25 @@ import org.codehaus.jackson.annotate.JsonProperty;
  */
 
 public class PersistentCard extends Card {
-    private String dbRev;
-    private String dbId;
+    private String dbRevCard;
+    private String dbIdCard;
     @JsonProperty("_id")
-    public String getDbId() {
-        return dbId;
+    public String getDbIdCard() {
+        return dbIdCard;
     }
 
     @JsonProperty("_id")
-    public void setDbId(String dbId) {
-        this.dbId = dbId;
+    public void setDbIdCard(String dbIdCard) {
+        this.dbIdCard = dbIdCard;
     }
 
     @JsonProperty("_rev")
-    public String getDbRev() {
-        return dbRev;
+    public String getDbRevCard() {
+        return dbRevCard;
     }
 
     @JsonProperty("_rev")
-    public void setDbRev(String dbRev) {
-        this.dbRev = dbRev;
+    public void setDbRevCard(String dbRevCard) {
+        this.dbRevCard = dbRevCard;
     }
 }

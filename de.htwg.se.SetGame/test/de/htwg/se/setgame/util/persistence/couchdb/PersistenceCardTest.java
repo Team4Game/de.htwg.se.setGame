@@ -28,13 +28,13 @@ public class PersistenceCardTest {
         String uid = "b3192b4a-55ba-4adc-9047-764778fd89c9";
         PersistentGame game =(PersistentGame) gameDao.findGame(uid);
         this.target = (PersistentCard) game.getUnusedCards().get(0);
-        Assert.assertTrue(null != game.getDbId());
-        Assert.assertTrue(null != game.getDbRev());
-        target.setDbId("ulala");
-        target.setDbRev("tralala");
+        Assert.assertTrue(null != game.getDbIdGame());
+        Assert.assertTrue(null != game.getDbRevGame());
+        target.setDbIdCard("ulala");
+        target.setDbRevCard("tralala");
 
-        Assert.assertTrue(target.getDbId().equals("ulala"));
-        Assert.assertTrue(target.getDbRev().equals("tralala"));
+        Assert.assertTrue(target.getDbIdCard().equals("ulala"));
+        Assert.assertTrue(target.getDbRevCard().equals("tralala"));
     }
 
 
