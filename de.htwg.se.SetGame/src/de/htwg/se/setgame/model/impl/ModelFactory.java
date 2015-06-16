@@ -1,8 +1,6 @@
 package de.htwg.se.setgame.model.impl;
 
 import de.htwg.se.setgame.model.*;
-import de.htwg.se.setgame.util.persistence.IGameDao;
-import de.htwg.se.setgame.util.persistence.hibernate.GameDao;
 
 
 /**

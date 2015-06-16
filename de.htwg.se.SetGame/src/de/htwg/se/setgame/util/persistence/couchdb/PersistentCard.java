@@ -1,9 +1,8 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
-import org.ektorp.support.CouchDbDocument;
-
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
+import org.ektorp.support.CouchDbDocument;
 
 /**
  * @author David Simon & Raina Bertolini

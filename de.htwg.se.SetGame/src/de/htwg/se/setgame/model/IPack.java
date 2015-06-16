@@ -1,6 +1,5 @@
 package de.htwg.se.setgame.model;
 
-import java.util.Collection;
 import java.util.List;
 
 /**

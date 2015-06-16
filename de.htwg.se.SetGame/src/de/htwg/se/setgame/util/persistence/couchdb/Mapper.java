@@ -1,10 +1,10 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
 import com.google.inject.Inject;
-import de.htwg.se.setgame.model.*;
-import de.htwg.se.setgame.model.impl.Card;
-import de.htwg.se.setgame.model.impl.Game;
-import de.htwg.se.setgame.model.impl.Player;
+import de.htwg.se.setgame.model.ICard;
+import de.htwg.se.setgame.model.IGame;
+import de.htwg.se.setgame.model.IModelFactory;
+import de.htwg.se.setgame.model.IPlayer;
 
 import java.util.*;
 

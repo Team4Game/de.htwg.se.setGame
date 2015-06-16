@@ -1,7 +1,8 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
-import java.util.Collection;
 import org.ektorp.support.CouchDbDocument;
+
+import java.util.Collection;
 
 /**
  * Created by miwalz on 03.06.2015.

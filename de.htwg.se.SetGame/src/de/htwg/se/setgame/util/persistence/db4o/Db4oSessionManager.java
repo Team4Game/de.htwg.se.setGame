@@ -3,8 +3,6 @@ package de.htwg.se.setgame.util.persistence.db4o;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.config.EmbeddedConfiguration;
-import com.google.inject.Inject;
-import de.htwg.se.setgame.model.impl.ModelFactory;
 
 /**
  * Created by raina on 16.06.2015.

@@ -1,11 +1,10 @@
 package de.htwg.se.setgame.util.persistence.hibernate;
 
-import java.io.Serializable;
-
-import javax.persistence.*;
-
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
+
+import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author David Simon & Raina Bertolini

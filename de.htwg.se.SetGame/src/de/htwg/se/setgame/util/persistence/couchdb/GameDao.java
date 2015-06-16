@@ -2,13 +2,7 @@ package de.htwg.se.setgame.util.persistence.couchdb;
 
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.util.persistence.IGameDao;
-import org.ektorp.CouchDbConnector;
-import org.ektorp.CouchDbInstance;
 import org.ektorp.DocumentNotFoundException;
-import org.ektorp.http.HttpClient;
-import org.ektorp.http.StdHttpClient;
-import org.ektorp.impl.StdCouchDbConnector;
-import org.ektorp.impl.StdCouchDbInstance;
 
 public class GameDao implements IGameDao {
 

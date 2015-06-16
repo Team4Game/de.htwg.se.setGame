@@ -1,26 +1,19 @@
 package de.htwg.se.setgame.aview.gui;
 
-import java.awt.GridLayout;
-import java.util.List;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.net.URL;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.TreeMap;
-
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-
-import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
 import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IPack;
 import de.htwg.se.setgame.model.impl.ModelFactory;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.net.URL;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * @author raina

@@ -1,10 +1,7 @@
 package de.htwg.se.setgame.util.persistence.db4o;
 
-import com.db4o.Db4oEmbedded;
-import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
 import com.db4o.query.Predicate;
-
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.util.persistence.IGameDao;
 
@@ -33,13 +30,13 @@ public class GameDao implements IGameDao {
 	@Override
 	public IGame findGame(final String id) {
 		ObjectSet<IGame> objectSet = Db4oSessionManager.getDbObjectContainer().query(new Predicate<IGame>() {
-			private static final long serialVersionUID = 7407252057775053179L;
+            private static final long serialVersionUID = 7407252057775053179L;
 
-			@Override
-			public boolean match(IGame game) {
-				return game.getId().equals(id);
-			}
-		});
+            @Override
+            public boolean match(IGame game) {
+                return game.getId().equals(id);
+            }
+        });
 		if (objectSet.isEmpty()) {
 			return null;
 		}

@@ -1,10 +1,13 @@
 package de.htwg.se.setgame.model.impl;
 
-import java.util.*;
-
 import de.htwg.se.setgame.model.AField;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Class Field.
