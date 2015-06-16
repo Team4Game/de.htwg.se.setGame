@@ -7,7 +7,9 @@ import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPlayer;
-import org.junit.*;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.*;
 
@@ -64,7 +66,10 @@ public class GameDaoTest {
     }
     @Test
     public void findGameTest(){
-       IGame result = target.findGame(game.getId());
+        String uid = "b3192b4a-55ba-4adc-9047-764778fd89c9";
+        game.setId(uid);
+        target.createOrUpdateGame(game);
+        IGame result = target.findGame(game.getId());
         Assert.assertTrue(result != null);
         target.closeDb();
 

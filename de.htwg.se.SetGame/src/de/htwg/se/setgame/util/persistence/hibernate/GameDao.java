@@ -70,7 +70,6 @@ public class GameDao implements IGameDao {
             session.saveOrUpdate(persistenceGame);
         } catch (HibernateException ex) {
             if (transaction != null) {
-                System.out.println(ex.toString());
                 transaction.rollback();
             }
         }
@@ -92,7 +91,6 @@ public class GameDao implements IGameDao {
             }
         } catch (HibernateException ex) {
             if (transaction != null) {
-                System.out.println(ex.toString());
                 transaction.rollback();
             }
         }
@@ -112,7 +110,6 @@ public class GameDao implements IGameDao {
             session.saveOrUpdate(newPlayer);
         } catch (HibernateException ex) {
             if (transaction != null) {
-                System.out.println(ex.toString());
                 transaction.rollback();
             }
         }
