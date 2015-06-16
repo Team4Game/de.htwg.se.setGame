@@ -2,6 +2,7 @@ package de.htwg.se.setgame.model.impl;
 
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IModelFactory;
+import de.htwg.se.setgame.model.impl.ModelFactory;
 import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
 import org.junit.Assert;
 import org.junit.Before;
@@ -44,6 +45,16 @@ public class CardTest {
     public void test_ToString(){
         String result = target.toString();
         Assert.assertTrue(result != null);
+
+    }
+    @Test
+    public void compareTo_false(){
+        Card card1 = new Card();
+        card1.setColor(CardAtributen.COLORS[2]);
+        card1.setForm(CardAtributen.FORME[1]);
+        card1.setPanelFilling(CardAtributen.FILL[1]);
+        card1.setNumberOfComponents(CardAtributen.NUMBEROFCOMPONET[0]);
+        Assert.assertTrue(card1.compareTo(target) == false);
 
     }
 

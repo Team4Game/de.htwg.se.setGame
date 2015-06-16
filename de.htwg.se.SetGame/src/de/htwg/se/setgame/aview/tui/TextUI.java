@@ -145,7 +145,7 @@ public class TextUI implements IObserver {
     }
 
     private ICard getCard(Integer[] arrayForSetNumber, int i) {
-        return ((List<ICard>) controller.getField().getCardsInField().values()).get(arrayForSetNumber[i]);
+        return (controller.getCardInFieldGame()).get(arrayForSetNumber[i]);
     }
 
 	/**

@@ -6,7 +6,8 @@ import de.htwg.se.setgame.controller.impl.SetController;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.impl.ModelFactory;
 import de.htwg.se.setgame.util.persistence.IGameDao;
-import de.htwg.se.setgame.util.persistence.hibernate.GameDao;
+import de.htwg.se.setgame.util.persistence.db4o.GameDao;
+
 
 public class SetGameModule extends AbstractModule {
 
