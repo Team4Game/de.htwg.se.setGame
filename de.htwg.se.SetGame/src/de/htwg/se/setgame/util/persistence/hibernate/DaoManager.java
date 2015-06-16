@@ -21,4 +21,5 @@ public class DaoManager {
         }
         return sessionFactory.openSession();
     }
+
 }

@@ -8,20 +8,22 @@ import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPlayer;
 import de.htwg.se.setgame.util.persistence.IGameDao;
+import org.hibernate.HibernateException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.*;
 
-public class HibernateTest {
-    IGameDao target;
+public class GameDaoTest {
+    GameDao target;
     IModelFactory modelFactory;
 
     @Before
     public void setUp() {
         Injector injector = Guice.createInjector(new SetGameModule());
         this.modelFactory = injector.getInstance(IModelFactory.class);
+        this.target = new GameDao();
 
     }
 
@@ -59,19 +61,17 @@ public class HibernateTest {
         game.setCounter(counter);
         game.setCardsInField(cardsInField);
         game.setUnusedCards(unusedCards);
-        IGameDao dao = new GameDao();
-        dao.createOrUpdateGame(game);
+        target.createOrUpdateGame(game);
 
 
-        dao.closeDb();
+        target.closeDb();
         Assert.assertEquals(uid, game.getId());
 
     }
 
     @Test
     public void getGame() {
-        IGameDao gameDao = new GameDao();
-        IGame game = gameDao.findGame("b3192b4a-55ba-4adc-9047-764778fd89c9");
+        IGame game = target.findGame("b3192b4a-55ba-4adc-9047-764778fd89c9");
         Assert.assertTrue(game != null);
 
     }
@@ -110,8 +110,8 @@ public class HibernateTest {
         game.setCounter(counter);
         game.setCardsInField(cardsInField);
         game.setUnusedCards(unusedCards);
-        IGameDao dao = new GameDao();
-        dao.createOrUpdateGame(game);
+
+        target.createOrUpdateGame(game);
         Assert.assertTrue(10 == game.getPlayerOne().getCounter());
         Assert.assertTrue(11 == game.getPlayerTwo().getCounter());
         Assert.assertTrue(card.compareTo(game.getUnusedCards().get(0)));
@@ -151,12 +151,40 @@ public class HibernateTest {
         game.setCounter(counter);
         game.setCardsInField(cardsInField);
         game.setUnusedCards(unusedCards);
-        IGameDao dao = new GameDao();
-        dao.createOrUpdateGame(game);
+        target.createOrUpdateGame(game);
         Assert.assertTrue(10 == game.getPlayerOne().getCounter());
         Assert.assertTrue(11 == game.getPlayerTwo().getCounter());
         Assert.assertTrue(card.compareTo(game.getUnusedCards().get(0)));
         Assert.assertEquals(uid, game.getId());
+    }
+
+    @Test(expected = org.hibernate.AssertionFailure.class)
+    public void saveGame_fail(){
+        PersistentGame persistentGame = new PersistentGame();
+        PersistentPlayer persistentPlayer = new PersistentPlayer();
+        persistentPlayer.setCounter(5);
+        persistentPlayer.setPid(1);
+        persistentGame.setPlayerOne(persistentPlayer);
+        target.saveGame(persistentGame);
+
+
+    }
+    @Test(expected = org.hibernate.AssertionFailure.class)
+    public void createCardsForGame_fail(){
+        PersistentCard persistentCard = new PersistentCard();
+        persistentCard.setColor("red");
+        Collection<PersistentCard> persistentCards = new ArrayList<PersistentCard>();
+        persistentCards.add(persistentCard);
+        target.createCardsForGame((List<PersistentCard>) persistentCards);
+
+
+    }
+    @Test(expected = org.hibernate.AssertionFailure.class)
+    public void createUserForGame_fail(){
+        PersistentPlayer persistentPlayer = new PersistentPlayer();
+        target.createUser(persistentPlayer);
+
+
     }
 
 }

@@ -62,7 +62,7 @@ public class GameDao implements IGameDao {
     }
 
 
-    private PersistentGame saveGame(PersistentGame persistenceGame) {
+    protected PersistentGame saveGame(PersistentGame persistenceGame) {
         Transaction transaction = null;
         Session session = DaoManager.getSession();
         try {
@@ -80,7 +80,7 @@ public class GameDao implements IGameDao {
         return persistenceGame;
     }
 
-    private List<PersistentCard> createCardsForGame(List<PersistentCard> unusedCards) {
+    protected List<PersistentCard> createCardsForGame(List<PersistentCard> unusedCards) {
         List<PersistentCard> result = new LinkedList<PersistentCard>();
         Session session = DaoManager.getSession();
         Transaction transaction = null;
@@ -104,7 +104,7 @@ public class GameDao implements IGameDao {
     }
 
 
-    private PersistentPlayer createUser(PersistentPlayer newPlayer) {
+    protected PersistentPlayer createUser(PersistentPlayer newPlayer) {
         Transaction transaction = null;
         Session session = DaoManager.getSession();
         try {

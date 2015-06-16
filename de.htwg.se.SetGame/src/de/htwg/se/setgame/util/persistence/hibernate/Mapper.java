@@ -15,14 +15,9 @@ public class Mapper {
     public Mapper(IModelFactory modelFactory){
         this.modelFactory = modelFactory;
     }
-    public IModelFactory getModelFactory() {
-        return modelFactory;
-    }
 
-    @Inject
-    public void setModelFactory(IModelFactory modelFactory) {
-        this.modelFactory = modelFactory;
-    }
+
+
 
     public PersistentGame getPersistentGame(IGame game) {
         String id = game.getId();

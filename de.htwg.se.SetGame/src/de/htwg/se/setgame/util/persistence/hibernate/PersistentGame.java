@@ -16,12 +16,14 @@ public class PersistentGame implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String gameID;
 
-    @OneToOne
+    @OneToOne(optional = false)
     private PersistentPlayer playerOne;
-    @OneToOne
+    @OneToOne(optional = false)
     private PersistentPlayer playerTwo;
+    @Column(nullable = false)
     private int counter;
 
 

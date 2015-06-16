@@ -19,8 +19,10 @@ public class PersistentPlayer implements Serializable, IPlayer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long playerID;
-    private int pid;
-    private int counter;
+    @Column(nullable = false)
+    private Integer pid;
+    @Column(nullable = false)
+    private Integer counter;
 
     public PersistentPlayer() {};
 	
