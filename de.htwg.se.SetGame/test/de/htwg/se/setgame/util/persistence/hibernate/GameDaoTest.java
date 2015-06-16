@@ -23,7 +23,7 @@ public class GameDaoTest {
     public void setUp() {
         Injector injector = Guice.createInjector(new SetGameModule());
         this.modelFactory = injector.getInstance(IModelFactory.class);
-        this.target = new GameDao();
+        this.target = new GameDao(modelFactory);
 
     }
 

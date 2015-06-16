@@ -2,6 +2,7 @@ package de.htwg.se.setgame.util.persistence.hibernate;
 
 
 import com.google.inject.Guice;
+import com.google.inject.Inject;
 import com.google.inject.Injector;
 import de.htwg.se.setgame.SetGameModule;
 import de.htwg.se.setgame.model.IGame;
@@ -18,11 +19,9 @@ import java.util.List;
 public class GameDao implements IGameDao {
 
     Mapper mapper;
+    @Inject
+    public GameDao(IModelFactory modelFactory) {
 
-    public GameDao() {
-
-        Injector injector = Guice.createInjector(new SetGameModule());
-        IModelFactory modelFactory = injector.getInstance(IModelFactory.class);
         mapper = new Mapper(modelFactory);
     }
 

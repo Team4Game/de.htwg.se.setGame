@@ -1,8 +1,12 @@
 package de.htwg.se.setgame.controller.impl;
 
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import de.htwg.se.setgame.SetGameModule;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
+import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.impl.ModelFactory;
 import de.htwg.se.setgame.util.persistence.hibernate.GameDao;
 import org.junit.Assert;
@@ -18,7 +22,10 @@ public class SetControllerTest {
 
     @Before
     public void setUp() {
-        this.target = new SetController(new ModelFactory(), new GameDao());
+
+        Injector injector = Guice.createInjector(new SetGameModule());
+        IModelFactory modelFactory = injector.getInstance(IModelFactory.class);
+        this.target = new SetController(modelFactory, new GameDao(modelFactory));
         this.aSetListe = new LinkedList<ICard>();
         aSetListe.addAll(this.target.getSetInField());
     }

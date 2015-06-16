@@ -22,11 +22,11 @@ public class GameDaoTest {
     private IModelFactory modelFactory;
     @Before
     public void setUp(){
-        target = new GameDao();
+
 
         Injector injector = Guice.createInjector(new SetGameModule());
         this.modelFactory = injector.getInstance(IModelFactory.class);
-
+        target = new GameDao(modelFactory);
         IPlayer playerOne = modelFactory.createPlayer();
         playerOne.setCounter(4);
         playerOne.setPid(0);
