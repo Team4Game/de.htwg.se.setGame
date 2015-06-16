@@ -26,13 +26,13 @@ public class PersistentCard implements Serializable, ICard {
         return cardID;
     }
 
-    public void setCardID(Long cardID) {
-        this.cardID = cardID;
-    }
-
+    @Column(nullable = false)
     private String color;
+    @Column(nullable = false)
     private String form;
+    @Column(nullable = false)
     private String panelFilling;
+    @Column(nullable = false)
     private int anz;
 
 	public PersistentCard() {};
