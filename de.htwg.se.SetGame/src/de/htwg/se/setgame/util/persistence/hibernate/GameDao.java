@@ -15,7 +15,8 @@ import java.util.List;
 
 public class GameDao implements IGameDao {
 
-    Mapper mapper;
+    private Mapper mapper;
+
     @Inject
     public GameDao(IModelFactory modelFactory) {
 
@@ -37,7 +38,7 @@ public class GameDao implements IGameDao {
         persistenceGame.setUnusedCards(unusedCards);
         List<PersistentCard> cardsInField = createCardsForGame((List<PersistentCard>) persistenceGame.getCardsInField());
         persistenceGame.setCardsInField(cardsInField);
-        PersistentGame pGame = saveGame(persistenceGame);
+        saveGame(persistenceGame);
 
     }
 

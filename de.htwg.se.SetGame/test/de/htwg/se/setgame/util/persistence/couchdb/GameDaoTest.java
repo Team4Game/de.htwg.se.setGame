@@ -26,7 +26,7 @@ public class GameDaoTest {
 
         Injector injector = Guice.createInjector(new SetGameModule());
         this.modelFactory = injector.getInstance(IModelFactory.class);
-        target = new GameDao(modelFactory);
+        target = new GameDao();
         IPlayer playerOne = modelFactory.createPlayer();
         playerOne.setCounter(4);
         playerOne.setPid(0);

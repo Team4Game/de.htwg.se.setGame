@@ -10,7 +10,7 @@ import de.htwg.se.setgame.model.impl.Card;
 import java.util.*;
 
 public class Mapper {
-    IModelFactory modelFactory;
+    private IModelFactory modelFactory;
     @Inject
     public Mapper(IModelFactory modelFactory){
         this.modelFactory = modelFactory;
@@ -28,8 +28,8 @@ public class Mapper {
         playerTwo.setPid(game.getPlayerTwo().getPid());
         playerTwo.setCounter(game.getPlayerTwo().getCounter());
         int counter = game.getCounter();
-		Collection<PersistentCard> cardsInField = new ArrayList<PersistentCard>(); // get via Field.getCardsInField
-		Collection<PersistentCard> unusedCards = new ArrayList<PersistentCard>(); // get via Pack.getPack
+		Collection<PersistentCard> cardsInField = new ArrayList<PersistentCard>();
+		Collection<PersistentCard> unusedCards = new ArrayList<PersistentCard>();
 
         for (Map.Entry<Integer, ICard> entry : game.getCardsInField().entrySet()) {
 			ICard card = entry.getValue();

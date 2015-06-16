@@ -21,7 +21,7 @@ public class PersistencePlayerTest {
 
         Injector injector = Guice.createInjector(new SetGameModule());
         IModelFactory modelFactory = injector.getInstance(IModelFactory.class);
-        this.gameDao = new GameDao(modelFactory);
+        this.gameDao = new GameDao();
     }
 
     @Test

@@ -15,7 +15,7 @@ public class TUITest {
     private TextUI target;
     @Before
     public void setUp(){
-        target = new TextUI(new SetController(new ModelFactory(), new GameDao(new ModelFactory())));
+        target = new TextUI(new SetController(new ModelFactory(), new GameDao()));
 
     }
     @Test

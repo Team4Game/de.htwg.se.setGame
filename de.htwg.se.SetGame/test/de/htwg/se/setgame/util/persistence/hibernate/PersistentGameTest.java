@@ -84,6 +84,7 @@ public class PersistentGameTest {
         Assert.assertTrue(target.getId() != null);
         Assert.assertTrue(target.getGameID().equals(uid));
         Assert.assertTrue(target.getPlayerOne() != null);
+        Assert.assertTrue(target.getPlayerOne().getPlayerID() != null);
         Assert.assertTrue(target.getPlayerTwo() != null);
         Assert.assertTrue(target.getCardsInField() != null);
         Assert.assertTrue(target.getUnusedCards() != null);

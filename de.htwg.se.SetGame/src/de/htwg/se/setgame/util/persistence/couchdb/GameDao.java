@@ -12,11 +12,10 @@ public class GameDao implements IGameDao {
 
 
     private final Mapper mapper;
-    @Inject
-    public GameDao(IModelFactory modelFactory) {
+    public GameDao() {
 
 
-        this.mapper = new Mapper(modelFactory);
+        this.mapper = new Mapper();
 
 
     }

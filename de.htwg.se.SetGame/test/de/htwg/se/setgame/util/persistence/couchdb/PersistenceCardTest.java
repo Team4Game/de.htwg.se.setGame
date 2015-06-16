@@ -20,7 +20,7 @@ public class PersistenceCardTest {
         this.target = new PersistentCard();
         Injector injector = Guice.createInjector(new SetGameModule());
         IModelFactory modelFactory = injector.getInstance(IModelFactory.class);
-        this.gameDao = new GameDao(modelFactory);
+        this.gameDao = new GameDao();
     }
 
     @Test

@@ -15,21 +15,22 @@ import java.io.Serializable;
 public class PersistentPlayer implements Serializable, IPlayer {
 	
 	private static final long serialVersionUID = 4826196614879025625L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long playerID;
     @Column(nullable = false)
     private Integer pid;
     @Column(nullable = false)
     private Integer counter;
 
-    public PersistentPlayer() {};
-	
-/*	public PersistentPlayer(int pid, int counter) {
-		this.pid = pid;
-		this.counter = counter;
-	}*/
+    public PersistentPlayer() {
+    }
+
+    public Long getPlayerID() {
+        return playerID;
+    }
+
+    ;
 
     public int getCounter() {
         return this.counter;

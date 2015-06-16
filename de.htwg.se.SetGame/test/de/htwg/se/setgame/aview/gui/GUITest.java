@@ -15,7 +15,7 @@ public class GUITest {
 
     @Before
     public void setUp() {
-        target = new GUI((new SetController(new ModelFactory(), new GameDao(new ModelFactory()))));
+        target = new GUI((new SetController(new ModelFactory(), new GameDao())));
 
     }
 
