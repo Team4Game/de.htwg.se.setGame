@@ -23,7 +23,7 @@ public class GameDao implements IGameDao {
             old.setPlayerTwo(game.getPlayerTwo());
             old.setUnusedCards(game.getUnusedCards());
             old.setCardsInField(game.getCardsInField());
-            Db4oSessionManager.getDbObjectContainer().store(old); // This is the update call
+            Db4oSessionManager.getDbObjectContainer().store(old);
         }
 	}
 

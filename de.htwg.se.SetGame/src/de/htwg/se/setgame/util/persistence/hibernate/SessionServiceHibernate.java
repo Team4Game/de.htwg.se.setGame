@@ -7,7 +7,7 @@ import org.hibernate.cfg.AnnotationConfiguration;
 /**
  * Created by raina on 15.06.2015.
  */
-public class SessionServiceHibernate {
+public final class SessionServiceHibernate {
     private static SessionFactory sessionFactory = null;
     private SessionServiceHibernate() {
 

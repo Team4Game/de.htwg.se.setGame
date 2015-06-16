@@ -11,7 +11,7 @@ import java.util.*;
 public class Mapper {
 
 
-    IModelFactory modelFactory;
+    private IModelFactory modelFactory;
 
     @Inject
     public Mapper(IModelFactory modelFactory) {

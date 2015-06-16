@@ -7,7 +7,7 @@ import com.db4o.config.EmbeddedConfiguration;
 /**
  * Created by raina on 16.06.2015.
  */
-public class Db4oSessionManager {
+public final class Db4oSessionManager {
     private static final String FILENAME = "setgame.db";
 
     private static ObjectContainer db;

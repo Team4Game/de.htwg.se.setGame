@@ -1,9 +1,6 @@
 package de.htwg.se.setgame.util.persistence.couchdb;
 
-import com.google.inject.Guice;
 import com.google.inject.Inject;
-import com.google.inject.Injector;
-import de.htwg.se.setgame.SetGameModule;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.util.persistence.IGameDao;
