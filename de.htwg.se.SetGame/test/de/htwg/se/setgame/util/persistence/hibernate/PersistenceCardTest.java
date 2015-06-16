@@ -32,7 +32,7 @@ public class PersistenceCardTest {
 
     @Test
     public void createPersistenceCard_ok() {
-        Session session = DaoManager.getSession();
+        Session session = SessionServiceHibernate.getSession();
         Transaction transaction = null;
         try {
 
@@ -67,7 +67,7 @@ public class PersistenceCardTest {
         this.target.setForm("uhla-uhla");
         this.target.setPanelFilling("fillBurNotFill");
         this.target.setNumberOfComponents(100);
-        Session session = DaoManager.getSession();
+        Session session = SessionServiceHibernate.getSession();
         Transaction transaction = null;
         try {
 
@@ -95,7 +95,7 @@ public class PersistenceCardTest {
         this.target.setForm("balk");
         this.target.setPanelFilling("fill");
         this.target.setNumberOfComponents(2);
-        Session session = DaoManager.getSession();
+        Session session = SessionServiceHibernate.getSession();
         Transaction transaction = null;
         try {
 

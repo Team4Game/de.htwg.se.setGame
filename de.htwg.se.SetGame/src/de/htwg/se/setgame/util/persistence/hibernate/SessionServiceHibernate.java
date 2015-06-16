@@ -7,9 +7,9 @@ import org.hibernate.cfg.AnnotationConfiguration;
 /**
  * Created by raina on 15.06.2015.
  */
-public class DaoManager {
+public class SessionServiceHibernate {
     private static SessionFactory sessionFactory = null;
-    private DaoManager() {
+    private SessionServiceHibernate() {
 
     }
 

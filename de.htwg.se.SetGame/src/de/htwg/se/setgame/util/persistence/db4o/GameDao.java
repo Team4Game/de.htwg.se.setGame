@@ -9,21 +9,30 @@ import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.util.persistence.IGameDao;
 
 public class GameDao implements IGameDao {
-	
-	private ObjectContainer db;
+
 
 	public GameDao() {
-		this.db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "setgame.data");
+
 	}
 
 	@Override
 	public void createOrUpdateGame(IGame game) {
-		this.db.store(game);
+        if(findGame(game.getId())== null) {
+            Db4oSessionManager.getDbObjectContainer().store(game);
+        }else{
+            IGame old = findGame(game.getId());
+            old.setCounter(game.getCounter());
+            old.setPlayerOne(game.getPlayerOne());
+            old.setPlayerTwo(game.getPlayerTwo());
+            old.setUnusedCards(game.getUnusedCards());
+            old.setCardsInField(game.getCardsInField());
+            Db4oSessionManager.getDbObjectContainer().store(old); // This is the update call
+        }
 	}
 
 	@Override
 	public IGame findGame(final String id) {
-		ObjectSet<IGame> objectSet = this.db.query(new Predicate<IGame>() {
+		ObjectSet<IGame> objectSet = Db4oSessionManager.getDbObjectContainer().query(new Predicate<IGame>() {
 			private static final long serialVersionUID = 7407252057775053179L;
 
 			@Override
@@ -39,7 +48,7 @@ public class GameDao implements IGameDao {
 	
 	@Override
 	public void closeDb() {
-		this.db.close();
+        Db4oSessionManager.getDbObjectContainer().close();
 	}
 
 }

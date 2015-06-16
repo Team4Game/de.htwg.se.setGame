@@ -1,19 +1,16 @@
 package de.htwg.se.setgame.controller.impl;
 
 
-import java.util.LinkedList;
-import java.util.List;
-
+import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
-import de.htwg.se.setgame.model.impl.Field;
 import de.htwg.se.setgame.model.impl.ModelFactory;
 import de.htwg.se.setgame.util.persistence.hibernate.GameDao;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.htwg.se.setgame.controller.impl.SetController;
-import de.htwg.se.setgame.model.ICard;
+import java.util.LinkedList;
+import java.util.List;
 
 public class SetControllerTest {
     SetController target;

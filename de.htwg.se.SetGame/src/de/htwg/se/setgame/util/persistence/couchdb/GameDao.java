@@ -12,19 +12,13 @@ import org.ektorp.impl.StdCouchDbInstance;
 
 public class GameDao implements IGameDao {
 
-	private CouchDbConnector db;
 	private Mapper mapper;
 
     public GameDao() {
 
 
         this.mapper = new Mapper();
-        HttpClient httpClient = new StdHttpClient.Builder()
-				.host("lenny2.in.htwg-konstanz.de").port(5984).build();
 
-		CouchDbInstance dbInstance = new StdCouchDbInstance(httpClient);
-		db = new StdCouchDbConnector("setgame", dbInstance);
-		db.createDatabaseIfNotExists();
 
 
     }
@@ -32,13 +26,13 @@ public class GameDao implements IGameDao {
 	@Override
 	public void createOrUpdateGame(IGame game) {
 		PersistentGame persistentGame = mapper.getPersistentGame(game);
-		db.create(persistentGame);
+		CouchDBSession.getCouchDbConnector().create(persistentGame);
 	}
 
 	@Override
 	public IGame findGame(String id) {
 		try {
-			PersistentGame persistentGame = db.get(PersistentGame.class, id);
+			PersistentGame persistentGame = CouchDBSession.getCouchDbConnector().get(PersistentGame.class, id);
 			IGame game = mapper.getGame(persistentGame);
 			return game;
         } catch (DocumentNotFoundException e) {

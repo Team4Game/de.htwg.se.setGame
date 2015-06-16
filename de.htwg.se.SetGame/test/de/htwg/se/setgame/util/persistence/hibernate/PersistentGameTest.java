@@ -58,7 +58,7 @@ public class PersistentGameTest {
 
     @Test
     public void createPersistenceGame_ok() {
-        Session session = DaoManager.getSession();
+        Session session = SessionServiceHibernate.getSession();
         Transaction transaction = null;
         try {
 

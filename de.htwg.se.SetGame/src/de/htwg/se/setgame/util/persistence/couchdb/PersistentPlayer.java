@@ -35,11 +35,5 @@ public class PersistentPlayer extends CouchDbDocument {
 		return this.pid;
 	}
 	
-	
-	/*
-	this.playerOne = 1;
-	this.playerTwo = 2;
-	this.playerOneCounter = 0;
-	this.playerTwoCounter = 0;
-	*/
+
 }

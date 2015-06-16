@@ -48,7 +48,7 @@ public class GameDao implements IGameDao {
 
     private void updateGame(IGame game) {
         PersistentGame persistentGame = mapper.getPersistentGame(game);
-        Session session = DaoManager.getSession();
+        Session session = SessionServiceHibernate.getSession();
         PersistentGame result = (PersistentGame) session.createCriteria(PersistentGame.class).add(Restrictions.eq("gameID", game.getId())).uniqueResult();
         result.getPlayerOne().setCounter(persistentGame.getPlayerOne().getCounter());
         result.getPlayerTwo().setCounter(persistentGame.getPlayerTwo().getCounter());
@@ -64,7 +64,7 @@ public class GameDao implements IGameDao {
 
     protected PersistentGame saveGame(PersistentGame persistenceGame) {
         Transaction transaction = null;
-        Session session = DaoManager.getSession();
+        Session session = SessionServiceHibernate.getSession();
         try {
             transaction = session.beginTransaction();
             session.saveOrUpdate(persistenceGame);
@@ -82,7 +82,7 @@ public class GameDao implements IGameDao {
 
     protected List<PersistentCard> createCardsForGame(List<PersistentCard> unusedCards) {
         List<PersistentCard> result = new LinkedList<PersistentCard>();
-        Session session = DaoManager.getSession();
+        Session session = SessionServiceHibernate.getSession();
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
@@ -106,7 +106,7 @@ public class GameDao implements IGameDao {
 
     protected PersistentPlayer createUser(PersistentPlayer newPlayer) {
         Transaction transaction = null;
-        Session session = DaoManager.getSession();
+        Session session = SessionServiceHibernate.getSession();
         try {
             transaction = session.beginTransaction();
             session.saveOrUpdate(newPlayer);
@@ -126,7 +126,7 @@ public class GameDao implements IGameDao {
     @Override
     public IGame findGame(String id) {
         IGame result = null;
-        Session session = DaoManager.getSession();
+        Session session = SessionServiceHibernate.getSession();
         PersistentGame persistentGame = (PersistentGame) session.createCriteria(PersistentGame.class).add(Restrictions.eq("gameID", id)).uniqueResult();
         if (persistentGame != null) {
             result = mapper.getGame(persistentGame);
@@ -138,7 +138,7 @@ public class GameDao implements IGameDao {
 
     @Override
 	public void closeDb() {
-        DaoManager.getSession().close();
+        SessionServiceHibernate.getSession().close();
     }
 
 }
