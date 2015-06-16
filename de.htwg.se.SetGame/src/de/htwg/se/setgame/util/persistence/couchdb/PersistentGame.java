@@ -13,11 +13,6 @@ import java.util.Map;
  */
 public class PersistentGame extends Game {
 
-    private String dbId;
-    private String dbRev;
-
-
-
 
     @JsonProperty("_id")
     public String getDbId() {
@@ -39,4 +34,6 @@ public class PersistentGame extends Game {
         this.dbRev = dbRev;
     }
 
+    private String dbId;
+    private String dbRev;
 }

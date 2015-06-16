@@ -9,9 +9,8 @@ import org.codehaus.jackson.annotate.JsonProperty;
  */
 
 public class PersistentCard extends Card {
-    private String dbId;
     private String dbRev;
-
+    private String dbId;
     @JsonProperty("_id")
     public String getDbId() {
         return dbId;
