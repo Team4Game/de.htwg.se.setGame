@@ -6,8 +6,10 @@ import com.google.inject.Injector;
 import de.htwg.se.setgame.SetGameModule;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
+import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.impl.ModelFactory;
+import de.htwg.se.setgame.util.persistence.GameDaoDummy;
 import de.htwg.se.setgame.util.persistence.hibernate.GameDao;
 import org.junit.Assert;
 import org.junit.Before;
@@ -25,7 +27,7 @@ public class SetControllerTest {
 
         Injector injector = Guice.createInjector(new SetGameModule());
         IModelFactory modelFactory = injector.getInstance(IModelFactory.class);
-        this.target = new SetController(modelFactory, new GameDao(modelFactory));
+        this.target = new SetController(modelFactory, new GameDaoDummy(modelFactory));
         this.aSetListe = new LinkedList<ICard>();
         aSetListe.addAll(this.target.getSetInField());
     }
@@ -148,5 +150,33 @@ public class SetControllerTest {
     public void getPack_ok(){
 
         Assert.assertEquals(69, target.getPack().getPack().size());
+    }
+    @Test
+    public void loadGame_ok(){
+       int result = target.loadGame("123");
+        Assert.assertTrue(result == 0);
+    }
+    @Test
+    public void loadGame_fail(){
+
+        int result = target.loadGame("sdsad");
+        Assert.assertTrue(result == -1);
+    }
+    @Test
+    public void saveGame_ok(){
+
+        String result = target.saveGame();
+        Assert.assertTrue(null != result);
+    }
+    @Test
+    public void saveGame_fail(){
+        target.uidForGame = "abc";
+        String result = target.saveGame();
+        Assert.assertTrue(result.equals("abc"));
+    }
+    @Test
+    public void setKITest(){
+        target.setKIPlayer("easy");
+
     }
 }

@@ -19,13 +19,7 @@ import java.util.UUID;
  */
 public class SetController extends Observable implements IController {
 
-	public GameProvider getGameProvider() {
-		return gameProvider;
-	}
 
-	public void setGameProvider(GameProvider gameProvider) {
-		this.gameProvider = gameProvider;
-	}
 
 	/**
 	 * gameProvider
@@ -492,7 +486,8 @@ public class SetController extends Observable implements IController {
         game.setCardsInField(cardsInField);
         game.setUnusedCards(unusedCards);
 		IGameDao dao = this.gameDao;
-		dao.createOrUpdateGame(game);
+
+        dao.createOrUpdateGame(game);
 		
 		System.out.println(game.getId());
 		
