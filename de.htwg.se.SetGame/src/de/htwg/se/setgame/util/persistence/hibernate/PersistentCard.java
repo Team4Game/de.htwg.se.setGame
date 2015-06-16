@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
-import com.sun.istack.internal.NotNull;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
 
@@ -31,13 +30,9 @@ public class PersistentCard implements Serializable, ICard {
         this.cardID = cardID;
     }
 
-    @NotNull
     private String color;
-    @NotNull
     private String form;
-    @NotNull
     private String panelFilling;
-    @NotNull
     private int anz;
 
 	public PersistentCard() {};

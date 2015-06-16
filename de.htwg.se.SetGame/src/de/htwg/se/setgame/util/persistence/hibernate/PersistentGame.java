@@ -1,7 +1,5 @@
 package de.htwg.se.setgame.util.persistence.hibernate;
 
-import com.sun.istack.internal.NotNull;
-import org.hibernate.annotations.IndexColumn;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -24,7 +22,6 @@ public class PersistentGame implements Serializable {
     private PersistentPlayer playerOne;
     @OneToOne
     private PersistentPlayer playerTwo;
-    @NotNull
     private int counter;
 
 

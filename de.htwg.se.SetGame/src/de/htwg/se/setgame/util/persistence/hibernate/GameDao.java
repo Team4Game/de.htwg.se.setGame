@@ -68,7 +68,6 @@ public class GameDao implements IGameDao {
         try {
             transaction = session.beginTransaction();
             session.saveOrUpdate(persistenceGame);
-            System.out.println(persistenceGame.getId());
         } catch (HibernateException ex) {
             if (transaction != null) {
                 System.out.println(ex.toString());
@@ -111,7 +110,6 @@ public class GameDao implements IGameDao {
         try {
             transaction = session.beginTransaction();
             session.saveOrUpdate(newPlayer);
-            System.out.println(newPlayer.getPid());
         } catch (HibernateException ex) {
             if (transaction != null) {
                 System.out.println(ex.toString());

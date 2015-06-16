@@ -1,20 +1,16 @@
 package de.htwg.se.setgame.controller.impl;
 
+import com.google.inject.Inject;
+import de.htwg.se.setgame.controller.IController;
+import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
+import de.htwg.se.setgame.model.*;
+import de.htwg.se.setgame.util.observer.Observable;
+import de.htwg.se.setgame.util.persistence.IGameDao;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-
-import com.google.inject.Inject;
-
-import de.htwg.se.setgame.controller.IController;
-import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
-import de.htwg.se.setgame.model.*;
-import de.htwg.se.setgame.model.impl.Game;
-import de.htwg.se.setgame.model.impl.Player;
-import de.htwg.se.setgame.util.observer.Observable;
-import de.htwg.se.setgame.util.persistence.IGameDao;
-import de.htwg.se.setgame.util.persistence.hibernate.GameDao;
 
 //import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
 

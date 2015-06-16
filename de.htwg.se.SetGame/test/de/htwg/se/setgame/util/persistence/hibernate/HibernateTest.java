@@ -12,10 +12,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class HibernateTest {
     IGameDao target;
@@ -65,7 +62,6 @@ public class HibernateTest {
         IGameDao dao = new GameDao();
         dao.createOrUpdateGame(game);
 
-        System.out.println(game.getId());
 
         dao.closeDb();
         Assert.assertEquals(uid, game.getId());
@@ -146,7 +142,7 @@ public class HibernateTest {
         unusedCards.add(card);
 
         // generate unique id
-        String uid = "b3192b4a-55ba-4adc-9047-764778fd89sddede";
+        String uid = UUID.randomUUID().toString();
 
         IGame game = modelFactory.createGame();
         game.setId(uid);
@@ -160,7 +156,7 @@ public class HibernateTest {
         Assert.assertTrue(10 == game.getPlayerOne().getCounter());
         Assert.assertTrue(11 == game.getPlayerTwo().getCounter());
         Assert.assertTrue(card.compareTo(game.getUnusedCards().get(0)));
-
+        Assert.assertEquals(uid, game.getId());
     }
 
 }

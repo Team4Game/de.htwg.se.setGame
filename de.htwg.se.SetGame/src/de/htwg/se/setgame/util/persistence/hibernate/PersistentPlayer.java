@@ -1,6 +1,6 @@
 package de.htwg.se.setgame.util.persistence.hibernate;
 
-import com.sun.istack.internal.NotNull;
+
 import de.htwg.se.setgame.model.IPlayer;
 
 import javax.persistence.*;
@@ -19,9 +19,7 @@ public class PersistentPlayer implements Serializable, IPlayer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long playerID;
-    @NotNull
     private int pid;
-    @NotNull
     private int counter;
 
     public PersistentPlayer() {};
