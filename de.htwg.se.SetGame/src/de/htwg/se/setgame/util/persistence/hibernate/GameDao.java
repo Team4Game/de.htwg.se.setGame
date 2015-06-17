@@ -17,7 +17,7 @@ public class GameDao implements IGameDao {
 
     private Mapper mapper;
 
-    @Inject
+
     public GameDao(IModelFactory modelFactory) {
 
         mapper = new Mapper(modelFactory);

@@ -10,7 +10,7 @@ import java.util.*;
 
 public class Mapper {
     private IModelFactory modelFactory;
-    @Inject
+
     public Mapper(IModelFactory modelFactory){
         this.modelFactory = modelFactory;
     }
