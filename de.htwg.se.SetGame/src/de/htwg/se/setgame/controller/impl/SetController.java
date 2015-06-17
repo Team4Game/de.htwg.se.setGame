@@ -435,13 +435,13 @@ public class SetController extends Observable implements IController {
     @Override
 	public String saveGame(int playerNumber) {
 
-		IPlayer playerOne = modelFactory.createPlayer();
-        playerOne.setCounter(this.playerOneCounter);
-        playerOne.setPid(this.playerOne);
-		IPlayer playerTwo = modelFactory.createPlayer();
-        playerTwo.setCounter(this.playerTwoCounter);
-        playerTwo.setPid(this.playerTwo);
-		int counter = this.counter;
+		IPlayer playerOneForDatabase = modelFactory.createPlayer();
+        playerOneForDatabase.setCounter(this.playerOneCounter);
+        playerOneForDatabase.setPid(this.playerOne);
+		IPlayer playerTwoForDatabase = modelFactory.createPlayer();
+        playerTwoForDatabase.setCounter(this.playerTwoCounter);
+        playerTwoForDatabase.setPid(this.playerTwo);
+		int counterDatabase = this.counter;
 		Map<Integer, ICard> cardsInField = this.getField().getCardsInField();
 		List<ICard> unusedCards = this.getPack().getPack();
         String uid;
@@ -453,16 +453,14 @@ public class SetController extends Observable implements IController {
         }
         IGame game = modelFactory.createGame();
         game.setId(uid);
-        game.setPlayerOne(playerOne);
-        game.setPlayerTwo(playerTwo);
-        game.setCounter(counter);
+        game.setPlayerOne(playerOneForDatabase);
+        game.setPlayerTwo(playerTwoForDatabase);
+        game.setCounter(counterDatabase);
         game.setCardsInField(cardsInField);
         game.setUnusedCards(unusedCards);
 		IGameDao dao = this.gameDao;
 
         dao.createOrUpdateGame(game);
-		
-		System.out.println(game.getId());
 		
 		dao.closeDb();
 		this.uidForGame = game.getId();
@@ -472,13 +470,12 @@ public class SetController extends Observable implements IController {
 
 	@Override
 	public int loadGame(String uid) {
-		
-		// sample savegame:
-		// 28395449-a76e-4499-8189-f7061e3994b7;
+
 
 		IGameDao dao = this.gameDao;
 		 IGame game = dao.findGame(uid);
 		if (game == null) {
+			// game not found
 			// game not found
 			return -1;
 		}
