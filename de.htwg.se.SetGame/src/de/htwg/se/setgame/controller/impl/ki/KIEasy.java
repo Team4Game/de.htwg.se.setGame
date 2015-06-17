@@ -5,8 +5,6 @@ import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.controller.IKi;
 import de.htwg.se.setgame.model.ICard;
 
-import javax.swing.*;
-import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -20,7 +18,7 @@ public class KIEasy implements IKi{
     private Timer timer = new Timer();
     private boolean foundSet = false;
     private TimerTask timertask;
-    private int waitingTime = 1000;
+    private static final int TIME = 1000;
 
     @Inject
     public KIEasy(IController controller, int player){
@@ -34,7 +32,7 @@ public class KIEasy implements IKi{
                 playSet();
             }
         };
-        timer.schedule(timertask, waitingTime);
+        timer.schedule(timertask, TIME);
 
     }
 
@@ -45,9 +43,9 @@ public class KIEasy implements IKi{
     }
 
     @Override
-    public void gamerFoundASet() { //delay
+    public void gamerFoundASet() {
         timer.cancel();
-        timer.schedule(timertask, waitingTime);
+        timer.schedule(timertask, TIME);
 
     }
 

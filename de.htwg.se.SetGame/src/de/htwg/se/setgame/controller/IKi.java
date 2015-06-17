@@ -8,7 +8,6 @@ public interface IKi {
     void playSet();
     void stopKI();
     void gamerFoundASet();
-    //void delay();
 
 
 }
