@@ -12,8 +12,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-//import de.htwg.se.setgame.util.persistence.couchdb.GameDao;
-
 /**
  * @author raina
  */
@@ -24,13 +22,13 @@ public class SetController extends Observable implements IController {
 	/**
 	 * gameProvider
 	 */
-	protected GameProvider gameProvider;
+	private GameProvider gameProvider;
 
 	/**
 	 * counter
 	 */
 	private int counter;
-    String uidForGame;
+    private String uidForGame;
 	/**
 	 * number for set
 	 */
@@ -63,15 +61,16 @@ public class SetController extends Observable implements IController {
 	/**
      * 
      */
-	IGame game = null;
+	private IGame game = null;
     private IModelFactory modelFactory;
+    private static final int AMOUNT = 12;
 	/**
 	 * Logic Construct make for the game a new field with a new pack!!!
 	 */
     private IGameDao gameDao;
 	@Inject
 	public SetController(IModelFactory modelFactory, IGameDao gameDao) {
-		this.gameProvider = new GameProvider(modelFactory, 12);
+		this.gameProvider = new GameProvider(modelFactory, AMOUNT);
 		this.counter = 0;
         this.gameDao = gameDao;
         this.modelFactory =  modelFactory;
