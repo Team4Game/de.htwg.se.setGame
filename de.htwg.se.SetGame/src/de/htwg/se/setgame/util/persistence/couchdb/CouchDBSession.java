@@ -17,6 +17,10 @@ public final class CouchDBSession {
 
     }
 
+    /**
+     *
+     * @return couchDb connection
+     */
     public static CouchDbConnector getCouchDbConnector(){
         if(couchDbConnector == null){
             HttpClient httpClient = new StdHttpClient.Builder()

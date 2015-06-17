@@ -13,6 +13,10 @@ public final class SessionServiceHibernate {
 
     }
 
+    /**
+     *
+     * @return  session for hibernate
+     */
     public static Session getSession() {
         if (sessionFactory == null) {
             sessionFactory = new AnnotationConfiguration().configure()

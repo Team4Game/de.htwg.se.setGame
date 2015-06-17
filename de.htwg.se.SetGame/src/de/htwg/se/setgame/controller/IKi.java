@@ -5,8 +5,19 @@ package de.htwg.se.setgame.controller;
  */
 public interface IKi {
 
+    /**
+     * method call set when time is over
+     */
     void playSet();
+
+    /**
+     * method stop KI
+     */
     void stopKI();
+
+    /**
+     * if gamer found a set KI should start from begin
+     */
     void gamerFoundASet();
 
 

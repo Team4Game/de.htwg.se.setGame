@@ -32,9 +32,28 @@ public interface ICard {
 	 */
 	String toString();
 
+    /**
+     *
+     * @param form set form of card
+     */
     void setForm(String form);
+
+    /**
+     *
+     * @param panelFilling set filling of Card
+     */
     void setPanelFilling(String panelFilling);
+
+    /**
+     *
+     * @param numberOfComponents number of components
+     */
     void setNumberOfComponents(int numberOfComponents);
+
+    /**
+     *
+     * @param color of card
+     */
     void setColor(String color);
     /**
 	 * @param card 

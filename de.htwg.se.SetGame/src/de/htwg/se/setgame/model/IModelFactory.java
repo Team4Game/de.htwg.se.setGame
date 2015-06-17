@@ -13,11 +13,26 @@ public interface IModelFactory {
 
     /**
      *
-     * @return new IField
+     * @return new Pack
      */
     IPack createPack();
+
+    /**
+     *
+     * @returnnew Game
+     */
     IGame createGame();
+
+    /**
+     *
+     * @return new Card
+     */
     ICard createCard();
+
+    /**
+     *
+     * @return new Player
+     */
     IPlayer createPlayer();
 
 

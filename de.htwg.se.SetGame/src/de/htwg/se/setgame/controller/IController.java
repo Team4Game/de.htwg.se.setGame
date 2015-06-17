@@ -112,6 +112,9 @@ public interface IController extends IObservable {
 	 */
 	int loadGame(String uid);
 
+    /**
+    * @param level level of the difficult of KI
+    */
     void setKIPlayer(String level);
 
 }

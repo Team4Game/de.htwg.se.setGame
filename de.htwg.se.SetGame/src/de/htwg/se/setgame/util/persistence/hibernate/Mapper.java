@@ -15,8 +15,11 @@ public class Mapper {
     }
 
 
-
-
+    /**
+     *
+     * @param game
+     * @return persistence game for hibernate
+     */
     public PersistentGame getPersistentGame(IGame game) {
         String id = game.getId();
         PersistentPlayer playerOne = new PersistentPlayer();
@@ -59,6 +62,11 @@ public class Mapper {
         return persGame;
     }
 
+    /**
+     *
+     * @param persistentGame
+     * @return Game for set
+     */
 	public IGame getGame(PersistentGame persistentGame) {
         String id = persistentGame.getGameID();
         IPlayer playerOne = modelFactory.createPlayer();

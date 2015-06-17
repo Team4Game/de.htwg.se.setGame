@@ -9,13 +9,28 @@ import org.codehaus.jackson.map.annotate.JsonDeserialize;
 
 @JsonDeserialize(as= PersistentPlayer.class)
 public interface IPlayer {
-	
+    /**
+     *
+     * @param pid
+     */
 	void setPid(int pid);
-	
+
+    /**
+     *
+     * @param counter
+     */
 	void setCounter(int counter);
-	
+
+    /**
+     *
+     * @return which id has player in game
+     */
 	int getPid();
-	
+
+    /**
+     *
+     * @return counter of set
+     */
 	int getCounter();
 	
 }

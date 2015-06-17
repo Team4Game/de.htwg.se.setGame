@@ -16,6 +16,10 @@ public final class Db4oSessionManager {
 
     }
 
+    /**
+     *
+     * @return objectContainer
+     */
     public static ObjectContainer getDbObjectContainer(){
         if(db == null){
             createDB();
@@ -26,6 +30,10 @@ public final class Db4oSessionManager {
         return db;
 
     }
+
+    /**
+     *  create DB
+     */
     private static void createDB(){
         EmbeddedConfiguration configuration = Db4oEmbedded.newConfiguration();
         db = Db4oEmbedded.openFile(configuration, FILENAME);
