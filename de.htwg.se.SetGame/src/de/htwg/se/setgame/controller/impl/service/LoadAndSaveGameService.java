@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class LoadAndSaveGameService {
     private IGameDao gameDao;
-    IModelFactory modelFactory;
+    private IModelFactory modelFactory;
     public LoadAndSaveGameService(IGameDao gameDao, IModelFactory modelFactory) {
         this.gameDao = gameDao;
         this.modelFactory = modelFactory;
@@ -32,7 +32,7 @@ public class LoadAndSaveGameService {
      * @param playerTwo
      * @return
      */
-    public String SaveGame(String uid, int playerOneCounter, int playerTwoCounter, int counter , List<ICard> unused, Map<Integer, ICard> cardsInFi, int playerOne,int playerTwo) {
+    public String saveGame(String uid, int playerOneCounter, int playerTwoCounter, int counter, List<ICard> unused, Map<Integer, ICard> cardsInFi, int playerOne, int playerTwo) {
         IPlayer playerOneForDatabase = modelFactory.createPlayer();
         playerOneForDatabase.setCounter(playerOneCounter);
         playerOneForDatabase.setPid(playerOne);

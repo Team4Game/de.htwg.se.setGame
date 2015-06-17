@@ -32,21 +32,18 @@ public class SetController extends Observable implements IController {
     private String uidForGame;
 	private int playerOneCounter;
 	private int playerTwoCounter;
-    private IModelFactory modelFactory;
     private IPack pack;
     private LoadAndSaveGameService loadAndSaveGameService;
     /**
      * Logic Construct make for the game a new field with a new pack!!!
      */
-    private IGameDao gameDao;
+
 	@Inject
 	public SetController(IModelFactory modelFactory, IGameDao gameDao) {
 		this.gameProvider = new GameProvider(modelFactory, AMOUNT);
 		PackProvider packProvider = new PackProvider(modelFactory);
         this.pack = packProvider.getPack();
         this.counter = 0;
-        this.gameDao = gameDao;
-        this.modelFactory =  modelFactory;
 		this.gameProvider.startUp();
 		this.playerOne = 1;
 		this.playerTwo = 2;
@@ -368,7 +365,7 @@ public class SetController extends Observable implements IController {
         }else{
             uid = uidForGame;
         }
-        String newUid = loadAndSaveGameService.SaveGame(uid, this.playerOneCounter, this.playerTwoCounter, this.counter,
+        String newUid = loadAndSaveGameService.saveGame(uid, this.playerOneCounter, this.playerTwoCounter, this.counter,
                 getPack().getPack(), getField().getCardsInField(), this.playerOne, this.playerTwo);
 
         return newUid + "+" + playerNumber;
