@@ -28,7 +28,7 @@ public class SetController extends Observable implements IController {
 	 * counter
 	 */
 	private int counter;
-    private String uidForGame;
+    protected String uidForGame;
 	/**
 	 * number for set
 	 */
