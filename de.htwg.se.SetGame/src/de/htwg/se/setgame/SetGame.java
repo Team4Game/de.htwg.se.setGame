@@ -36,7 +36,7 @@ public final class SetGame {
     }
 
     private void initLogger() {
-        PropertyConfigurator.configure("log4j.properties");
+        PropertyConfigurator.configure("resources/log4j.properties");
     }
 
     private void initDependencyInjector() {
