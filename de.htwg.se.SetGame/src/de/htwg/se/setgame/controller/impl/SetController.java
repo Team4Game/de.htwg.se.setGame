@@ -4,6 +4,8 @@ import com.google.inject.Inject;
 import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
 import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
+import de.htwg.se.setgame.controller.impl.service.LoadAndSaveGameService;
+import de.htwg.se.setgame.controller.impl.service.SetService;
 import de.htwg.se.setgame.model.*;
 import de.htwg.se.setgame.util.observer.Observable;
 import de.htwg.se.setgame.util.persistence.IGameDao;
@@ -18,13 +20,13 @@ import java.util.UUID;
  */
 public class SetController extends Observable implements IController {
 
-
     private static final int NUMBEROFSETCARDS = 3;
     private static final int THREE = 3;
     private static final int THOUSAND = 1000;
     private static final int AMOUNT = 12;
     private final int playerOne;
     private final int playerTwo;
+    private SetService setService;
     private GameProvider gameProvider;
     private int counter;
     private String uidForGame;
@@ -32,9 +34,10 @@ public class SetController extends Observable implements IController {
 	private int playerTwoCounter;
     private IModelFactory modelFactory;
     private IPack pack;
-	/**
-	 * Logic Construct make for the game a new field with a new pack!!!
-	 */
+    private LoadAndSaveGameService loadAndSaveGameService;
+    /**
+     * Logic Construct make for the game a new field with a new pack!!!
+     */
     private IGameDao gameDao;
 	@Inject
 	public SetController(IModelFactory modelFactory, IGameDao gameDao) {
@@ -49,12 +52,14 @@ public class SetController extends Observable implements IController {
 		this.playerTwo = 2;
 		this.playerOneCounter = 0;
 		this.playerTwoCounter = 0;
-		checkIfIsASeTInGame();
-	}
+        this.setService = new SetService();
+        loadAndSaveGameService = new LoadAndSaveGameService(gameDao, modelFactory);
+        checkIfIsASeTInGame();
+    }
 
-	@Override
-	public void newGame() {
-		this.gameProvider.clear();
+    @Override
+    public void newGame() {
+        this.gameProvider.clear();
 		this.counter = 0;
 		this.playerOneCounter = 0;
 		this.playerTwoCounter = 0;
@@ -434,68 +439,42 @@ public class SetController extends Observable implements IController {
     }
     @Override
 	public String saveGame(int playerNumber) {
-
-		IPlayer playerOneForDatabase = modelFactory.createPlayer();
-        playerOneForDatabase.setCounter(this.playerOneCounter);
-        playerOneForDatabase.setPid(this.playerOne);
-		IPlayer playerTwoForDatabase = modelFactory.createPlayer();
-        playerTwoForDatabase.setCounter(this.playerTwoCounter);
-        playerTwoForDatabase.setPid(this.playerTwo);
-		int counterDatabase = this.counter;
-		Map<Integer, ICard> cardsInField = this.getField().getCardsInField();
-		List<ICard> unusedCards = this.getPack().getPack();
         String uid;
-		if(this.uidForGame == null) {
+        if (this.uidForGame == null) {
             // generate unique id
-         uid   =UUID.randomUUID().toString();
+            uid = UUID.randomUUID().toString();
         }else{
             uid = uidForGame;
         }
-        IGame game = modelFactory.createGame();
-        game.setId(uid);
-        game.setPlayerOne(playerOneForDatabase);
-        game.setPlayerTwo(playerTwoForDatabase);
-        game.setCounter(counterDatabase);
-        game.setCardsInField(cardsInField);
-        game.setUnusedCards(unusedCards);
-		IGameDao dao = this.gameDao;
+        String newUid = loadAndSaveGameService.SaveGame(uid, this.playerOneCounter, this.playerTwoCounter, this.counter,
+                getPack().getPack(), getField().getCardsInField(), this.playerOne, this.playerTwo);
 
-        dao.createOrUpdateGame(game);
-		
-		dao.closeDb();
-		this.uidForGame = game.getId();
-		return game.getId()+"+"+playerNumber;
+        return newUid + "+" + playerNumber;
 
-	}
+    }
 
-	@Override
-	public int loadGame(String uid) {
+    @Override
+    public int loadGame(String uid) {
 
+        IGame game = loadAndSaveGameService.getGame(uid);
+        if (game == null) {
+            // game not found
+            return -1;
+        }
 
-		IGameDao dao = this.gameDao;
-		 IGame game = dao.findGame(uid);
-		if (game == null) {
-			// game not found
-			// game not found
-			return -1;
-		}
-		
-		this.gameProvider.getCardInFieldGame().clear();
+        this.gameProvider.getCardInFieldGame().clear();
         this.gameProvider.getUnusedCards().clear();
         this.gameProvider.getAllCardsInGame().clear();
-		this.counter = game.getCounter();
-		this.playerOneCounter = game.getPlayerOne().getCounter();
-		this.playerTwoCounter = game.getPlayerTwo().getCounter();
-		this.getField().setCardInField(game.getCardsInField());
-		this.getPack().setPack(game.getUnusedCards());
+        this.counter = game.getCounter();
+        this.playerOneCounter = game.getPlayerOne().getCounter();
+        this.playerTwoCounter = game.getPlayerTwo().getCounter();
+        this.getField().setCardInField(game.getCardsInField());
+        this.getPack().setPack(game.getUnusedCards());
+        notifyObservers();
+        this.uidForGame = game.getId();
+        return 0;
 
-		notifyObservers();
-		
-		dao.closeDb();
-		this.uidForGame = game.getId();
-		return 0;
-
-	}
+    }
 
     @Override
     public void setKIPlayer(String level) {

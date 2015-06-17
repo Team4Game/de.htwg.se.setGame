@@ -125,13 +125,6 @@ public class PackProvider {
      * @return pack of cards
      */
 
-    public List<ICard> getCardsInpack() {
-        List<ICard> liste = new LinkedList<ICard>();
-        for (ICard card : this.pack.getPack()) {
-            liste.add(card);
-        }
-        return liste;
-    }
 }
 
 

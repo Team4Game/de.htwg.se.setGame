@@ -32,9 +32,6 @@ public class GameProvider {
         return iPack;
     }
 
-    public void setiPack(IPack iPack) {
-        this.iPack = iPack;
-    }
 
     private IPack iPack;
     private IField field;
@@ -59,13 +56,6 @@ public class GameProvider {
 
 
 
-    /**
-     * pack for the game are the cards and the random positions
-     */
-
-    public void setField(IField field) {
-        this.field = field;
-    }
 
         /*
          * (non-Javadoc)
@@ -210,14 +200,7 @@ public class GameProvider {
         }
 
 
-    public boolean remove(ICard card) {
-            return false;
-        }
 
-
-    public boolean add(ICard card) {
-            return false;
-        }
 
         /*
          * (non-Javadoc)
