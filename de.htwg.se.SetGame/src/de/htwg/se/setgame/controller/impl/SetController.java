@@ -19,52 +19,18 @@ import java.util.UUID;
 public class SetController extends Observable implements IController {
 
 
-
-	/**
-	 * gameProvider
-	 */
-	private GameProvider gameProvider;
-
-	/**
-	 * counter
-	 */
-	private int counter;
-    private String uidForGame;
-	/**
-	 * number for set
-	 */
-	private static final int NUMBEROFSETCARDS = 3;
-	/**
-	 * numforgotrguth;
-	 */
-	private static final int THREE = 3;
-	/**
-	 * a number for
-	 */
-	private static final int THOUSAND = 1000;
-	/**
-     *
-     */
-	private final int playerOne;
-	/**
-     *
-     */
-	private final int playerTwo;
-	/**
-     *
-     */
-	private int playerOneCounter;
-	/**
-     *
-     */
-	private int playerTwoCounter;
-
-	/**
-     * 
-     */
-
-    private IModelFactory modelFactory;
+    private static final int NUMBEROFSETCARDS = 3;
+    private static final int THREE = 3;
+    private static final int THOUSAND = 1000;
     private static final int AMOUNT = 12;
+    private final int playerOne;
+    private final int playerTwo;
+    private GameProvider gameProvider;
+    private int counter;
+    private String uidForGame;
+	private int playerOneCounter;
+	private int playerTwoCounter;
+    private IModelFactory modelFactory;
     private IPack pack;
 	/**
 	 * Logic Construct make for the game a new field with a new pack!!!
@@ -73,7 +39,8 @@ public class SetController extends Observable implements IController {
 	@Inject
 	public SetController(IModelFactory modelFactory, IGameDao gameDao) {
 		this.gameProvider = new GameProvider(modelFactory, AMOUNT);
-		this.pack = new PackProvider(modelFactory).getPack();
+		PackProvider packProvider = new PackProvider(modelFactory);
+        this.pack = packProvider.getPack();
         this.counter = 0;
         this.gameDao = gameDao;
         this.modelFactory =  modelFactory;
@@ -464,9 +431,6 @@ public class SetController extends Observable implements IController {
     @Override
     public List<ICard> getNewPack() {
        return this.pack.getPack();
-    }
-    private String getUidForGame(){
-        return uidForGame;
     }
     @Override
 	public String saveGame(int playerNumber) {
