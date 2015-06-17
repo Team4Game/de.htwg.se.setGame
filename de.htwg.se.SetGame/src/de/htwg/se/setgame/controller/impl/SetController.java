@@ -502,7 +502,7 @@ public class SetController extends Observable implements IController {
 		
 		dao.closeDb();
 		this.uidForGame = game.getId();
-		return game.getId();
+		return game.getId()+"+"+playerNumber;
 
 	}
 
