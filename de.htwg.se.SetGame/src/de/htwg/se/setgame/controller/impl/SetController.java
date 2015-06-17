@@ -465,7 +465,9 @@ public class SetController extends Observable implements IController {
     public List<ICard> getNewPack() {
        return this.pack.getPack();
     }
-
+    private String getUidForGame(){
+        return uidForGame;
+    }
     @Override
 	public String saveGame(int playerNumber) {
 
