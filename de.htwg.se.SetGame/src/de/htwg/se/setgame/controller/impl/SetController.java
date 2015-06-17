@@ -458,10 +458,15 @@ public class SetController extends Observable implements IController {
 
 	@Override
 	public IPack getPack() {
-		return pack;
+		return gameProvider.getiPack();
 	}
 
-	@Override
+    @Override
+    public List<ICard> getNewPack() {
+       return this.pack.getPack();
+    }
+
+    @Override
 	public String saveGame() {
 
 		IPlayer playerOne = modelFactory.createPlayer();
