@@ -5,11 +5,9 @@ import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPlayer;
 import de.htwg.se.setgame.util.persistence.IGameDao;
-import de.htwg.se.setgame.util.persistence.db4o.GameDao;
 
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 /**
  * Created by raina on 17.06.2015.
