@@ -103,7 +103,7 @@ public interface IController extends IObservable {
 	 * 	save game
 	 * @return 
 	 */
-	String saveGame();
+	String saveGame(int playerNumber);
 
 	/**
 	 * 	load game

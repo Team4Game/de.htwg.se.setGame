@@ -97,7 +97,7 @@ public class SetController extends Observable implements IController {
 	/**
      *
      */
-	protected void checkIfIsASeTInGame() {
+	private void checkIfIsASeTInGame() {
 		List<ICard> liste = new LinkedList<ICard>();
 		liste.addAll(getSet(this.gameProvider.getCardsInField()));
 		if (liste.size() < NUMBEROFSETCARDS) {
@@ -467,7 +467,7 @@ public class SetController extends Observable implements IController {
     }
 
     @Override
-	public String saveGame() {
+	public String saveGame(int playerNumber) {
 
 		IPlayer playerOne = modelFactory.createPlayer();
         playerOne.setCounter(this.playerOneCounter);
