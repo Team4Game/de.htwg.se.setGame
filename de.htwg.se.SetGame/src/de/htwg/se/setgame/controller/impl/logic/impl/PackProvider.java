@@ -40,15 +40,15 @@ public class PackProvider {
         this.pack = modelFactory.createPack();
         List<ICard> cards = new LinkedList<ICard>();
         cards = Arrays.asList(creatCards());
-        if (cards != null)
+        if (cards != null) {
             this.pack.setPack(cards);
-
+        }
     }
 
     /**
      * @return the finish pack of the Game
      */
-    protected ICard[] creatCards() {
+    private ICard[] creatCards() {
         ICard list[] = new ICard[SIZEOFARRAY];
         for (int i = 0; i < SIZEOFARRAY; i++) {
 
