@@ -170,7 +170,7 @@ public class SetControllerTest {
     }
     @Test
     public void saveGame_fail(){
-        target.uidForGame = "abc";
+
         String result = target.saveGame();
         Assert.assertTrue(result.equals("abc"));
     }

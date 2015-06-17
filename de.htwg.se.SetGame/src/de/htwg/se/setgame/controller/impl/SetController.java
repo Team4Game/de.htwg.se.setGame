@@ -3,6 +3,7 @@ package de.htwg.se.setgame.controller.impl;
 import com.google.inject.Inject;
 import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
+import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
 import de.htwg.se.setgame.model.*;
 import de.htwg.se.setgame.util.observer.Observable;
 import de.htwg.se.setgame.util.persistence.IGameDao;
@@ -28,7 +29,7 @@ public class SetController extends Observable implements IController {
 	 * counter
 	 */
 	private int counter;
-    protected String uidForGame;
+    private String uidForGame;
 	/**
 	 * number for set
 	 */
@@ -61,7 +62,7 @@ public class SetController extends Observable implements IController {
 	/**
      * 
      */
-	private IGame game = null;
+
     private IModelFactory modelFactory;
     private static final int AMOUNT = 12;
     private IPack pack;
@@ -72,7 +73,7 @@ public class SetController extends Observable implements IController {
 	@Inject
 	public SetController(IModelFactory modelFactory, IGameDao gameDao) {
 		this.gameProvider = new GameProvider(modelFactory, AMOUNT);
-		this.pack = gameProvider.getiPack();
+		this.pack = new PackProvider(modelFactory).getPack();
         this.counter = 0;
         this.gameDao = gameDao;
         this.modelFactory =  modelFactory;
@@ -505,7 +506,7 @@ public class SetController extends Observable implements IController {
 		// 28395449-a76e-4499-8189-f7061e3994b7;
 
 		IGameDao dao = this.gameDao;
-		this.game = dao.findGame(uid);
+		 IGame game = dao.findGame(uid);
 		if (game == null) {
 			// game not found
 			return -1;
@@ -523,7 +524,7 @@ public class SetController extends Observable implements IController {
 		notifyObservers();
 		
 		dao.closeDb();
-		this.uidForGame = this.game.getId();
+		this.uidForGame = game.getId();
 		return 0;
 
 	}
