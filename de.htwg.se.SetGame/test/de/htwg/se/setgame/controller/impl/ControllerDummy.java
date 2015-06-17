@@ -90,7 +90,12 @@ public class ControllerDummy implements IController {
     }
 
     @Override
-    public String saveGame() {
+    public List<ICard> getNewPack() {
+        return null;
+    }
+
+    @Override
+    public String saveGame(int player) {
         return null;
     }
 

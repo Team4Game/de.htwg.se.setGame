@@ -1,6 +1,5 @@
 package de.htwg.se.setgame.util.persistence.hibernate;
 
-import com.google.inject.Inject;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
@@ -10,7 +9,7 @@ import java.util.*;
 
 public class Mapper {
     private IModelFactory modelFactory;
-    @Inject
+
     public Mapper(IModelFactory modelFactory){
         this.modelFactory = modelFactory;
     }

@@ -3,6 +3,7 @@ package de.htwg.se.setgame.controller.impl;
 import com.google.inject.Inject;
 import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
+import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
 import de.htwg.se.setgame.model.*;
 import de.htwg.se.setgame.util.observer.Observable;
 import de.htwg.se.setgame.util.persistence.IGameDao;
@@ -18,52 +19,19 @@ import java.util.UUID;
 public class SetController extends Observable implements IController {
 
 
-
-	/**
-	 * gameProvider
-	 */
-	private GameProvider gameProvider;
-
-	/**
-	 * counter
-	 */
-	private int counter;
-    protected String uidForGame;
-	/**
-	 * number for set
-	 */
-	private static final int NUMBEROFSETCARDS = 3;
-	/**
-	 * numforgotrguth;
-	 */
-	private static final int THREE = 3;
-	/**
-	 * a number for
-	 */
-	private static final int THOUSAND = 1000;
-	/**
-     *
-     */
-	private final int playerOne;
-	/**
-     *
-     */
-	private final int playerTwo;
-	/**
-     *
-     */
-	private int playerOneCounter;
-	/**
-     *
-     */
-	private int playerTwoCounter;
-
-	/**
-     * 
-     */
-	private IGame game = null;
-    private IModelFactory modelFactory;
+    private static final int NUMBEROFSETCARDS = 3;
+    private static final int THREE = 3;
+    private static final int THOUSAND = 1000;
     private static final int AMOUNT = 12;
+    private final int playerOne;
+    private final int playerTwo;
+    private GameProvider gameProvider;
+    private int counter;
+    private String uidForGame;
+	private int playerOneCounter;
+	private int playerTwoCounter;
+    private IModelFactory modelFactory;
+    private IPack pack;
 	/**
 	 * Logic Construct make for the game a new field with a new pack!!!
 	 */
@@ -71,7 +39,9 @@ public class SetController extends Observable implements IController {
 	@Inject
 	public SetController(IModelFactory modelFactory, IGameDao gameDao) {
 		this.gameProvider = new GameProvider(modelFactory, AMOUNT);
-		this.counter = 0;
+		PackProvider packProvider = new PackProvider(modelFactory);
+        this.pack = packProvider.getPack();
+        this.counter = 0;
         this.gameDao = gameDao;
         this.modelFactory =  modelFactory;
 		this.gameProvider.startUp();
@@ -94,7 +64,7 @@ public class SetController extends Observable implements IController {
 	/**
      *
      */
-	protected void checkIfIsASeTInGame() {
+	private void checkIfIsASeTInGame() {
 		List<ICard> liste = new LinkedList<ICard>();
 		liste.addAll(getSet(this.gameProvider.getCardsInField()));
 		if (liste.size() < NUMBEROFSETCARDS) {
@@ -458,8 +428,12 @@ public class SetController extends Observable implements IController {
 		return gameProvider.getiPack();
 	}
 
-	@Override
-	public String saveGame() {
+    @Override
+    public List<ICard> getNewPack() {
+       return this.pack.getPack();
+    }
+    @Override
+	public String saveGame(int playerNumber) {
 
 		IPlayer playerOne = modelFactory.createPlayer();
         playerOne.setCounter(this.playerOneCounter);
@@ -492,7 +466,7 @@ public class SetController extends Observable implements IController {
 		
 		dao.closeDb();
 		this.uidForGame = game.getId();
-		return game.getId();
+		return game.getId()+"+"+playerNumber;
 
 	}
 
@@ -503,7 +477,7 @@ public class SetController extends Observable implements IController {
 		// 28395449-a76e-4499-8189-f7061e3994b7;
 
 		IGameDao dao = this.gameDao;
-		this.game = dao.findGame(uid);
+		 IGame game = dao.findGame(uid);
 		if (game == null) {
 			// game not found
 			return -1;
@@ -521,7 +495,7 @@ public class SetController extends Observable implements IController {
 		notifyObservers();
 		
 		dao.closeDb();
-		this.uidForGame = this.game.getId();
+		this.uidForGame = game.getId();
 		return 0;
 
 	}

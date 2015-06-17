@@ -1,7 +1,6 @@
 package de.htwg.se.setgame.util.persistence.hibernate;
 
 
-import com.google.inject.Inject;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.util.persistence.IGameDao;
@@ -17,7 +16,7 @@ public class GameDao implements IGameDao {
 
     private Mapper mapper;
 
-    @Inject
+
     public GameDao(IModelFactory modelFactory) {
 
         mapper = new Mapper(modelFactory);

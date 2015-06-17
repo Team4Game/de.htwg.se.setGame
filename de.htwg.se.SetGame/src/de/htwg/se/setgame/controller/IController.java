@@ -98,12 +98,12 @@ public interface IController extends IObservable {
 	 * @return IPack
 	 */
 	IPack getPack();
-	
+    List<ICard> getNewPack();
 	/**
 	 * 	save game
 	 * @return 
 	 */
-	String saveGame();
+	String saveGame(int playerNumber);
 
 	/**
 	 * 	load game

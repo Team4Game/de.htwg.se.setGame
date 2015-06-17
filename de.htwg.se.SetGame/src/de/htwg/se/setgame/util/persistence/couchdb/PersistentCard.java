@@ -30,4 +30,6 @@ public class PersistentCard extends Card {
     public void setDbRevCard(String dbRevCard) {
         this.dbRevCard = dbRevCard;
     }
+
+
 }

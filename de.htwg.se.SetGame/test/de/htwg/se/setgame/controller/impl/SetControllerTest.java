@@ -15,6 +15,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -56,7 +59,6 @@ public class SetControllerTest {
         for (int i = 0; i < 27; i++) {
             List<ICard> cardSet = target.getASetInGame();
             target.isASetForController(cardSet.get(0), cardSet.get(1), cardSet.get(2), 1);
-            target.checkIfIsASeTInGame();
             if (target.getASetInGame().size() == 0 && target.getCardinGame().size() == 9) {
                 target.newGame();
                 i = 0;
@@ -123,7 +125,6 @@ public class SetControllerTest {
         while(target.getASetInGame().size() != 0){
             List<ICard> cardSet = target.getASetInGame();
             target.isASetForController(cardSet.get(0), cardSet.get(1), cardSet.get(2), 1);
-            target.checkIfIsASeTInGame();
         }
         Assert.assertTrue(target.stillSetInGame() == false);
     }
@@ -165,15 +166,10 @@ public class SetControllerTest {
     @Test
     public void saveGame_ok(){
 
-        String result = target.saveGame();
+        String result = target.saveGame(1);
         Assert.assertTrue(null != result);
     }
-    @Test
-    public void saveGame_fail(){
-        target.uidForGame = "abc";
-        String result = target.saveGame();
-        Assert.assertTrue(result.equals("abc"));
-    }
+
     @Test
     public void setKITest(){
         target.setKIPlayer("easy");

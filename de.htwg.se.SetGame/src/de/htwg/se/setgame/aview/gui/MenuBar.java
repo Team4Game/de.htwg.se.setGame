@@ -71,7 +71,7 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	}
 	
 	public void saveGame() {
-		String uid = GUI.getController().saveGame();
+		String uid = GUI.getController().saveGame(1);
         JOptionPane.showMessageDialog(null, "Your game is saved under:\n\n" + uid + "\n\nIf you want to continue your game you will need this key.");
 	}
 
