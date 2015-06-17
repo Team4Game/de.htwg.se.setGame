@@ -9,7 +9,7 @@ public interface IModelFactory {
      *
      * @return new IField
      */
-    public IField createField();
+    IField createField();
 
     /**
      *

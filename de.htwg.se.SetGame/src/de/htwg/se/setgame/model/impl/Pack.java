@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class Pack implements IPack {
 
-    LinkedList<ICard> unUsedCards;
+    private LinkedList<ICard> unUsedCards;
 
     public Pack(){
         this.unUsedCards = new LinkedList<ICard>();
@@ -25,8 +25,7 @@ public class Pack implements IPack {
 
     @Override
     public void setPack(List<ICard> pack) {
-        for(ICard car : pack)
-        this.unUsedCards.add(car);
+        this.unUsedCards.addAll(pack);
     }
 
 

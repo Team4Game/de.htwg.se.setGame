@@ -75,11 +75,21 @@ public class Mapper {
 		
 		int key = 0;
 		for (PersistentCard persCard : persistentGame.getCardsInField()) {
-			cardsInField.put(key, new Card(persCard.getColor(), persCard.getForm(), persCard.getPanelFilling(), persCard.getNumberOfComponents()));
+			ICard card = modelFactory.createCard();
+            card.setColor(persCard.getColor());
+            card.setForm(persCard.getForm());
+            card.setPanelFilling(persCard.getPanelFilling());
+            card.setNumberOfComponents(persCard.getNumberOfComponents());
+            cardsInField.put(key,card);
 			key++;
 		}
 		for (PersistentCard persCard : persistentGame.getUnusedCards()) {
-			unusedCards.add(new Card(persCard.getColor(), persCard.getForm(), persCard.getPanelFilling(), persCard.getNumberOfComponents()));
+            ICard cardForUnusedList = modelFactory.createCard();
+            cardForUnusedList.setColor(persCard.getColor());
+            cardForUnusedList.setForm(persCard.getForm());
+            cardForUnusedList.setPanelFilling(persCard.getPanelFilling());
+            cardForUnusedList.setNumberOfComponents(persCard.getNumberOfComponents());
+			unusedCards.add(cardForUnusedList);
 		}
 
         IGame game = modelFactory.createGame();

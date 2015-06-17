@@ -3,7 +3,7 @@ package de.htwg.se.setgame.model.impl.atributte;
 /**
  * Created by raina on 03.06.2015.
  */
-public class CardAtributen {
+public final class CardAtributen {
     private CardAtributen(){
 
     }

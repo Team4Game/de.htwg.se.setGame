@@ -30,8 +30,7 @@ public class PersistentGame implements Serializable {
     @OneToMany(cascade=CascadeType.ALL)
     @JoinTable(name="SETGAME_UNUSED_CARDS", joinColumns={@JoinColumn(name="GAME_ID", referencedColumnName="id")}
             , inverseJoinColumns={@JoinColumn(name="UNUSEDCARD_ID", referencedColumnName="cardID",nullable=true)})
-    private Collection<PersistentCard> unusedCards = new TreeSet<PersistentCard>(); // get via Pack.getPack
-
+    private Collection<PersistentCard> unusedCards = new TreeSet<PersistentCard>();
     @OneToMany(cascade=CascadeType.ALL)
     @JoinTable(name="SETGAME_CARDS_IN_FIELD", joinColumns={@JoinColumn(name="GAME_ID", referencedColumnName="id")}
             , inverseJoinColumns={@JoinColumn(name="CARD_IN_FIELD_ID", referencedColumnName="cardID",nullable=true)})

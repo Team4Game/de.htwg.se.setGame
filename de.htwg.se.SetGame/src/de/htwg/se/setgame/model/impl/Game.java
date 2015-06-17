@@ -3,7 +3,6 @@ package de.htwg.se.setgame.model.impl;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IPlayer;
-import de.htwg.se.setgame.util.persistence.couchdb.PersistentCard;
 
 import java.util.List;
 import java.util.Map;
@@ -17,8 +16,10 @@ public class Game implements IGame {
 	private IPlayer playerOne;
 	private IPlayer playerTwo;
 	private int counter;
-	private Map<Integer, ICard> cardsInField; // get via Field.getCardsInField
-	private List<ICard> unusedCards; // get via Pack.getPack
+    // get via Field.getCardsInField
+	private Map<Integer, ICard> cardsInField;
+    // get via Pack.getPack
+    private List<ICard> unusedCards;
 
 	public Game(){
 

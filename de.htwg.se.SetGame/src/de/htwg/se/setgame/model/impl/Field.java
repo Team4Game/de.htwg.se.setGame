@@ -17,9 +17,6 @@ import java.util.TreeSet;
  * @category Modell
  */
 public class Field extends AField {
-    protected static final int INITIALVALUEOFFIELD = 12;
-    private static final int MAX = 81;
-    private static final int ONE = 1;
     private static final int NUMBERFORONELINE = 3;
     private static final int LEGHTFORSTRING = CardAtributen.FILL[0].length();
     private Map<Integer, ICard> cardsInField;

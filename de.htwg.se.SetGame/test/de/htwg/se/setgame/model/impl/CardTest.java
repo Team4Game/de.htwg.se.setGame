@@ -2,7 +2,6 @@ package de.htwg.se.setgame.model.impl;
 
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IModelFactory;
-import de.htwg.se.setgame.model.impl.ModelFactory;
 import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
 import org.junit.Assert;
 import org.junit.Before;
@@ -28,8 +27,12 @@ public class CardTest {
 	}
     @Test
     public void createCartTest_Fail(){
-        Card c = new Card("bla","bla","bla", -100 );
-        Assert.assertTrue(c.getColor() == null && c.getForm() == null && c.getPanelFilling() == null && c.getNumberOfComponents() == -1);
+        Card card = new Card();
+        card.setColor("bla");
+        card.setForm("bla");
+        card.setPanelFilling("bla");
+        card.setNumberOfComponents(-100);
+        Assert.assertTrue(card.getColor() == null && card.getForm() == null && card.getPanelFilling() == null && card.getNumberOfComponents() == -1);
 
     }
     @Test
