@@ -64,6 +64,7 @@ public class SetController extends Observable implements IController {
 	private IGame game = null;
     private IModelFactory modelFactory;
     private static final int AMOUNT = 12;
+    private IPack pack;
 	/**
 	 * Logic Construct make for the game a new field with a new pack!!!
 	 */
@@ -71,7 +72,8 @@ public class SetController extends Observable implements IController {
 	@Inject
 	public SetController(IModelFactory modelFactory, IGameDao gameDao) {
 		this.gameProvider = new GameProvider(modelFactory, AMOUNT);
-		this.counter = 0;
+		this.pack = gameProvider.getiPack();
+        this.counter = 0;
         this.gameDao = gameDao;
         this.modelFactory =  modelFactory;
 		this.gameProvider.startUp();
@@ -455,7 +457,7 @@ public class SetController extends Observable implements IController {
 
 	@Override
 	public IPack getPack() {
-		return gameProvider.getiPack();
+		return pack;
 	}
 
 	@Override
