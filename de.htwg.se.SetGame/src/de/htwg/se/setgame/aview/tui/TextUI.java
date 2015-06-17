@@ -7,8 +7,6 @@ import de.htwg.se.setgame.util.observer.Event;
 import de.htwg.se.setgame.util.observer.IObserver;
 import org.apache.log4j.Logger;
 
-import java.util.List;
-
 /**
  * @author raina
  *

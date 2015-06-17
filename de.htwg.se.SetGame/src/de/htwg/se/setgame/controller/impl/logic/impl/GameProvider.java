@@ -18,7 +18,6 @@ public class GameProvider {
     private static final int MAX = 81;
     private static final int ONE = 1;
     private static final int NUMBERFORONELINE = 3;
-    private static final int LEGHTFORSTRING = CardAtributen.FILL[0].length();
     /**
      * Class Field.
      *

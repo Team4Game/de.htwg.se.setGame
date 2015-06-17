@@ -38,7 +38,8 @@ public class PackProvider {
     public PackProvider(IModelFactory modelFactory) {
         this.modelFactory = modelFactory;
         this.pack = modelFactory.createPack();
-        List<ICard> cards = Arrays.asList(creatCards());
+        ICard[] result = creatCards();
+        List<ICard> cards = Arrays.asList(result);
         this.pack.setPack(cards);
 
     }
