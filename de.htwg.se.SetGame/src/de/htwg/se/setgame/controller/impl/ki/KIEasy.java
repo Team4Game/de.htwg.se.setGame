@@ -16,13 +16,13 @@ public class KIEasy implements IKi{
     private IController controller;
     private int player;
     private Timer timer = new Timer();
-    private boolean foundSet = false;
     private TimerTask timertask;
     private static final int TIME = 1000;
 
     @Inject
     public KIEasy(IController controller, int player){
         this.controller = controller;
+        this.player = player;
     }
     public void initiatKI(){
 
