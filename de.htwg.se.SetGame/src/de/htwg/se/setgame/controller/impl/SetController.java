@@ -36,6 +36,7 @@ public class SetController extends Observable implements IController {
     private LoadAndSaveGameService loadAndSaveGameService;
     /**
      * Logic Construct make for the game a new field with a new pack!!!
+     * start Aktoren
      */
     private final Set<IKiPlugin> plugin;
 	@Inject
