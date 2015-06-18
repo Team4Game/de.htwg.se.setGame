@@ -20,5 +20,22 @@ public interface IKiPlugin {
      */
     void gamerFoundASet();
 
+    /**
+     * start ki
+     */
+    void initKI();
+
+    /**
+     *
+     * @param kiLevel ex. Easy Hard
+     * @return if Ki supports lever
+     */
+    boolean isKiLevel(String kiLevel);
+
+    /**
+     *
+     * @param controller set controller for ki so that ki can play
+     */
+    void setController(IController controller);
 
 }

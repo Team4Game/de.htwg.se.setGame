@@ -5,7 +5,7 @@ import com.google.inject.multibindings.Multibinder;
 import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.controller.IKiPlugin;
 import de.htwg.se.setgame.controller.impl.SetController;
-import de.htwg.se.setgame.controller.impl.ki.IKHard;
+import de.htwg.se.setgame.controller.impl.ki.KIHard;
 import de.htwg.se.setgame.controller.impl.ki.KIEasy;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.impl.ModelFactory;
@@ -23,7 +23,7 @@ public class SetGameModule extends AbstractModule {
         Multibinder<IKiPlugin> plugins =
                 Multibinder.newSetBinder(binder(), IKiPlugin.class);
         plugins.addBinding().to(KIEasy.class);
-        plugins.addBinding().to(IKHard.class);
+        plugins.addBinding().to(KIHard.class);
 
 
 

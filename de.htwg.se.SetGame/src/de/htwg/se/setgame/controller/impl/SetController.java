@@ -5,6 +5,7 @@ import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.controller.IKiPlugin;
 import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
 import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
+import de.htwg.se.setgame.controller.impl.service.KiService;
 import de.htwg.se.setgame.controller.impl.service.LoadAndSaveGameService;
 import de.htwg.se.setgame.controller.impl.service.SetService;
 import de.htwg.se.setgame.model.*;
@@ -31,6 +32,7 @@ public class SetController extends Observable implements IController {
 	private int playerOneCounter;
 	private int playerTwoCounter;
     private IPack pack;
+    private KiService kiService;
     private LoadAndSaveGameService loadAndSaveGameService;
     /**
      * Logic Construct make for the game a new field with a new pack!!!
@@ -48,6 +50,7 @@ public class SetController extends Observable implements IController {
 		this.playerTwo = 2;
 		this.playerOneCounter = 0;
 		this.playerTwoCounter = 0;
+        this.kiService = new KiService(this);
         this.setService = new SetService();
         loadAndSaveGameService = new LoadAndSaveGameService(gameDao, modelFactory);
         checkIfIsASeTInGame();
@@ -253,7 +256,11 @@ public class SetController extends Observable implements IController {
 
 			}
 			if (playerOne == player || player == this.playerTwo || player >= 0) {
-				notifyObservers();
+				if(kiService.isKiPlaying() && player != playerTwo){
+                    kiService.notifyKi();
+                }
+                notifyObservers();
+
 			}
 		}
 	}
@@ -396,7 +403,18 @@ public class SetController extends Observable implements IController {
 
     @Override
     public void setKIPlayer(String level) {
+        for(IKiPlugin kiPlugin : plugin){
+            if(kiPlugin.isKiLevel(level)){
+                kiService.startKiPlugin(kiPlugin);
+                break;
+            }
+        }
 
+    }
+
+    @Override
+    public boolean isKIPLaying() {
+        return kiService.isKiPlaying();
     }
 
 }

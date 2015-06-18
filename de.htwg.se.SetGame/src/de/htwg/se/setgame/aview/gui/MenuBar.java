@@ -11,9 +11,9 @@ import java.awt.event.ActionListener;
 public class MenuBar extends JMenuBar implements ActionListener {
 	
 	private static final long serialVersionUID = 1L;
-	private JMenuItem mHelp, mExit, mNewGame, mSaveGame, mLoadGame;
-	
-	public MenuBar() {
+    private JMenuItem mHelp, mExit, mNewGame, mSaveGame, mLoadGame, kiEasy, kiHard;
+
+    public MenuBar() {
 		
 		JMenu menu = new JMenu("Game");
 		mHelp = new JMenuItem("Help");
@@ -25,11 +25,19 @@ public class MenuBar extends JMenuBar implements ActionListener {
 		mSaveGame = new JMenuItem("Save Game");
 		mSaveGame.addActionListener(this);
 		mLoadGame = new JMenuItem("Load Game");
-		mLoadGame.addActionListener(this);
-		menu.add(mNewGame);
+        mLoadGame.addActionListener(this);
+        kiEasy = new JMenuItem("Easy");
+        kiEasy.addActionListener(this);
+        kiHard = new JMenuItem("Hard");
+        kiHard.addActionListener(this);
+
+
+        menu.add(mNewGame);
 		menu.add(mSaveGame);
 		menu.add(mLoadGame);
-		menu.add(mHelp);
+        menu.add(kiEasy);
+        menu.add(kiHard);
+        menu.add(mHelp);
 		menu.add(mExit);
 		this.add(menu);
 	}
@@ -61,16 +69,32 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	        	saveGame();
 	        }else if ( e.getSource() == mLoadGame ){
 	        	loadGame();
-	        }else{
-	        	if ( JOptionPane.showConfirmDialog(null,
+            } else if (e.getSource() == kiEasy) {
+                kiEasyWay();
+
+            } else if (e.getSource() == kiHard) {
+                kiHardWay();
+            } else {
+                if ( JOptionPane.showConfirmDialog(null,
 	        			"Really start a new Game?", "Choice", JOptionPane.YES_NO_OPTION) == 0) {
 	        		newGame();
 	        	}
 	    }
 		
 	}
-	
-	public void saveGame() {
+
+    private void kiHardWay() {
+        GUI.getController().setKIPlayer("Hard");
+
+    }
+
+    private void kiEasyWay() {
+        GUI.getController().setKIPlayer("Easy");
+
+
+    }
+
+    public void saveGame() {
 		String uid = GUI.getController().saveGame(1);
         JOptionPane.showMessageDialog(null, "Your game is saved under:\n\n" + uid + "\n\nIf you want to continue your game you will need this key.");
 	}

@@ -9,22 +9,26 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by David on 17.06.15.
+ * Created by raina on 17.06.2015.
  */
-public class KIEasy implements IKiPlugin {
-    private static final int TIME = 20000;
+public class KIHard implements IKiPlugin {
+    private static final String KILEVEL = "Hard";
+    private static final int TIME = 5000;
     private static final int PLAYER = 2;
-    private static final String KILEVEL = "Easy";
     private IController controller;
     private Timer timer;
     private TimerTask timertask;
     private boolean isWorking;
-    public KIEasy() {
+
+    public KIHard() {
         System.out.println("start ki");
         this.timer = new Timer();
         startTimeTask();
     }
 
+    public IController getController() {
+        return controller;
+    }
 
     @Override
     public void setController(IController controller) {
@@ -74,17 +78,17 @@ public class KIEasy implements IKiPlugin {
     @Override
     public void stopKI() {
         System.out.println("cancel ki");
-        if(isWorking) {
+        if (isWorking) {
             cancelTask();
             isWorking = false;
         }
     }
-    private void cancelTask(){
+
+    private void cancelTask() {
         timertask.cancel();
         timer.cancel();
         timer = new Timer();
         startTimeTask();
-
     }
 
 }

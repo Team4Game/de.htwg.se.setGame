@@ -110,6 +110,11 @@ public class ControllerDummy implements IController {
     }
 
     @Override
+    public boolean isKIPLaying() {
+        return false;
+    }
+
+    @Override
     public void addObserver(IObserver s) {
 
     }

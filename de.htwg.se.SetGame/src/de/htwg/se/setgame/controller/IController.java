@@ -117,4 +117,6 @@ public interface IController extends IObservable {
     */
     void setKIPlayer(String level);
 
+    boolean isKIPLaying();
+
 }
