@@ -3,14 +3,8 @@
     <output-path>$PROJECT_DIR$/out/artifacts/de_htwg_se_SetGame_jar</output-path>
     <root id="archive" name="de.htwg.se.SetGame.jar">
       <element id="module-output" name="de.htwg.se.SetGame" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/de.htwg.se.SetGame/lib/aopalliance.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/de.htwg.se.SetGame/lib/log4j-1.2.17.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/de.htwg.se.SetGame/lib/guice-3.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/de.htwg.se.SetGame/lib/guice-assistedinject-3.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/de.htwg.se.SetGame/lib/javax.inject.jar" path-in-jar="/" />
       <element id="dir-copy" path="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack" />
       <element id="library" level="project" name="lib" />
-      <element id="file-copy" path="$PROJECT_DIR$/de.htwg.se.SetGame/src/log4j.properties" />
     </root>
   </artifact>
 </component>

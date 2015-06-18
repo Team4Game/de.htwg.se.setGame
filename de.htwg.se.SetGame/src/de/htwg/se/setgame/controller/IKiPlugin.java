@@ -3,7 +3,7 @@ package de.htwg.se.setgame.controller;
 /**
  * Created by David on 12.06.15.
  */
-public interface IKi {
+public interface IKiPlugin {
 
     /**
      * method call set when time is over

@@ -4,6 +4,7 @@ package de.htwg.se.setgame.controller.impl;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import de.htwg.se.setgame.SetGameModule;
+import de.htwg.se.setgame.controller.IKiPlugin;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
 import de.htwg.se.setgame.model.IGame;
@@ -20,6 +21,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.TreeSet;
 
 public class SetControllerTest {
     SetController target;
@@ -30,7 +32,7 @@ public class SetControllerTest {
 
         Injector injector = Guice.createInjector(new SetGameModule());
         IModelFactory modelFactory = injector.getInstance(IModelFactory.class);
-        this.target = new SetController(modelFactory, new GameDaoDummy(modelFactory));
+        this.target = new SetController(modelFactory, new GameDaoDummy(modelFactory), new TreeSet<IKiPlugin>());
         this.aSetListe = new LinkedList<ICard>();
         aSetListe.addAll(this.target.getSetInField());
     }

@@ -2,6 +2,7 @@ package de.htwg.se.setgame.controller.impl;
 
 import com.google.inject.Inject;
 import de.htwg.se.setgame.controller.IController;
+import de.htwg.se.setgame.controller.IKiPlugin;
 import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
 import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
 import de.htwg.se.setgame.controller.impl.service.LoadAndSaveGameService;
@@ -10,10 +11,7 @@ import de.htwg.se.setgame.model.*;
 import de.htwg.se.setgame.util.observer.Observable;
 import de.htwg.se.setgame.util.persistence.IGameDao;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * @author raina
@@ -37,13 +35,14 @@ public class SetController extends Observable implements IController {
     /**
      * Logic Construct make for the game a new field with a new pack!!!
      */
-
+    private final Set<IKiPlugin> plugin;
 	@Inject
-	public SetController(IModelFactory modelFactory, IGameDao gameDao) {
+	public SetController(IModelFactory modelFactory, IGameDao gameDao , Set<IKiPlugin> plugin) {
 		this.gameProvider = new GameProvider(modelFactory, AMOUNT);
 		PackProvider packProvider = new PackProvider(modelFactory);
         this.pack = packProvider.getPack();
         this.counter = 0;
+        this.plugin = plugin;
 		this.gameProvider.startUp();
 		this.playerOne = 1;
 		this.playerTwo = 2;
