@@ -13,9 +13,19 @@ import java.util.TimerTask;
  */
 public abstract class AKI implements IKiPlugin {
     private static final int PLAYER = 2;
+
+    public Timer getTimer() {
+        return timer;
+    }
+
+    public void setTimer(Timer timer) {
+        this.timer = timer;
+    }
+
+    private Timer timer;
     private IController controller;
-    protected Timer timer;
     private TimerTask timertask;
+    private boolean isWorking;
 
     protected boolean isWorking() {
         return isWorking;
@@ -24,10 +34,6 @@ public abstract class AKI implements IKiPlugin {
     protected void setWorking(boolean isWorking) {
         this.isWorking = isWorking;
     }
-
-    private boolean isWorking;
-
-
 
     public IController getController() {
         return controller;
@@ -52,8 +58,10 @@ public abstract class AKI implements IKiPlugin {
     @Override
     public void playSet() {
         List<ICard> solution = controller.getSetInField();
-        if (solution != null)
+        if (solution != null) {
             controller.isASetForController(solution.get(0), solution.get(1), solution.get(2), PLAYER);
+
+        }
     }
 
     @Override

@@ -10,7 +10,7 @@ public class KIHard extends AKI {
     private static final int TIME = 5000;
     public KIHard() {
         super.startTimeTask();
-        super.timer = new Timer();
+        super.setTimer(new Timer());
     }
     @Override
     public void initKI() {

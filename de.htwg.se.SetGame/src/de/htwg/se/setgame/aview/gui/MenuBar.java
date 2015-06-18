@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 public class MenuBar extends JMenuBar implements ActionListener {
 	
 	private static final long serialVersionUID = 1L;
-    private JMenuItem mHelp, mExit, mNewGame, mSaveGame, mLoadGame, kiEasy, kiHard;
+    private JMenuItem mHelp, mExit, mNewGame, mSaveGame, mLoadGame, kiEasy, kiMedium,kiHard;
 
     public MenuBar() {
 		
@@ -30,12 +30,15 @@ public class MenuBar extends JMenuBar implements ActionListener {
         kiEasy.addActionListener(this);
         kiHard = new JMenuItem("Hard");
         kiHard.addActionListener(this);
+        kiMedium = new JMenuItem("Medium");
+        kiMedium.addActionListener(this);
 
 
         menu.add(mNewGame);
 		menu.add(mSaveGame);
 		menu.add(mLoadGame);
         menu.add(kiEasy);
+        menu.add(kiMedium);
         menu.add(kiHard);
         menu.add(mHelp);
 		menu.add(mExit);
@@ -74,6 +77,8 @@ public class MenuBar extends JMenuBar implements ActionListener {
 
             } else if (e.getSource() == kiHard) {
                 kiHardWay();
+            }else if (e.getSource() == kiMedium) {
+                kiMediumWay();
             } else {
                 if ( JOptionPane.showConfirmDialog(null,
 	        			"Really start a new Game?", "Choice", JOptionPane.YES_NO_OPTION) == 0) {
@@ -82,6 +87,10 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	    }
 		
 	}
+
+    private void kiMediumWay() {
+        GUI.getController().setKIPlayer("Medium");
+    }
 
     private void kiHardWay() {
         GUI.getController().setKIPlayer("Hard");

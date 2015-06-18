@@ -7,6 +7,7 @@ import de.htwg.se.setgame.controller.IKiPlugin;
 import de.htwg.se.setgame.controller.impl.SetController;
 import de.htwg.se.setgame.controller.impl.ki.KIHard;
 import de.htwg.se.setgame.controller.impl.ki.KIEasy;
+import de.htwg.se.setgame.controller.impl.ki.KIMedium;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.impl.ModelFactory;
 import de.htwg.se.setgame.util.persistence.IGameDao;
@@ -24,6 +25,7 @@ public class SetGameModule extends AbstractModule {
                 Multibinder.newSetBinder(binder(), IKiPlugin.class);
         plugins.addBinding().to(KIEasy.class);
         plugins.addBinding().to(KIHard.class);
+        plugins.addBinding().to(KIMedium.class);
 
 
 
