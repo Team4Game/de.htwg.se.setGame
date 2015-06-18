@@ -6,6 +6,7 @@ import java.util.Timer;
  * Created by David on 17.06.15.
  */
 public class KIEasy extends AKI {
+
     private static final int TIMEFOREASY = 20000;
     private static final String KIEASY = "Easy";
 
@@ -25,6 +26,8 @@ public class KIEasy extends AKI {
         super.initiationKI(TIMEFOREASY);
 
     }
+
+
 
 
 }

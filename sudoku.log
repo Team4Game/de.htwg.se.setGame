@@ -1,527 +1,633 @@
-INFO Timer-1 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| purple |  | green  |  | purple |  
-|  balk  |  |  wave  |  | ovally |  
-|   2    |  |   1    |  |   2    |  
-|halffill|  | empty  |  |halffill|  
-    [3]        [4]        [5]    
-| green  |  | green  |  | purple |  
-|  wave  |  | ovally |  |  wave  |  
-|   2    |  |   2    |  |   3    |  
-|halffill|  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-| purple |  | green  |  | purple |  
-|  wave  |  |  balk  |  |  balk  |  
-|   2    |  |   3    |  |   2    |  
-|halffill|  |halffill|  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  | green  |  |  red   |  
-|  balk  |  |  balk  |  |  balk  |  
-|   3    |  |   2    |  |   3    |  
-| empty  |  |  fill  |  |halffill|  
-
-INFO Timer-1 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-|  red   |  | green  |  |  red   |  
-|  balk  |  |  wave  |  |  wave  |  
-|   3    |  |   1    |  |   2    |  
-| empty  |  | empty  |  |  fill  |  
-    [3]        [4]        [5]    
-| green  |  | green  |  | purple |  
-|  wave  |  | ovally |  |  wave  |  
-|   2    |  |   2    |  |   3    |  
-|halffill|  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-| purple |  | green  |  | purple |  
-| ovally |  |  balk  |  |  balk  |  
-|   2    |  |   3    |  |   2    |  
-|  fill  |  |halffill|  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  | green  |  |  red   |  
-|  balk  |  |  balk  |  |  balk  |  
-|   3    |  |   2    |  |   3    |  
-| empty  |  |  fill  |  |halffill|  
-
-INFO Timer-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-|  red   |  | purple |  |  red   |  
-|  balk  |  |  balk  |  |  wave  |  
-|   3    |  |   1    |  |   3    |  
-| empty  |  | empty  |  |halffill|  
-    [3]        [4]        [5]    
-| green  |  | green  |  | green  |  
-|  wave  |  | ovally |  | ovally |  
-|   2    |  |   2    |  |   3    |  
-|halffill|  |halffill|  |  fill  |  
-    [6]        [7]        [8]    
-| purple |  | green  |  | purple |  
-| ovally |  |  balk  |  |  balk  |  
-|   2    |  |   3    |  |   2    |  
-|  fill  |  |halffill|  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  | green  |  |  red   |  
-|  balk  |  |  balk  |  |  balk  |  
-|   3    |  |   2    |  |   3    |  
-| empty  |  |  fill  |  |halffill|  
-
-INFO Timer-2 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-|  red   |  |  red   |  |  red   |  
-|  balk  |  | ovally |  |  wave  |  
-|   3    |  |   2    |  |   3    |  
-| empty  |  |halffill|  |halffill|  
-    [3]        [4]        [5]    
-| green  |  | green  |  | green  |  
-|  wave  |  | ovally |  | ovally |  
-|   2    |  |   2    |  |   3    |  
-|halffill|  |halffill|  |  fill  |  
-    [6]        [7]        [8]    
-| purple |  | green  |  | purple |  
-| ovally |  |  balk  |  |  balk  |  
-|   2    |  |   3    |  |   2    |  
-|  fill  |  |halffill|  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  |  red   |  |  red   |  
-|  balk  |  |  wave  |  | ovally |  
-|   3    |  |   3    |  |   3    |  
-| empty  |  |  fill  |  |  fill  |  
-
-INFO Timer-2 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| purple |  |  red   |  |  red   |  
-|  wave  |  | ovally |  |  balk  |  
-|   1    |  |   2    |  |   1    |  
-|halffill|  |halffill|  | empty  |  
-    [3]        [4]        [5]    
-| green  |  | green  |  | green  |  
-|  wave  |  | ovally |  | ovally |  
-|   2    |  |   2    |  |   3    |  
-|halffill|  |halffill|  |  fill  |  
-    [6]        [7]        [8]    
-| purple |  | green  |  | purple |  
-| ovally |  |  balk  |  |  balk  |  
-|   2    |  |   3    |  |   2    |  
-|  fill  |  |halffill|  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  |  red   |  |  red   |  
-|  balk  |  |  wave  |  |  balk  |  
-|   3    |  |   3    |  |   1    |  
-| empty  |  |  fill  |  |  fill  |  
-
-INFO Timer-3 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| purple |  |  red   |  |  red   |  
-| ovally |  | ovally |  |  balk  |  
-|   3    |  |   1    |  |   1    |  
-|  fill  |  |  fill  |  | empty  |  
-    [3]        [4]        [5]    
-| green  |  | green  |  | green  |  
-|  wave  |  | ovally |  | ovally |  
-|   2    |  |   2    |  |   3    |  
-|halffill|  |halffill|  |  fill  |  
-    [6]        [7]        [8]    
-| purple |  | green  |  | purple |  
-| ovally |  | ovally |  |  balk  |  
-|   2    |  |   1    |  |   2    |  
-|  fill  |  |halffill|  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  |  red   |  |  red   |  
-|  balk  |  |  wave  |  |  balk  |  
-|   3    |  |   3    |  |   1    |  
-| empty  |  |  fill  |  |  fill  |  
-
-INFO Timer-4 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| purple |  |  red   |  | purple |  
-|  balk  |  | ovally |  |  wave  |  
-|   1    |  |   1    |  |   2    |  
-|halffill|  |  fill  |  | empty  |  
-    [3]        [4]        [5]    
-|  red   |  | green  |  | green  |  
-| ovally |  | ovally |  | ovally |  
-|   3    |  |   2    |  |   3    |  
-| empty  |  |halffill|  |  fill  |  
-    [6]        [7]        [8]    
-| purple |  | green  |  | purple |  
-| ovally |  | ovally |  |  balk  |  
-|   2    |  |   1    |  |   2    |  
-|  fill  |  |halffill|  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  |  red   |  |  red   |  
-|  balk  |  |  wave  |  |  balk  |  
-|   3    |  |   3    |  |   1    |  
-| empty  |  |  fill  |  |  fill  |  
-
-INFO Timer-4 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| green  |  |  red   |  | purple |  
-|  wave  |  | ovally |  |  wave  |  
-|   2    |  |   1    |  |   2    |  
-|  fill  |  |  fill  |  | empty  |  
-    [3]        [4]        [5]    
-|  red   |  | green  |  | green  |  
-| ovally |  | ovally |  | ovally |  
-|   3    |  |   2    |  |   3    |  
-| empty  |  |halffill|  |  fill  |  
-    [6]        [7]        [8]    
-| purple |  | green  |  |  red   |  
-| ovally |  | ovally |  |  balk  |  
-|   2    |  |   1    |  |   2    |  
-|  fill  |  |halffill|  | empty  |  
-    [9]        [10]        [11]    
-| purple |  |  red   |  |  red   |  
-|  balk  |  |  wave  |  |  balk  |  
-|   2    |  |   3    |  |   1    |  
-| empty  |  |  fill  |  |  fill  |  
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| purple |  |  red   |  | green  |  
-| ovally |  |  wave  |  |  balk  |  
-|   1    |  |   2    |  |   3    |  
-| empty  |  | empty  |  | empty  |  
-    [3]        [4]        [5]    
-| green  |  | green  |  | purple |  
-|  wave  |  | ovally |  |  balk  |  
-|   1    |  |   3    |  |   3    |  
-| empty  |  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-|  red   |  | purple |  | green  |  
-|  balk  |  |  wave  |  |  wave  |  
-|   2    |  |   2    |  |   1    |  
-|  fill  |  |  fill  |  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  | green  |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   1    |  |   1    |  
-|  fill  |  | empty  |  |  fill  |  
-
-INFO Timer-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| green  |  | purple |  |  red   |  
-|  balk  |  | ovally |  | ovally |  
-|   1    |  |   3    |  |   2    |  
-|  fill  |  |halffill|  | empty  |  
-    [3]        [4]        [5]    
-| green  |  | green  |  | purple |  
-|  wave  |  | ovally |  |  balk  |  
-|   1    |  |   3    |  |   3    |  
-| empty  |  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-|  red   |  | purple |  | green  |  
-|  balk  |  |  wave  |  |  wave  |  
-|   2    |  |   2    |  |   1    |  
-|  fill  |  |  fill  |  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  | green  |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   1    |  |   1    |  
-|  fill  |  | empty  |  |  fill  |  
-
-INFO Timer-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| green  |  |  red   |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   3    |  |   2    |  
-|  fill  |  |halffill|  | empty  |  
-    [3]        [4]        [5]    
-|  red   |  | green  |  | purple |  
-| ovally |  | ovally |  |  balk  |  
-|   3    |  |   3    |  |   3    |  
-|  fill  |  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-| purple |  | purple |  | green  |  
-|  wave  |  |  wave  |  |  wave  |  
-|   1    |  |   2    |  |   1    |  
-|halffill|  |  fill  |  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  | green  |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   1    |  |   1    |  
-|  fill  |  | empty  |  |  fill  |  
-
-INFO Timer-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-|  red   |  |  red   |  |  red   |  
-| ovally |  |  balk  |  | ovally |  
-|   2    |  |   3    |  |   2    |  
-|halffill|  |halffill|  | empty  |  
-    [3]        [4]        [5]    
-|  red   |  | green  |  | purple |  
-|  balk  |  | ovally |  |  balk  |  
-|   3    |  |   3    |  |   3    |  
-|  fill  |  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-| purple |  | green  |  | green  |  
-|  wave  |  | ovally |  |  wave  |  
-|   1    |  |   3    |  |   1    |  
-|halffill|  |  fill  |  |  fill  |  
-    [9]        [10]        [11]    
-| purple |  | green  |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   1    |  |   1    |  
-|  fill  |  | empty  |  |  fill  |  
-
-INFO Timer-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-|  red   |  |  red   |  | green  |  
-| ovally |  |  balk  |  |  wave  |  
-|   2    |  |   3    |  |   2    |  
-|halffill|  |halffill|  |halffill|  
-    [3]        [4]        [5]    
-|  red   |  | green  |  |  red   |  
-|  balk  |  | ovally |  |  balk  |  
-|   3    |  |   3    |  |   1    |  
-|  fill  |  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-| purple |  | green  |  | green  |  
-|  wave  |  | ovally |  | ovally |  
-|   1    |  |   3    |  |   3    |  
-|halffill|  |  fill  |  | empty  |  
-    [9]        [10]        [11]    
-| purple |  | green  |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   1    |  |   1    |  
-|  fill  |  | empty  |  |  fill  |  
-
-INFO Timer-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-|  red   |  |  red   |  | green  |  
-| ovally |  |  balk  |  |  balk  |  
-|   2    |  |   3    |  |   3    |  
-|halffill|  |halffill|  |  fill  |  
-    [3]        [4]        [5]    
-|  red   |  | green  |  |  red   |  
-|  balk  |  | ovally |  |  balk  |  
-|   3    |  |   3    |  |   1    |  
-|  fill  |  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-| purple |  |  red   |  | green  |  
-|  wave  |  |  wave  |  | ovally |  
-|   1    |  |   2    |  |   3    |  
-|halffill|  |  fill  |  | empty  |  
-    [9]        [10]        [11]    
-| purple |  | purple |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   3    |  |   1    |  
-|  fill  |  |  fill  |  |  fill  |  
-
-INFO Timer-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-|  red   |  | purple |  | green  |  
-|  wave  |  |  wave  |  |  wave  |  
-|   1    |  |   2    |  |   3    |  
-| empty  |  |halffill|  |  fill  |  
-    [3]        [4]        [5]    
-| green  |  | green  |  |  red   |  
-| ovally |  | ovally |  |  balk  |  
-|   2    |  |   3    |  |   1    |  
-|  fill  |  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-| purple |  |  red   |  | green  |  
-|  wave  |  |  wave  |  | ovally |  
-|   1    |  |   2    |  |   3    |  
-|halffill|  |  fill  |  | empty  |  
-    [9]        [10]        [11]    
-| purple |  | purple |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   2    |  |   1    |  
-|  fill  |  |halffill|  |  fill  |  
-
-INFO Timer-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-|  red   |  | purple |  | green  |  
-| ovally |  | ovally |  | ovally |  
-|   1    |  |   1    |  |   1    |  
-| empty  |  |halffill|  |  fill  |  
-    [3]        [4]        [5]    
-| green  |  | green  |  |  red   |  
-| ovally |  | ovally |  |  balk  |  
-|   2    |  |   3    |  |   1    |  
-|  fill  |  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-| purple |  |  red   |  | green  |  
-|  wave  |  |  wave  |  | ovally |  
-|   1    |  |   2    |  |   3    |  
-|halffill|  |  fill  |  | empty  |  
-    [9]        [10]        [11]    
-| purple |  | purple |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   2    |  |   1    |  
-|  fill  |  |halffill|  |  fill  |  
-
-INFO Timer-1 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| purple |  | purple |  | purple |  
-| ovally |  |  wave  |  | ovally |  
-|   2    |  |   1    |  |   3    |  
-|  fill  |  | empty  |  |  fill  |  
-    [3]        [4]        [5]    
-| green  |  | green  |  |  red   |  
-| ovally |  | ovally |  |  balk  |  
-|   2    |  |   3    |  |   1    |  
-|  fill  |  |halffill|  |halffill|  
-    [6]        [7]        [8]    
-| purple |  |  red   |  | green  |  
-|  wave  |  |  wave  |  | ovally |  
-|   1    |  |   2    |  |   3    |  
-|halffill|  |  fill  |  | empty  |  
-    [9]        [10]        [11]    
-| purple |  | purple |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   2    |  |   1    |  
-|  fill  |  |halffill|  |  fill  |  
-
+DEBUG main org.apache.http.headers - << ETag: "1-dffbdf6be440315bdda9600ea0304dc8"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:17 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Content-Length: 95
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.cache.ResponseCachingPolicy - Response was not cacheable.
+DEBUG main org.apache.http.wire - << "{"ok":true,"id":"7533fc21e5a9b1579dbfe9ab090a8d2e","rev":"1-dffbdf6be440315bdda9600ea0304dc8"}[\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /a_setgame/_design/findid/_view/game?key=%226c21f973-552b-40f6-9dad-45a73dba114b%22 HTTP/1.1
+DEBUG main org.apache.http.wire - >> "GET /a_setgame/_design/findid/_view/game?key=%226c21f973-552b-40f6-9dad-45a73dba114b%22 HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /a_setgame/_design/findid/_view/game?key=%226c21f973-552b-40f6-9dad-45a73dba114b%22 HTTP/1.1
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "4SEY6WS5ONGUR82UI0SEE3OQM"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:17 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Transfer-Encoding: chunked
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << ETag: "4SEY6WS5ONGUR82UI0SEE3OQM"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:17 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.wire - << "29[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"total_rows":332,"offset":146,"rows":[[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1ee[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"id":"7533fc21e5a9b1579dbfe9ab090a8d2e","key":"6c21f973-552b-40f6-9dad-45a73dba114b","value":{"_id":"7533fc21e5a9b1579dbfe9ab090a8d2e","_rev":"1-dffbdf6be440315bdda9600ea0304dc8","playerOne":{"pid":0,"counter":4},"playerTwo":{"pid":2,"counter":3},"counter":4,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"6c21f973-552b-40f6-9dad-45a73dba114b"}}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "4[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "]}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "0[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /a_setgame/_design/findid/_view/game?key=%226c21f973-552b-40f6-9dad-45a73dba114b%22 HTTP/1.1
+DEBUG main org.apache.http.wire - >> "GET /a_setgame/_design/findid/_view/game?key=%226c21f973-552b-40f6-9dad-45a73dba114b%22 HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /a_setgame/_design/findid/_view/game?key=%226c21f973-552b-40f6-9dad-45a73dba114b%22 HTTP/1.1
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "4SEY6WS5ONGUR82UI0SEE3OQM"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:17 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Transfer-Encoding: chunked
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << ETag: "4SEY6WS5ONGUR82UI0SEE3OQM"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:17 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.wire - << "29[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"total_rows":332,"offset":146,"rows":[[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1ee[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"id":"7533fc21e5a9b1579dbfe9ab090a8d2e","key":"6c21f973-552b-40f6-9dad-45a73dba114b","value":{"_id":"7533fc21e5a9b1579dbfe9ab090a8d2e","_rev":"1-dffbdf6be440315bdda9600ea0304dc8","playerOne":{"pid":0,"counter":4},"playerTwo":{"pid":2,"counter":3},"counter":4,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"6c21f973-552b-40f6-9dad-45a73dba114b"}}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "4[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "]}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "0[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.client.cache.CacheInvalidator - Request should not be cached
+DEBUG main org.apache.http.impl.client.cache.CacheInvalidator - parent entry: null
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: PUT /a_setgame/7533fc21e5a9b1579dbfe9ab090a8d2e HTTP/1.1
+DEBUG main org.apache.http.wire - >> "PUT /a_setgame/7533fc21e5a9b1579dbfe9ab090a8d2e HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Via: 1.1 localhost (Apache-HttpClient/4.1.2 (cache))[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Content-Length: 402[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Expect: 100-continue[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> PUT /a_setgame/7533fc21e5a9b1579dbfe9ab090a8d2e HTTP/1.1
+DEBUG main org.apache.http.headers - >> Via: 1.1 localhost (Apache-HttpClient/4.1.2 (cache))
+DEBUG main org.apache.http.headers - >> Content-Length: 402
+DEBUG main org.apache.http.headers - >> Content-Type: application/json
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> Expect: 100-continue
+DEBUG main org.apache.http.wire - << "HTTP/1.1 100 Continue[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 100 Continue
+DEBUG main org.apache.http.headers - << HTTP/1.1 100 Continue
+DEBUG main org.apache.http.wire - >> "{"playerOne":{"pid":0,"counter":10},"playerTwo":{"pid":2,"counter":11},"counter":21,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"6c21f973-552b-40f6-9dad-45a73dba114b","_id":"7533fc21e5a9b1579dbfe9ab090a8d2e","_rev":"1-dffbdf6be440315bdda9600ea0304dc8"}"
+DEBUG main org.apache.http.wire - << "HTTP/1.1 201 Created[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "Location: http://lenny2.in.htwg-konstanz.de:5984/a_setgame/7533fc21e5a9b1579dbfe9ab090a8d2e[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "2-c0197a21a9cecb1efe3083c1a5d28f57"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:18 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Length: 95[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 201 Created
+DEBUG main org.apache.http.headers - << HTTP/1.1 201 Created
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << Location: http://lenny2.in.htwg-konstanz.de:5984/a_setgame/7533fc21e5a9b1579dbfe9ab090a8d2e
+DEBUG main org.apache.http.headers - << ETag: "2-c0197a21a9cecb1efe3083c1a5d28f57"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:18 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Content-Length: 95
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.cache.ResponseCachingPolicy - Response was not cacheable.
+DEBUG main org.apache.http.wire - << "{"ok":true,"id":"7533fc21e5a9b1579dbfe9ab090a8d2e","rev":"2-c0197a21a9cecb1efe3083c1a5d28f57"}[\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /a_setgame/_design/findid/_view/game?key=%226c21f973-552b-40f6-9dad-45a73dba114b%22 HTTP/1.1
+DEBUG main org.apache.http.wire - >> "GET /a_setgame/_design/findid/_view/game?key=%226c21f973-552b-40f6-9dad-45a73dba114b%22 HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /a_setgame/_design/findid/_view/game?key=%226c21f973-552b-40f6-9dad-45a73dba114b%22 HTTP/1.1
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "SD546EIAR6FT29UKUHGNTDDY"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:18 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Transfer-Encoding: chunked
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << ETag: "SD546EIAR6FT29UKUHGNTDDY"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:18 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.wire - << "29[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"total_rows":332,"offset":146,"rows":[[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1f1[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"id":"7533fc21e5a9b1579dbfe9ab090a8d2e","key":"6c21f973-552b-40f6-9dad-45a73dba114b","value":{"_id":"7533fc21e5a9b1579dbfe9ab090a8d2e","_rev":"2-c0197a21a9cecb1efe3083c1a5d28f57","playerOne":{"pid":0,"counter":10},"playerTwo":{"pid":2,"counter":11},"counter":21,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"6c21f973-552b-40f6-9dad-45a73dba114b"}}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "4[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "]}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "0[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1
+DEBUG main org.apache.http.wire - >> "GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "4R7RAAQ8XH3PDRY30S8QKLSXH"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:18 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Transfer-Encoding: chunked
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << ETag: "4R7RAAQ8XH3PDRY30S8QKLSXH"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:18 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.wire - << "29[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"total_rows":332,"offset":249,"rows":[[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1f0[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"id":"7533fc21e5a9b1579dbfe9ab09003ed4","key":"b3192b4a-55ba-4adc-9047-764778fd89c9","value":{"_id":"7533fc21e5a9b1579dbfe9ab09003ed4","_rev":"332-92e7b5662a7befa321b12d4773b0b2ce","playerOne":{"pid":0,"counter":4},"playerTwo":{"pid":2,"counter":3},"counter":4,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"b3192b4a-55ba-4adc-9047-764778fd89c9"}}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "4[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "]}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "0[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1
+DEBUG main org.apache.http.wire - >> "GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "4R7RAAQ8XH3PDRY30S8QKLSXH"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:18 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Transfer-Encoding: chunked
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << ETag: "4R7RAAQ8XH3PDRY30S8QKLSXH"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:18 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.wire - << "29[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"total_rows":332,"offset":249,"rows":[[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1f0[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"id":"7533fc21e5a9b1579dbfe9ab09003ed4","key":"b3192b4a-55ba-4adc-9047-764778fd89c9","value":{"_id":"7533fc21e5a9b1579dbfe9ab09003ed4","_rev":"332-92e7b5662a7befa321b12d4773b0b2ce","playerOne":{"pid":0,"counter":4},"playerTwo":{"pid":2,"counter":3},"counter":4,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"b3192b4a-55ba-4adc-9047-764778fd89c9"}}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "4[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "]}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "0[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.client.cache.CacheInvalidator - Request should not be cached
+DEBUG main org.apache.http.impl.client.cache.CacheInvalidator - parent entry: null
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: PUT /a_setgame/7533fc21e5a9b1579dbfe9ab09003ed4 HTTP/1.1
+DEBUG main org.apache.http.wire - >> "PUT /a_setgame/7533fc21e5a9b1579dbfe9ab09003ed4 HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Via: 1.1 localhost (Apache-HttpClient/4.1.2 (cache))[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Content-Length: 401[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Expect: 100-continue[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> PUT /a_setgame/7533fc21e5a9b1579dbfe9ab09003ed4 HTTP/1.1
+DEBUG main org.apache.http.headers - >> Via: 1.1 localhost (Apache-HttpClient/4.1.2 (cache))
+DEBUG main org.apache.http.headers - >> Content-Length: 401
+DEBUG main org.apache.http.headers - >> Content-Type: application/json
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> Expect: 100-continue
+DEBUG main org.apache.http.wire - << "HTTP/1.1 100 Continue[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 100 Continue
+DEBUG main org.apache.http.headers - << HTTP/1.1 100 Continue
+DEBUG main org.apache.http.wire - >> "{"playerOne":{"pid":0,"counter":4},"playerTwo":{"pid":2,"counter":3},"counter":4,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"b3192b4a-55ba-4adc-9047-764778fd89c9","_id":"7533fc21e5a9b1579dbfe9ab09003ed4","_rev":"332-92e7b5662a7befa321b12d4773b0b2ce"}"
+DEBUG main org.apache.http.wire - << "HTTP/1.1 201 Created[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "Location: http://lenny2.in.htwg-konstanz.de:5984/a_setgame/7533fc21e5a9b1579dbfe9ab09003ed4[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "333-e6b7a758f3ca6bf30329d036f6560f32"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:19 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Length: 97[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 201 Created
+DEBUG main org.apache.http.headers - << HTTP/1.1 201 Created
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << Location: http://lenny2.in.htwg-konstanz.de:5984/a_setgame/7533fc21e5a9b1579dbfe9ab09003ed4
+DEBUG main org.apache.http.headers - << ETag: "333-e6b7a758f3ca6bf30329d036f6560f32"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:19 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Content-Length: 97
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.cache.ResponseCachingPolicy - Response was not cacheable.
+DEBUG main org.apache.http.wire - << "{"ok":true,"id":"7533fc21e5a9b1579dbfe9ab09003ed4","rev":"333-e6b7a758f3ca6bf30329d036f6560f32"}[\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /a_setgame/_design/findid/_view/game?key=%2289493d3e-182f-4466-acde-ed81cc98fb91%22 HTTP/1.1
+DEBUG main org.apache.http.wire - >> "GET /a_setgame/_design/findid/_view/game?key=%2289493d3e-182f-4466-acde-ed81cc98fb91%22 HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /a_setgame/_design/findid/_view/game?key=%2289493d3e-182f-4466-acde-ed81cc98fb91%22 HTTP/1.1
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "566W7K45KVCZINNIQXM8WAGHI"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:19 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Transfer-Encoding: chunked
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << ETag: "566W7K45KVCZINNIQXM8WAGHI"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:19 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.wire - << "29[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"total_rows":332,"offset":200,"rows":[[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "4[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "]}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "0[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.client.cache.CacheInvalidator - Request should not be cached
+DEBUG main org.apache.http.impl.client.cache.CacheInvalidator - parent entry: null
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /a_setgame/ HTTP/1.1
+DEBUG main org.apache.http.wire - >> "POST /a_setgame/ HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Via: 1.1 localhost (Apache-HttpClient/4.1.2 (cache))[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Content-Length: 314[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Content-Type: application/json[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Expect: 100-continue[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> POST /a_setgame/ HTTP/1.1
+DEBUG main org.apache.http.headers - >> Via: 1.1 localhost (Apache-HttpClient/4.1.2 (cache))
+DEBUG main org.apache.http.headers - >> Content-Length: 314
+DEBUG main org.apache.http.headers - >> Content-Type: application/json
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.headers - >> Expect: 100-continue
+DEBUG main org.apache.http.wire - << "HTTP/1.1 100 Continue[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 100 Continue
+DEBUG main org.apache.http.headers - << HTTP/1.1 100 Continue
+DEBUG main org.apache.http.wire - >> "{"playerOne":{"pid":0,"counter":4},"playerTwo":{"pid":2,"counter":3},"counter":4,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"89493d3e-182f-4466-acde-ed81cc98fb91"}"
+DEBUG main org.apache.http.wire - << "HTTP/1.1 201 Created[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "Location: http://lenny2.in.htwg-konstanz.de:5984/a_setgame/7533fc21e5a9b1579dbfe9ab090a9565[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "1-43bf32bd17060f24233ac6583cd7b8e9"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:19 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Length: 95[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 201 Created
+DEBUG main org.apache.http.headers - << HTTP/1.1 201 Created
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << Location: http://lenny2.in.htwg-konstanz.de:5984/a_setgame/7533fc21e5a9b1579dbfe9ab090a9565
+DEBUG main org.apache.http.headers - << ETag: "1-43bf32bd17060f24233ac6583cd7b8e9"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:19 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Content-Length: 95
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.impl.client.cache.ResponseCachingPolicy - Response was not cacheable.
+DEBUG main org.apache.http.wire - << "{"ok":true,"id":"7533fc21e5a9b1579dbfe9ab090a9565","rev":"1-43bf32bd17060f24233ac6583cd7b8e9"}[\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1
+DEBUG main org.apache.http.wire - >> "GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "9ALI9S634JVM9I7W0SMY2MBVW"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:19 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Transfer-Encoding: chunked
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << ETag: "9ALI9S634JVM9I7W0SMY2MBVW"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:19 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.wire - << "29[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"total_rows":333,"offset":250,"rows":[[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1f0[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"id":"7533fc21e5a9b1579dbfe9ab09003ed4","key":"b3192b4a-55ba-4adc-9047-764778fd89c9","value":{"_id":"7533fc21e5a9b1579dbfe9ab09003ed4","_rev":"333-e6b7a758f3ca6bf30329d036f6560f32","playerOne":{"pid":0,"counter":4},"playerTwo":{"pid":2,"counter":3},"counter":4,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"b3192b4a-55ba-4adc-9047-764778fd89c9"}}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "4[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "]}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "0[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1
+DEBUG main org.apache.http.wire - >> "GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "9ALI9S634JVM9I7W0SMY2MBVW"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:19 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Transfer-Encoding: chunked
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << ETag: "9ALI9S634JVM9I7W0SMY2MBVW"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:19 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.wire - << "29[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"total_rows":333,"offset":250,"rows":[[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1f0[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"id":"7533fc21e5a9b1579dbfe9ab09003ed4","key":"b3192b4a-55ba-4adc-9047-764778fd89c9","value":{"_id":"7533fc21e5a9b1579dbfe9ab09003ed4","_rev":"333-e6b7a758f3ca6bf30329d036f6560f32","playerOne":{"pid":0,"counter":4},"playerTwo":{"pid":2,"counter":3},"counter":4,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"b3192b4a-55ba-4adc-9047-764778fd89c9"}}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "4[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "]}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "0[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Get connection: HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984], timeout = 1000
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]] total kept alive: 1, total issued: 0, total allocated: 1 out of 20
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Getting free connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Stale connection check
+DEBUG main org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: best-match
+DEBUG main org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1
+DEBUG main org.apache.http.wire - >> "GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Host: lenny2.in.htwg-konstanz.de:5984[\r][\n]"
+DEBUG main org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+DEBUG main org.apache.http.wire - >> "[\r][\n]"
+DEBUG main org.apache.http.headers - >> GET /a_setgame/_design/findid/_view/game?key=%22b3192b4a-55ba-4adc-9047-764778fd89c9%22 HTTP/1.1
+DEBUG main org.apache.http.headers - >> Host: lenny2.in.htwg-konstanz.de:5984
+DEBUG main org.apache.http.headers - >> Connection: Keep-Alive
+DEBUG main org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG main org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG main org.apache.http.wire - << "Server: CouchDB/1.3.0 (Erlang OTP/R15B03)[\r][\n]"
+DEBUG main org.apache.http.wire - << "ETag: "9ALI9S634JVM9I7W0SMY2MBVW"[\r][\n]"
+DEBUG main org.apache.http.wire - << "Date: Thu, 18 Jun 2015 17:30:19 GMT[\r][\n]"
+DEBUG main org.apache.http.wire - << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+DEBUG main org.apache.http.wire - << "Cache-Control: must-revalidate[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << HTTP/1.1 200 OK
+DEBUG main org.apache.http.headers - << Transfer-Encoding: chunked
+DEBUG main org.apache.http.headers - << Server: CouchDB/1.3.0 (Erlang OTP/R15B03)
+DEBUG main org.apache.http.headers - << ETag: "9ALI9S634JVM9I7W0SMY2MBVW"
+DEBUG main org.apache.http.headers - << Date: Thu, 18 Jun 2015 17:30:19 GMT
+DEBUG main org.apache.http.headers - << Content-Type: text/plain; charset=utf-8
+DEBUG main org.apache.http.headers - << Cache-Control: must-revalidate
+DEBUG main org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+DEBUG main org.apache.http.wire - << "29[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"total_rows":333,"offset":250,"rows":[[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1f0[\r][\n]"
+DEBUG main org.apache.http.wire - << "{"id":"7533fc21e5a9b1579dbfe9ab09003ed4","key":"b3192b4a-55ba-4adc-9047-764778fd89c9","value":{"_id":"7533fc21e5a9b1579dbfe9ab09003ed4","_rev":"333-e6b7a758f3ca6bf30329d036f6560f32","playerOne":{"pid":0,"counter":4},"playerTwo":{"pid":2,"counter":3},"counter":4,"cardsInField":{"0":{"color":"red","form":"wave","panelFilling":"fill","numberOfComponents":1}},"unusedCards":[{"color":"green","form":"wave","panelFilling":"fill","numberOfComponents":1}],"id":"b3192b4a-55ba-4adc-9047-764778fd89c9"}}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "4[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "]}"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "1[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.wire - << "0[\r][\n]"
+DEBUG main org.apache.http.wire - << "[\r][\n]"
+DEBUG main org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager - Released connection is reusable.
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Releasing connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Pooling connection [HttpRoute[{}->http://lenny2.in.htwg-konstanz.de:5984]][null]; keep alive indefinitely
+DEBUG main org.apache.http.impl.conn.tsccm.ConnPoolByRoute - Notifying no-one, there are no waiting threads

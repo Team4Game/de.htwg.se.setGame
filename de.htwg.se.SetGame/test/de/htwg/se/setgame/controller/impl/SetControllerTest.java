@@ -4,6 +4,7 @@ package de.htwg.se.setgame.controller.impl;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import de.htwg.se.setgame.SetGameModule;
+import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.controller.IKiPlugin;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
@@ -24,14 +25,15 @@ import java.util.List;
 import java.util.TreeSet;
 
 public class SetControllerTest {
-    SetController target;
-    LinkedList<ICard> aSetListe;
-
+    private SetController target;
+    private LinkedList<ICard> aSetListe;
+    private IController targetForKi;
     @Before
     public void setUp() {
 
         Injector injector = Guice.createInjector(new SetGameModule());
         IModelFactory modelFactory = injector.getInstance(IModelFactory.class);
+        targetForKi = injector.getInstance(IController.class);
         this.target = new SetController(modelFactory, new GameDaoDummy(modelFactory), new TreeSet<IKiPlugin>());
         this.aSetListe = new LinkedList<ICard>();
         aSetListe.addAll(this.target.getSetInField());
@@ -175,6 +177,14 @@ public class SetControllerTest {
     @Test
     public void setKITest(){
         target.setKIPlayer("easy");
+
+    }
+    @Test
+    public void testKI(){
+        targetForKi.setKIPlayer("Easy");
+        List<ICard> solution = targetForKi.getSetInField();
+        targetForKi.isASetForController(solution.get(0),solution.get(1),solution.get(2), 1);
+        Assert.assertTrue(78 == targetForKi.getCardinGame().size() );
 
     }
 }

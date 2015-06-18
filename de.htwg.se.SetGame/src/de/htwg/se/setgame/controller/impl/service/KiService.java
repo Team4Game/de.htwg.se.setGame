@@ -12,10 +12,16 @@ public class KiService {
     private boolean isPlaying;
     private IKiPlugin kiPlugin;
     private IController controller;
+
     public KiService( IController controller){
         this.controller = controller;
         kiPlugin = null;
     }
+
+    /**
+     *
+     * @param kiPlugin ki that user choice
+     */
     public void startKiPlugin(IKiPlugin kiPlugin) {
         isPlaying = true;
         if(this.kiPlugin != null) {
@@ -26,15 +32,18 @@ public class KiService {
         kiPlugin.initKI();
 
     }
+
+    /**
+     *
+     * @return if ki is on use
+     */
     public boolean isKiPlaying(){
         return isPlaying;
     }
-    public void stopKI(){
-        isPlaying = false;
-        if(this.kiPlugin != null){
-            this.kiPlugin.stopKI();
-        }
-    }
+
+    /**
+     * when a user found a set
+     */
     public void notifyKi(){
         this.kiPlugin.gamerFoundASet();
     }
