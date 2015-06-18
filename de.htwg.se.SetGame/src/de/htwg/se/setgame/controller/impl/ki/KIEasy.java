@@ -11,80 +11,26 @@ import java.util.TimerTask;
 /**
  * Created by David on 17.06.15.
  */
-public class KIEasy implements IKiPlugin {
-    private static final int TIME = 20000;
-    private static final int PLAYER = 2;
-    private static final String KILEVEL = "Easy";
-    private IController controller;
-    private Timer timer;
-    private TimerTask timertask;
-    private boolean isWorking;
+public class KIEasy extends AKI {
+    private static final int TIMEFOREASY = 20000;
+    private static final String KIEASY = "Easy";
+
     public KIEasy() {
-        System.out.println("start ki");
-        this.timer = new Timer();
-        startTimeTask();
-    }
-
-
-    @Override
-    public void setController(IController controller) {
-        this.controller = controller;
-    }
-
-    @Override
-    public void initKI() {
-        isWorking = true;
-        timer.scheduleAtFixedRate(timertask, TIME, TIME);
-
+        super.timer = new Timer();
+        super.startTimeTask();
     }
 
     @Override
     public boolean isKiLevel(String kiLevel) {
-        return kiLevel.equals(KILEVEL);
-    }
-
-    private void startTimeTask() {
-        timertask = new TimerTask() {
-            @Override
-            public void run() {
-                System.out.println("running");
-                System.out.println("Run Ki SEt");
-                playSet();
-            }
-        };
+        return kiLevel.equals(KIEASY);
     }
 
     @Override
-    public void playSet() {
-        System.out.println("ki found set");
-        List<ICard> solution = controller.getSetInField();
-        if (solution != null)
-            controller.isASetForController(solution.get(0), solution.get(1), solution.get(2), PLAYER);
-    }
-
-    @Override
-    public void gamerFoundASet() {
-        System.out.println("gamer found set");
-        cancelTask();
-        initKI();
-
+    public void initKI() {
+        super.setWorking(true);
+        super.initiationKI(TIMEFOREASY);
 
     }
 
-    @Override
-    public void stopKI() {
-        System.out.println("cancel ki");
-        if(isWorking) {
-            cancelTask();
-            isWorking = false;
-        }
-    }
-    private void cancelTask(){
-        timertask.cancel();
-        timer.cancel();
-        timer = new Timer();
-        startTimeTask();
-
-    }
 
 }
