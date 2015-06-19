@@ -4,10 +4,13 @@ package de.htwg.se.setgame.util.persistence.hibernate;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.util.persistence.IGameDao;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
+
+import com.google.inject.Inject;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -16,7 +19,7 @@ public class GameDao implements IGameDao {
 
     private Mapper mapper;
 
-
+    @Inject
     public GameDao(IModelFactory modelFactory) {
 
         mapper = new Mapper(modelFactory);
