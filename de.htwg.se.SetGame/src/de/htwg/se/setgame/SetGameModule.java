@@ -14,6 +14,10 @@ public class SetGameModule extends AbstractModule {
 		bind(IModelFactory.class).to(ModelFactory.class);
 		bind(IController.class).to(SetController.class);
 
+		//TODO: SetGame Module fuer eine Liste --> diese Liste in den Controller (IController) einfuegen
+
+
+
 	}
 
 }
