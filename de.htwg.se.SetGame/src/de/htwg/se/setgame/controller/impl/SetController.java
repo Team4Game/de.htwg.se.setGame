@@ -4,10 +4,12 @@ package de.htwg.se.setgame.controller.impl;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import com.google.inject.Inject;
 
 import de.htwg.se.setgame.controller.IController;
+import de.htwg.se.setgame.controller.IPlugin;
 import de.htwg.se.setgame.controller.impl.logic.impl.GameProvider;
 import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
 import de.htwg.se.setgame.model.*;
@@ -15,6 +17,7 @@ import de.htwg.se.setgame.model.impl.Game;
 import de.htwg.se.setgame.model.impl.Pack;
 import de.htwg.se.setgame.model.impl.Player;
 import de.htwg.se.setgame.util.observer.Observable;
+import de.htwg.se.setgame.controller.impl.ki.KILevel;
 
 
 /**
@@ -69,12 +72,17 @@ public class SetController extends Observable implements IController {
      *
      */
     private int playerTwoCounter;
+    /**
+     *
+     */
+    private final Set<IPlugin> kiPlugins;
 
     /**
      * Logic Construct make for the game a new field with a new pack!!!
      */
     @Inject
-    public SetController(IModelFactory modelFactory) {
+    public SetController(IModelFactory modelFactory, Set<IPlugin> kiPlugins) {
+        this.kiPlugins = kiPlugins;
         this.gameProvider = new GameProvider(modelFactory, 12);
         this.counter = 0;
         this.gameProvider.startUp();
@@ -447,4 +455,15 @@ public class SetController extends Observable implements IController {
         System.out.println("target point");
 
     }
+
+    @Override
+    public void setKiPlayer(KILevel level){
+        for(IPlugin plugin : kiPlugins){
+            if(plugin.isKiRightLevel(level)){
+                plugin.startKi(level);
+            }
+        }
+
+    }
+
 }
