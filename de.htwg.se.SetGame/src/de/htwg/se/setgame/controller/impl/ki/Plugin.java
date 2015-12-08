@@ -9,7 +9,7 @@ import java.util.*;
 /**
  * Created by David on 11.11.15.
  */
-public abstract class Plugin implements IPlugin{
+public abstract class Plugin implements IPlugin {
 
 
     @Inject
@@ -37,19 +37,20 @@ public abstract class Plugin implements IPlugin{
         this.timeToRun = timeToRun;
     }
 
-    public void setTimer(Timer timer){
+    public void setTimer(Timer timer) {
         this.timer = timer;
     }
 
     @Override
     public void startKi(KILevel level) {
-        isRunning = true;
-        if(timerTask == null){
+
+
+        if (timerTask == null) {
             timerTask = new TimerTask() {
                 @Override
                 public void run() {
                     List<ICard> solution = controller.getASetInGame();
-                    controller.isASetForController(solution.get(0),solution.get(1),solution.get(2),PLAYER);
+                    controller.isASetForController(solution.get(0), solution.get(1), solution.get(2), PLAYER);
                 }
             };
         }
@@ -58,7 +59,9 @@ public abstract class Plugin implements IPlugin{
         System.out.println("Time to RUN " + isRunning);
         timer.scheduleAtFixedRate(timerTask, timeToRun, timeToRun);
 
+
     }
+
     protected void startTimeTask() {
 
     }
@@ -67,12 +70,20 @@ public abstract class Plugin implements IPlugin{
     @Override
     public void stopKi(KILevel level) {
         System.out.println("stop KI out Running: " + isRunning);
-        System.out.println("ki"+level);
+        System.out.println("ki" + level);
         if (isRunning) {
-            System.out.println("stop timer for:"+timeToRun);
-            timerTask.cancel();
+            System.out.println("stop timer for:" + timeToRun);
             timer.cancel();
-            isRunning= false;
+            timerTask.cancel();
+            timer = new Timer();
+            timerTask = new TimerTask() {
+                @Override
+                public void run() {
+                    List<ICard> solution = controller.getASetInGame();
+                    controller.isASetForController(solution.get(0), solution.get(1), solution.get(2), PLAYER);
+                }
+            };
+            isRunning = false;
 
         }
     }
