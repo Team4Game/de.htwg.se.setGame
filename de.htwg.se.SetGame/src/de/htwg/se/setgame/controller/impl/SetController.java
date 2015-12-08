@@ -461,7 +461,10 @@ public class SetController extends Observable implements IController {
         for(IPlugin plugin : kiPlugins){
             if(plugin.isKiRightLevel(level)){
                 plugin.startKi(level);
+            }else{
+                plugin.stopKi(level);
             }
+
         }
 
     }

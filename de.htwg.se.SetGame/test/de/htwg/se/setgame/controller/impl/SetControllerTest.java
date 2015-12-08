@@ -20,7 +20,7 @@ public class SetControllerTest {
 
     @Before
     public void setUp() {
-        this.target = new SetController(new ModelFactory());
+        //this.target = new SetController(new ModelFactory());
         this.aSetListe = new LinkedList<ICard>();
         aSetListe.addAll(this.target.getSetInField());
     }

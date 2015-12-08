@@ -9,7 +9,7 @@ public interface IPlugin {
 
     void startKi(KILevel level);
 
-    void stopKi();
+    void stopKi(KILevel level);
 
     boolean isKiRightLevel(KILevel level);
 

@@ -30,14 +30,11 @@ public final class SetGame {
     }
 
     private SetGame(boolean activateGui) {
-        initLogger();
+
         initDependencyInjector();
         initUserInterface(activateGui);
     }
 
-    private void initLogger() {
-        PropertyConfigurator.configure("log4j.properties");
-    }
 
     private void initDependencyInjector() {
         Injector injector = Guice.createInjector(new SetGameModule());

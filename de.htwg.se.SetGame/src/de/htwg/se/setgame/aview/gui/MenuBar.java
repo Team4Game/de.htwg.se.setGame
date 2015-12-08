@@ -1,5 +1,7 @@
 package de.htwg.se.setgame.aview.gui;
 
+import de.htwg.se.setgame.controller.impl.ki.KILevel;
+
 import javax.swing.*;
 
 
@@ -12,7 +14,7 @@ import java.awt.event.*;
 public class MenuBar extends JMenuBar implements ActionListener {
 	
 	private static final long serialVersionUID = 1L;
-	private JMenuItem mHelp, mExit, mNewGame;
+	private JMenuItem mHelp, mExit, mNewGame, mEasy, mMedium, mHard;
 	
 	public MenuBar() {
 		
@@ -27,6 +29,18 @@ public class MenuBar extends JMenuBar implements ActionListener {
 		menu.add(mHelp);
 		menu.add(mExit);
 		this.add(menu);
+
+		JMenu kiMenu = new JMenu("KI");
+		mEasy = new JMenuItem("Easy");
+		mEasy.addActionListener(this);
+		mMedium = new JMenuItem("Medium");
+		mMedium.addActionListener(this);
+		mHard = new JMenuItem("Hard");
+		mHard.addActionListener(this);
+		kiMenu.add(mEasy);
+		kiMenu.add(mMedium);
+		kiMenu.add(mHard);
+		this.add(kiMenu);
 	}
 
 	@Override
@@ -52,12 +66,18 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	        			+ "Have fun!", "Close", JOptionPane.CLOSED_OPTION);
 	        }else if ( e.getSource() == mExit ){
 	        	exit();
-	        }else{
+	        }else if(e.getSource() == mNewGame){
 	        	if ( JOptionPane.showConfirmDialog(null,
 	        			"Really start a new Game?", "Choice", JOptionPane.YES_NO_OPTION) == 0) {
 	        		newGame();
 	        	}
-	    }
+	    }else if(e.getSource() == mEasy){
+				GUI.getController().setKiPlayer(KILevel.EASY);
+			}else if(e.getSource() == mMedium){
+				GUI.getController().setKiPlayer(KILevel.MEDIUM);
+			}else if(e.getSource() == mHard){
+				GUI.getController().setKiPlayer(KILevel.HARD);
+			}
 		
 	}
 	
