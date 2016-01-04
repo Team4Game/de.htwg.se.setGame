@@ -58,8 +58,9 @@ public class GameProviderTest {
     @Test
     public void testCardsInField() {
         this.target.startUp();
-        List<ICard> cardInField = this.target.getCardsInField();
-        Assert.assertTrue(this.target.getCardInFieldGame().values().containsAll(this.target.getCardsInField()));
+        List<ICard> cardInField = new LinkedList<ICard>();
+                cardInField.addAll(this.target.getCardsInField().values());
+        Assert.assertTrue(this.target.getCardInFieldGame().values().containsAll(this.target.getCardsInField().values()));
 
     }
 

@@ -1,10 +1,7 @@
 package de.htwg.se.setgame.controller.impl;
 
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import com.google.inject.Inject;
 
@@ -18,6 +15,7 @@ import de.htwg.se.setgame.model.impl.Pack;
 import de.htwg.se.setgame.model.impl.Player;
 import de.htwg.se.setgame.util.observer.Observable;
 import de.htwg.se.setgame.controller.impl.ki.KILevel;
+import de.htwg.se.setgame.util.persistance.IGameDao;
 
 
 /**
@@ -33,6 +31,8 @@ public class SetController extends Observable implements IController {
         this.gameProvider = gameProvider;
     }
 
+
+    private String token;
     /**
      * gameProvider
      */
@@ -42,7 +42,6 @@ public class SetController extends Observable implements IController {
      * counter
      */
     private int counter;
-
 
     /**
      * number for set
@@ -77,11 +76,13 @@ public class SetController extends Observable implements IController {
      */
     private final Set<IPlugin> kiPlugins;
 
+
+    private IGameDao gameDao;
     /**
      * Logic Construct make for the game a new field with a new pack!!!
      */
     @Inject
-    public SetController(IModelFactory modelFactory, Set<IPlugin> kiPlugins) {
+    public SetController(IModelFactory modelFactory, Set<IPlugin> kiPlugins, IGameDao gameDao) {
         this.kiPlugins = kiPlugins;
         this.gameProvider = new GameProvider(modelFactory, 12);
         this.counter = 0;
@@ -90,6 +91,7 @@ public class SetController extends Observable implements IController {
         this.playerTwo = 2;
         this.playerOneCounter = 0;
         this.playerTwoCounter = 0;
+        this.gameDao = gameDao;
         checkIfIsASeTInGame();
     }
 
@@ -99,6 +101,7 @@ public class SetController extends Observable implements IController {
         this.counter = 0;
         this.playerOneCounter = 0;
         this.playerTwoCounter = 0;
+        this.token = null;
         notifyObservers();
     }
     
@@ -108,7 +111,7 @@ public class SetController extends Observable implements IController {
      */
     protected void checkIfIsASeTInGame() {
         List<ICard> liste = new LinkedList<ICard>();
-        liste.addAll(getSet(this.gameProvider.getCardsInField()));
+        liste.addAll(getSet(getCardInFieldGame()));
         if (liste.size() < NUMBEROFSETCARDS) {
             int i = 0;
             while (!changeCardsInGame() && i < THOUSAND) {
@@ -129,7 +132,7 @@ public class SetController extends Observable implements IController {
      */
     protected boolean isInField(ICard cardOne, ICard cardTwo, ICard cardThree) {
         this.counter = 0;
-        for (ICard card : gameProvider.getCardsInField()) {
+        for (ICard card : gameProvider.getCardsInField().values()) {
             if (card.compareTo(cardOne) || card.compareTo(cardTwo)
                     || card.compareTo(cardThree)) {
                 counter++;
@@ -370,7 +373,7 @@ public class SetController extends Observable implements IController {
      */
     @Override
     public List<ICard> getASetInGame() {
-        return getSet(this.gameProvider.getCardsInField());
+        return getSet(getCardInFieldGame());
     }
 
     /* (non-Javadoc)
@@ -391,7 +394,7 @@ public class SetController extends Observable implements IController {
      */
     @Override
     public List<ICard> getSetInField() {
-        return getSet(this.gameProvider.getCardsInField());
+        return getSet(getCardInFieldGame());
 
     }
 
@@ -429,7 +432,9 @@ public class SetController extends Observable implements IController {
 
     @Override
     public List<ICard> getCardInFieldGame() {
-        return this.gameProvider.getCardsInField();
+        List<ICard> result = new LinkedList<ICard>();
+        result.addAll(gameProvider.getCardInFieldGame().values());
+        return result;
     }
 
     @Override
@@ -444,15 +449,40 @@ public class SetController extends Observable implements IController {
     @Override
     public void saveGame() {
 
+        if(this.token == null){
+            token = UUID.randomUUID().toString();
+        }
+
         List<ICard> unusedCards = this.getPack().getPack();
-        List<ICard> cardsInField = this.getCardInFieldGame();
+        Map<Integer, ICard> cardsInField = this.gameProvider.getCardInFieldGame();
         IPlayer player1 = new Player(this.playerOne, this.playerOneCounter);
         IPlayer player2 = new Player(this.playerTwo, this.playerTwoCounter);
-        String token = "123test";
 
         Game game = new Game(player1, player2 , cardsInField , unusedCards , token);
+        gameDao.createOrUpdate(game);
+        System.out.println("TOKEN = "+ token);
 
-        System.out.println("target point");
+
+
+    }
+
+    @Override
+    public void loadGame(String id) {
+        IGame game = gameDao.findGame(id);
+        if(game == null){
+
+        } else {
+            this.gameProvider.getCardInFieldGame().clear();
+            this.gameProvider.getUnusedCards().clear();
+            this.gameProvider.getCardsInField().clear();
+            this.counter = 0;
+            this.playerOneCounter = game.getPlayerOne().getCounter();
+            this.playerTwoCounter = game.getPlayerTwo().getCounter();
+            this.gameProvider.getField().setCardInField(game.getCardInField());
+            this.gameProvider.getiPack().setPack(game.getUnusedCards());
+            this.token = game.getToken();
+            notifyObservers();
+        }
 
     }
 

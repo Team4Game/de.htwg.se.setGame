@@ -14,7 +14,7 @@ import java.awt.event.*;
 public class MenuBar extends JMenuBar implements ActionListener {
 	
 	private static final long serialVersionUID = 1L;
-	private JMenuItem mHelp, mExit, mNewGame, mEasy, mMedium, mHard;
+	private JMenuItem mHelp, mExit, mNewGame, mEasy, mMedium, mHard, save, load;
 	
 	public MenuBar() {
 		
@@ -41,6 +41,15 @@ public class MenuBar extends JMenuBar implements ActionListener {
 		kiMenu.add(mMedium);
 		kiMenu.add(mHard);
 		this.add(kiMenu);
+
+		JMenu saveLoadMenu = new JMenu("Save/Load");
+		save = new JMenuItem("Save");
+		save.addActionListener(this);
+		load = new JMenuItem("Load");
+		load.addActionListener(this);
+		saveLoadMenu.add(save);
+		saveLoadMenu.add(load);
+		this.add(saveLoadMenu);
 	}
 
 	@Override
@@ -77,7 +86,13 @@ public class MenuBar extends JMenuBar implements ActionListener {
 				GUI.getController().setKiPlayer(KILevel.MEDIUM);
 			}else if(e.getSource() == mHard){
 				GUI.getController().setKiPlayer(KILevel.HARD);
+			} else if(e.getSource() == save){
+				GUI.getController().saveGame();
+			} else if(e.getSource() == load) {
+				String token = JOptionPane.showInputDialog("Bitte Token eingeben");
+				GUI.getController().loadGame(token);
 			}
+
 		
 	}
 	

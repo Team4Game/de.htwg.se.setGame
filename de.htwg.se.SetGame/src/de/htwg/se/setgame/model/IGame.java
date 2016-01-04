@@ -1,6 +1,7 @@
 package de.htwg.se.setgame.model;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by raina on 03.06.2015.
@@ -11,7 +12,7 @@ public interface IGame {
 	
 	void setPlayerTwo(IPlayer player2);
 
-	void setCardInField(List<ICard> cardsInField);
+	void setCardInField(Map<Integer, ICard> cardsInField);
 
 	void setUnusedCards(List<ICard> unusedCards);
 
@@ -21,7 +22,7 @@ public interface IGame {
 
 	IPlayer getPlayerTwo();
 
-	List<ICard> getCardInField();
+	Map<Integer, ICard> getCardInField();
 
 	List<ICard> getUnusedCards();
 

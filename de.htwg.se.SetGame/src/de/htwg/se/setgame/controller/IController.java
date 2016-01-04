@@ -107,8 +107,14 @@ public interface IController extends IObservable {
 	void saveGame();
 
 	/**
+	 * 	load game
+	 */
+	void loadGame(String id);
+
+	/**
 	 * set Ki Level
 	 */
 	void setKiPlayer(KILevel level);
+
 
 }

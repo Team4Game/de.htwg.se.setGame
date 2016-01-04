@@ -12,10 +12,10 @@ import de.htwg.se.setgame.util.persistance.IGameDao;
 /**
  * Created by David on 04.01.16.
  */
-public class GameDaoDb4o implements IGameDao{
+public class GameDao implements IGameDao{
 
     private static ObjectContainer db;
-    public GameDaoDb4o(){
+    public GameDao(){
 
     }
 

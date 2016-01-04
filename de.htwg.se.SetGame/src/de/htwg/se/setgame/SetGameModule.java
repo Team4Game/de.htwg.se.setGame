@@ -10,6 +10,8 @@ import de.htwg.se.setgame.model.impl.ModelFactory;
 import de.htwg.se.setgame.controller.impl.ki.EasyKi;
 import de.htwg.se.setgame.controller.impl.ki.MediumKi;
 import de.htwg.se.setgame.controller.impl.ki.HardKi;
+import de.htwg.se.setgame.util.persistance.IGameDao;
+import de.htwg.se.setgame.util.persistance.db4o.GameDao;
 
 public class SetGameModule extends AbstractModule {
 
@@ -17,6 +19,7 @@ public class SetGameModule extends AbstractModule {
 	protected void configure() {
 		bind(IModelFactory.class).to(ModelFactory.class);
 		bind(IController.class).to(SetController.class);
+		bind(IGameDao.class).to(GameDao.class);
 		Multibinder<IPlugin> kiPlugins = Multibinder.newSetBinder(binder(), IPlugin.class);
 		kiPlugins.addBinding().to(EasyKi.class);
 		kiPlugins.addBinding().to(MediumKi.class);

@@ -188,11 +188,10 @@ public class GameProvider {
          * @see de.htwg.se.setgame.modell.IField#getCardsInField()
          */
 
-    public List<ICard> getCardsInField() {
+    public Map<Integer,ICard> getCardsInField() {
 
-            List<ICard> liste = new LinkedList<ICard>();
-            liste.addAll(this.getCardInFieldGame().values());
-            return liste;
+
+            return this.getCardInFieldGame();
 
         }
 
@@ -300,7 +299,6 @@ public class GameProvider {
             startUp();
 
         }
-
 
 
 

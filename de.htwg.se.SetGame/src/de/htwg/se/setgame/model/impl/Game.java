@@ -5,6 +5,7 @@ import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IPlayer;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by raina on 03.06.2015.
@@ -14,12 +15,12 @@ public class Game implements IGame {
 	private IPlayer player1;
 	private IPlayer player2;
 
-	private List<ICard> cardsInField; // get via Field.getCardsInField
+	private Map<Integer,ICard> cardsInField; // get via Field.getCardsInField
 	private List<ICard> unusedCards; // get via Pack.getPack
 
 	private String token;
 
-	public Game(IPlayer player1, IPlayer player2, List<ICard> cardsInField,
+	public Game(IPlayer player1, IPlayer player2, Map<Integer,ICard> cardsInField,
 			List<ICard> unusedCards, String token) {
 		super();
 		this.player1 = player1;
@@ -30,7 +31,7 @@ public class Game implements IGame {
 	}
 
 	@Override
-	public void setCardInField(List<ICard> cardsInField) {
+	public void setCardInField(Map<Integer,ICard> cardsInField) {
 		this.cardsInField = cardsInField;
 	}
 
@@ -55,7 +56,7 @@ public class Game implements IGame {
 	}
 
 	@Override
-	public List<ICard> getCardInField() {
+	public Map<Integer, ICard> getCardInField() {
 		return this.cardsInField;
 	}
 
