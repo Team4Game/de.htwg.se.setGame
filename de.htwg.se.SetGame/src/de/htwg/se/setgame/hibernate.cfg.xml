@@ -13,9 +13,9 @@
         <property name="connection.password">htwg</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="show_sql">false</property>
-        <mapping class="de.htwg.se.setgame.util.persistence.hibernate.Game" />
-        <mapping class="de.htwg.se.setgame.util.persistence.hibernate.Player" />
-        <mapping class="de.htwg.se.setgame.util.persistence.hibernate.Card" />
+        <mapping class="de.htwg.se.setgame.util.persistance.hibernate.pojo.Game" />
+        <mapping class="de.htwg.se.setgame.util.persistance.hibernate.pojo.Player" />
+        <mapping class="de.htwg.se.setgame.util.persistance.hibernate.pojo.Card" />
     </session-factory>
 
 </hibernate-configuration>
