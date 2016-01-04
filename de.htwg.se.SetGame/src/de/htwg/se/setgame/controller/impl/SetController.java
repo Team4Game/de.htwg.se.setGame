@@ -455,10 +455,18 @@ public class SetController extends Observable implements IController {
 
         List<ICard> unusedCards = this.getPack().getPack();
         Map<Integer, ICard> cardsInField = this.gameProvider.getCardInFieldGame();
-        IPlayer player1 = new Player(this.playerOne, this.playerOneCounter);
-        IPlayer player2 = new Player(this.playerTwo, this.playerTwoCounter);
-
-        Game game = new Game(player1, player2 , cardsInField , unusedCards , token);
+        IPlayer player1 = gameProvider.getModelFactory().createPlayer();
+        player1.setCounter(playerOneCounter);
+        player1.setId(playerOne);
+        IPlayer player2 = gameProvider.getModelFactory().createPlayer();
+        player2.setCounter(playerTwoCounter);
+        player2.setId(playerTwo);
+        IGame game = gameProvider.getModelFactory().createGame();
+        game.setCardInField(cardsInField);
+        game.setUnusedCards(unusedCards);
+        game.setPlayerOne(player1);
+        game.setPlayerTwo(player2);
+        game.setGameToken(token);
         gameDao.createOrUpdate(game);
         System.out.println("TOKEN = "+ token);
 

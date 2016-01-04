@@ -10,7 +10,7 @@ import javax.persistence.*;
  * Created by David on 04.01.16.
  */
 @Entity
-@Table(name = "card")
+@Table(name = "player")
 public class Player implements IPlayer {
 
 

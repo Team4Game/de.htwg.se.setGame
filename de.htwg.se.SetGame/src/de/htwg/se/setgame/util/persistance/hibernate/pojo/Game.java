@@ -3,10 +3,12 @@ package de.htwg.se.setgame.util.persistance.hibernate.pojo;
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IPlayer;
+import de.htwg.se.setgame.util.persistance.hibernate.GameDaoMapper;
 
 import javax.persistence.*;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 /**
@@ -14,7 +16,7 @@ import java.util.TreeMap;
  */
 
 @Entity
-@Table(name = "setgame_game")
+@Table(name = "setgamegame")
 public class Game implements IGame {
 
 
@@ -27,9 +29,9 @@ public class Game implements IGame {
 
 
 
-    @Column(name = "cards_in_field")
-    @MapKey(name = "number")
-    private Map<Integer, ICard> cardsInField = new TreeMap<Integer, ICard>();
+    @Column(name = "cardsforfield")
+    @ElementCollection
+    private Map<Integer, Card> cardsInField;
 
     @Column(name = "token")
     private String token;
@@ -39,30 +41,29 @@ public class Game implements IGame {
     private Player playerOne;
     @OneToOne(optional = false)
     private Player playerTwo;
-    @Column(nullable = false)
-    private int counter;
     @Column
     @OneToMany(targetEntity = Card.class)
-    private List<ICard> unusedCards;
+    private Set<Card> unusedCards;
 
     @Override
     public void setPlayerOne(IPlayer player1) {
-        this.playerOne = (Player) player1;
+        this.playerOne = GameDaoMapper.getPlayer(player1);
     }
 
     @Override
     public void setPlayerTwo(IPlayer player2) {
-        this.playerTwo = (Player) player2;
+        this.playerTwo = GameDaoMapper.getPlayer(player2);
     }
 
     @Override
     public void setCardInField(Map<Integer, ICard> cardsInField) {
-        this.cardsInField = cardsInField;
+
+        this.cardsInField = GameDaoMapper.getCardsInField(cardsInField);
     }
 
     @Override
     public void setUnusedCards(List<ICard> unusedCards) {
-        this.unusedCards = unusedCards;
+        this.unusedCards = GameDaoMapper.getUnusedCard(unusedCards);
     }
 
     @Override
@@ -82,12 +83,12 @@ public class Game implements IGame {
 
     @Override
     public Map<Integer, ICard> getCardInField() {
-        return cardsInField;
+        return GameDaoMapper.getICardsInField(cardsInField);
     }
 
     @Override
     public List<ICard> getUnusedCards() {
-        return unusedCards;
+        return GameDaoMapper.getICards(unusedCards);
     }
 
     @Override

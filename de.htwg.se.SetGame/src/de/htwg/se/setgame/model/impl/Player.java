@@ -10,9 +10,8 @@ public class Player implements IPlayer {
 	private int id;
 	private int counter;
 	
-	public Player(int id, int counter) {
-		this.id = id;
-		this.counter = counter;
+	public Player() {
+
 	}
 
 	@Override

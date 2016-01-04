@@ -20,14 +20,9 @@ public class Game implements IGame {
 
 	private String token;
 
-	public Game(IPlayer player1, IPlayer player2, Map<Integer,ICard> cardsInField,
-			List<ICard> unusedCards, String token) {
+	public Game() {
 		super();
-		this.player1 = player1;
-		this.player2 = player2;
-		this.cardsInField = cardsInField;
-		this.unusedCards = unusedCards;
-		this.token = token;
+
 	}
 
 	@Override

@@ -41,6 +41,15 @@ public class GameProvider {
     private IPack iPack;
     private IField field;
     private IModelFactory modelFactory;
+
+    public IModelFactory getModelFactory() {
+        return modelFactory;
+    }
+
+    public void setModelFactory(IModelFactory modelFactory) {
+        this.modelFactory = modelFactory;
+    }
+
     /**
      * startup of the objects
      */

@@ -20,4 +20,5 @@ public interface IModelFactory {
     IPack createPack();
     IGame createGame();
     ICard createCard();
+    IPlayer createPlayer();
 }
