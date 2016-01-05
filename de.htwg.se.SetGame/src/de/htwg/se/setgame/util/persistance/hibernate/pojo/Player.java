@@ -1,7 +1,7 @@
 package de.htwg.se.setgame.util.persistance.hibernate.pojo;
 
 
-import de.htwg.se.setgame.model.IPlayer;
+
 
 import javax.persistence.*;
 
@@ -11,7 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "player")
-public class Player implements IPlayer {
+public class Player extends de.htwg.se.setgame.model.impl.Player {
 
 
 

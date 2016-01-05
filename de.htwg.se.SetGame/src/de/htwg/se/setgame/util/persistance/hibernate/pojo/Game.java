@@ -6,6 +6,7 @@ import de.htwg.se.setgame.model.IPlayer;
 import de.htwg.se.setgame.util.persistance.hibernate.GameDaoMapper;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -17,21 +18,24 @@ import java.util.TreeMap;
 
 @Entity
 @Table(name = "setgamegame")
-public class Game implements IGame {
+public class Game implements Serializable, IGame {
 
-
+    private static int counter= 0;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(nullable = false)
-    private String gameID;
 
+    public CardsInField getCardsInFieldTable() {
+        return cardsInFieldTable;
+    }
 
+    public void setCardsInFieldTable(CardsInField cardsInFieldTable) {
+        this.cardsInFieldTable = cardsInFieldTable;
+    }
 
-    @Column(name = "cardsforfield")
-    @ElementCollection
-    private Map<Integer, Card> cardsInField;
+    @OneToOne(optional = false)
+    private CardsInField cardsInFieldTable;
 
     @Column(name = "token")
     private String token;
@@ -41,8 +45,8 @@ public class Game implements IGame {
     private Player playerOne;
     @OneToOne(optional = false)
     private Player playerTwo;
-    @Column
-    @OneToMany(targetEntity = Card.class)
+
+    @OneToMany(fetch = FetchType.EAGER, targetEntity = Card.class)
     private Set<Card> unusedCards;
 
     @Override
@@ -58,7 +62,7 @@ public class Game implements IGame {
     @Override
     public void setCardInField(Map<Integer, ICard> cardsInField) {
 
-        this.cardsInField = GameDaoMapper.getCardsInField(cardsInField);
+        this.cardsInFieldTable.setCardsInField(GameDaoMapper.getCardsInField(cardsInField));
     }
 
     @Override
@@ -83,7 +87,7 @@ public class Game implements IGame {
 
     @Override
     public Map<Integer, ICard> getCardInField() {
-        return GameDaoMapper.getICardsInField(cardsInField);
+        return GameDaoMapper.getICardsInField(cardsInFieldTable.getCardsInField());
     }
 
     @Override
@@ -95,4 +99,9 @@ public class Game implements IGame {
     public String getToken() {
         return token;
     }
+
+    public Long getId() {
+        return id;
+    }
+
 }

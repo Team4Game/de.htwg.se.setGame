@@ -8,14 +8,15 @@
     <session-factory>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://lenny2.in.htwg-konstanz.de:3306/games?createDatabaseIfNotExist=true</property>
-        <property name="connection.username">htwg</property>
-        <property name="connection.password">htwg</property>
+        <property name="connection.url">jdbc:mysql://192.168.1.38:3306/setgame?createDatabaseIfNotExist=true</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <property name="show_sql">false</property>
+        <property name="show_sql">true</property>
         <mapping class="de.htwg.se.setgame.util.persistance.hibernate.pojo.Game" />
         <mapping class="de.htwg.se.setgame.util.persistance.hibernate.pojo.Player" />
         <mapping class="de.htwg.se.setgame.util.persistance.hibernate.pojo.Card" />
+        <mapping class="de.htwg.se.setgame.util.persistance.hibernate.pojo.CardsInField" />
     </session-factory>
 
 </hibernate-configuration>

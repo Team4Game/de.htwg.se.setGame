@@ -1,15 +1,21 @@
 package de.htwg.se.setgame.util.persistance.hibernate.pojo;
 
 import de.htwg.se.setgame.model.ICard;
+import de.htwg.se.setgame.model.IGame;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by David on 04.01.16.
  */
 @Entity
 @Table(name = "setgame_card")
-public class Card implements ICard {
+public class Card extends de.htwg.se.setgame.model.impl.Card implements Serializable,Comparable {
+
+    public void setCardID(Long cardID) {
+        this.cardID = cardID;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,6 +33,9 @@ public class Card implements ICard {
     private String panelFilling;
     @Column(nullable = false)
     private int anz;
+
+
+
 
     @Override
     public String getColor() {
@@ -76,5 +85,13 @@ public class Card implements ICard {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if(o instanceof ICard){
+            return compareTo((ICard)o) ? 0 : 1;
+        }
+        return 1;
     }
 }
