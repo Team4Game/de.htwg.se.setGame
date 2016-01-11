@@ -5,6 +5,7 @@ import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IPlayer;
 
 import de.htwg.se.setgame.util.persistance.hibernate.pojo.Card;
+import de.htwg.se.setgame.util.persistance.hibernate.pojo.CardsInField;
 import de.htwg.se.setgame.util.persistance.hibernate.pojo.Game;
 import de.htwg.se.setgame.util.persistance.hibernate.pojo.Player;
 
@@ -24,12 +25,14 @@ public class GameDaoMapper {
     }
     public static Game getGame(IGame game){
         Game result = new Game();
+        result.setCardsInFieldTable(new CardsInField());
         result.setPlayerOne(game.getPlayerOne());
         result.setPlayerTwo(game.getPlayerTwo());
         result.setCardInField(game.getCardInField());
         result.setUnusedCards(game.getUnusedCards());
         result.setCardInField(game.getCardInField());
         result.setGameToken(game.getToken());
+
         return  result;
 
     }
@@ -60,19 +63,12 @@ public class GameDaoMapper {
     public static List<ICard> getICards(Set<Card> unusedCards) {
         List<ICard> result = new LinkedList<ICard>();
         for(Card card : unusedCards){
-            result.add(getICard(card));
+            result.add(card);
         }
         return result;
     }
 
-    private static ICard getICard(Card card) {
-        ICard result = new de.htwg.se.setgame.model.impl.Card();
-        result.setColor(card.getColor());
-        result.setForm(card.getForm());
-        result.setNumberOfComponents(card.getNumberOfComponents());
-        result.setPanelFilling(card.getPanelFilling());
-        return result;
-    }
+
 
     public static Map<Integer, Card> getCardsInField(Map<Integer, ICard> cardsInField) {
         Map<Integer, Card> result = new TreeMap<Integer, Card>();
@@ -85,7 +81,7 @@ public class GameDaoMapper {
     public static Map<Integer, ICard> getICardsInField(Map<Integer, Card> cardsInField) {
         Map<Integer, ICard> result = new TreeMap<Integer, ICard>();
         for(Integer key : cardsInField.keySet()){
-            result.put(key, getICard(cardsInField.get(key)));
+            result.put(key, cardsInField.get(key));
         }
         return result;
     }
