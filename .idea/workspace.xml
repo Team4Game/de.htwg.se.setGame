@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6818033a-37b4-43b4-9f57-9dfde351fbb4" name="Default" comment="finished Hibernate DB implementation POJo">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/GameDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/GameDaoGame.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/GameDaoMapper.java" />
+    <list default="true" id="6818033a-37b4-43b4-9f57-9dfde351fbb4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="de.htwg.se.setGame.iws" />
@@ -1614,7 +1611,7 @@
       <workItem from="1448968625431" duration="259000" />
       <workItem from="1449590361499" duration="8315000" />
       <workItem from="1451914455983" duration="42946000" />
-      <workItem from="1452506442157" duration="556000" />
+      <workItem from="1452506442157" duration="594000" />
     </task>
     <task id="LOCAL-00001" summary="#WEB TECH size of field.">
       <created>1421180325921</created>
@@ -1838,11 +1835,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452623578581</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="GameDaos">
+      <created>1452623635577</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1452623635577</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166291000" />
+    <option name="totallyTimeSpent" value="166329000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1933,7 +1936,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TUI was wrong now is working with gui and model factory is finish" />
     <MESSAGE value="test field constructor" />
     <MESSAGE value="correct some violations" />
     <MESSAGE value="equalsIgnoreCase violation" />
@@ -1958,7 +1960,8 @@
     <MESSAGE value="Model IPlayer Interface" />
     <MESSAGE value="Hibernate finished GameDao and GameDaoMapper" />
     <MESSAGE value="Pojo Card Game and Player finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pojo Card Game and Player finished" />
+    <MESSAGE value="GameDaos" />
+    <option name="LAST_COMMIT_MESSAGE" value="GameDaos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2247,6 +2250,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3324937">
           <caret line="308" column="16" selection-start-line="308" selection-start-column="16" selection-end-line="308" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2254,6 +2258,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.93333334">
           <caret line="367" column="5" selection-start-line="367" selection-start-column="5" selection-end-line="367" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
