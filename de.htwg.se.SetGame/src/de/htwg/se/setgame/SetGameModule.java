@@ -11,9 +11,10 @@ import de.htwg.se.setgame.controller.impl.ki.EasyKi;
 import de.htwg.se.setgame.controller.impl.ki.MediumKi;
 import de.htwg.se.setgame.controller.impl.ki.HardKi;
 import de.htwg.se.setgame.util.persistance.IGameDao;
-import de.htwg.se.setgame.util.persistance.hibernate.GameDao;
+import de.htwg.se.setgame.util.persistance.hibernate.GameDao; //Google Guice @Injection Annotation
 
 public class SetGameModule extends AbstractModule {
+
 
 	@Override
 	protected void configure() {
@@ -26,7 +27,6 @@ public class SetGameModule extends AbstractModule {
 		kiPlugins.addBinding().to(HardKi.class);
 
 		//TODO: SetGame Module fuer eine Liste --> diese Liste in den Controller (IController) einfuegen
-
 
 
 	}
