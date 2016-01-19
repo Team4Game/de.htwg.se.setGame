@@ -11,7 +11,7 @@ import de.htwg.se.setgame.controller.impl.ki.EasyKi;
 import de.htwg.se.setgame.controller.impl.ki.MediumKi;
 import de.htwg.se.setgame.controller.impl.ki.HardKi;
 import de.htwg.se.setgame.util.persistance.IGameDao;
-import de.htwg.se.setgame.util.persistance.hibernate.GameDao; //Google Guice @Injection Annotation
+import de.htwg.se.setgame.util.persistance.couchDB.GameDao; //Google Guice @Injection Annotation
 
 public class SetGameModule extends AbstractModule {
 
