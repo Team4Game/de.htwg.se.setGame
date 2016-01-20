@@ -43,8 +43,6 @@ public class DaoDummy implements IGameDao {
             result.setPlayerTwo(player2);
             result.setCardInField(new HashMap<Integer, ICard>());
             result.setUnusedCards(new LinkedList<ICard>());
-            //result.setCounter(3);
-            //result.setId(id);
             return result;
         } else {
             return null;

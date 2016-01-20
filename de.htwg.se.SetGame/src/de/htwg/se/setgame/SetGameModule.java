@@ -26,7 +26,7 @@ public class SetGameModule extends AbstractModule {
 		kiPlugins.addBinding().to(MediumKi.class);
 		kiPlugins.addBinding().to(HardKi.class);
 
-		//TODO: SetGame Module fuer eine Liste --> diese Liste in den Controller (IController) einfuegen
+		//SetGame Module fuer eine Liste --> diese Liste in den Controller (IController) einfuegen
 
 
 	}
