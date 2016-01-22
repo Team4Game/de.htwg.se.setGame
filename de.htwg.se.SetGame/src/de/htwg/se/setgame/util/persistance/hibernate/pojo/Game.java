@@ -34,7 +34,7 @@ public class Game implements Serializable, IGame {
         this.cardsInFieldTable = cardsInFieldTable;
     }
 
-    @OneToOne(optional = false)
+    @OneToOne()
     private CardsInField cardsInFieldTable;
 
     @Column(name = "token")
