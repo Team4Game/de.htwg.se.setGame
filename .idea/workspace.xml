@@ -7,8 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6818033a-37b4-43b4-9f57-9dfde351fbb4" name="Default" comment="some changes in DaoDummy and SetGameModule">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/DaoDummy.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/DaoDummy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java" afterPath="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/hibernate.cfg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="de.htwg.se.setGame.iws" />
@@ -72,34 +71,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="25.555555">
-              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameDaoMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDaoMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="25.0">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DaoDummy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/DaoDummy.java">
+      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,69 +85,91 @@
         <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-6.0">
-              <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SetGameModule.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java">
+      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/resources/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51975054">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.338558">
+              <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="GameDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/db4o/GameDao.java">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+              <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/3.5.6-Final/hibernate-core-3.5.6-Final-sources.jar!/org/hibernate/cfg/Configuration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Game.java">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Game.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IGame.java">
+      <file leaf-file-name="AnnotationConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-annotations/3.5.6-Final/hibernate-annotations-3.5.6-Final-sources.jar!/org/hibernate/cfg/AnnotationConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+              <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+              <folding>
+                <element signature="e#6932#6933#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Version.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-annotations/3.5.6-Final/hibernate-annotations-3.5.6-Final-sources.jar!/org/hibernate/cfg/annotations/Version.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Player.java">
+      <file leaf-file-name="LoggerFactory.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4-sources.jar!/org/slf4j/LoggerFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+              <folding>
+                <element signature="e#10036#10037#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardsInField.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/CardsInField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -216,7 +215,6 @@
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/EasyKi.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/MediumKi.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/HardKi.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/Plugin.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/db4o/db4oManager.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/IGameDao.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/db4o/Db4oManager.java" />
@@ -244,20 +242,22 @@
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IGame.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/GameDao.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/GameDaoMapper.java" />
-        <option value="$PROJECT_DIR$/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Player.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/resources/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDaoMapper.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/CardsInField.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Card.java" />
-        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Game.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/pom.xml" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/Dummy.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/DaoDummy.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/Plugin.java" />
         <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Game.java" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/de.htwg.se.SetGame/resources/resources/hibernate.cfg.xml" />
       </list>
     </option>
   </component>
@@ -380,15 +380,11 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="test">
+            <PATH_ELEMENT USER_OBJECT="resources">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de/htwg/se/setgame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="model/impl">
+            <PATH_ELEMENT USER_OBJECT="resources">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -402,207 +398,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="test">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de/htwg/se/setgame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de.htwg.se.SetGame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="META-INF">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de.htwg.se.SetGame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de/htwg/se/setgame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de.htwg.se.SetGame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de/htwg/se/setgame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="util">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="persistance">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de.htwg.se.SetGame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de/htwg/se/setgame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="util">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="persistance">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="hibernate">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de.htwg.se.SetGame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de/htwg/se/setgame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="util">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="persistance">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="hibernate">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="pojo">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de.htwg.se.SetGame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de/htwg/se/setgame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="util">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de.htwg.se.SetGame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de/htwg/se/setgame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="model">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de.htwg.se.SetGame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="de/htwg/se/setgame">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="model">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="impl">
+            <PATH_ELEMENT USER_OBJECT="resources">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -1199,7 +995,7 @@
       <workItem from="1448968625431" duration="259000" />
       <workItem from="1449590361499" duration="8315000" />
       <workItem from="1451914455983" duration="42946000" />
-      <workItem from="1452506442157" duration="12988000" />
+      <workItem from="1452506442157" duration="25100000" />
     </task>
     <task id="LOCAL-00001" summary="#WEB TECH size of field.">
       <created>1421180325921</created>
@@ -1471,11 +1267,29 @@
       <option name="project" value="LOCAL" />
       <updated>1453235146014</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="some changes in DaoDummy and SetGameModule">
+      <created>1453289739927</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1453289739927</updated>
+    </task>
+    <task id="LOCAL-00047" summary="persistence hibernate config update!">
+      <created>1453458914010</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1453458914010</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Plugin changes">
+      <created>1453458942353</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1453458942353</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178723000" />
+    <option name="totallyTimeSpent" value="190835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1493,25 +1307,25 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35702747" sideWeight="0.4302554" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35702747" sideWeight="0.36842105" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27698863" sideWeight="0.49030694" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27698863" sideWeight="0.48707592" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299866" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878837" sideWeight="0.49882904" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.49676898" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50142044" sideWeight="0.2625202" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4318182" sideWeight="0.7180937" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58117324" sideWeight="0.2825521" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3578352" sideWeight="0.15606937" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27698863" sideWeight="0.509693" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.016962843" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43323863" sideWeight="0.28998384" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.49676898" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33844912" sideWeight="0.5114943" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2528409" sideWeight="0.49676898" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33844912" sideWeight="0.49859154" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33844912" sideWeight="0.48850575" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35702747" sideWeight="0.5697446" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2627841" sideWeight="0.7197092" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35702747" sideWeight="0.6315789" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43323863" sideWeight="0.71001613" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28450704" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1566,9 +1380,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change field to integer with card value" />
-    <MESSAGE value="change pack to resource folder and tostring to field and ogger4j configuration" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/rabertol/de.htwg.se.setGame&#10;&#10;Conflicts:&#10;&#9;de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java&#10;" />
     <MESSAGE value="project setgame 2015/2016" />
     <MESSAGE value="plugin implementation" />
     <MESSAGE value="ki easy hard and medium implementation" />
@@ -1591,7 +1402,10 @@
     <MESSAGE value="Dao Dummy for testing (Mocking)" />
     <MESSAGE value="Test Dummy for Mocking and SetControllerTest modified for Dummy" />
     <MESSAGE value="change DB to CouchDB" />
-    <option name="LAST_COMMIT_MESSAGE" value="change DB to CouchDB" />
+    <MESSAGE value="some changes in DaoDummy and SetGameModule" />
+    <MESSAGE value="persistence hibernate config update!" />
+    <MESSAGE value="Plugin changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plugin changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1610,7 +1424,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/Plugin.java</url>
-          <line>73</line>
+          <line>72</line>
           <properties />
           <option name="timeStamp" value="141" />
         </line-breakpoint>
@@ -1682,18 +1496,6 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java</url>
-          <line>52</line>
-          <properties />
-          <option name="timeStamp" value="212" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="214" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java</url>
           <line>176</line>
           <properties />
           <option name="timeStamp" value="222" />
@@ -1740,11 +1542,35 @@
           <properties />
           <option name="timeStamp" value="240" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="244" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="245" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="246" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="248" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="241" />
+      <option name="time" value="249" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1753,395 +1579,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/3.5.6-Final/hibernate-core-3.5.6-Final-sources.jar!/org/hibernate/collection/PersistentMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13483#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#2326#2327#0" expanded="false" />
-            <element signature="e#2347#2348#0" expanded="false" />
-            <element signature="e#3955#3956#0" expanded="false" />
-            <element signature="e#3997#3998#0" expanded="false" />
-            <element signature="e#4045#4046#0" expanded="false" />
-            <element signature="e#4074#4075#0" expanded="false" />
-            <element signature="e#4308#4309#0" expanded="false" />
-            <element signature="e#4363#4364#0" expanded="false" />
-            <element signature="e#4435#4436#0" expanded="false" />
-            <element signature="e#4496#4497#0" expanded="false" />
-            <element signature="e#7101#7102#0" expanded="false" />
-            <element signature="e#7128#7129#0" expanded="false" />
-            <element signature="e#7685#7686#0" expanded="false" />
-            <element signature="e#7724#7725#0" expanded="false" />
-            <element signature="e#7852#7853#0" expanded="false" />
-            <element signature="e#7873#7874#0" expanded="false" />
-            <element signature="e#8169#8170#0" expanded="false" />
-            <element signature="e#8204#8205#0" expanded="false" />
-            <element signature="e#8255#8256#0" expanded="false" />
-            <element signature="e#8295#8296#0" expanded="false" />
-            <element signature="e#8324#8325#0" expanded="false" />
-            <element signature="e#8353#8354#0" expanded="false" />
-            <element signature="e#8384#8385#0" expanded="false" />
-            <element signature="e#8440#8441#0" expanded="false" />
-            <element signature="e#8745#8746#0" expanded="false" />
-            <element signature="e#8771#8772#0" expanded="false" />
-            <element signature="e#8903#8904#0" expanded="false" />
-            <element signature="e#8932#8933#0" expanded="false" />
-            <element signature="e#8976#8977#0" expanded="false" />
-            <element signature="e#9010#9011#0" expanded="false" />
-            <element signature="e#9136#9137#0" expanded="false" />
-            <element signature="e#9159#9160#0" expanded="false" />
-            <element signature="e#9188#9189#0" expanded="false" />
-            <element signature="e#9218#9219#0" expanded="false" />
-            <element signature="e#9243#9244#0" expanded="false" />
-            <element signature="e#9303#9304#0" expanded="false" />
-            <element signature="e#9480#9481#0" expanded="false" />
-            <element signature="e#9501#9502#0" expanded="false" />
-            <element signature="e#11901#11902#0" expanded="false" />
-            <element signature="e#11945#11946#0" expanded="false" />
-            <element signature="e#11988#11989#0" expanded="false" />
-            <element signature="e#12034#12035#0" expanded="false" />
-            <element signature="e#12381#12382#0" expanded="false" />
-            <element signature="e#12433#12434#0" expanded="false" />
-            <element signature="e#12509#12510#0" expanded="false" />
-            <element signature="e#12529#12530#0" expanded="false" />
-            <element signature="e#12566#12567#0" expanded="false" />
-            <element signature="e#12586#12587#0" expanded="false" />
-            <element signature="e#12988#12989#0" expanded="false" />
-            <element signature="e#13018#13019#0" expanded="false" />
-            <element signature="e#13055#13056#0" expanded="false" />
-            <element signature="e#13076#13077#0" expanded="false" />
-            <element signature="e#13106#13107#0" expanded="false" />
-            <element signature="e#13125#13126#0" expanded="false" />
-            <element signature="e#13344#13345#0" expanded="false" />
-            <element signature="e#13370#13371#0" expanded="false" />
-            <element signature="e#13407#13408#0" expanded="false" />
-            <element signature="e#13427#13428#0" expanded="false" />
-            <element signature="e#13457#13458#0" expanded="false" />
-            <element signature="e#13476#13477#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/3.5.6-Final/hibernate-core-3.5.6-Final-sources.jar!/org/hibernate/collection/AbstractPersistentCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="370" column="0" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23879#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#2697#2698#0" expanded="false" />
-            <element signature="e#2715#2716#0" expanded="false" />
-            <element signature="e#2755#2756#0" expanded="false" />
-            <element signature="e#2772#2773#0" expanded="false" />
-            <element signature="e#2815#2816#0" expanded="false" />
-            <element signature="e#2839#2840#0" expanded="false" />
-            <element signature="e#2875#2876#0" expanded="false" />
-            <element signature="e#2894#2895#0" expanded="false" />
-            <element signature="e#2930#2931#0" expanded="false" />
-            <element signature="e#2950#2951#0" expanded="false" />
-            <element signature="e#2981#2982#0" expanded="false" />
-            <element signature="e#3000#3001#0" expanded="false" />
-            <element signature="e#3051#3052#0" expanded="false" />
-            <element signature="e#3079#3080#0" expanded="false" />
-            <element signature="e#5619#5620#0" expanded="false" />
-            <element signature="e#5643#5644#0" expanded="false" />
-            <element signature="e#9059#9060#0" expanded="false" />
-            <element signature="e#9088#9089#0" expanded="false" />
-            <element signature="e#9186#9187#0" expanded="false" />
-            <element signature="e#9204#9205#0" expanded="false" />
-            <element signature="e#11231#11232#0" expanded="false" />
-            <element signature="e#11263#11264#0" expanded="false" />
-            <element signature="e#12755#12756#0" expanded="false" />
-            <element signature="e#12774#12775#0" expanded="false" />
-            <element signature="e#13425#13426#0" expanded="false" />
-            <element signature="e#13488#13489#0" expanded="false" />
-            <element signature="e#13574#13575#0" expanded="false" />
-            <element signature="e#13599#13600#0" expanded="false" />
-            <element signature="e#13641#13642#0" expanded="false" />
-            <element signature="e#13659#13660#0" expanded="false" />
-            <element signature="e#13768#13769#0" expanded="false" />
-            <element signature="e#13802#13803#0" expanded="false" />
-            <element signature="e#13999#14000#0" expanded="false" />
-            <element signature="e#14084#14085#0" expanded="false" />
-            <element signature="e#14115#14116#0" expanded="false" />
-            <element signature="e#14158#14159#0" expanded="false" />
-            <element signature="e#14185#14186#0" expanded="false" />
-            <element signature="e#14239#14240#0" expanded="false" />
-            <element signature="e#15519#15520#0" expanded="false" />
-            <element signature="e#15540#15541#0" expanded="false" />
-            <element signature="e#15654#15655#0" expanded="false" />
-            <element signature="e#15677#15678#0" expanded="false" />
-            <element signature="e#15706#15707#0" expanded="false" />
-            <element signature="e#15736#15737#0" expanded="false" />
-            <element signature="e#15762#15763#0" expanded="false" />
-            <element signature="e#15789#15790#0" expanded="false" />
-            <element signature="e#15987#15988#0" expanded="false" />
-            <element signature="e#16012#16013#0" expanded="false" />
-            <element signature="e#16104#16105#0" expanded="false" />
-            <element signature="e#16134#16135#0" expanded="false" />
-            <element signature="e#16168#16169#0" expanded="false" />
-            <element signature="e#16202#16203#0" expanded="false" />
-            <element signature="e#16228#16229#0" expanded="false" />
-            <element signature="e#16255#16256#0" expanded="false" />
-            <element signature="e#16283#16284#0" expanded="false" />
-            <element signature="e#16315#16316#0" expanded="false" />
-            <element signature="e#16345#16346#0" expanded="false" />
-            <element signature="e#16376#16377#0" expanded="false" />
-            <element signature="e#16408#16409#0" expanded="false" />
-            <element signature="e#16444#16445#0" expanded="false" />
-            <element signature="e#16670#16671#0" expanded="false" />
-            <element signature="e#16691#16692#0" expanded="false" />
-            <element signature="e#16940#16941#0" expanded="false" />
-            <element signature="e#16971#16972#0" expanded="false" />
-            <element signature="e#17017#17018#0" expanded="false" />
-            <element signature="e#17051#17052#0" expanded="false" />
-            <element signature="e#17081#17082#0" expanded="false" />
-            <element signature="e#17110#17111#0" expanded="false" />
-            <element signature="e#17142#17143#0" expanded="false" />
-            <element signature="e#17193#17194#0" expanded="false" />
-            <element signature="e#17470#17471#0" expanded="false" />
-            <element signature="e#17496#17497#0" expanded="false" />
-            <element signature="e#17527#17528#0" expanded="false" />
-            <element signature="e#17556#17557#0" expanded="false" />
-            <element signature="e#17601#17602#0" expanded="false" />
-            <element signature="e#17635#17636#0" expanded="false" />
-            <element signature="e#17765#17766#0" expanded="false" />
-            <element signature="e#17790#17791#0" expanded="false" />
-            <element signature="e#18514#18515#0" expanded="false" />
-            <element signature="e#18546#18547#0" expanded="false" />
-            <element signature="e#18659#18660#0" expanded="false" />
-            <element signature="e#18694#18695#0" expanded="false" />
-            <element signature="e#18770#18771#0" expanded="false" />
-            <element signature="e#18797#18798#0" expanded="false" />
-            <element signature="e#18884#18885#0" expanded="false" />
-            <element signature="e#18915#18916#0" expanded="false" />
-            <element signature="e#18998#18999#0" expanded="false" />
-            <element signature="e#19028#19029#0" expanded="false" />
-            <element signature="e#19114#19115#0" expanded="false" />
-            <element signature="e#19166#19167#0" expanded="false" />
-            <element signature="e#19261#19262#0" expanded="false" />
-            <element signature="e#19296#19297#0" expanded="false" />
-            <element signature="e#19388#19389#0" expanded="false" />
-            <element signature="e#19448#19449#0" expanded="false" />
-            <element signature="e#19548#19549#0" expanded="false" />
-            <element signature="e#19609#19610#0" expanded="false" />
-            <element signature="e#20387#20388#0" expanded="false" />
-            <element signature="e#20414#20415#0" expanded="false" />
-            <element signature="e#20508#20509#0" expanded="false" />
-            <element signature="e#20542#20543#0" expanded="false" />
-            <element signature="e#20626#20627#0" expanded="false" />
-            <element signature="e#20656#20657#0" expanded="false" />
-            <element signature="e#20762#20763#0" expanded="false" />
-            <element signature="e#20797#20798#0" expanded="false" />
-            <element signature="e#23710#23711#0" expanded="false" />
-            <element signature="e#23758#23759#0" expanded="false" />
-            <element signature="e#23788#23789#0" expanded="false" />
-            <element signature="e#23807#23808#0" expanded="false" />
-            <element signature="e#23847#23848#0" expanded="false" />
-            <element signature="e#23872#23873#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="467" column="0" selection-start-line="467" selection-start-column="0" selection-end-line="467" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/pojo/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="e#331#332#0" expanded="false" />
-            <element signature="e#362#363#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/GameDaoGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/GameDaoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/model/impl/CardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/Dummy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#908#909#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-            <element signature="e#1068#1069#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1145#1146#0" expanded="true" />
-            <element signature="e#1192#1193#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#1263#1264#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
-            <element signature="e#1488#1489#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1598#1599#0" expanded="true" />
-            <element signature="e#1642#1643#0" expanded="true" />
-            <element signature="e#1669#1670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/test/de/htwg/se/setgame/controller/impl/SetControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="29" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/GameDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/KILevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/MediumKi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/HardKi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/EasyKi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/GameProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/PackProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/IController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/IPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/Plugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IModelFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2155,16 +1592,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/ICard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2186,26 +1613,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/AField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Field.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/ModelFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -2250,14 +1661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/IGameDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/3.5.6-Final/hibernate-core-3.5.6-Final-sources.jar!/org/hibernate/Session.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2266,74 +1669,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/CardsInField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="25.555555">
-          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDaoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="25.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/db4o/GameDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -2356,21 +1695,315 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/AField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/ICard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/SetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/IModelFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/model/impl/ModelFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/logic/impl/GameProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/KILevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/MediumKi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/HardKi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/EasyKi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/GameDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/pojo/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/couchDB/pojo/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/IGameDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/controller/impl/ki/Plugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDaoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/db4o/GameDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="552" column="0" selection-start-line="552" selection-start-column="0" selection-end-line="552" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GameField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="467" column="0" selection-start-line="467" selection-start-column="0" selection-end-line="467" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/SetGameModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51975054">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="e#1543#1544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/aview/gui/MenuBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4-sources.jar!/org/slf4j/helpers/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#1548#1549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4-sources.jar!/org/slf4j/helpers/NOPLoggerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#1702#1703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/3.5.6-Final/hibernate-core-3.5.6-Final-sources.jar!/org/hibernate/cfg/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-annotations/3.5.6-Final/hibernate-annotations-3.5.6-Final-sources.jar!/org/hibernate/cfg/annotations/Version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4-sources.jar!/org/slf4j/LoggerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+          <folding>
+            <element signature="e#10036#10037#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-annotations/3.5.6-Final/hibernate-annotations-3.5.6-Final-sources.jar!/org/hibernate/cfg/AnnotationConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding>
+            <element signature="e#6932#6933#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/pojo/CardsInField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/src/de/htwg/se/setgame/util/persistance/hibernate/GameDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de.htwg.se.SetGame/resources/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.338558">
+          <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
