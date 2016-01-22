@@ -66,7 +66,6 @@ public abstract class Plugin implements IPlugin {
 
     }
 
-    // And From your main() method or any other metho
     @Override
     public void stopKi(KILevel level) {
         System.out.println("stop KI out Running: " + isRunning);
