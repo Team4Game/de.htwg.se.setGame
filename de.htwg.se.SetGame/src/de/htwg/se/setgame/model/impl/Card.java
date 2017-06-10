@@ -15,21 +15,7 @@ public class Card extends ACard {
 	private String panelFilling;
 	private int anz;
 
-	/**
-	 * This method create a new card object
-	 * 
-	 * @param color
-	 * @param form
-	 * @param panelFilling
-	 * @param amount
-	 */
-	public Card(String color, String form, String panelFilling, int amount) {
-		this.setColor(color);
-		this.setForm(form);
-		this.setPanelFilling(panelFilling);
-		this.setNumberOfComponents(amount);
 
-	}
     public Card(){
 
     }

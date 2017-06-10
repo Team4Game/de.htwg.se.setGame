@@ -1,21 +1,36 @@
 package de.htwg.se.setgame.model;
 
-
-import de.htwg.se.setgame.util.persistance.couchDB.pojo.Player;
-import org.codehaus.jackson.map.annotate.JsonDeserialize;
-
 /**
  * Created by raina on 03.06.2015.
  */
-@JsonDeserialize(as = Player.class)
+
+import de.htwg.se.setgame.util.persistence.couchdb.PersistentPlayer;
+import org.codehaus.jackson.map.annotate.JsonDeserialize;
+
+@JsonDeserialize(as= PersistentPlayer.class)
 public interface IPlayer {
-	
-	void setId(int id);
-	
+    /**
+     *
+     * @param pid
+     */
+	void setPid(int pid);
+
+    /**
+     *
+     * @param counter
+     */
 	void setCounter(int counter);
-	
-	int getId();
-	
+
+    /**
+     *
+     * @return which id has player in game
+     */
+	int getPid();
+
+    /**
+     *
+     * @return counter of set
+     */
 	int getCounter();
 	
 }

@@ -12,22 +12,74 @@ import java.util.Map;
  */
 public class Game implements IGame {
 
-	private IPlayer player1;
-	private IPlayer player2;
+	private String gameID;
+	private IPlayer playerOne;
+	private IPlayer playerTwo;
+	private int counter;
+    // get via Field.getCardsInField
+	private Map<Integer, ICard> cardsInField;
+    // get via Pack.getPack
+    private List<ICard> unusedCards;
 
-	private Map<Integer,ICard> cardsInField; // get via Field.getCardsInField
-	private List<ICard> unusedCards; // get via Pack.getPack
+	public Game(){
 
-	private String token;
+    }
 
-	public Game() {
-		super();
-
+	
+	
+	@Override
+	public String getId() {
+		return gameID;
 	}
 
 	@Override
-	public void setCardInField(Map<Integer,ICard> cardsInField) {
+	public void setId(String id) {
+		this.gameID = id;
+	}
+
+	@Override
+	public IPlayer getPlayerOne() {
+		return playerOne;
+	}
+
+	@Override
+	public void setPlayerOne(IPlayer playerOne) {
+		this.playerOne = playerOne;
+	}
+
+	@Override
+	public IPlayer getPlayerTwo() {
+		return playerTwo;
+	}
+
+	@Override
+	public void setPlayerTwo(IPlayer playerTwo) {
+		this.playerTwo = playerTwo;
+	}
+
+	@Override
+	public int getCounter() {
+		return counter;
+	}
+
+	@Override
+	public void setCounter(int counter) {
+		this.counter = counter;
+	}
+
+	@Override
+	public Map<Integer, ICard> getCardsInField() {
+		return cardsInField;
+	}
+
+	@Override
+	public void setCardsInField(Map<Integer, ICard> cardsInField) {
 		this.cardsInField = cardsInField;
+	}
+
+	@Override
+	public List<ICard> getUnusedCards() {
+		return unusedCards;
 	}
 
 	@Override
@@ -35,43 +87,4 @@ public class Game implements IGame {
 		this.unusedCards = unusedCards;
 	}
 
-	@Override
-	public void setGameToken(String token) {
-		this.token = token;
-	}
-
-	@Override
-	public IPlayer getPlayerOne() {
-		return this.player1;
-	}
-
-	@Override
-	public IPlayer getPlayerTwo() {
-		return this.player2;
-	}
-
-	@Override
-	public Map<Integer, ICard> getCardInField() {
-		return this.cardsInField;
-	}
-
-	@Override
-	public List<ICard> getUnusedCards() {
-		return this.unusedCards;
-	}
-
-	@Override
-	public String getToken() {
-		return this.token;
-	}
-
-	@Override
-	public void setPlayerOne(IPlayer player1) {
-		this.player1 = player1;
-	}
-
-	@Override
-	public void setPlayerTwo(IPlayer player2) {
-		this.player2 = player2;
-	}
 }

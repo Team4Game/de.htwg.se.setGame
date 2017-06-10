@@ -1,10 +1,9 @@
 package de.htwg.se.setgame.model;
 
-
-import de.htwg.se.setgame.util.persistance.couchDB.pojo.Card;
+import de.htwg.se.setgame.util.persistence.couchdb.PersistentCard;
 import org.codehaus.jackson.map.annotate.JsonDeserialize;
 
-@JsonDeserialize(as = Card.class)
+@JsonDeserialize(as = PersistentCard.class)
 public interface ICard {
 	 /**
 	 * @return colors
@@ -33,9 +32,28 @@ public interface ICard {
 	 */
 	String toString();
 
+    /**
+     *
+     * @param form set form of card
+     */
     void setForm(String form);
+
+    /**
+     *
+     * @param panelFilling set filling of Card
+     */
     void setPanelFilling(String panelFilling);
+
+    /**
+     *
+     * @param numberOfComponents number of components
+     */
     void setNumberOfComponents(int numberOfComponents);
+
+    /**
+     *
+     * @param color of card
+     */
     void setColor(String color);
     /**
 	 * @param card 

@@ -1,11 +1,13 @@
 package de.htwg.se.setgame.model.impl;
 
-import java.util.*;
-
 import de.htwg.se.setgame.model.AField;
 import de.htwg.se.setgame.model.ICard;
-import de.htwg.se.setgame.model.IPack;
 import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Class Field.
@@ -15,9 +17,6 @@ import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
  * @category Modell
  */
 public class Field extends AField {
-    protected static final int INITIALVALUEOFFIELD = 12;
-    private static final int MAX = 81;
-    private static final int ONE = 1;
     private static final int NUMBERFORONELINE = 3;
     private static final int LEGHTFORSTRING = CardAtributen.FILL[0].length();
     private Map<Integer, ICard> cardsInField;
