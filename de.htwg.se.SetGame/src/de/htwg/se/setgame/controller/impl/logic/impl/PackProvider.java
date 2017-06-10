@@ -38,15 +38,17 @@ public class PackProvider {
     public PackProvider(IModelFactory modelFactory) {
         this.modelFactory = modelFactory;
         this.pack = modelFactory.createPack();
-        List<ICard> cards = Arrays.asList(creatCards());
-        this.pack.setPack(cards);
-
+        List<ICard> cards = new LinkedList<ICard>();
+        cards = Arrays.asList(creatCards());
+        if (cards != null) {
+            this.pack.setPack(cards);
+        }
     }
 
     /**
      * @return the finish pack of the Game
      */
-    protected ICard[] creatCards() {
+    private ICard[] creatCards() {
         ICard list[] = new ICard[SIZEOFARRAY];
         for (int i = 0; i < SIZEOFARRAY; i++) {
 
@@ -123,13 +125,6 @@ public class PackProvider {
      * @return pack of cards
      */
 
-    public List<ICard> getCardsInpack() {
-        List<ICard> liste = new LinkedList<ICard>();
-        for (ICard card : this.pack.getPack()) {
-            liste.add(card);
-        }
-        return liste;
-    }
 }
 
 

@@ -1,14 +1,12 @@
 package de.htwg.se.setgame.aview.gui;
 
-import java.awt.GridLayout;
-
-import javax.swing.*;
-
 import com.google.inject.Inject;
-
 import de.htwg.se.setgame.controller.IController;
 import de.htwg.se.setgame.util.observer.Event;
 import de.htwg.se.setgame.util.observer.IObserver;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class GUI extends JFrame implements IObserver {
 

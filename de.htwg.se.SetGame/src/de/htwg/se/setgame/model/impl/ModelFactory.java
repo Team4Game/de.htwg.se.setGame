@@ -3,9 +3,6 @@ package de.htwg.se.setgame.model.impl;
 import de.htwg.se.setgame.model.*;
 
 
-import java.util.LinkedList;
-import java.util.List;
-
 /**
  * Created by David on 15.04.15.
  */
@@ -23,6 +20,8 @@ public class ModelFactory implements IModelFactory {
         return new Pack();
     }
 
+
+
     @Override
     public IGame createGame() {
         return new Game();
@@ -37,6 +36,8 @@ public class ModelFactory implements IModelFactory {
     public IPlayer createPlayer() {
         return new Player();
     }
+
+
 
 
 }

@@ -1,13 +1,9 @@
 package de.htwg.se.setgame.aview.gui;
 
+import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 /**
@@ -81,19 +77,22 @@ public class SetButton extends JPanel implements ActionListener {
 	 * 
 	 */
 	public void choice() {
-		
-			Object[] options = {"Player1", "Player2"};
-	 
-	        	int selected = JOptionPane.showOptionDialog(null,
-	        			"Which Player?", "Choice",JOptionPane.DEFAULT_OPTION, 
-	        			JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-	        	if(selected == ZERO) {
-	                GUI.getController().isASetForController(GameField.getCardforSetOne(), GameField.getCardforSetTwo(), GameField.getCardforSetThree(), ONE);
-	                
-	        	} else if (selected == ONE) {
-	            	GUI.getController().isASetForController(GameField.getCardforSetOne(), GameField.getCardforSetTwo(), GameField.getCardforSetThree(), TWO);
-	        	}	
+		    if(GUI.getController().isKIPLaying()) {
+                GUI.getController().isASetForController(GameField.getCardforSetOne(), GameField.getCardforSetTwo(), GameField.getCardforSetThree(), ONE);
+            }else {
 
+                Object[] options = {"Player1", "Player2"};
+
+                int selected = JOptionPane.showOptionDialog(null,
+                        "Which Player?", "Choice", JOptionPane.DEFAULT_OPTION,
+                        JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                if (selected == ZERO) {
+                    GUI.getController().isASetForController(GameField.getCardforSetOne(), GameField.getCardforSetTwo(), GameField.getCardforSetThree(), ONE);
+
+                } else if (selected == ONE) {
+                    GUI.getController().isASetForController(GameField.getCardforSetOne(), GameField.getCardforSetTwo(), GameField.getCardforSetThree(), TWO);
+                }
+            }
 	}
 	
 	/**

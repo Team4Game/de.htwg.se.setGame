@@ -1,14 +1,12 @@
 package de.htwg.se.setgame.controller;
 
-import java.util.List;
-import java.util.Map;
-
 import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
 import de.htwg.se.setgame.model.IPack;
-import de.htwg.se.setgame.controller.impl.ki.KILevel;
-
 import de.htwg.se.setgame.util.observer.IObservable;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author raina
@@ -100,21 +98,25 @@ public interface IController extends IObservable {
 	 * @return IPack
 	 */
 	IPack getPack();
-	
+    List<ICard> getNewPack();
 	/**
 	 * 	save game
+	 * @return 
 	 */
-	void saveGame();
+	String saveGame(int playerNumber);
 
 	/**
 	 * 	load game
+	 * @param uid 
+	 * @return 
 	 */
-	void loadGame(String id);
+	int loadGame(String uid);
 
-	/**
-	 * set Ki Level
-	 */
-	void setKiPlayer(KILevel level);
+    /**
+    * @param level level of the difficult of KI
+    */
+    void setKIPlayer(String level);
 
+    boolean isKIPLaying();
 
 }

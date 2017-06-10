@@ -1,11 +1,8 @@
 package de.htwg.se.setgame.aview.gui;
 
-import de.htwg.se.setgame.controller.impl.ki.KILevel;
-
 import javax.swing.*;
-
-
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * @author raina
@@ -14,9 +11,9 @@ import java.awt.event.*;
 public class MenuBar extends JMenuBar implements ActionListener {
 	
 	private static final long serialVersionUID = 1L;
-	private JMenuItem mHelp, mExit, mNewGame, mEasy, mMedium, mHard, save, load;
-	
-	public MenuBar() {
+    private JMenuItem mHelp, mExit, mNewGame, mSaveGame, mLoadGame, kiEasy, kiMedium,kiHard;
+
+    public MenuBar() {
 		
 		JMenu menu = new JMenu("Game");
 		mHelp = new JMenuItem("Help");
@@ -25,31 +22,27 @@ public class MenuBar extends JMenuBar implements ActionListener {
 		mExit.addActionListener(this);
 		mNewGame = new JMenuItem("New Game");
 		mNewGame.addActionListener(this);
-		menu.add(mNewGame);
-		menu.add(mHelp);
+		mSaveGame = new JMenuItem("Save Game");
+		mSaveGame.addActionListener(this);
+		mLoadGame = new JMenuItem("Load Game");
+        mLoadGame.addActionListener(this);
+        kiEasy = new JMenuItem("Easy");
+        kiEasy.addActionListener(this);
+        kiHard = new JMenuItem("Hard");
+        kiHard.addActionListener(this);
+        kiMedium = new JMenuItem("Medium");
+        kiMedium.addActionListener(this);
+
+
+        menu.add(mNewGame);
+		menu.add(mSaveGame);
+		menu.add(mLoadGame);
+        menu.add(kiEasy);
+        menu.add(kiMedium);
+        menu.add(kiHard);
+        menu.add(mHelp);
 		menu.add(mExit);
 		this.add(menu);
-
-		JMenu kiMenu = new JMenu("KI");
-		mEasy = new JMenuItem("Easy");
-		mEasy.addActionListener(this);
-		mMedium = new JMenuItem("Medium");
-		mMedium.addActionListener(this);
-		mHard = new JMenuItem("Hard");
-		mHard.addActionListener(this);
-		kiMenu.add(mEasy);
-		kiMenu.add(mMedium);
-		kiMenu.add(mHard);
-		this.add(kiMenu);
-
-		JMenu saveLoadMenu = new JMenu("Save/Load");
-		save = new JMenuItem("Save");
-		save.addActionListener(this);
-		load = new JMenuItem("Load");
-		load.addActionListener(this);
-		saveLoadMenu.add(save);
-		saveLoadMenu.add(load);
-		this.add(saveLoadMenu);
 	}
 
 	@Override
@@ -75,25 +68,54 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	        			+ "Have fun!", "Close", JOptionPane.CLOSED_OPTION);
 	        }else if ( e.getSource() == mExit ){
 	        	exit();
-	        }else if(e.getSource() == mNewGame){
-	        	if ( JOptionPane.showConfirmDialog(null,
+	        }else if ( e.getSource() == mSaveGame ){
+	        	saveGame();
+	        }else if ( e.getSource() == mLoadGame ){
+	        	loadGame();
+            } else if (e.getSource() == kiEasy) {
+                kiEasyWay();
+
+            } else if (e.getSource() == kiHard) {
+                kiHardWay();
+            }else if (e.getSource() == kiMedium) {
+                kiMediumWay();
+            } else {
+                if ( JOptionPane.showConfirmDialog(null,
 	        			"Really start a new Game?", "Choice", JOptionPane.YES_NO_OPTION) == 0) {
 	        		newGame();
 	        	}
-	    }else if(e.getSource() == mEasy){
-				GUI.getController().setKiPlayer(KILevel.EASY);
-			}else if(e.getSource() == mMedium){
-				GUI.getController().setKiPlayer(KILevel.MEDIUM);
-			}else if(e.getSource() == mHard){
-				GUI.getController().setKiPlayer(KILevel.HARD);
-			} else if(e.getSource() == save){
-				GUI.getController().saveGame();
-			} else if(e.getSource() == load) {
-				String token = JOptionPane.showInputDialog("Bitte Token eingeben");
-				GUI.getController().loadGame(token);
-			}
-
+	    }
 		
+	}
+
+    private void kiMediumWay() {
+        GUI.getController().setKIPlayer("Medium");
+    }
+
+    private void kiHardWay() {
+        GUI.getController().setKIPlayer("Hard");
+
+    }
+
+    private void kiEasyWay() {
+        GUI.getController().setKIPlayer("Easy");
+
+
+    }
+
+    public void saveGame() {
+		String uid = GUI.getController().saveGame(1);
+        JOptionPane.showMessageDialog(null, "Your game is saved under:\n\n" + uid + "\n\nIf you want to continue your game you will need this key.");
+	}
+
+	public void loadGame() {
+		String uid = (String) JOptionPane.showInputDialog(null, "Game token:");
+		if ((uid != null) && (uid.length() > 0)) {
+		    int result = GUI.getController().loadGame(uid);
+		    if (result < 0) {
+		    	JOptionPane.showMessageDialog(null, "No game found under this token.");
+		    }
+		}
 	}
 	
 	public void exit() {

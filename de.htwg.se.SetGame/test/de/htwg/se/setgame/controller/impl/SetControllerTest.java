@@ -1,44 +1,40 @@
 package de.htwg.se.setgame.controller.impl;
 
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
-
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import de.htwg.se.setgame.SetGameModule;
 import de.htwg.se.setgame.controller.IController;
-import de.htwg.se.setgame.controller.IPlugin;
-import de.htwg.se.setgame.controller.impl.ki.Plugin;
+import de.htwg.se.setgame.controller.IKiPlugin;
+import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
+import de.htwg.se.setgame.model.IGame;
 import de.htwg.se.setgame.model.IModelFactory;
-import de.htwg.se.setgame.model.impl.Field;
 import de.htwg.se.setgame.model.impl.ModelFactory;
-import de.htwg.se.setgame.util.persistance.DaoDummy;
+import de.htwg.se.setgame.util.persistence.GameDaoDummy;
+import de.htwg.se.setgame.util.persistence.hibernate.GameDao;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.htwg.se.setgame.controller.impl.SetController;
-import de.htwg.se.setgame.model.ICard;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.TreeSet;
 
 public class SetControllerTest {
-    SetController target;
-    LinkedList<ICard> aSetListe;
-    IController controller;
-
+    private SetController target;
+    private LinkedList<ICard> aSetListe;
+    private IController targetForKi;
     @Before
     public void setUp() {
-        //this.target = new SetController(new ModelFactory());
-        //this.aSetListe = new LinkedList<ICard>();
-        //aSetListe.addAll(this.target.getSetInField());
 
         Injector injector = Guice.createInjector(new SetGameModule());
         IModelFactory modelFactory = injector.getInstance(IModelFactory.class);
-        controller = injector.getInstance(IController.class);
-        this.target = new SetController(modelFactory, new TreeSet<IPlugin>(), new DaoDummy(modelFactory));
+        targetForKi = injector.getInstance(IController.class);
+        this.target = new SetController(modelFactory, new GameDaoDummy(modelFactory), new TreeSet<IKiPlugin>());
         this.aSetListe = new LinkedList<ICard>();
         aSetListe.addAll(this.target.getSetInField());
     }
@@ -67,7 +63,6 @@ public class SetControllerTest {
         for (int i = 0; i < 27; i++) {
             List<ICard> cardSet = target.getASetInGame();
             target.isASetForController(cardSet.get(0), cardSet.get(1), cardSet.get(2), 1);
-            target.checkIfIsASeTInGame();
             if (target.getASetInGame().size() == 0 && target.getCardinGame().size() == 9) {
                 target.newGame();
                 i = 0;
@@ -129,18 +124,14 @@ public class SetControllerTest {
         Assert.assertTrue(target.stillSetInGame() == true);
     }
 
-
-    /*
     @Test
     public void stillSetInGame_Fail(){
         while(target.getASetInGame().size() != 0){
             List<ICard> cardSet = target.getASetInGame();
             target.isASetForController(cardSet.get(0), cardSet.get(1), cardSet.get(2), 1);
-            target.checkIfIsASeTInGame();
         }
         Assert.assertTrue(target.stillSetInGame() == false);
     }
-    */
     @Test
          public void getplayerPoints_ok(){
         Assert.assertEquals(target.getPlayerOnePoints(),0);
@@ -164,5 +155,36 @@ public class SetControllerTest {
     public void getPack_ok(){
 
         Assert.assertEquals(69, target.getPack().getPack().size());
+    }
+    @Test
+    public void loadGame_ok(){
+       int result = target.loadGame("123");
+        Assert.assertTrue(result == 0);
+    }
+    @Test
+    public void loadGame_fail(){
+
+        int result = target.loadGame("sdsad");
+        Assert.assertTrue(result == -1);
+    }
+    @Test
+    public void saveGame_ok(){
+
+        String result = target.saveGame(1);
+        Assert.assertTrue(null != result);
+    }
+
+    @Test
+    public void setKITest(){
+        target.setKIPlayer("easy");
+
+    }
+    @Test
+    public void testKI(){
+        targetForKi.setKIPlayer("Easy");
+        List<ICard> solution = targetForKi.getSetInField();
+        targetForKi.isASetForController(solution.get(0),solution.get(1),solution.get(2), 1);
+        Assert.assertTrue(78 == targetForKi.getCardinGame().size() );
+
     }
 }

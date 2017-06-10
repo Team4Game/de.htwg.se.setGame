@@ -4,7 +4,6 @@ import de.htwg.se.setgame.model.ICard;
 import de.htwg.se.setgame.model.IField;
 import de.htwg.se.setgame.model.IModelFactory;
 import de.htwg.se.setgame.model.IPack;
-import de.htwg.se.setgame.model.impl.atributte.CardAtributen;
 
 import java.util.*;
 
@@ -18,7 +17,6 @@ public class GameProvider {
     private static final int MAX = 81;
     private static final int ONE = 1;
     private static final int NUMBERFORONELINE = 3;
-    private static final int LEGHTFORSTRING = CardAtributen.FILL[0].length();
     /**
      * Class Field.
      *
@@ -34,9 +32,6 @@ public class GameProvider {
         return iPack;
     }
 
-    public void setiPack(IPack iPack) {
-        this.iPack = iPack;
-    }
 
     private IPack iPack;
     private IField field;
@@ -70,13 +65,6 @@ public class GameProvider {
 
 
 
-    /**
-     * pack for the game are the cards and the random positions
-     */
-
-    public void setField(IField field) {
-        this.field = field;
-    }
 
         /*
          * (non-Javadoc)
@@ -220,14 +208,7 @@ public class GameProvider {
         }
 
 
-    public boolean remove(ICard card) {
-            return false;
-        }
 
-
-    public boolean add(ICard card) {
-            return false;
-        }
 
         /*
          * (non-Javadoc)
