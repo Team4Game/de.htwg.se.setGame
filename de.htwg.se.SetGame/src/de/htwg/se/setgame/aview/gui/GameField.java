@@ -1,23 +1,19 @@
 package de.htwg.se.setgame.aview.gui;
 
-import java.awt.GridLayout;
-import java.util.List;
+import de.htwg.se.setgame.controller.impl.logic.impl.PackProvider;
+import de.htwg.se.setgame.model.ICard;
+import de.htwg.se.setgame.model.IPack;
+import de.htwg.se.setgame.model.impl.ModelFactory;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-
-import de.htwg.se.setgame.modell.ICard;
-import de.htwg.se.setgame.modell.impl.Pack;
 
 /**
  * @author raina
@@ -135,7 +131,7 @@ public class GameField extends JPanel implements ActionListener {
 	private static JPanel panel1 = new JPanel();
 
 	private static ICard[] card = new ICard[FIVE];
-	private static Pack pack;
+	private static IPack iPack;
 	private static Map<Integer, String> cardToPicture;
 	private static List<ICard> saveList;
 	private static List<String> urlListe;
@@ -149,13 +145,13 @@ public class GameField extends JPanel implements ActionListener {
 		saveList = new LinkedList<ICard>();
 		urlListe = new LinkedList<String>();
 		test = new LinkedList<String>();
+        PackProvider packProvider = new PackProvider(new ModelFactory());
+		iPack = packProvider.getPack();
 
-		pack = new Pack();
-
-		for (int i = 0; i < pack.getPack().size(); i++) {
+		for (int i = 0; i < iPack.getPack().size(); i++) {
 			test.add("/pack/" + i + ".gif");
 		}
-		for (int index1 = 0; index1 < pack.getPack().size(); index1++) {
+		for (int index1 = 0; index1 < iPack.getPack().size(); index1++) {
 			cardToPicture.put(index1, test.get(index1));
 		}
 
@@ -163,18 +159,18 @@ public class GameField extends JPanel implements ActionListener {
 
 		cardkey = ZERO;
 
-		resource1 = ImageIcon.class.getResource(urlListe.get(number1));
-		resource2 = ImageIcon.class.getResource(urlListe.get(number2));
-		resource3 = ImageIcon.class.getResource(urlListe.get(number3));
-		resource4 = ImageIcon.class.getResource(urlListe.get(number4));
-		resource5 = ImageIcon.class.getResource(urlListe.get(number5));
-		resource6 = ImageIcon.class.getResource(urlListe.get(number6));
-		resource7 = ImageIcon.class.getResource(urlListe.get(number7));
-		resource8 = ImageIcon.class.getResource(urlListe.get(number8));
-		resource9 = ImageIcon.class.getResource(urlListe.get(number9));
-		resource10 = ImageIcon.class.getResource(urlListe.get(number10));
-		resource11 = ImageIcon.class.getResource(urlListe.get(number11));
-		resource12 = ImageIcon.class.getResource(urlListe.get(number12));
+		resource1 = getClass().getResource(urlListe.get(number1));
+		resource2 = getClass().getResource(urlListe.get(number2));
+		resource3 = getClass().getResource(urlListe.get(number3));
+		resource4 = getClass().getResource(urlListe.get(number4));
+		resource5 = getClass().getResource(urlListe.get(number5));
+		resource6 = getClass().getResource(urlListe.get(number6));
+		resource7 = getClass().getResource(urlListe.get(number7));
+		resource8 = getClass().getResource(urlListe.get(number8));
+		resource9 = getClass().getResource(urlListe.get(number9));
+		resource10 = getClass().getResource(urlListe.get(number10));
+		resource11 = getClass().getResource(urlListe.get(number11));
+		resource12 = getClass().getResource(urlListe.get(number12));
 
 		icon1 = new ImageIcon(resource1);
 		icon2 = new ImageIcon(resource2);
@@ -503,7 +499,7 @@ public class GameField extends JPanel implements ActionListener {
 	}
 	
 	public static int numberGiven() {
-		return pack.getPack().size();
+		return iPack.getPack().size();
 	}
 	
 	public static void saveUrl() {
@@ -514,17 +510,16 @@ public class GameField extends JPanel implements ActionListener {
 	}
 	
 	public static void string(int index1) {
-		String s = pack.getPack().get(index1).toString();
+		String s = iPack.getPack().get(index1).toString();
 		saveUrlFor(s);
 	}
 	 
 	public static void saveUrlFor(String card) {
-		for (ICard key : GUI.getController().getField().getCardInFieldGame()
-				.values()) {
+		for (ICard key : GUI.getController().getCardInFieldGame()) {
 			if (card.equals(key.toString())) {
 				urlListe.add(cardToPicture.get(cardkey));
 				saveList.add(key);
-			}
+            }
 		}
 	}
 

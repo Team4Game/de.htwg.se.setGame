@@ -1,9 +1,8 @@
 package de.htwg.se.setgame.aview.gui;
 
 import javax.swing.*;
-
-
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * @author raina
@@ -12,9 +11,9 @@ import java.awt.event.*;
 public class MenuBar extends JMenuBar implements ActionListener {
 	
 	private static final long serialVersionUID = 1L;
-	private JMenuItem mHelp, mExit, mNewGame;
-	
-	public MenuBar() {
+    private JMenuItem mHelp, mExit, mNewGame, mSaveGame, mLoadGame, kiEasy, kiMedium,kiHard;
+
+    public MenuBar() {
 		
 		JMenu menu = new JMenu("Game");
 		mHelp = new JMenuItem("Help");
@@ -23,8 +22,25 @@ public class MenuBar extends JMenuBar implements ActionListener {
 		mExit.addActionListener(this);
 		mNewGame = new JMenuItem("New Game");
 		mNewGame.addActionListener(this);
-		menu.add(mNewGame);
-		menu.add(mHelp);
+		mSaveGame = new JMenuItem("Save Game");
+		mSaveGame.addActionListener(this);
+		mLoadGame = new JMenuItem("Load Game");
+        mLoadGame.addActionListener(this);
+        kiEasy = new JMenuItem("Easy");
+        kiEasy.addActionListener(this);
+        kiHard = new JMenuItem("Hard");
+        kiHard.addActionListener(this);
+        kiMedium = new JMenuItem("Medium");
+        kiMedium.addActionListener(this);
+
+
+        menu.add(mNewGame);
+		menu.add(mSaveGame);
+		menu.add(mLoadGame);
+        menu.add(kiEasy);
+        menu.add(kiMedium);
+        menu.add(kiHard);
+        menu.add(mHelp);
 		menu.add(mExit);
 		this.add(menu);
 	}
@@ -52,19 +68,60 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	        			+ "Have fun!", "Close", JOptionPane.CLOSED_OPTION);
 	        }else if ( e.getSource() == mExit ){
 	        	exit();
-	        }else{
-	        	if ( JOptionPane.showConfirmDialog(null,
+	        }else if ( e.getSource() == mSaveGame ){
+	        	saveGame();
+	        }else if ( e.getSource() == mLoadGame ){
+	        	loadGame();
+            } else if (e.getSource() == kiEasy) {
+                kiEasyWay();
+
+            } else if (e.getSource() == kiHard) {
+                kiHardWay();
+            }else if (e.getSource() == kiMedium) {
+                kiMediumWay();
+            } else {
+                if ( JOptionPane.showConfirmDialog(null,
 	        			"Really start a new Game?", "Choice", JOptionPane.YES_NO_OPTION) == 0) {
 	        		newGame();
 	        	}
 	    }
 		
 	}
+
+    private void kiMediumWay() {
+        GUI.getController().setKIPlayer("Medium");
+    }
+
+    private void kiHardWay() {
+        GUI.getController().setKIPlayer("Hard");
+
+    }
+
+    private void kiEasyWay() {
+        GUI.getController().setKIPlayer("Easy");
+
+
+    }
+
+    public void saveGame() {
+		String uid = GUI.getController().saveGame(1);
+        JOptionPane.showMessageDialog(null, "Your game is saved under:\n\n" + uid + "\n\nIf you want to continue your game you will need this key.");
+	}
+
+	public void loadGame() {
+		String uid = (String) JOptionPane.showInputDialog(null, "Game token:");
+		if ((uid != null) && (uid.length() > 0)) {
+		    int result = GUI.getController().loadGame(uid);
+		    if (result < 0) {
+		    	JOptionPane.showMessageDialog(null, "No game found under this token.");
+		    }
+		}
+	}
 	
 	public void exit() {
-		if(GUI.getController().geTplayerOnePoints() > GUI.getController().geTplayerTwoPoints()) {
+		if(GUI.getController().getPlayerOnePoints() > GUI.getController().getPlayerTwoPoints()) {
     		playerOneWin();
-    	} else if (GUI.getController().geTplayerOnePoints() < GUI.getController().geTplayerTwoPoints()) {
+    	} else if (GUI.getController().getPlayerOnePoints() < GUI.getController().getPlayerTwoPoints()) {
     		playerTwoWin();
     	} else {
     		noOneWin();
@@ -79,9 +136,9 @@ public class MenuBar extends JMenuBar implements ActionListener {
 	}
 	
 	public void newGame() {
-		if(GUI.getController().geTplayerOnePoints() > GUI.getController().geTplayerTwoPoints()) {
+		if(GUI.getController().getPlayerOnePoints() > GUI.getController().getPlayerTwoPoints()) {
     		playerOneWin();
-    	} else if (GUI.getController().geTplayerOnePoints() < GUI.getController().geTplayerTwoPoints()) {
+    	} else if (GUI.getController().getPlayerOnePoints() < GUI.getController().getPlayerTwoPoints()) {
     		playerTwoWin();
     	} else {
     		noOneWin();
