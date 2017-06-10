@@ -1,2 +1,16 @@
 /bin
 /target
+#################################################################################
+# Eclipse IGNORE
+#################################################################################
+# Eclipse
+.classpath
+.project
+.settings/
+.lauch
+# to under porjects
+*/.classpath
+*/.project
+*/.settings/
+*/.lauch
+*/*.iml
