@@ -642,45 +642,25 @@ Set size of the field 3-80 size number
 For a newGame please write nw
 Have fun!!! if you want to finish the game please write exit
     [0]        [1]        [2]    
-|  red   |  | purple |  | green  |  
-| ovally |  |  wave  |  |  balk  |  
-|   1    |  |   2    |  |   3    |  
+| green  |  |  red   |  | purple |  
+| ovally |  | ovally |  | ovally |  
+|   3    |  |   2    |  |   1    |  
 |halffill|  |halffill|  |halffill|  
     [3]        [4]        [5]    
-| green  |  |  red   |  |  red   |  
-|  balk  |  |  balk  |  | ovally |  
-|   1    |  |   3    |  |   2    |  
-| empty  |  |halffill|  |  fill  |  
+| green  |  | purple |  |  red   |  
+|  balk  |  |  wave  |  | ovally |  
+|   2    |  |   2    |  |   1    |  
+|halffill|  |halffill|  |halffill|  
     [6]        [7]        [8]    
-|  red   |  | purple |  | purple |  
-|  wave  |  |  wave  |  |  balk  |  
-|   1    |  |   3    |  |   3    |  
-|halffill|  | empty  |  | empty  |  
+|  red   |  | purple |  | green  |  
+| ovally |  | ovally |  | ovally |  
+|   2    |  |   2    |  |   2    |  
+| empty  |  | empty  |  | empty  |  
     [9]        [10]        [11]    
-| purple |  | green  |  | purple |  
-|  balk  |  |  balk  |  | ovally |  
-|   3    |  |   2    |  |   3    |  
-|halffill|  | empty  |  |halffill|  
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - A tipp your set begiss with  
-|red| 
- |ovally| 
- |halffill| 
- |1|
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - A tipp your set begiss with  
-|red| 
- |ovally| 
- |halffill| 
- |1|
+| purple |  |  red   |  | green  |  
+|  balk  |  |  balk  |  |  balk  |  
+|   2    |  |   2    |  |   3    |  
+| empty  |  | empty  |  |halffill|  
 
 INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
 81
@@ -695,11 +675,7 @@ INFO main de.htwg.se.de.htwg.se.setgame.aview.tui -
 
 INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
 81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO AWT-EventQueue-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
+INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
 Well ist not that hard to play ;)
 If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
 if you need a tipp plese write h
@@ -710,123 +686,29 @@ Set size of the field 3-80 size number
 For a newGame please write nw
 Have fun!!! if you want to finish the game please write exit
     [0]        [1]        [2]    
-|  red   |  | purple |  | purple |  
-| ovally |  |  wave  |  |  wave  |  
-|   1    |  |   2    |  |   2    |  
-|halffill|  |halffill|  |  fill  |  
+|  red   |  |  red   |  | purple |  
+|  wave  |  |  wave  |  |  wave  |  
+|   2    |  |   2    |  |   1    |  
+|  fill  |  | empty  |  | empty  |  
     [3]        [4]        [5]    
 | green  |  | purple |  |  red   |  
-|  balk  |  | ovally |  | ovally |  
-|   1    |  |   1    |  |   2    |  
-| empty  |  | empty  |  |  fill  |  
-    [6]        [7]        [8]    
-|  red   |  | purple |  | purple |  
-|  wave  |  |  wave  |  |  balk  |  
-|   1    |  |   3    |  |   3    |  
-|halffill|  | empty  |  | empty  |  
-    [9]        [10]        [11]    
-|  red   |  | green  |  | purple |  
-|  wave  |  |  balk  |  | ovally |  
-|   1    |  |   2    |  |   3    |  
-|  fill  |  | empty  |  |halffill|  
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-78
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Index  == 1
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Index  == 5
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Index  == 10
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-78
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| purple |  |  red   |  | green  |  
 |  balk  |  |  wave  |  | ovally |  
-|   2    |  |   1    |  |   3    |  
-|halffill|  | empty  |  |  fill  |  
-    [3]        [4]        [5]    
-| purple |  | purple |  |  red   |  
-| ovally |  |  wave  |  |  wave  |  
-|   3    |  |   2    |  |   3    |  
-|  fill  |  |  fill  |  | empty  |  
+|   2    |  |   2    |  |   1    |  
+|halffill|  |halffill|  |halffill|  
     [6]        [7]        [8]    
-| green  |  |  red   |  | green  |  
-| ovally |  | ovally |  |  wave  |  
+|  red   |  | purple |  | green  |  
+| ovally |  | ovally |  | ovally |  
 |   2    |  |   2    |  |   2    |  
-|halffill|  | empty  |  |halffill|  
+| empty  |  | empty  |  | empty  |  
     [9]        [10]        [11]    
-| purple |  | purple |  | green  |  
-|  balk  |  |  balk  |  |  wave  |  
-|   1    |  |   2    |  |   3    |  
-|  fill  |  | empty  |  | empty  |  
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Index  == 0
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Index  == 1
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Index  == 2
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
-81
-INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
-Well ist not that hard to play ;)
-If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
-if you need a tipp plese write h
-if you want to know the solution please write s
-If you want to know the game point please write GetPoints
-if you want to solve the set with out knowing just write solve
-Set size of the field 3-80 size number
-For a newGame please write nw
-Have fun!!! if you want to finish the game please write exit
-    [0]        [1]        [2]    
-| green  |  |  red   |  | green  |  
-|  wave  |  |  balk  |  | ovally |  
-|   1    |  |   1    |  |   2    |  
-| empty  |  |halffill|  |  fill  |  
-    [3]        [4]        [5]    
-| purple |  | purple |  |  red   |  
-| ovally |  |  wave  |  |  wave  |  
-|   3    |  |   2    |  |   3    |  
-|  fill  |  |  fill  |  | empty  |  
-    [6]        [7]        [8]    
-| green  |  |  red   |  | green  |  
-| ovally |  | ovally |  |  wave  |  
-|   2    |  |   2    |  |   2    |  
-|halffill|  | empty  |  |halffill|  
-    [9]        [10]        [11]    
-| purple |  | purple |  | green  |  
-|  balk  |  |  balk  |  |  wave  |  
-|   1    |  |   2    |  |   3    |  
-|  fill  |  | empty  |  | empty  |  
+| purple |  |  red   |  | green  |  
+|  balk  |  |  balk  |  |  balk  |  
+|   2    |  |   2    |  |   3    |  
+| empty  |  | empty  |  |halffill|  
 
 INFO main de.htwg.se.de.htwg.se.setgame.aview.tui - 
 Congratilations it is a SET!! ! size == 1266
-INFO AWT-EventQueue-0 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
+INFO Timer-1 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
 Well ist not that hard to play ;)
 If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
 if you need a tipp plese write h
@@ -837,23 +719,54 @@ Set size of the field 3-80 size number
 For a newGame please write nw
 Have fun!!! if you want to finish the game please write exit
     [0]        [1]        [2]    
-| green  |  |  red   |  | green  |  
-|  wave  |  |  balk  |  | ovally |  
-|   1    |  |   1    |  |   2    |  
-| empty  |  |halffill|  |  fill  |  
+| green  |  |  red   |  | purple |  
+| ovally |  |  wave  |  |  wave  |  
+|   2    |  |   2    |  |   1    |  
+|halffill|  | empty  |  | empty  |  
     [3]        [4]        [5]    
-| purple |  | purple |  | purple |  
-| ovally |  |  wave  |  |  balk  |  
-|   3    |  |   2    |  |   3    |  
-|  fill  |  |  fill  |  |halffill|  
+|  red   |  | purple |  |  red   |  
+|  wave  |  |  wave  |  | ovally |  
+|   3    |  |   2    |  |   1    |  
+|halffill|  |halffill|  |halffill|  
     [6]        [7]        [8]    
-| purple |  |  red   |  | green  |  
-| ovally |  | ovally |  |  wave  |  
-|   2    |  |   2    |  |   2    |  
-|  fill  |  | empty  |  |halffill|  
+|  red   |  | purple |  | green  |  
+| ovally |  |  wave  |  | ovally |  
+|   2    |  |   1    |  |   2    |  
+| empty  |  |halffill|  | empty  |  
     [9]        [10]        [11]    
-| green  |  | purple |  | green  |  
-|  wave  |  |  balk  |  |  wave  |  
+| purple |  |  red   |  | green  |  
+|  balk  |  |  balk  |  |  balk  |  
 |   2    |  |   2    |  |   3    |  
-|  fill  |  | empty  |  | empty  |  
+| empty  |  | empty  |  |halffill|  
+
+INFO Timer-1 de.htwg.se.de.htwg.se.setgame.aview.tui - Welcome to SetGame!!!! 
+Well ist not that hard to play ;)
+If you found a set please write : set PlayerOne (or PlayerTwo) and the number of the fields 1 2 3 (0-11)
+if you need a tipp plese write h
+if you want to know the solution please write s
+If you want to know the game point please write GetPoints
+if you want to solve the set with out knowing just write solve
+Set size of the field 3-80 size number
+For a newGame please write nw
+Have fun!!! if you want to finish the game please write exit
+    [0]        [1]        [2]    
+| green  |  | purple |  | purple |  
+| ovally |  | ovally |  |  wave  |  
+|   2    |  |   3    |  |   1    |  
+|halffill|  |halffill|  | empty  |  
+    [3]        [4]        [5]    
+|  red   |  | purple |  |  red   |  
+|  wave  |  |  wave  |  | ovally |  
+|   3    |  |   2    |  |   1    |  
+|halffill|  |halffill|  |halffill|  
+    [6]        [7]        [8]    
+| green  |  | purple |  | green  |  
+|  balk  |  |  wave  |  | ovally |  
+|   1    |  |   1    |  |   2    |  
+| empty  |  |halffill|  | empty  |  
+    [9]        [10]        [11]    
+| purple |  | purple |  | green  |  
+|  balk  |  |  wave  |  |  balk  |  
+|   2    |  |   3    |  |   3    |  
+| empty  |  |  fill  |  |halffill|  
 

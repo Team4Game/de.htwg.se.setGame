@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="de.htwg.se.SetGame:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/de_htwg_se_SetGame_jar</output-path>
+    <root id="archive" name="de.htwg.se.SetGame.jar">
+      <element id="module-output" name="de.htwg.se.SetGame" />
+      <element id="dir-copy" path="$PROJECT_DIR$/de.htwg.se.SetGame/resources/pack" />
+      <element id="library" level="project" name="lib" />
+    </root>
+  </artifact>
+</component>

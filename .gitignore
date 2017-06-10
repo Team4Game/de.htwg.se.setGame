@@ -1,7 +1,3 @@
 de.htwg.se.SetGame/.classpath
 de.htwg.se.SetGame/.classpath
 de.htwg.se.SetGame/.settings/org.eclipse.jdt.core.prefs
-/out/*
-/out
-.idea
-de.htwg.se.SetGame/de.htwg.se.SetGame.iml
