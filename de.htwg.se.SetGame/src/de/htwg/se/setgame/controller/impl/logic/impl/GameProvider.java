@@ -36,15 +36,6 @@ public class GameProvider {
     private IPack iPack;
     private IField field;
     private IModelFactory modelFactory;
-
-    public IModelFactory getModelFactory() {
-        return modelFactory;
-    }
-
-    public void setModelFactory(IModelFactory modelFactory) {
-        this.modelFactory = modelFactory;
-    }
-
     /**
      * startup of the objects
      */
@@ -185,10 +176,11 @@ public class GameProvider {
          * @see de.htwg.se.setgame.modell.IField#getCardsInField()
          */
 
-    public Map<Integer,ICard> getCardsInField() {
+    public List<ICard> getCardsInField() {
 
-
-            return this.getCardInFieldGame();
+            List<ICard> liste = new LinkedList<ICard>();
+            liste.addAll(this.getCardInFieldGame().values());
+            return liste;
 
         }
 
@@ -289,6 +281,7 @@ public class GameProvider {
             startUp();
 
         }
+
 
 
 
