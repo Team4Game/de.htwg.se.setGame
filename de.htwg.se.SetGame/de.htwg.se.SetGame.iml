@@ -4,7 +4,7 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="1f0a724f-957f-4e42-85a8-e45fbfe5f844" />
+          <unit-entry name="hibernate.cfg.xml" value="6ef6ee4d-c3b3-4751-be7d-4478c24d43b3" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resources/hibernate.cfg.xml" />
@@ -73,4 +73,3 @@
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.35" level="project" />
   </component>
 </module>
-
