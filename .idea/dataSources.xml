@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="1f0a724f-957f-4e42-85a8-e45fbfe5f844">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://lenny2.in.htwg-konstanz.de:3306/test?createDatabaseIfNotExist=true</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://C:\Users\raina\.m2\repository\mysql\mysql-connector-java\5.1.35\mysql-connector-java-5.1.35.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
